@@ -1,0 +1,74 @@
+﻿@Styles.Render("~/Content/slider-less")
+
+@model IList<Raiduga.Web.Models.Common.SliderItemViewModel>
+
+<div id="home-slider" class="carousel slide" data-ride="carousel" data-interval="0">
+
+	<ol class="carousel-indicators">
+		<li data-target="#home-slider" data-slide-to="0" class="active"></li>
+		<li data-target="#home-slider" data-slide-to="1"></li>
+		<li data-target="#home-slider" data-slide-to="2"></li>
+	</ol>
+
+	<div class="carousel-inner" role="listbox">
+		@{
+			var isActive = true;
+		}
+		@foreach (var item in Model)
+		{
+			<div class="item @(isActive ? "active" : "")">
+				<img src="/Content/img/slide1.jpg" alt="@item.Title">
+				<div class="carousel-caption">
+					<div class="text-container">
+						<div id="text" class="animated fadeInDown">
+							<div class="text">
+								<h1>@item.Title</h1>
+								<h5>@item.SubTitle</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			isActive = false;
+		}
+	</div>
+
+	<!-- Controls -->
+	<a id="leftButton" class="left carousel-control" href="#home-slider" role="button" data-slide="prev">
+		<img src="~/Content/img/arrow-left.svg">
+	</a>
+	<a id="rightButton" class="right carousel-control" href="#home-slider" role="button" data-slide="next">
+		<img src="~/Content/img/arrow-right.svg">
+	</a>
+</div>
+
+@*<section class="slider" style="background-image: url('/Content/img/slide1.jpg')">
+		<div class="main-container">
+			<div class="left-button-container">
+				<button id="leftButton">
+					<img src="~/Content/img/arrow-left.svg">
+				</button>
+			</div>
+			<div class="text-container">
+				<div id="text" class="animated fadeInDown">
+					<div class="text">
+						<h1>Райдуга</h1>
+						<h5>Центр інтелектуального та творчого розвитку особистості</h5>
+					</div>
+				</div>
+				<div id="index">0</div>
+			</div>
+			<div class="right-button-container">
+				<button id="rightButton">
+					<img src="~/Content/img/arrow-right.svg">
+				</button>
+			</div>
+		</div>
+		<div class="indicators-container">
+			<div id="bullets">
+				<div style="background-color: rgb(255, 255, 255);"></div>
+				<div style="background-color: transparent;"></div>
+				<div style="background-color: transparent;"></div>
+			</div>
+		</div>
+	</section>*@

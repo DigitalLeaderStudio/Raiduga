@@ -1,0 +1,90 @@
+﻿@import url('lib.less');
+
+body {
+	color: @text-color;
+}
+
+header {
+	.top-line {
+		padding: 10px 30px 10px 60px;
+	}
+
+	a {
+		&:hover {
+			color: @hover-color;
+		}
+
+		color: @text-color;
+		text-decoration: none;
+	}
+
+	a.logo img {
+		height: 100px;
+		width: 100px;
+		float: left;
+	}
+
+	a.logo h4 {
+		float: left;
+		margin-top: 20px;
+		font-family: @font-comforta;
+		font-size: 1.4em;
+	}
+
+	.navbar {
+		margin-top: 20px;
+		border: none;
+		background: #FFFFFF;
+
+		.navbar-header {
+			.navbar-brand {
+				&.active,
+				&:hover {
+					color: #D1102E;
+				}
+			}
+		}
+
+		ul.navbar-nav {
+		}
+	}
+}
+
+footer {
+	padding: 10px 30px 60px 80px;
+	background-color: #5A1595;
+	color: #FFFFFF;
+	font-family: @font-open-sans;
+
+	a {
+		color: #FFFFFF;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.brand, .brand-caption {
+		font-family: @font-comforta;
+		font-size: 2.5em;
+	}
+
+	.brand-caption {
+		font-size: 1.5em;
+		margin-bottom: 20px;
+	}
+
+	.title {
+		font-weight: bold;
+		margin: 15px 0;
+	}
+
+	.row.social {
+		a {
+			margin-right: 7px;
+		}
+
+		margin-top: 30px;
+		font-size: 2em;
+	}
+}

@@ -1,0 +1,29 @@
+﻿@model Raiduga.Web.Models.Common.SliderItemViewModel
+@using Raiduga.Web.Localization;
+
+@{
+	ViewBag.Title = "Delete";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3>@Translations.Slider_DeleteTitle</h3>
+	</div>
+	<div class="panel-body">
+		<p>
+			@Translations.Slider_DeletePrompt
+		</p>
+	</div>
+	<div class="panel-footer">
+		@using (Html.BeginForm())
+		{
+			@Html.AntiForgeryToken()
+			@Html.HiddenFor(m => m.Id)
+			<a href="@Url.Action("Index", "Slider")" class="btn btn-default">@Translations.Slider_Cancel</a>
+			<input type="submit" class="btn btn-danger" value="@Translations.Slider_Delete" />
+		}
+	</div>
+</div>

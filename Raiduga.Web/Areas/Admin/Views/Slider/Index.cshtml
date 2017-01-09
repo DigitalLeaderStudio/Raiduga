@@ -1,0 +1,51 @@
+﻿@model List<Raiduga.Web.Models.Common.SliderItemViewModel>
+
+@using Raiduga.Web.Localization;
+
+@{
+	ViewBag.Title = "Список слайдов";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="slider row">
+	<div class="col-md-12">
+		<a href="@Url.Action("Create", "Slider")" class="btn btn-success navbar-btn">@Translations.Slider_CreateNewSlide</a>
+		@foreach (var item in Model)
+		{
+			string imageBase64 = Convert.ToBase64String(item.Image);
+			string imageSrc = string.Format("data:image/gif;base64,{0}", imageBase64);
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="item">
+
+							<img src="@imageSrc" alt="@item.Title">
+							<div class="carousel-caption">
+								<div class="text-container">
+									<div id="text" class="form-group">
+										<div class="text">
+											<h1>
+												@item.Title
+											</h1>
+											<h5>
+												@item.SubTitle
+											</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<a href="@Url.Action("Edit", new { id = @item.Id })" class="btn btn-primary">@Translations.Slider_Edit</a>
+					<a href="@Url.Action("Delete", new { id = @item.Id })" class="btn btn-danger pull-right">@Translations.Slider_Delete</a>
+				</div>
+			</div>
+		}
+	</div>
+</div>
