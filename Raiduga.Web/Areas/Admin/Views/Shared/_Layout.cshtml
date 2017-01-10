@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Raiduga.Web.Localization
+
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -33,7 +35,13 @@
 				<ul class="nav navbar-nav">
 					<li>@Html.ActionLink("Home", "Index", "Home")</li>
 					<li>@Html.ActionLink("About", "About", "Home")</li>
-					<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+					<li>
+						@{
+							var count = ViewBag.NewMessagesCount;
+						}
+						<a href="@Url.Action("Index", "Contact", new { area = "Admin" })">@Translations.Contacts_Title <span class="badge">@count</span></a>
+					</li>
+					@*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
 				</ul>
 				@Html.Partial("_LoginPartial")
 			</div>
@@ -48,6 +56,7 @@
 	</div>
 
 	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/unobtrusive")
 	@Scripts.Render("~/bundles/bootstrap")
 	@RenderSection("scripts", required: false)
 </body>

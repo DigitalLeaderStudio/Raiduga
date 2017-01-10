@@ -16,6 +16,7 @@
 
 	@Scripts.Render("~/bundles/modernizr")
 
+	@Scripts.Render("~/bundles/jquery")
 </head>
 <body>
 
@@ -49,10 +50,10 @@
 		</div>
 	</div>
 	<footer>
-		@Html.Partial("_FooterPartial")
+		@Html.Action("_FooterPartial", "Common")
 	</footer>
 
-	@Scripts.Render("~/bundles/jquery")
+
 	@Scripts.Render("~/bundles/bootstrap")
 	@RenderSection("scripts", required: false)
 </body>

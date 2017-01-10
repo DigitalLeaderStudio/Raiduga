@@ -17,3 +17,5 @@ C:\Users\toha\Work\Projects\Raiduga\Raiduga.DAL\obj\Debug\Raiduga.DAL.csproj.Gen
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.DAL\obj\Debug\Raiduga.DAL.dll
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.DAL\obj\Debug\Raiduga.DAL.pdb
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.DAL\obj\Debug\Raiduga.DAL.Migrations.AddFile.resources
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.DAL\obj\Debug\Raiduga.DAL.Migrations.AddAffiliates.resources
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.DAL\obj\Debug\Raiduga.DAL.Migrations.AddContactRequest.resources

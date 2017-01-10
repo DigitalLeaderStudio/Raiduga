@@ -57,13 +57,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Affiliate.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="ContactRequest.cs" />
     <Compile Include="File.cs" />
+    <Compile Include="IDateExtended.cs" />
     <Compile Include="Identity\Role.cs" />
     <Compile Include="Identity\User.cs" />
     <Compile Include="Identity\UserClaim.cs" />
     <Compile Include="Identity\UserLogin.cs" />
     <Compile Include="Identity\UserRole.cs" />
     <Compile Include="Interfaces\IKey.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="Hours.cs" />
+    <Compile Include="Phone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SliderItem.cs" />
   </ItemGroup>

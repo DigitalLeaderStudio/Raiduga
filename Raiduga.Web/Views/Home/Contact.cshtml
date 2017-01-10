@@ -1,17 +1,105 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model List<Raiduga.Web.Models.Common.AffiliateViewModel>
+@using Raiduga.Web.Localization
+@{
+	ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@Scripts.Render("~/bundles/unobtrusive")
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="contacts">
+
+	<h2 class="title">@Translations.Contacts_Title</h2>
+
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel panel-default">
+			@foreach (var affiliate in Model)
+			{
+			<div class="panel-heading" role="tab" id="heading-@affiliate.Id">
+				<h4 class="panel-title">
+					<a role="button"
+					   data-toggle="collapse"
+					   data-parent="#accordion"
+					   href="#collapse-@affiliate.Id"
+					   aria-expanded="@affiliate.IsPrimary"
+					   aria-controls="collapse-@affiliate.Id">
+						@*@affiliate.Title*@
+						<i class="fa fa-map-marker"></i>@affiliate.Address.Name
+					</a>
+				</h4>
+			</div>
+			<div id="collapse-@affiliate.Id" class="panel-collapse collapse @(affiliate.IsPrimary ? "in" : "")" role="tabpanel" aria-labelledby="heading-@affiliate.Id">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-3">
+							<address>
+								<i class="fa fa-clock-o"></i>
+								@string.Format(Translations.Contacts_Hours, affiliate.Hours.Start, affiliate.Hours.End)
+							</address>
+							<address>
+								@foreach (var phone in @affiliate.Phones)
+									{
+								<i class="fa fa-phone"></i>
+								<a href="tel:@phone.Number">@phone.Number</a>
+								<br />
+									}
+							</address>
+							<address>
+								@foreach (var email in @affiliate.Emails)
+									{
+								<i class="fa fa-envelope"></i>
+								<a href="mailto:@email.Value">@email.Value</a>
+								<br />
+									}
+							</address>
+						</div>
+						<div class="col-md-9">
+							@{
+				var enFormatProvier = new System.Globalization.CultureInfo("en-EN");
+							}
+							<div id="map-@affiliate.Id" lat="@affiliate.Address.Latitude.ToString(enFormatProvier)" lng="@affiliate.Address.Longitude.ToString(enFormatProvier)" class="map"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			}
+		</div>
+	</div>
+
+	@Html.Action("_ContactFormPartial", "Common")
+</div>
+<script>
+	var maps = [];
+	var markers = [];
+	function initMap() {
+		var $maps = $('.map');
+		$.each($maps, function (i, value) {
+			var uluru = { lat: parseFloat($(value).attr('lat')), lng: parseFloat($(value).attr('lng')) };
+
+			var mapDivId = $(value).attr('id');
+
+			maps[mapDivId] = new google.maps.Map(document.getElementById(mapDivId), {
+				zoom: 17,
+				center: uluru
+			});
+
+			markers[mapDivId] = new google.maps.Marker({
+				position: uluru,
+				map: maps[mapDivId]
+			});
+		})
+	}
+
+	$('#accordion').on('shown.bs.collapse', function (evt, data) {
+		var divId = $(evt.target).find('.map').attr('id');
+
+		var center = maps[divId].getCenter();
+		google.maps.event.trigger(maps[divId], 'resize');
+		maps[divId].setCenter(center);
+	});
+</script>
+
+
+<script async defer
+		src="https://maps.googleapis.com/maps/api/js?language=ru-Ru&key=AIzaSyAx5SMPnxPBZz1_1Z8g1h7wZDzGMvDixWQ&callback=initMap">
+</script>

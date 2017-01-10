@@ -27,8 +27,42 @@
 			modelBuilder.Entity<UserLogin>().ToTable("UserLogins");
 			modelBuilder.Entity<UserRole>().ToTable("UserRoles");
 			modelBuilder.Entity<Role>().ToTable("Roles");
+
+			modelBuilder.Entity<Affiliate>()
+				.HasMany(a => a.Phones)
+				.WithMany(p => p.Affiliates)
+				.Map(map =>
+				{
+					map.ToTable("PhonesToAffiliates");
+					map.MapLeftKey("PhoneId");
+					map.MapRightKey("AffiliateId");
+				});
+
+			modelBuilder.Entity<Affiliate>()
+				.HasMany(a => a.Emails)
+				.WithMany(p => p.Affiliates)
+				.Map(map =>
+				{
+					map.ToTable("EmailsToAffiliates");
+					map.MapLeftKey("EmailId");
+					map.MapRightKey("AffiliateId");
+				});
+
+			modelBuilder.Entity<Affiliate>()
+				.HasMany(a => a.Hours)
+				.WithMany(p => p.Affiliates)
+				.Map(map =>
+				{
+					map.ToTable("HoursToAffiliates");
+					map.MapLeftKey("HoursId");
+					map.MapRightKey("AffiliateId");
+				});
 		}
 
 		public DbSet<SliderItem> SliderItems { get; set; }
+
+		public DbSet<Affiliate> Affiliates { get; set; }
+
+		public DbSet<ContactRequest> ContactRequests { get; set; }
 	}
 }

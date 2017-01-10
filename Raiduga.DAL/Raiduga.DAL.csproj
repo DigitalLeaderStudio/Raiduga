@@ -65,6 +65,14 @@
     <Compile Include="Migrations\201701091158129_AddFile.Designer.cs">
       <DependentUpon>201701091158129_AddFile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701101139382_AddAffiliates.cs" />
+    <Compile Include="Migrations\201701101139382_AddAffiliates.Designer.cs">
+      <DependentUpon>201701101139382_AddAffiliates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701101507173_AddContactRequest.cs" />
+    <Compile Include="Migrations\201701101507173_AddContactRequest.Designer.cs">
+      <DependentUpon>201701101507173_AddContactRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701091158129_AddFile.resx">
       <DependentUpon>201701091158129_AddFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701101139382_AddAffiliates.resx">
+      <DependentUpon>201701101139382_AddAffiliates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701101507173_AddContactRequest.resx">
+      <DependentUpon>201701101507173_AddContactRequest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

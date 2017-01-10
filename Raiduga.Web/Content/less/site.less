@@ -4,6 +4,10 @@ body {
 	color: @text-color;
 }
 
+i {
+	margin-right: 5px;
+}
+
 header {
 	.top-line {
 		padding: 10px 30px 10px 60px;
@@ -51,6 +55,7 @@ header {
 }
 
 footer {
+	margin-top: 20px;
 	padding: 10px 30px 60px 80px;
 	background-color: #5A1595;
 	color: #FFFFFF;
@@ -86,5 +91,52 @@ footer {
 
 		margin-top: 30px;
 		font-size: 2em;
+	}
+}
+
+.contacts {
+	color: @color-primary;
+	font-family: @font-open-sans;
+
+	h1, h2, h3, h4 {
+		color: @color-primary;
+		font-family: @font-open-sans;
+		font-weight: bold;
+	}
+
+	h2 {
+		&.title {
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	}
+
+	.map {
+		height: 300px;
+		width: 100%;
+	}
+
+
+
+	address {
+		font-size: 0.9em;
+		letter-spacing: 1px;
+	}
+
+	a {
+		&:hover {
+			color: @color-hover;
+		}
+
+		color: @color-primary;
+	}
+
+	.contact-form {
+		margin-top: 30px;
+
+		#loader {
+			position: absolute;
+			display: none;
+		}
 	}
 }

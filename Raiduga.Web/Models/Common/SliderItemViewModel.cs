@@ -5,7 +5,7 @@
 	using System.ComponentModel.DataAnnotations;
 	using System.Web;
 
-	public class SliderItemViewModel
+	public class SliderItemViewModel : IGeneratable<SliderItem, SliderItemViewModel>
 	{
 		public int Id { get; set; }
 
@@ -47,14 +47,14 @@
 			return result;
 		}
 
-		public static SliderItemViewModel FromDbModel(SliderItem dbModel)
+		public SliderItemViewModel FromDbModel(SliderItem model)
 		{
 			var result = new SliderItemViewModel
 			{
-				Id = dbModel.Id,
-				Title = dbModel.Title,
-				SubTitle = dbModel.SubTitle,
-				Image = dbModel.Image == null ? null : dbModel.Image.Content
+				Id = model.Id,
+				Title = model.Title,
+				SubTitle = model.SubTitle,
+				Image = model.Image == null ? null : model.Image.Content
 			};
 
 			return result;

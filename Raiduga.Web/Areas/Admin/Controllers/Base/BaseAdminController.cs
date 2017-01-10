@@ -27,5 +27,14 @@
 			dbContext = null;
 			base.Dispose(disposing);
 		}
+
+		protected override void OnActionExecuting(ActionExecutingContext filterContext)
+		{
+			base.OnActionExecuting(filterContext);
+
+			var count = DbContext.ContactRequests.CountAsync(cr => !cr.UpdationDate.HasValue);
+
+			ViewBag.NewMessagesCount = count.Result;
+		}
 	}
 }

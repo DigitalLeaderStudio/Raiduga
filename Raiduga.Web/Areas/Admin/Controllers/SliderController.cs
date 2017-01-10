@@ -18,7 +18,7 @@
 
 			foreach (var dbItem in DbContext.SliderItems.Include(si => si.Image).ToArray())
 			{
-				model.Add(SliderItemViewModel.FromDbModel(dbItem));
+				model.Add(new SliderItemViewModel().FromDbModel(dbItem));
 			}
 
 			return View(model);
@@ -65,7 +65,7 @@
 		{
 			var originalItem = DbContext.Set<SliderItem>().Find(id);
 
-			return View(SliderItemViewModel.FromDbModel(originalItem));
+			return View(new SliderItemViewModel().FromDbModel(originalItem));
 		}
 
 		// POST: Admin/Slider/Edit/5
@@ -102,7 +102,7 @@
 		{
 			var originalItem = DbContext.Set<SliderItem>().Find(id);
 
-			return View(SliderItemViewModel.FromDbModel(originalItem));
+			return View(new SliderItemViewModel().FromDbModel(originalItem));
 		}
 
 		// POST: Admin/Slider/Delete/5

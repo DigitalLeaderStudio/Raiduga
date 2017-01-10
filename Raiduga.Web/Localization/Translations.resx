@@ -117,6 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ContactsForm_ClearForm" xml:space="preserve">
+    <value>Clear form</value>
+  </data>
+  <data name="ContactsForm_Email" xml:space="preserve">
+    <value>Email *</value>
+  </data>
+  <data name="ContactsForm_Email_Placeholder" xml:space="preserve">
+    <value>Please enter you contact email *</value>
+  </data>
+  <data name="ContactsForm_MarkAsRead" xml:space="preserve">
+    <value>Mark as read</value>
+  </data>
+  <data name="ContactsForm_Message" xml:space="preserve">
+    <value>Message *</value>
+  </data>
+  <data name="ContactsForm_MessageIsNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ContactsForm_Message_Placeholder" xml:space="preserve">
+    <value>Message for me *</value>
+  </data>
+  <data name="ContactsForm_Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ContactsForm_PhoneNotSet" xml:space="preserve">
+    <value>Phone doesn't set</value>
+  </data>
+  <data name="ContactsForm_Phone_Placeholder" xml:space="preserve">
+    <value>Please enter your contact phone </value>
+  </data>
+  <data name="ContactsForm_RequiredFieldsCaption" xml:space="preserve">
+    <value>* These fields are required.</value>
+  </data>
+  <data name="ContactsForm_SendMessage" xml:space="preserve">
+    <value>Send message</value>
+  </data>
+  <data name="ContactsForm_SuccessfullySent" xml:space="preserve">
+    <value>Your message has been successfully sent!</value>
+  </data>
+  <data name="ContactsForm_Title" xml:space="preserve">
+    <value>Contacts form</value>
+  </data>
+  <data name="Contacts_Hours" xml:space="preserve">
+    <value>Hours: from {0:HH:mm} to {1:HH:mm}</value>
+  </data>
+  <data name="Contacts_Title" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
   <data name="Slider_BackToList" xml:space="preserve">
     <value>Back to list</value>
   </data>

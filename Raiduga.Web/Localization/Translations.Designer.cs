@@ -61,6 +61,150 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hours: from {0:HH:mm} to {1:HH:mm}.
+        /// </summary>
+        public static string Contacts_Hours {
+            get {
+                return ResourceManager.GetString("Contacts_Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contacts.
+        /// </summary>
+        public static string Contacts_Title {
+            get {
+                return ResourceManager.GetString("Contacts_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear form.
+        /// </summary>
+        public static string ContactsForm_ClearForm {
+            get {
+                return ResourceManager.GetString("ContactsForm_ClearForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email *.
+        /// </summary>
+        public static string ContactsForm_Email {
+            get {
+                return ResourceManager.GetString("ContactsForm_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter you contact email *.
+        /// </summary>
+        public static string ContactsForm_Email_Placeholder {
+            get {
+                return ResourceManager.GetString("ContactsForm_Email_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mark as read.
+        /// </summary>
+        public static string ContactsForm_MarkAsRead {
+            get {
+                return ResourceManager.GetString("ContactsForm_MarkAsRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message *.
+        /// </summary>
+        public static string ContactsForm_Message {
+            get {
+                return ResourceManager.GetString("ContactsForm_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message for me *.
+        /// </summary>
+        public static string ContactsForm_Message_Placeholder {
+            get {
+                return ResourceManager.GetString("ContactsForm_Message_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New.
+        /// </summary>
+        public static string ContactsForm_MessageIsNew {
+            get {
+                return ResourceManager.GetString("ContactsForm_MessageIsNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string ContactsForm_Phone {
+            get {
+                return ResourceManager.GetString("ContactsForm_Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter your contact phone .
+        /// </summary>
+        public static string ContactsForm_Phone_Placeholder {
+            get {
+                return ResourceManager.GetString("ContactsForm_Phone_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone doesn&apos;t set.
+        /// </summary>
+        public static string ContactsForm_PhoneNotSet {
+            get {
+                return ResourceManager.GetString("ContactsForm_PhoneNotSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * These fields are required..
+        /// </summary>
+        public static string ContactsForm_RequiredFieldsCaption {
+            get {
+                return ResourceManager.GetString("ContactsForm_RequiredFieldsCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send message.
+        /// </summary>
+        public static string ContactsForm_SendMessage {
+            get {
+                return ResourceManager.GetString("ContactsForm_SendMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your message has been successfully sent!.
+        /// </summary>
+        public static string ContactsForm_SuccessfullySent {
+            get {
+                return ResourceManager.GetString("ContactsForm_SuccessfullySent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contacts form.
+        /// </summary>
+        public static string ContactsForm_Title {
+            get {
+                return ResourceManager.GetString("ContactsForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back to list.
         /// </summary>
         public static string Slider_BackToList {

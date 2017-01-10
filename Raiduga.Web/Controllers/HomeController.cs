@@ -1,12 +1,13 @@
 ﻿namespace Raiduga.Web.Controllers
 {
+	using Raiduga.Web.Models.Common;
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Web;
 	using System.Web.Mvc;
 
-	public class HomeController : Controller
+	public class HomeController : BaseController
 	{
 		public ActionResult Index()
 		{
@@ -22,9 +23,14 @@
 
 		public ActionResult Contact()
 		{
-			ViewBag.Message = "Your contact page.";
+			var model = new List<AffiliateViewModel>();
 
-			return View();
+			foreach (var affiliate in DbContext.Affiliates.ToArray())
+			{
+				model.Add(new AffiliateViewModel().FromDbModel(affiliate));
+			}
+
+			return View(model);
 		}
 	}
 }

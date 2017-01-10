@@ -7,6 +7,7 @@
 	using System.Web;
 	using System.Web.Mvc;
 	using System.Data.Entity;
+	using System.Threading.Tasks;
 
 	public class CommonController : BaseController
 	{
@@ -17,10 +18,52 @@
 
 			foreach (var dbItem in DbContext.SliderItems.Include(si => si.Image).ToArray())
 			{
-				model.Add(SliderItemViewModel.FromDbModel(dbItem));
+				model.Add(new SliderItemViewModel().FromDbModel(dbItem));
 			}
 
 			return PartialView(model);
+		}
+
+		public ActionResult _FooterPartial()
+		{
+			var dbData = DbContext.Affiliates.First(a => a.IsPrimary);
+			var model = new AffiliateViewModel().FromDbModel(dbData);
+
+			return PartialView(model);
+		}
+
+		public ActionResult _ContactFormPartial()
+		{
+			return PartialView(new ContactRequestViewModel());
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<PartialViewResult> ContactRequest(ContactRequestViewModel item)
+		{
+			if (ModelState.IsValid)
+			{
+				try
+				{
+					var dbData = item.ToDbModel();
+					dbData.CreationDate = DateTime.Now;
+
+					DbContext.ContactRequests.Add(dbData);
+					item.SuccessfullySent = true;
+
+					await DbContext.SaveChangesAsync();
+				}
+				catch (Exception e)
+				{
+					ModelState.AddModelError("", e.Message);
+				}
+			}
+
+			item.Errors = ModelState.Values.SelectMany(m => m.Errors)
+								 .Select(e => e.ErrorMessage)
+								 .ToList();
+
+			return PartialView("_ContactFormPartial", item);
 		}
 	}
 }

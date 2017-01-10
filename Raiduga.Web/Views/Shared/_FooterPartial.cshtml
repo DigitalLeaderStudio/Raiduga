@@ -1,4 +1,6 @@
-﻿
+﻿@model Raiduga.Web.Models.Common.AffiliateViewModel
+
+@using Raiduga.Web.Localization
 
 <div class="row">
 	<div class="col-md-12">
@@ -13,21 +15,39 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="title">
-			Контакты
+			@Translations.Contacts_Title
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<i class="fa fa-phone" aria-hidden="true"></i>
-				<a href="tel:+380961112233">+38096 111 22 33</a>
-				<a href="tel:+380633334455">+38063 333 44 55</a>
+				<address>
+					@foreach (var phone in Model.Phones)
+					{
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						<a href="tel:@phone.Number">@phone.Number</a>
+						<br />
+					}
+				</address>
 			</div>
 			<div class="col-md-12">
-				<i class="fa fa-envelope" aria-hidden="true"></i>
-				<a href="mailto:office@raiduga.kiev.ua">office@raiduga.kiev.ua</a>
+				<address>
+					@foreach (var email in Model.Emails)
+					{
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<a href="mailto:@email.Value">@email.Value</a>
+						<br />
+					}
+				</address>
 			</div>
 			<div class="col-md-12">
-				<i class="fa fa-map-marker" aria-hidden="true"></i>
-				г. Киев, ул. Волгоградська, 18
+				<address>
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
+					@{
+						var enFormatProvier = new System.Globalization.CultureInfo("en-EN");
+					}
+					<a target="_blank" href="http://www.google.com/maps/place/@Model.Address.Latitude.ToString(enFormatProvier),@Model.Address.Longitude.ToString(enFormatProvier)">
+						@Model.Address.Name
+					</a>
+				</address>
 			</div>
 		</div>
 	</div>

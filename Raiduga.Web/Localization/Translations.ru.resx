@@ -117,6 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ContactsForm_ClearForm" xml:space="preserve">
+    <value>Очистить форму</value>
+  </data>
+  <data name="ContactsForm_Email" xml:space="preserve">
+    <value>Email *</value>
+  </data>
+  <data name="ContactsForm_Email_Placeholder" xml:space="preserve">
+    <value>Пожалуйста, введите Ваш контактный email *</value>
+  </data>
+  <data name="ContactsForm_MarkAsRead" xml:space="preserve">
+    <value>Прочитано</value>
+  </data>
+  <data name="ContactsForm_Message" xml:space="preserve">
+    <value>Сообщение *</value>
+  </data>
+  <data name="ContactsForm_MessageIsNew" xml:space="preserve">
+    <value>Новое</value>
+  </data>
+  <data name="ContactsForm_Message_Placeholder" xml:space="preserve">
+    <value>Пожалуйста введите Ваше сообщение *</value>
+  </data>
+  <data name="ContactsForm_Phone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="ContactsForm_PhoneNotSet" xml:space="preserve">
+    <value>Телефон не указан</value>
+  </data>
+  <data name="ContactsForm_Phone_Placeholder" xml:space="preserve">
+    <value>Пожалуйста, введите Ваш контактный телефон</value>
+  </data>
+  <data name="ContactsForm_RequiredFieldsCaption" xml:space="preserve">
+    <value>* Эти поля являются обязательными.</value>
+  </data>
+  <data name="ContactsForm_SendMessage" xml:space="preserve">
+    <value>Отправить сообщение</value>
+  </data>
+  <data name="ContactsForm_SuccessfullySent" xml:space="preserve">
+    <value>Ваше сообщение было успешно отправленно!</value>
+  </data>
+  <data name="ContactsForm_Title" xml:space="preserve">
+    <value>Контактная форма</value>
+  </data>
+  <data name="Contacts_Hours" xml:space="preserve">
+    <value>Часы работы: с {0:HH:mm} до {1:HH:mm}</value>
+  </data>
+  <data name="Contacts_Title" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
   <data name="Slider_BackToList" xml:space="preserve">
     <value>К списку слайдов</value>
   </data>
