@@ -1,6 +1,4 @@
-﻿@model Raiduga.Web.Models.Common.AffiliateViewModel
-
-@using Raiduga.Web.Localization
+﻿@using Raiduga.Web.Localization
 
 <div class="row">
 	<div class="col-md-12">
@@ -17,39 +15,7 @@
 		<div class="title">
 			@Translations.Contacts_Title
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<address>
-					@foreach (var phone in Model.Phones)
-					{
-						<i class="fa fa-phone" aria-hidden="true"></i>
-						<a href="tel:@phone.Number">@phone.Number</a>
-						<br />
-					}
-				</address>
-			</div>
-			<div class="col-md-12">
-				<address>
-					@foreach (var email in Model.Emails)
-					{
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						<a href="mailto:@email.Value">@email.Value</a>
-						<br />
-					}
-				</address>
-			</div>
-			<div class="col-md-12">
-				<address>
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					@{
-						var enFormatProvier = new System.Globalization.CultureInfo("en-EN");
-					}
-					<a target="_blank" href="http://www.google.com/maps/place/@Model.Address.Latitude.ToString(enFormatProvier),@Model.Address.Longitude.ToString(enFormatProvier)">
-						@Model.Address.Name
-					</a>
-				</address>
-			</div>
-		</div>
+		@Html.Partial("_FastContactsPartial")
 	</div>
 	<div class="col-md-4">
 		<div class="title">

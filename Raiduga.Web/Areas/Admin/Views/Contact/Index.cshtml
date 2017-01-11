@@ -1,0 +1,78 @@
+﻿@model List<Raiduga.Web.Models.Common.AffiliateViewModel>
+@using Raiduga.Web.Localization
+
+@{
+	ViewBag.Title = Translations.Contacts_Title;
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+	var enFormatProvier = new System.Globalization.CultureInfo("en-EN");
+}
+
+<h2>@Translations.Contacts_Title</h2>
+
+
+<div class="container contacts">
+	@foreach (var affiliate in Model)
+	{
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					@if (affiliate.IsPrimary)
+					{
+						<span class="pull-right">
+							<i class="fa fa-check-circle"></i>@Translations.ContactsForm_Primary
+						</span>
+					}
+					<i class="fa fa-map-marker"></i>@affiliate.Address.Name
+				</h4>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-3">
+						<address>
+							<i class="fa fa-clock-o"></i>
+							@Translations.Contacts_Hours_Prompt
+							<br />
+							@Translations.Contacts_Hours_From @affiliate.Hours.Start.ToString(@"hh\:mm")
+							&nbsp;@Translations.Contacts_Hours_To@affiliate.Hours.End.ToString(@"hh\:mm")
+						</address>
+						@Html.Raw(affiliate.HtmlDataContacts)
+						<p>@affiliate.Description</p>
+					</div>
+					<div class="col-md-9">
+						<div id="map-@affiliate.Id" lat="@affiliate.Address.Latitude.ToString(enFormatProvier)" lng="@affiliate.Address.Longitude.ToString(enFormatProvier)" class="map"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel-footer">
+				<a href="@Url.Action("Edit", "Contact", new { area = "Admin", id = affiliate.Id })" type="button" class="btn btn-default">@Translations.Edit</a>
+			</div>
+		</div>
+	}
+</div>
+<script>
+	var maps = [];
+	var markers = [];
+	function initMap() {
+		var $maps = $('.map');
+		$.each($maps, function (i, value) {
+			var uluru = { lat: parseFloat($(value).attr('lat')), lng: parseFloat($(value).attr('lng')) };
+
+			var mapDivId = $(value).attr('id');
+
+			maps[mapDivId] = new google.maps.Map(document.getElementById(mapDivId), {
+				zoom: 17,
+				center: uluru
+			});
+
+			markers[mapDivId] = new google.maps.Marker({
+				position: uluru,
+				map: maps[mapDivId]
+			});
+		})
+	}
+</script>
+
+<script async defer
+		src="https://maps.googleapis.com/maps/api/js?language=ru-Ru&key=AIzaSyAx5SMPnxPBZz1_1Z8g1h7wZDzGMvDixWQ&callback=initMap">
+</script>

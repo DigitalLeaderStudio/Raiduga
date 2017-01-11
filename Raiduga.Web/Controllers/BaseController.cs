@@ -1,6 +1,7 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Raiduga.DAL;
+	using Raiduga.Web.Models.Common;
 	using System;
 	using System.Collections.Generic;
 	using System.Data.Entity;
@@ -23,6 +24,14 @@
 
 				return dbContext;
 			}
+		}
+
+		protected override void OnActionExecuting(ActionExecutingContext filterContext)
+		{
+			var viewModel = new AffiliateViewModel().FromDbModel(DbContext.Affiliates.First(a => a.IsPrimary));
+			ViewBag.Affiliate = viewModel;
+
+			base.OnActionExecuting(filterContext);
 		}
 
 		protected override void Dispose(bool disposing)

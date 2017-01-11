@@ -25,8 +25,12 @@
 					  "~/Scripts/jquery.validate.js"));
 
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+					  "~/Scripts/site.js",
 					  "~/Scripts/bootstrap.js",
 					  "~/Scripts/respond.js"));
+
+			bundles.Add(new ScriptBundle("~/bundles/bootstrap-timepicker").Include(
+					  "~/Scripts/bootstrap-timepicker/bootstrap-timepicker.js"));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
@@ -38,6 +42,9 @@
 
 			bundles.Add(new LessBundle("~/Content/slider-less")
 			.Include("~/Content/less/slider.less"));
+
+			bundles.Add(new LessBundle("~/Content/timepicker-less")
+			.Include("~/Content/less/timepicker.less"));
 
 			bundles.Add(new StyleBundle("~/Content/fonts").Include(
 				"~/Content/font-awesome-4.7.0/css/font-awesome.css"

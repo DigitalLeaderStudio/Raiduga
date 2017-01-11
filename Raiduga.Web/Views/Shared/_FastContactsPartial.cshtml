@@ -1,0 +1,18 @@
+﻿@{
+	var enFormatProvier = new System.Globalization.CultureInfo("en-EN");
+	Raiduga.Web.Models.Common.AffiliateViewModel viewModel = (Raiduga.Web.Models.Common.AffiliateViewModel)ViewBag.Affiliate;
+}
+
+<div class="row">
+	<div class="col-md-12">
+		@Html.Raw(viewModel.HtmlDataContacts)
+	</div>
+	<div class="col-md-12">
+		<address>
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<a target="_blank" href="http://www.google.com/maps/place/@viewModel.Address.Latitude.ToString(enFormatProvier),@viewModel.Address.Longitude.ToString(enFormatProvier)">
+				@viewModel.Address.Name
+			</a>
+		</address>
+	</div>
+</div>

@@ -8,6 +8,56 @@ i {
 	margin-right: 5px;
 }
 
+.material-switch {
+	> input[type="checkbox"] {
+		display: none;
+	}
+
+	> label {
+		cursor: pointer;
+		height: 0px;
+		position: relative;
+		width: 40px;
+
+		&::before {
+			background: rgb(0, 0, 0);
+			box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+			border-radius: 8px;
+			content: '';
+			height: 16px;
+			margin-top: -8px;
+			position: absolute;
+			opacity: 0.3;
+			transition: all 0.4s ease-in-out;
+			width: 40px;
+		}
+
+		&::after {
+			background: rgb(255, 255, 255);
+			border-radius: 16px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+			content: '';
+			height: 24px;
+			left: -4px;
+			margin-top: -8px;
+			position: absolute;
+			top: -4px;
+			transition: all 0.3s ease-in-out;
+			width: 24px;
+		}
+
+		> input[type="checkbox"]:checked + label::before {
+			background: inherit;
+			opacity: 0.5;
+		}
+	}
+
+	> input[type="checkbox"]:checked + label::after {
+		background: inherit;
+		left: 20px;
+	}
+}
+
 header {
 	.top-line {
 		padding: 10px 30px 10px 60px;
@@ -89,7 +139,7 @@ footer {
 			margin-right: 7px;
 		}
 
-		margin-top: 30px;
+		margin-top: 10px;
 		font-size: 2em;
 	}
 }
@@ -109,6 +159,10 @@ footer {
 			margin-bottom: 30px;
 			text-align: center;
 		}
+	}
+
+	&.home {
+		margin-top: 30px;
 	}
 
 	.map {
@@ -133,6 +187,10 @@ footer {
 
 	.contact-form {
 		margin-top: 30px;
+
+		.btn-margin {
+			margin: 5px;
+		}
 
 		#loader {
 			position: absolute;

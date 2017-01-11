@@ -12,6 +12,7 @@
 
 	@Styles.Render("~/Content/css")
 	@Styles.Render("~/Content/less")
+	@Styles.Render("~/Content/timepicker-less")
 	@Styles.Render("~/Content/fonts")
 	@Styles.Render("~/Content/Admin/less")
 
@@ -35,11 +36,12 @@
 				<ul class="nav navbar-nav">
 					<li>@Html.ActionLink("Home", "Index", "Home")</li>
 					<li>@Html.ActionLink("About", "About", "Home")</li>
+					<li>@Html.ActionLink(@Translations.Contacts_Title, "Index", "Contact")</li>
 					<li>
 						@{
 							var count = ViewBag.NewMessagesCount;
 						}
-						<a href="@Url.Action("Index", "Contact", new { area = "Admin" })">@Translations.Contacts_Title <span class="badge">@count</span></a>
+						<a href="@Url.Action("Index", "Messages", new { area = "Admin" })">@Translations.Messages_Title <span class="badge">@count</span></a>
 					</li>
 					@*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
 				</ul>
@@ -58,6 +60,7 @@
 	@Scripts.Render("~/bundles/jquery")
 	@Scripts.Render("~/bundles/unobtrusive")
 	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/bootstrap-timepicker")
 	@RenderSection("scripts", required: false)
 </body>
 </html>

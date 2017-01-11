@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BackToList" xml:space="preserve">
+    <value>Назад к списку</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
   <data name="ContactsForm_ClearForm" xml:space="preserve">
     <value>Очистить форму</value>
   </data>
@@ -147,6 +153,9 @@
   <data name="ContactsForm_Phone_Placeholder" xml:space="preserve">
     <value>Пожалуйста, введите Ваш контактный телефон</value>
   </data>
+  <data name="ContactsForm_Primary" xml:space="preserve">
+    <value>Главное отделение</value>
+  </data>
   <data name="ContactsForm_RequiredFieldsCaption" xml:space="preserve">
     <value>* Эти поля являются обязательными.</value>
   </data>
@@ -159,11 +168,53 @@
   <data name="ContactsForm_Title" xml:space="preserve">
     <value>Контактная форма</value>
   </data>
+  <data name="Contacts_Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
   <data name="Contacts_Hours" xml:space="preserve">
-    <value>Часы работы: с {0:HH:mm} до {1:HH:mm}</value>
+    <value>Часы работы: с {0} до {1}</value>
+  </data>
+  <data name="Contacts_Hours_From" xml:space="preserve">
+    <value>с </value>
+  </data>
+  <data name="Contacts_Hours_Prompt" xml:space="preserve">
+    <value>Часы работы: </value>
+  </data>
+  <data name="Contacts_Hours_To" xml:space="preserve">
+    <value>до </value>
+  </data>
+  <data name="Contacts_Latitude" xml:space="preserve">
+    <value>Широта</value>
+  </data>
+  <data name="Contacts_Longitude" xml:space="preserve">
+    <value>Долгота</value>
   </data>
   <data name="Contacts_Title" xml:space="preserve">
     <value>Контакты</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="Home_ContactsUsPrompt" xml:space="preserve">
+    <value>Свяжитесь с нами</value>
+  </data>
+  <data name="Home_FastContacts_Title" xml:space="preserve">
+    <value>Быстрые контакты</value>
+  </data>
+  <data name="Home_Title" xml:space="preserve">
+    <value>Домашняя</value>
+  </data>
+  <data name="Messages_Title" xml:space="preserve">
+    <value>Сообщения</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="SiteName" xml:space="preserve">
+    <value>Райдуга</value>
   </data>
   <data name="Slider_BackToList" xml:space="preserve">
     <value>К списку слайдов</value>

@@ -18,6 +18,8 @@ namespace Raiduga.DAL.Migrations
 
 		protected override void Seed(ApplicationDbContext context)
 		{
+			char tab = '\u0009';
+
 			#region User add
 
 			var role = new Role
@@ -50,6 +52,8 @@ namespace Raiduga.DAL.Migrations
 			#endregion
 
 			#region affiliates add
+			
+			#region affiliate 1
 
 			var affiliate = new Affiliate
 			{
@@ -65,7 +69,23 @@ namespace Raiduga.DAL.Migrations
 				IsPrimary = true,
 				Hours = new List<Hours>(),
 				Emails = new List<Email>(),
-				Phones = new List<Phone>()
+				Phones = new List<Phone>(),
+				HtmlDataContacts = @"<address>
+								<i class=""fa fa-phone""></i>
+								<a href=""tel:(044) 275-17-79"">(044) 275-17-79</a>
+								<br>
+								<i class=""fa fa-phone""></i>
+								<a href=""tel:(096) 003-31-14"">(096) 003-31-14</a>
+								<br>
+								<i class=""fa fa-phone""></i>
+								<a href=""tel:(099) 007-59-54"">(099) 007-59-54</a>
+								<br>
+						</address>
+						<address>
+							<i class=""fa fa-envelope""></i>
+							<a href=""mailto:office@raiduga.kiev.ua"">office@raiduga.kiev.ua</a>
+							<br>
+						</address>".Replace(tab.ToString(), "")
 			};
 
 			affiliate.Phones.Add(new Phone { Number = "(044) 275-17-79" });
@@ -75,12 +95,16 @@ namespace Raiduga.DAL.Migrations
 			affiliate.Hours.Add(
 				new Hours
 				{
-					Start = new DateTime(2017, 1, 1, 8, 30, 0),
-					End = new DateTime(2017, 1, 1, 19, 0, 0)
+					Start = new TimeSpan(8, 30, 0),
+					End = new TimeSpan(19, 0, 0)
 				});
 
 			context.Affiliates.AddOrUpdate(a => a.Name, affiliate);
 			context.SaveChanges();
+			
+			#endregion
+			
+			#region affiliate 2
 
 			var affiliate1 = new Affiliate
 			{
@@ -97,7 +121,20 @@ namespace Raiduga.DAL.Migrations
 				IsPrimary = false,
 				Hours = new List<Hours>(),
 				Emails = new List<Email>(),
-				Phones = new List<Phone>()
+				Phones = new List<Phone>(),
+				HtmlDataContacts = @"<address>
+										<i class=""fa fa-phone""></i>
+										<a href=""tel:(050) 448-49-07"">(050) 448-49-07</a>
+										<br>
+										<i class=""fa fa-phone""></i>
+										<a href=""tel:(068) 455-04-26"">(068) 455-04-26</a>
+										<br>
+								</address>
+								<address>
+										<i class=""fa fa-envelope""></i>
+										<a href=""mailto:office@raiduga.kiev.ua"">office@raiduga.kiev.ua</a>
+										<br>
+								</address>".Replace(tab.ToString(), "")
 			};
 
 			affiliate1.Phones.Add(new Phone { Number = "(050) 448-49-07" });
@@ -106,12 +143,16 @@ namespace Raiduga.DAL.Migrations
 			affiliate1.Hours.Add(
 				new Hours
 				{
-					Start = new DateTime(2017, 1, 1, 9, 0, 0),
-					End = new DateTime(2017, 1, 1, 19, 0, 0)
+					Start = new TimeSpan(9, 0, 0),
+					End = new TimeSpan(19, 0, 0)
 				});
 
 			context.Affiliates.AddOrUpdate(a => a.Name, affiliate1);
 			context.SaveChanges();
+			
+			#endregion 
+
+			#region affiliate 3
 
 			var affiliate2 = new Affiliate
 			{
@@ -127,7 +168,23 @@ namespace Raiduga.DAL.Migrations
 				IsPrimary = false,
 				Hours = new List<Hours>(),
 				Emails = new List<Email>(),
-				Phones = new List<Phone>()
+				Phones = new List<Phone>(),
+				HtmlDataContacts = @"<address>
+										<i class=""fa fa-phone""></i>
+										<a href=""tel:(044) 275-17-79"">(044) 275-17-79</a>
+										<br>
+										<i class=""fa fa-phone""></i>
+										<a href=""tel:(066) 747-56-15"">(066) 747-56-15</a>
+										<br>
+										<i class=""fa fa-phone""></i>
+										<a href=""tel:(063) 151-53-13"">(063) 151-53-13</a>
+										<br>
+								</address>
+								<address>
+										<i class=""fa fa-envelope""></i>
+										<a href=""mailto:office@raiduga.kiev.ua"">office@raiduga.kiev.ua</a>
+										<br>
+								</address>".Replace(tab.ToString(), "")
 			};
 
 			affiliate2.Phones.Add(new Phone { Number = "(044) 275-17-79" });
@@ -137,12 +194,14 @@ namespace Raiduga.DAL.Migrations
 			affiliate2.Hours.Add(
 				new Hours
 				{
-					Start = new DateTime(2017, 1, 1, 9, 0, 0),
-					End = new DateTime(2017, 1, 1, 19, 0, 0)
+					Start = new TimeSpan(9, 0, 0),
+					End = new TimeSpan(19, 0, 0)
 				});
 
 			context.Affiliates.AddOrUpdate(a => a.Name, affiliate2);
 			context.SaveChanges();
+
+			#endregion
 
 			#endregion
 		}

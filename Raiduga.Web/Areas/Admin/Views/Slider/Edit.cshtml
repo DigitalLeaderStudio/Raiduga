@@ -1,17 +1,17 @@
 ﻿@model Raiduga.Web.Models.Common.SliderItemViewModel
 @using Raiduga.Web.Localization;
 @{
-	ViewBag.Title = "Edit";
+	ViewBag.Title = Translations.Slider_Title;
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-<h2>Edit</h2>
+<h2>@Translations.Edit</h2>
 
 <div class="slider row">
 	<div class="col-md-12">
 		@using (Html.BeginForm("Edit", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
 		{
 			@Html.AntiForgeryToken()
-			
+
 			@Html.HiddenFor(model => model.Id)
 
 			<div class="panel panel-default">
@@ -42,7 +42,7 @@
 				<div class="panel-footer">
 					<div class="row">
 						<div class="col-md-2">
-							<input type="submit" value="@Translations.Slider_Save" class="btn btn-default" />
+							<input type="submit" value="@Translations.Save" class="btn btn-default" />
 						</div>
 						<div class="col-md-4">
 							<label>@Translations.Slider_SelectAnotherImage</label>
@@ -55,5 +55,5 @@
 	</div>
 </div>
 <div>
-	@Html.ActionLink(@Translations.Slider_BackToList, "Index")
+	@Html.ActionLink(@Translations.BackToList, "Index")
 </div>

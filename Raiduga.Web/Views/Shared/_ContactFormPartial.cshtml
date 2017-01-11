@@ -1,0 +1,92 @@
+﻿@model Raiduga.Web.Models.Common.ContactRequestViewModel
+
+@using Raiduga.Web.Localization
+
+@{
+	var ajaxOptions = new AjaxOptions
+	{
+		Url = Url.Action("ContactRequest", "Common"),
+		UpdateTargetId = "contact-form-container",
+		OnComplete = "OnComplete",
+		OnBegin = "OnBegin"
+	};
+}
+@Scripts.Render("~/bundles/unobtrusive")
+<div id="contact-form-container">
+	@using (Ajax.BeginForm(ajaxOptions))
+	{
+		@Html.AntiForgeryToken()
+		<div class="panel panel-success contact-form">
+			<div class="panel-heading">
+				<img id="loader" src="~/Content/img/ajax-loader.gif" />
+				<h4 class="text-center">@Translations.ContactsForm_Title</h4>
+			</div>
+			<div class="panel-body">
+				@if (Model.Errors != null && Model.Errors.Count > 0)
+				{
+					<div class="alert alert-danger" role="alert">
+						@foreach (var error in Model.Errors)
+						{
+							@error <br />
+						}
+					</div>
+				}
+				else if (Model.SuccessfullySent)
+				{
+					<div class="alert alert-success" role="alert">@Translations.ContactsForm_SuccessfullySent</div>
+				}
+
+				<div class="controls">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								@Html.LabelFor(m => m.Email, new { @class = "control-label" })
+								@Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = @Translations.ContactsForm_Email_Placeholder })
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								@Html.LabelFor(m => m.Phone, new { @class = "control-label" })
+								@Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = @Translations.ContactsForm_Phone_Placeholder })
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								@Html.LabelFor(m => m.Message, new { @class = "control-label" })
+								@Html.TextAreaFor(m => m.Message, new { @rows = "3", @class = "form-control", @placeholder = @Translations.ContactsForm_Message_Placeholder })
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-muted">@Translations.ContactsForm_RequiredFieldsCaption</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<input type="submit" class="btn btn-success btn-margin" value="@Translations.ContactsForm_SendMessage" />
+				<input type="button" class="btn btn-default btn-margin" value="@Translations.ContactsForm_ClearForm" onclick="ClearForm(); return false;" />
+			</div>
+		</div>
+	}
+
+	<script type="text/javascript">
+		function OnBegin() {
+			$("#loader").show();
+			$('form input[type="submit"]').prop('disabled', true);
+		}
+
+		function OnComplete() {
+			$("#loader").hide();
+			$('form input[type="submit"]').prop('disabled', false);
+		}
+
+		function ClearForm() {
+			$('form input[type="text"],textarea').val('');
+		}
+	</script>
+
+</div>

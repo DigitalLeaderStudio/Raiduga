@@ -1,0 +1,123 @@
+﻿@model Raiduga.Web.Models.Common.AffiliateViewModel
+@using Raiduga.Web.Localization;
+@{
+	ViewBag.Title = "Edit";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+	var enFormatProvier = new System.Globalization.CultureInfo("en-EN");
+}
+
+<h2>@Translations.Edit</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+	<hr />
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	@Html.HiddenFor(model => model.Id)
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						@Html.HiddenFor(model => model.Address.Id)
+
+						<div class="form-group">
+							@Html.LabelFor(m => m.Address.Name, new { @class = "contolr-label" })
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+								@Html.TextBoxFor(model => model.Address.Name, new { @class = "form-control" })
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="form-group">
+							@Html.LabelFor(m => m.Address.Latitude, new { @class = "contolr-label" })
+							@Html.TextBoxFor(m => m.Address.Latitude, new { @class = "form-control" })
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							@Html.LabelFor(m => m.Address.Longitude, new { @class = "contolr-label" })
+							@Html.TextBoxFor(m => m.Address.Longitude, new { @class = "form-control" })
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-12 form-group">
+
+					<span class="material-switch">
+						<input id="IsPrimary"
+							   name="IsPrimary"
+							   value="@Model.IsPrimary.ToString().ToLower()"
+							   type="checkbox" @(Model.IsPrimary ? "checked=checked" : null) />
+						<label for="IsPrimary" class="label-default"></label>
+					</span>
+					@Translations.ContactsForm_Primary
+				</div>
+			</div>
+
+			<div class="row">
+				@Html.HiddenFor(m => m.Hours.Id)
+				<div class="col-md-12 form-group">
+					<label class="pull-left">
+						@Translations.Contacts_Hours_Prompt @Translations.Contacts_Hours_From
+					</label>
+					<div class="input-group bootstrap-timepicker timepicker col-md-2">
+						<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+						@Html.TextBoxFor(m => m.Hours.Start,
+									new
+									{
+										@class = "form-control input-small",
+										data_minute_step = "15",
+										data_max_hours = 24,
+										data_show_meridian = "false"
+									})
+					</div>
+					<label class="pull-left">
+						@Translations.Contacts_Hours_To
+					</label>
+					<div class="input-group bootstrap-timepicker timepicker col-md-2">
+						<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+						@Html.TextBoxFor(m => m.Hours.End,
+									 new
+									 {
+										 @class = "form-control input-small",
+										 data_minute_step = "15",
+										 data_max_hours = 24,
+										 data_show_meridian = "false"
+									 })
+					</div>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="label label-warning">
+							HTML для контактов. Менять аккуратно (понимая структуру HTML)!
+						</div>
+						@Html.TextAreaFor(model => model.HtmlDataContacts, new { @class = "form-control", @rows = "5" })
+					</div>
+					<div class="form-group">
+						@Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel-footer">
+			<input type="submit" value="@Translations.Save" class="btn btn-default" />
+		</div>
+	</div>
+}
+
+<div>
+	@Html.ActionLink(@Translations.BackToList, "Index")
+</div>

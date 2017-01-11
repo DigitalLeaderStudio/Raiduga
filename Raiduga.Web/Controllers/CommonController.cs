@@ -32,6 +32,8 @@
 			return PartialView(model);
 		}
 
+		#region contacts
+
 		public ActionResult _ContactFormPartial()
 		{
 			return PartialView(new ContactRequestViewModel());
@@ -65,5 +67,7 @@
 
 			return PartialView("_ContactFormPartial", item);
 		}
+
+		#endregion
 	}
 }

@@ -61,11 +61,83 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hours: from {0:HH:mm} to {1:HH:mm}.
+        ///   Looks up a localized string similar to Back to list.
+        /// </summary>
+        public static string BackToList {
+            get {
+                return ResourceManager.GetString("BackToList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Contacts_Address {
+            get {
+                return ResourceManager.GetString("Contacts_Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hours: from {0} to {1}.
         /// </summary>
         public static string Contacts_Hours {
             get {
                 return ResourceManager.GetString("Contacts_Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string Contacts_Hours_From {
+            get {
+                return ResourceManager.GetString("Contacts_Hours_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hours .
+        /// </summary>
+        public static string Contacts_Hours_Prompt {
+            get {
+                return ResourceManager.GetString("Contacts_Hours_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string Contacts_Hours_To {
+            get {
+                return ResourceManager.GetString("Contacts_Hours_To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Latitude.
+        /// </summary>
+        public static string Contacts_Latitude {
+            get {
+                return ResourceManager.GetString("Contacts_Latitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Longitude.
+        /// </summary>
+        public static string Contacts_Longitude {
+            get {
+                return ResourceManager.GetString("Contacts_Longitude", resourceCulture);
             }
         }
         
@@ -169,6 +241,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Primary office.
+        /// </summary>
+        public static string ContactsForm_Primary {
+            get {
+                return ResourceManager.GetString("ContactsForm_Primary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to * These fields are required..
         /// </summary>
         public static string ContactsForm_RequiredFieldsCaption {
@@ -201,6 +282,78 @@ namespace Raiduga.Web.Localization {
         public static string ContactsForm_Title {
             get {
                 return ResourceManager.GetString("ContactsForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact us.
+        /// </summary>
+        public static string Home_ContactsUsPrompt {
+            get {
+                return ResourceManager.GetString("Home_ContactsUsPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast contacts.
+        /// </summary>
+        public static string Home_FastContacts_Title {
+            get {
+                return ResourceManager.GetString("Home_FastContacts_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string Home_Title {
+            get {
+                return ResourceManager.GetString("Home_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Messages.
+        /// </summary>
+        public static string Messages_Title {
+            get {
+                return ResourceManager.GetString("Messages_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raiduga.
+        /// </summary>
+        public static string SiteName {
+            get {
+                return ResourceManager.GetString("SiteName", resourceCulture);
             }
         }
         
