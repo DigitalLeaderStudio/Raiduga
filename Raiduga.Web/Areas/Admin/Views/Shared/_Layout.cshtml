@@ -34,8 +34,14 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li>@Html.ActionLink("Home", "Index", "Home")</li>
 					<li>@Html.ActionLink("About", "About", "Home")</li>
+					<li>
+						<a href="@Url.Action( "Index", "Slider", new { area = "Admin" })">@Translations.Slider_Page_Title</a>
+					</li>
+					<li>
+						<a href="@Url.Action( "Index", "Service", new { area = "Admin" })">@Translations.Service_Title</a>
+					</li>
+
 					<li>@Html.ActionLink(@Translations.Contacts_Title, "Index", "Contact")</li>
 					<li>
 						@{

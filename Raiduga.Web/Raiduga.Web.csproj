@@ -172,10 +172,13 @@
     <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\Base\BaseAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,12 +201,14 @@
     <Compile Include="Models\Common\AffiliateViewModel.cs" />
     <Compile Include="Models\Common\ContactRequestViewModel.cs" />
     <Compile Include="Models\Common\EmailViewModel.cs" />
+    <Compile Include="Models\Common\FileViewModel.cs" />
     <Compile Include="Models\Common\HoursViewModel.cs" />
     <Compile Include="Models\Common\PhoneViewModel.cs" />
     <Compile Include="Models\Common\SliderItemViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IGeneratable.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Service\ServiceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -283,6 +288,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Views\Service\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -339,12 +346,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_ContactFormPartial.cshtml" />
     <Content Include="Views\Shared\_FastContactsPartial.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\BaseAdmin\" />
+    <Folder Include="Extentions\" />
     <Folder Include="Views\Common\" />
+    <Folder Include="Views\FileController\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

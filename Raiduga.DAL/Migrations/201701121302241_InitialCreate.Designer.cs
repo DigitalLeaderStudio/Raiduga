@@ -7,13 +7,13 @@ namespace Raiduga.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddAffiliates : IMigrationMetadata
+    public sealed partial class InitialCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAffiliates));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701101139382_AddAffiliates"; }
+            get { return "201701121302241_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

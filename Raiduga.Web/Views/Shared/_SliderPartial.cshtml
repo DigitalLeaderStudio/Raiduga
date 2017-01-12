@@ -17,7 +17,7 @@
 		@foreach (var item in Model)
 		{
 			<div class="item @(isActive ? "active" : "")">
-				<img src="/Content/img/slide1.jpg" alt="@item.Title">
+				<img src="@Url.Action("Show", "File", new { id = item.ImageId })" alt="@item.Title">
 				<div class="carousel-caption">
 					<div class="text-container">
 						<div id="text" class="animated fadeInDown">
@@ -41,34 +41,3 @@
 		<img src="~/Content/img/arrow-right.svg">
 	</a>
 </div>
-
-@*<section class="slider" style="background-image: url('/Content/img/slide1.jpg')">
-		<div class="main-container">
-			<div class="left-button-container">
-				<button id="leftButton">
-					<img src="~/Content/img/arrow-left.svg">
-				</button>
-			</div>
-			<div class="text-container">
-				<div id="text" class="animated fadeInDown">
-					<div class="text">
-						<h1>Райдуга</h1>
-						<h5>Центр інтелектуального та творчого розвитку особистості</h5>
-					</div>
-				</div>
-				<div id="index">0</div>
-			</div>
-			<div class="right-button-container">
-				<button id="rightButton">
-					<img src="~/Content/img/arrow-right.svg">
-				</button>
-			</div>
-		</div>
-		<div class="indicators-container">
-			<div id="bullets">
-				<div style="background-color: rgb(255, 255, 255);"></div>
-				<div style="background-color: transparent;"></div>
-				<div style="background-color: transparent;"></div>
-			</div>
-		</div>
-	</section>*@

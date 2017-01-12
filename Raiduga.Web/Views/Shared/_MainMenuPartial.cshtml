@@ -1,4 +1,5 @@
-﻿<nav class="navbar navbar-default">
+﻿@using Raiduga.Web.Localization
+<nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -19,11 +20,11 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="main-menu">
 			<ul class="nav navbar-nav">
-				<li><a href="#">Наші послуги</a></li>
+				<li><a href="@Url.Action("Index", "Service", new { area = "" })">@Translations.Service_Title</a></li>
 				<li><a href="#">Новини</a></li>
 				<li><a href="#">Розклад</a></li>
 				<li><a href="#">Про нас</a></li>
-				<li><a href="@Url.Action("Contact", "Home")">Контакти</a></li>
+				<li><a href="@Url.Action("Contact", "Home")">@Translations.Contacts_Title</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">

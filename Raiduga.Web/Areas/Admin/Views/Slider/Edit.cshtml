@@ -19,7 +19,7 @@
 					@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 					<div class="row">
 						<div class="item">
-							<img src="/Content/img/slide1.jpg" alt="@Model.Title">
+							<img src="@Url.Action("Show", "File", new { area = "", id = Model.ImageId })" alt="@Model.Title">
 							<div class="carousel-caption">
 								<div class="text-container">
 									<div id="text" class="form-group">

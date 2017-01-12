@@ -349,6 +349,24 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Service_Details {
+            get {
+                return ResourceManager.GetString("Service_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services.
+        /// </summary>
+        public static string Service_Title {
+            get {
+                return ResourceManager.GetString("Service_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Raiduga.
         /// </summary>
         public static string SiteName {
@@ -435,6 +453,15 @@ namespace Raiduga.Web.Localization {
         public static string Slider_Name {
             get {
                 return ResourceManager.GetString("Slider_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slider.
+        /// </summary>
+        public static string Slider_Page_Title {
+            get {
+                return ResourceManager.GetString("Slider_Page_Title", resourceCulture);
             }
         }
         

@@ -1,4 +1,4 @@
-﻿namespace Raiduga.Models
+﻿namespace Raiduga.Models.Interfaces
 {
 	using System;
 

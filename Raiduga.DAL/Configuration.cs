@@ -30,13 +30,13 @@ namespace Raiduga.DAL.Migrations
 			context.Roles.AddOrUpdate(r => r.Name, role);
 
 			var user = new User
-			{
-				UserName = "admin@admin.com",
-				Email = "admin@admin.com",
-				EmailConfirmed = true,
-				SecurityStamp = "random",
-				PasswordHash = new PasswordHasher().HashPassword("admin11")
-			};
+				{
+					UserName = "admin@admin.com",
+					Email = "admin@admin.com",
+					EmailConfirmed = true,
+					SecurityStamp = "random",
+					PasswordHash = new PasswordHasher().HashPassword("admin11")
+				};
 
 			context.Users.AddOrUpdate(u => u.Email, user);
 
@@ -522,11 +522,11 @@ namespace Raiduga.DAL.Migrations
 			#region Школьникам
 
 			var schollService = new Service
-			{
-				Name = "Школьникам",
-				Description = "Школьникам",
-				BodyHtml = ""
-			};
+				{
+					Name = "Школьникам",
+					Description = "Школьникам",
+					BodyHtml = ""
+				};
 
 			#region Courses
 
@@ -534,7 +534,7 @@ namespace Raiduga.DAL.Migrations
 			schollService.Courses.Add(new Course
 			{
 				Name = "Английский клуб",
-				Description = "Английский клуб",
+				Description = "Английский клуб", 
 				CreationDate = DateTime.Now,
 				Duration = new TimeSpan(0),
 				PriorityOrder = 1,
@@ -574,12 +574,12 @@ namespace Raiduga.DAL.Migrations
 			#region Взрослым
 
 			var adultService = new Service
-			{
-				Name = "Взрослым",
-				Description = "Взрослым",
-				BodyHtml = "",
-				Courses = new List<Course>()
-			};
+				{
+					Name = "Взрослым",
+					Description = "Взрослым",
+					BodyHtml = "",
+					Courses = new List<Course>()
+				};
 
 			adultService.Courses.Add(new Course
 			{

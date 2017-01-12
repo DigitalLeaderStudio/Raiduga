@@ -18,6 +18,20 @@
 			return new ApplicationDbContext();
 		}
 
+		#region DbSets
+
+		public DbSet<SliderItem> SliderItems { get; set; }
+
+		public DbSet<Affiliate> Affiliates { get; set; }
+
+		public DbSet<ContactRequest> ContactRequests { get; set; }
+
+		public DbSet<Service> Services { get; set; }
+
+		public DbSet<File> Files { get; set; }
+
+		#endregion
+
 		protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
@@ -58,11 +72,5 @@
 					map.MapRightKey("AffiliateId");
 				});
 		}
-
-		public DbSet<SliderItem> SliderItems { get; set; }
-
-		public DbSet<Affiliate> Affiliates { get; set; }
-
-		public DbSet<ContactRequest> ContactRequests { get; set; }
 	}
 }

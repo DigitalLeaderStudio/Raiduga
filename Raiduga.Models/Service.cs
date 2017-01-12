@@ -1,23 +1,26 @@
 ﻿namespace Raiduga.Models
 {
 	using Raiduga.Models.Interfaces;
+	using System.Collections.Generic;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
 
-	public class SliderItem : IKey<int>
+	public class Service : IKey<int>, IBodyHtml
 	{
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
 
-		[StringLength(24)]
-		public string Title { get; set; }
+		public string Name { get; set; }
 
-		[StringLength(128)]
-		public string SubTitle { get; set; }
+		public string BodyHtml { get; set; }
+
+		public string Description { get; set; }
 
 		public int? ImageId { get; set; }
 
 		public virtual File Image { get; set; }
+
+		public virtual ICollection<Course> Courses { get; set; }
 	}
 }

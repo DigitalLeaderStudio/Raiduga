@@ -213,6 +213,12 @@
   <data name="Save" xml:space="preserve">
     <value>Сохранить</value>
   </data>
+  <data name="Service_Details" xml:space="preserve">
+    <value>Детальнее</value>
+  </data>
+  <data name="Service_Title" xml:space="preserve">
+    <value>Наши услуги</value>
+  </data>
   <data name="SiteName" xml:space="preserve">
     <value>Райдуга</value>
   </data>
@@ -242,6 +248,9 @@
   </data>
   <data name="Slider_Name" xml:space="preserve">
     <value>Новый слайд</value>
+  </data>
+  <data name="Slider_Page_Title" xml:space="preserve">
+    <value>Слайдер</value>
   </data>
   <data name="Slider_Save" xml:space="preserve">
     <value>Сохранить</value>

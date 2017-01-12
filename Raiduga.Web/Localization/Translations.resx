@@ -213,6 +213,12 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Service_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Service_Title" xml:space="preserve">
+    <value>Services</value>
+  </data>
   <data name="SiteName" xml:space="preserve">
     <value>Raiduga</value>
   </data>
@@ -242,6 +248,9 @@
   </data>
   <data name="Slider_Name" xml:space="preserve">
     <value>Slider item</value>
+  </data>
+  <data name="Slider_Page_Title" xml:space="preserve">
+    <value>Slider</value>
   </data>
   <data name="Slider_Save" xml:space="preserve">
     <value>Save</value>

@@ -57,29 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201701071326160_Initial-Create.cs" />
-    <Compile Include="Migrations\201701071326160_Initial-Create.Designer.cs">
-      <DependentUpon>201701071326160_Initial-Create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701091158129_AddFile.cs" />
-    <Compile Include="Migrations\201701091158129_AddFile.Designer.cs">
-      <DependentUpon>201701091158129_AddFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701101139382_AddAffiliates.cs" />
-    <Compile Include="Migrations\201701101139382_AddAffiliates.Designer.cs">
-      <DependentUpon>201701101139382_AddAffiliates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701101507173_AddContactRequest.cs" />
-    <Compile Include="Migrations\201701101507173_AddContactRequest.Designer.cs">
-      <DependentUpon>201701101507173_AddContactRequest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701111250541_ChangeHoursTimeTypeToTimeSpan.cs" />
-    <Compile Include="Migrations\201701111250541_ChangeHoursTimeTypeToTimeSpan.Designer.cs">
-      <DependentUpon>201701111250541_ChangeHoursTimeTypeToTimeSpan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701111535376_AffiliateSimpleContactsSolution.cs" />
-    <Compile Include="Migrations\201701111535376_AffiliateSimpleContactsSolution.Designer.cs">
-      <DependentUpon>201701111535376_AffiliateSimpleContactsSolution.cs</DependentUpon>
+    <Compile Include="Migrations\201701121302241_InitialCreate.cs" />
+    <Compile Include="Migrations\201701121302241_InitialCreate.Designer.cs">
+      <DependentUpon>201701121302241_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,23 +75,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701071326160_Initial-Create.resx">
-      <DependentUpon>201701071326160_Initial-Create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701091158129_AddFile.resx">
-      <DependentUpon>201701091158129_AddFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701101139382_AddAffiliates.resx">
-      <DependentUpon>201701101139382_AddAffiliates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701101507173_AddContactRequest.resx">
-      <DependentUpon>201701101507173_AddContactRequest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701111250541_ChangeHoursTimeTypeToTimeSpan.resx">
-      <DependentUpon>201701111250541_ChangeHoursTimeTypeToTimeSpan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701111535376_AffiliateSimpleContactsSolution.resx">
-      <DependentUpon>201701111535376_AffiliateSimpleContactsSolution.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701121302241_InitialCreate.resx">
+      <DependentUpon>201701121302241_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

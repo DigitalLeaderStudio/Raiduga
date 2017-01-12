@@ -20,7 +20,7 @@
 		[Display(ResourceType = typeof(Translations), Name = "Slider_Image")]
 		public HttpPostedFileBase File { get; set; }
 
-		public byte[] Image { get; set; }
+		public int? ImageId { get; set; }
 
 		public SliderItem ToDbModel()
 		{
@@ -54,7 +54,7 @@
 				Id = model.Id,
 				Title = model.Title,
 				SubTitle = model.SubTitle,
-				Image = model.Image == null ? null : model.Image.Content
+				ImageId = model.ImageId
 			};
 
 			return result;
