@@ -3,6 +3,7 @@
 	using Raiduga.Models;
 	using Raiduga.Models.Interfaces;
 	using Raiduga.Web.Models.Common;
+	using System.Collections.Generic;
 	using System.Web;
 
 	public class ServiceViewModel : IBodyHtml, IGeneratable<Service, ServiceViewModel>
@@ -15,6 +16,8 @@
 
 		public string BodyHtml { get; set; }
 
+		public List<CourseViewModel> Courses { get; set; }
+
 		public HttpPostedFileBase File { get; set; }
 
 		public int? ImageId { get; set; }
@@ -26,6 +29,12 @@
 			this.Description = model.Description;
 			this.BodyHtml = model.BodyHtml;
 			this.ImageId = model.ImageId;
+			this.Courses = new List<CourseViewModel>();
+
+			foreach (var course in model.Courses)
+			{
+				this.Courses.Add(new CourseViewModel().FromDbModel(course));
+			}
 
 			return this;
 		}

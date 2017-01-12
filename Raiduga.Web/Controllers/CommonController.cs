@@ -16,7 +16,7 @@
 		{
 			var model = new List<SliderItemViewModel>();
 
-			foreach (var dbItem in DbContext.SliderItems.Include(si => si.Image).ToArray())
+			foreach (var dbItem in DbContext.SliderItems.ToArray())
 			{
 				model.Add(new SliderItemViewModel().FromDbModel(dbItem));
 			}

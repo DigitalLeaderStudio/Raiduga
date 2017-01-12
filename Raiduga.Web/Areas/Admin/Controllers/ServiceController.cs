@@ -17,7 +17,7 @@
 		{
 			var model = new List<ServiceViewModel>();
 
-			foreach (var dbItem in DbContext.Services.Include(srv => srv.Image).ToArray())
+			foreach (var dbItem in DbContext.Services.ToArray())
 			{
 				model.Add(new ServiceViewModel().FromDbModel(dbItem));
 			}

@@ -349,6 +349,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Courses.
+        /// </summary>
+        public static string Service_AllCourses {
+            get {
+                return ResourceManager.GetString("Service_AllCourses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
         public static string Service_Details {

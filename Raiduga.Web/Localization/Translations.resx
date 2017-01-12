@@ -213,6 +213,9 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Service_AllCourses" xml:space="preserve">
+    <value>All Courses</value>
+  </data>
   <data name="Service_Details" xml:space="preserve">
     <value>Details</value>
   </data>

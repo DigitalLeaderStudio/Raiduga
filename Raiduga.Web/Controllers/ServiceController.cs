@@ -1,8 +1,8 @@
 ﻿namespace Raiduga.Web.Controllers
 {
-	using Raiduga.Web.Models.Common;
 	using Raiduga.Web.Models.Service;
 	using System.Collections.Generic;
+	using System.Data.Entity;
 	using System.Linq;
 	using System.Web.Mvc;
 
@@ -21,23 +21,18 @@
 			return View(model);
 		}
 
-		public ActionResult About()
+		public ActionResult _ServiceHomePartial()
 		{
-			ViewBag.Message = "Your application description page.";
+			var dbData = DbContext.Services.ToArray();
 
-			return View();
-		}
+			var model = new List<ServiceViewModel>();
 
-		public ActionResult Contact()
-		{
-			var model = new List<AffiliateViewModel>();
-
-			foreach (var affiliate in DbContext.Affiliates.OrderByDescending(a => a.IsPrimary).ToArray())
+			foreach (var dbItem in dbData)
 			{
-				model.Add(new AffiliateViewModel().FromDbModel(affiliate));
+				model.Add(new ServiceViewModel().FromDbModel(dbItem));
 			}
 
-			return View(model);
+			return PartialView(model);
 		}
 	}
 }

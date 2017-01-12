@@ -1,0 +1,33 @@
+﻿@using Raiduga.Web.Localization
+@model List<Raiduga.Web.Models.Service.ServiceViewModel>
+
+<div class="services">
+	<div class="row">
+		@foreach (var item in Model)
+		{
+			<div class="service-block">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img src="@Url.Action("Show", "File", new { area = "", id = item.ImageId })" alt="@item.Name" />
+						<div class="caption text-center">
+							<h3><strong>@item.Name</strong></h3>
+							<hr />
+							<p>
+								<ul class="text-left">
+									@foreach (var course in item.Courses.OrderBy(c => c.PriorityOrder).Take(5))
+									{
+										<li><i class="fa fa-certificate"></i> @course.Name</li>
+									}
+								</ul>
+							</p>
+						</div>
+						<p class="text-center">
+							<a href="#" class="btn btn-primary">@Translations.Service_AllCourses</a>
+						</p>
+					</div>
+				</div>
+				@*<div class="clearfix"></div>*@
+			</div>
+		}
+	</div>
+</div>

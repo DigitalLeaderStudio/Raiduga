@@ -20,15 +20,15 @@
 
 		#region DbSets
 
-		public DbSet<SliderItem> SliderItems { get; set; }
+		public virtual DbSet<SliderItem> SliderItems { get; set; }
 
-		public DbSet<Affiliate> Affiliates { get; set; }
+		public virtual DbSet<Affiliate> Affiliates { get; set; }
 
-		public DbSet<ContactRequest> ContactRequests { get; set; }
+		public virtual DbSet<ContactRequest> ContactRequests { get; set; }
 
-		public DbSet<Service> Services { get; set; }
+		public virtual DbSet<Service> Services { get; set; }
 
-		public DbSet<File> Files { get; set; }
+		public virtual DbSet<File> Files { get; set; }
 
 		#endregion
 
