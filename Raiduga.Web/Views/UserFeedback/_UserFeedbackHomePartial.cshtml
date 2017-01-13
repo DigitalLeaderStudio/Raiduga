@@ -1,0 +1,30 @@
+﻿@using Raiduga.Web.Localization
+@model List<Raiduga.Web.Models.UserFeedback.UserFeedbackViewModel>
+
+<div class="feedbacks">
+	@foreach (var item in Model)
+	{
+		<div class="feedback-item">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-2">
+					@{
+						var srcAction = item.ImageId.HasValue ?
+						Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
+						string.Empty;
+					}
+					<img src="@srcAction"
+						 class="img-circle img-responsive"
+						 alt="@item.Text" />
+				</div>
+				<div class="col-md-4">
+					<p>@item.Text</p>
+					<hr />
+					<p>
+						@item.UserName
+						<span class="pull-right"><i class="fa fa-calendar "></i>@item.CreationDate.Value.ToShortDateString()</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	}
+</div>

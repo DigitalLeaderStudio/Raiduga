@@ -5,9 +5,11 @@ namespace Raiduga.DAL.Migrations
 	using Raiduga.Models.Identity;
 	using System;
 	using System.Collections.Generic;
-	using System.Data.Entity;
 	using System.Data.Entity.Migrations;
-	using System.Linq;
+	using System.IO;
+	using System.Reflection;
+	using System.Web;
+	using System.Web.Hosting;
 
 	internal sealed class Configuration : DbMigrationsConfiguration<Raiduga.DAL.ApplicationDbContext>
 	{
@@ -210,11 +212,20 @@ namespace Raiduga.DAL.Migrations
 			#region Дошкольникам
 
 			#region preSchollService
+			var image = new Raiduga.Models.File
+			{
+				ContentType = "image/svg+xml",
+				FileName = "дошкільнятам.svg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/дошкільнятам.svg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, image);
+			context.SaveChanges();
+
 			var preSchollService = new Service
 			{
 				Name = "Дошкольникам",
-				Description = "Дошкольникам",
-
+				Description = "Осенью дни становятся короче, а ночи — длиннее. После теплых августовских дней наступают прохладные сентябрьские. Осеннее солнце поднимается уже не так высоко, как летом, поэтому его лучи уже не прогревают землю. Температура воздуха становится холоднее.",
+				ImageId = image.Id
 			};
 			#endregion
 
@@ -520,12 +531,21 @@ namespace Raiduga.DAL.Migrations
 			#endregion
 
 			#region Школьникам
+			image = new Raiduga.Models.File
+			{
+				ContentType = "image/svg+xml",
+				FileName = "школярам.svg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/школярам.svg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, image);
+			context.SaveChanges();
 
 			var schollService = new Service
 			{
 				Name = "Школьникам",
-				Description = "Школьникам",
-				BodyHtml = ""
+				Description = "Осенью дни становятся короче, а ночи — длиннее. После теплых августовских дней наступают прохладные сентябрьские. Осеннее солнце поднимается уже не так высоко, как летом, поэтому его лучи уже не прогревают землю. Температура воздуха становится холоднее.",
+				BodyHtml = "",
+				ImageId = image.Id
 			};
 
 			#region Courses
@@ -572,13 +592,21 @@ namespace Raiduga.DAL.Migrations
 			#endregion
 
 			#region Взрослым
-
+			image = new Raiduga.Models.File
+			{
+				ContentType = "image/svg+xml",
+				FileName = "дорослим.svg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/дорослим.svg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, image);
+			context.SaveChanges();
 			var adultService = new Service
 			{
 				Name = "Взрослым",
-				Description = "Взрослым",
+				Description = "Осенью дни становятся короче, а ночи — длиннее. После теплых августовских дней наступают прохладные сентябрьские. Осеннее солнце поднимается уже не так высоко, как летом, поэтому его лучи уже не прогревают землю. Температура воздуха становится холоднее.",
 				BodyHtml = "",
-				Courses = new List<Course>()
+				Courses = new List<Course>(),
+				ImageId = image.Id
 			};
 
 			adultService.Courses.Add(new Course
@@ -704,6 +732,18 @@ namespace Raiduga.DAL.Migrations
 			#endregion
 
 			#endregion
+		}
+
+		private string MapPath(string seedFile)
+		{
+			if (HttpContext.Current != null)
+				return HostingEnvironment.MapPath(seedFile);
+
+			var absolutePath = new Uri(Assembly.GetExecutingAssembly().CodeBase).AbsolutePath;
+			var directoryName = Path.GetDirectoryName(absolutePath);
+			var path = Path.Combine(directoryName, ".." + seedFile.TrimStart('~').Replace('/', '\\'));
+
+			return path;
 		}
 	}
 }

@@ -1,7 +1,9 @@
-﻿using Raiduga.Models;
-using System;
-namespace Raiduga.Web.Models.Common
+﻿namespace Raiduga.Web.Models.Common
 {
+	using Raiduga.Models;
+	using Raiduga.Web.Models.Interfaces;
+	using System;
+
 	public class HoursViewModel : IGeneratable<Hours, HoursViewModel>
 	{
 		public int Id { get; set; }

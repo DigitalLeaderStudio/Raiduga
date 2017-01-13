@@ -3,6 +3,7 @@
 	using Raiduga.Models;
 	using Raiduga.Models.Interfaces;
 	using Raiduga.Web.Localization;
+	using Raiduga.Web.Models.Interfaces;
 	using System;
 	using System.Collections.Generic;
 	using System.ComponentModel.DataAnnotations;

@@ -192,6 +192,9 @@
   <data name="Contacts_Title" xml:space="preserve">
     <value>Contacts</value>
   </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create new item</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
@@ -206,6 +209,9 @@
   </data>
   <data name="Home_Title" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Image_Caption" xml:space="preserve">
+    <value>Image</value>
   </data>
   <data name="Messages_Title" xml:space="preserve">
     <value>Messages</value>
@@ -238,7 +244,7 @@
     <value>Delete</value>
   </data>
   <data name="Slider_DeletePrompt" xml:space="preserve">
-    <value>The slide item will be deleted. Are you realy want to delete it?</value>
+    <value>The slide item will be deleted. Do you really want to delete it?</value>
   </data>
   <data name="Slider_DeleteTitle" xml:space="preserve">
     <value>Deletion</value>
@@ -266,5 +272,20 @@
   </data>
   <data name="Slider_Title" xml:space="preserve">
     <value>Slide Title</value>
+  </data>
+  <data name="UserFeedback_DeletePrompt" xml:space="preserve">
+    <value>The feedback will be deleted. Do you really want to delete it?</value>
+  </data>
+  <data name="UserFeedback_IsActive" xml:space="preserve">
+    <value>Is feedback is active</value>
+  </data>
+  <data name="UserFeedback_Text" xml:space="preserve">
+    <value>Feedbacks text</value>
+  </data>
+  <data name="UserFeedback_Title" xml:space="preserve">
+    <value>Feedbacks</value>
+  </data>
+  <data name="UserFeedback_UserName" xml:space="preserve">
+    <value>User name</value>
   </data>
 </root>

@@ -1,0 +1,44 @@
+﻿@using Raiduga.Web.Localization
+@model List<Raiduga.Web.Models.UserFeedback.UserFeedbackViewModel>
+
+@{
+	ViewBag.Title = Translations.UserFeedback_Title;
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Translations.UserFeedback_Title</h2>
+
+<div class="feedbacks">
+	<div class="row">
+		<a href="@Url.Action("Create", "UserFeedback", new { area = "Admin"})" class="btn btn-success navbar-btn">@Translations.Create</a>
+	</div>
+	@foreach (var item in Model)
+	{
+		<div class="panel panel-default">
+			<div class="panel-body">
+
+				<div class="feedback-item">
+					<div class="row">
+						<div class="col-md-3 col-md-offset-2">
+							<img src="@Url.Action("Show", "File", new { area = "", id = item.ImageId })"
+								 class="img-circle img-responsive"
+								 alt="@item.Text" />
+						</div>
+						<div class="col-md-4">
+							<p>@item.Text</p>
+							<hr />
+							<p>
+								@item.UserName
+								<span class="pull-right"><i class="fa fa-calendar "></i>@item.CreationDate.Value.ToShortDateString()</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<a href="@Url.Action("Edit", new { id = @item.Id })" class="btn btn-primary">@Translations.Edit</a>
+				<a href="@Url.Action("Delete", new { id = @item.Id })" class="btn btn-danger pull-right">@Translations.Delete</a>
+			</div>
+		</div>
+	}
+</div>

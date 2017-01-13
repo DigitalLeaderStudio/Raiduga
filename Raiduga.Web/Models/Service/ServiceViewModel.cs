@@ -2,11 +2,10 @@
 {
 	using Raiduga.Models;
 	using Raiduga.Models.Interfaces;
-	using Raiduga.Web.Models.Common;
+	using Raiduga.Web.Models.Interfaces;
 	using System.Collections.Generic;
-	using System.Web;
 
-	public class ServiceViewModel : IBodyHtml, IGeneratable<Service, ServiceViewModel>
+	public class ServiceViewModel : AFileViewModel, IBodyHtml, IGeneratable<Service, ServiceViewModel>
 	{
 		public int Id { get; set; }
 
@@ -17,10 +16,6 @@
 		public string BodyHtml { get; set; }
 
 		public List<CourseViewModel> Courses { get; set; }
-
-		public HttpPostedFileBase File { get; set; }
-
-		public int? ImageId { get; set; }
 
 		public ServiceViewModel FromDbModel(Service model)
 		{
@@ -47,20 +42,8 @@
 				Name = this.Name,
 				Description = this.Description,
 				BodyHtml = this.BodyHtml,
+				Image = this.GetFile()
 			};
-
-			if (this.File != null && this.File.ContentLength > 0)
-			{
-				using (var reader = new System.IO.BinaryReader(this.File.InputStream))
-				{
-					result.Image = new File
-					{
-						FileName = System.IO.Path.GetFileName(this.File.FileName),
-						ContentType = this.File.ContentType,
-						Content = reader.ReadBytes(this.File.ContentLength)
-					};
-				}
-			}
 
 			return result;
 		}

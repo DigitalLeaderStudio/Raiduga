@@ -1,0 +1,59 @@
+﻿@using Raiduga.Web.Localization
+@model Raiduga.Web.Models.UserFeedback.UserFeedbackViewModel
+@{
+	ViewBag.Title = Translations.UserFeedback_Title + " " + Translations.Edit;
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Translations.Edit</h2>
+
+<div class="feedbacks">
+
+	@using (Html.BeginForm("Edit", "UserFeedback", FormMethod.Post, new { enctype = "multipart/form-data" }))
+	{
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(m => m.Id)
+
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-horizontal">
+			<div class="form-group">
+				@Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+					@Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextAreaFor(model => model.Text, new { @class = "form-control" })
+					@Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.CheckBoxFor(model => model.IsActive)
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.File, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					<img src="@Url.Action("Show", "File", new { area = "", id = Model.ImageId })" class="img-circle img-responsive" />
+					@Html.TextBoxFor(model => model.File, new { @type = "file" })
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+					<input type="submit" value="@Translations.Save" class="btn btn-default" />
+				</div>
+			</div>
+		</div>
+
+	}
+</div>
+<div>
+	@Html.ActionLink(@Translations.Slider_BackToList, "Index")
+</div>

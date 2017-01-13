@@ -192,6 +192,9 @@
   <data name="Contacts_Title" xml:space="preserve">
     <value>Контакты</value>
   </data>
+  <data name="Create" xml:space="preserve">
+    <value>Добавить новый елемент</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Удалить</value>
   </data>
@@ -206,6 +209,9 @@
   </data>
   <data name="Home_Title" xml:space="preserve">
     <value>Домашняя</value>
+  </data>
+  <data name="Image_Caption" xml:space="preserve">
+    <value>Изображение</value>
   </data>
   <data name="Messages_Title" xml:space="preserve">
     <value>Сообщения</value>
@@ -266,5 +272,20 @@
   </data>
   <data name="Slider_Title" xml:space="preserve">
     <value>Заголовок слайда</value>
+  </data>
+  <data name="UserFeedback_DeletePrompt" xml:space="preserve">
+    <value>Данный отзыв будет удален. Вы действительно хотите удалить его?</value>
+  </data>
+  <data name="UserFeedback_IsActive" xml:space="preserve">
+    <value>Отзыв активный?</value>
+  </data>
+  <data name="UserFeedback_Text" xml:space="preserve">
+    <value>Текст отзыва</value>
+  </data>
+  <data name="UserFeedback_Title" xml:space="preserve">
+    <value>Отзывы</value>
+  </data>
+  <data name="UserFeedback_UserName" xml:space="preserve">
+    <value>Имя оставившего отзыв</value>
   </data>
 </root>

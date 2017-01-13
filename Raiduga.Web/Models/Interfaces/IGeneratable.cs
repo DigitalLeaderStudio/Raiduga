@@ -1,4 +1,4 @@
-﻿namespace Raiduga.Web.Models
+﻿namespace Raiduga.Web.Models.Interfaces
 {
 	public interface IGeneratable<TDbModel, TViewModel>
 	{
