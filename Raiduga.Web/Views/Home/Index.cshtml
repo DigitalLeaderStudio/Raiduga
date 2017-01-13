@@ -14,20 +14,27 @@
 		<br />
 		@Html.Action("_ServiceHomePartial", "Service")
 	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h1 class="text-center">
+			<strong>@Translations.UserFeedback_Title</strong>
+		</h1> 
+		<br />
+	</div>
+	<div class="col-md-8 col-md-offset-2">
+			@Html.Action("_UserFeedbackHomePartial", "UserFeedback")
+	</div>
+</div>
+<div class="row">
 	<div class="col-md-12">
 		<h1 class="text-center">
 			<strong>@Translations.Home_ContactsUsPrompt</strong>
 		</h1>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-8 col-md-offset-2">
 		<div class="contacts">
 			@Html.Action("_ContactFormPartial", "Common")
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="contacts home">
-			@Html.Partial("_FastContactsPartial")
 		</div>
 	</div>
 </div>

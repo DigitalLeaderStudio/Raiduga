@@ -172,12 +172,14 @@
     <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\Base\BaseAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserFeedbackController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\UserFeedbackController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -201,14 +203,15 @@
     <Compile Include="Models\Common\AffiliateViewModel.cs" />
     <Compile Include="Models\Common\ContactRequestViewModel.cs" />
     <Compile Include="Models\Common\EmailViewModel.cs" />
-    <Compile Include="Models\Common\FileViewModel.cs" />
     <Compile Include="Models\Common\HoursViewModel.cs" />
     <Compile Include="Models\Common\PhoneViewModel.cs" />
     <Compile Include="Models\Common\SliderItemViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\IGeneratable.cs" />
+    <Compile Include="Models\Interfaces\AFileViewModel.cs" />
+    <Compile Include="Models\Interfaces\IGeneratable.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Service\CourseViewModel.cs" />
+    <Compile Include="Models\UserFeedback\UserFeedbackViewModel.cs" />
     <Compile Include="Models\Service\ServiceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -291,6 +294,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Admin\Views\Service\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Service\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\UserFeedback\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserFeedback\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\UserFeedback\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\UserFeedback\Delete.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -349,6 +356,7 @@
     <Content Include="Views\Shared\_FastContactsPartial.cshtml" />
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Service\_ServiceHomePartial.cshtml" />
+    <Content Include="Views\UserFeedback\_UserFeedbackHomePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

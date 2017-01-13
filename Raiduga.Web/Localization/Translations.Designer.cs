@@ -286,6 +286,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create new item.
+        /// </summary>
+        public static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Delete {
@@ -327,6 +336,15 @@ namespace Raiduga.Web.Localization {
         public static string Home_Title {
             get {
                 return ResourceManager.GetString("Home_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image.
+        /// </summary>
+        public static string Image_Caption {
+            get {
+                return ResourceManager.GetString("Image_Caption", resourceCulture);
             }
         }
         
@@ -421,7 +439,7 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The slide item will be deleted. Are you realy want to delete it?.
+        ///   Looks up a localized string similar to The slide item will be deleted. Do you really want to delete it?.
         /// </summary>
         public static string Slider_DeletePrompt {
             get {
@@ -507,6 +525,51 @@ namespace Raiduga.Web.Localization {
         public static string Slider_Title {
             get {
                 return ResourceManager.GetString("Slider_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The feedback will be deleted. Do you really want to delete it?.
+        /// </summary>
+        public static string UserFeedback_DeletePrompt {
+            get {
+                return ResourceManager.GetString("UserFeedback_DeletePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is feedback is active.
+        /// </summary>
+        public static string UserFeedback_IsActive {
+            get {
+                return ResourceManager.GetString("UserFeedback_IsActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feedbacks text.
+        /// </summary>
+        public static string UserFeedback_Text {
+            get {
+                return ResourceManager.GetString("UserFeedback_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feedbacks.
+        /// </summary>
+        public static string UserFeedback_Title {
+            get {
+                return ResourceManager.GetString("UserFeedback_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User name.
+        /// </summary>
+        public static string UserFeedback_UserName {
+            get {
+                return ResourceManager.GetString("UserFeedback_UserName", resourceCulture);
             }
         }
     }

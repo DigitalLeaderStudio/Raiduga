@@ -1,6 +1,7 @@
 ﻿namespace Raiduga.Web.Models.Common
 {
 	using Raiduga.Models;
+	using Raiduga.Web.Models.Interfaces;
 
 	public class EmailViewModel : IGeneratable<Email, EmailViewModel>
 	{

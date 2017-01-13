@@ -30,6 +30,8 @@
 
 		public virtual DbSet<File> Files { get; set; }
 
+		public virtual DbSet<UserFeedback> UserFeedbacks { get; set; }
+
 		#endregion
 
 		protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)

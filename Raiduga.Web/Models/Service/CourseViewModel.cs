@@ -2,6 +2,7 @@
 {
 	using Raiduga.Models;
 	using Raiduga.Models.Interfaces;
+	using Raiduga.Web.Models.Interfaces;
 	using System;
 
 	public class CourseViewModel : IBodyHtml, IGeneratable<Course, CourseViewModel>

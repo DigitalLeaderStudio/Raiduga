@@ -1,6 +1,7 @@
 ﻿namespace Raiduga.Web.Models.Common
 {
 	using Raiduga.Models;
+	using Raiduga.Web.Models.Interfaces;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Web.Mvc;

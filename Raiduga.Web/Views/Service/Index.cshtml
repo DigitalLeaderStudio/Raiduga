@@ -13,7 +13,13 @@
 		<div class="service-block center-block">
 			<div class="row">
 				<div class="col-md-offset-2 col-md-2">
-					<img src="@Url.Action("Show", "File", new { area = "", id = item.ImageId })" alt="@item.Name" />
+					@{
+						var srcAction = item.ImageId.HasValue ?
+							Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
+							string.Empty;
+							
+					}
+					<img src="@srcAction" alt="@item.Name" />
 				</div>
 				<div class="col-md-6">
 					<h4><strong>@item.Name</strong></h4>

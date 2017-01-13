@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +61,10 @@
     <Compile Include="Migrations\201701121302241_InitialCreate.cs" />
     <Compile Include="Migrations\201701121302241_InitialCreate.Designer.cs">
       <DependentUpon>201701121302241_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701130940104_AddUserFeedback.cs" />
+    <Compile Include="Migrations\201701130940104_AddUserFeedback.Designer.cs">
+      <DependentUpon>201701130940104_AddUserFeedback.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701121302241_InitialCreate.resx">
       <DependentUpon>201701121302241_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701130940104_AddUserFeedback.resx">
+      <DependentUpon>201701130940104_AddUserFeedback.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

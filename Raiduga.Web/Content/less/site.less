@@ -185,8 +185,34 @@ footer {
 		color: @color-primary;
 	}
 
+	.panel-default {
+		& > .panel-heading > h4 a {
+			color: #fff;
+		}
+
+		&:nth-child(4n+1) > .panel-heading {
+			background-color: @color-orange;
+		}
+
+		&:nth-child(4n+2) > .panel-heading {
+			background-color: @color-green;
+		}
+
+		&:nth-child(4n+3) > .panel-heading {
+			background-color: @color-purple;
+		}
+	}
+
 	.contact-form {
 		margin-top: 30px;
+
+		&.panel-default > .panel-heading {
+			background-color: @color-light-blue;
+
+			h4 {
+				color: white;
+			}
+		}
 
 		.btn-margin {
 			margin: 5px;
@@ -203,6 +229,8 @@ footer {
 	margin-top: 20px;
 
 	.service-block {
+		margin-bottom: 20px;
+
 		hr {
 			border-width: 3px;
 		}
@@ -217,7 +245,7 @@ footer {
 			}
 		}
 
-		&:nth-child(1) {
+		&:nth-child(4n+1) {
 			hr, .btn-primary {
 				&:hover {
 					border-color: @color-orange-hover;
@@ -233,7 +261,7 @@ footer {
 			}
 		}
 
-		&:nth-child(2) {
+		&:nth-child(4n+2) {
 			hr, .btn-primary {
 				&:hover {
 					border-color: @color-green-hover;
@@ -249,7 +277,7 @@ footer {
 			}
 		}
 
-		&:nth-child(3) {
+		&:nth-child(4n+3) {
 			hr, .btn-primary {
 				&:hover {
 					border-color: @color-purple-hover;
@@ -263,6 +291,44 @@ footer {
 			.thumbnail {
 				border: solid 3px @color-purple;
 			}
+		}
+	}
+}
+
+.feedbacks {
+	.feedback-item {
+		margin-bottom: 40px;
+
+		img, hr {
+			border-style: solid;
+		}
+
+		img {
+			border-width: 5px;
+		}
+
+		hr {
+			border-width: 2px;
+		}
+
+		&:nth-child(4n+1) img, &:nth-child(4n+1) hr {
+			border-color: @color-orange;
+		}
+
+		&:nth-child(4n+2) img, &:nth-child(4n+2) hr {
+			border-color: @color-green;
+		}
+
+		&:nth-child(4n+3) img, &:nth-child(4n+3) hr {
+			border-color: @color-red;
+		}
+
+		&:nth-child(4n+4) img, &:nth-child(4n+4) hr {
+			border-color: @color-blue;
+		}
+
+		&:nth-child(4n+5) img, &:nth-child(4n+5) hr {
+			border-color: @color-purple;
 		}
 	}
 }

@@ -5,7 +5,7 @@
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
 
-	public class Service : IKey<int>, IBodyHtml
+	public class Service : IKey<int>, IBodyHtml, IImageble
 	{
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
