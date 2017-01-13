@@ -60,9 +60,15 @@ i {
 }
 
 header {
-    border-bottom: 1px solid @color-grey-border;
-    width: 100%;
-    padding: 10px 5%;
+    .row {
+        margin: 0;
+    }
+
+    .main-menu {
+        border-bottom: 1px solid @color-grey-border;
+        width: 100%;
+        padding: 10px 5%;
+    }
 
 	a {
 		&:hover {
@@ -92,14 +98,13 @@ header {
         }
 	}
 
-
 	.navbar {
 		margin: 0px;
 		border: none;
 		background: #FFFFFF;
 
 		.navbar-header {
-			width: 40%;
+			width: 50%;
             .navbar-brand {
 				&.active,
 				&:hover {
@@ -110,7 +115,7 @@ header {
 
         .navbar-collapse {
             float: left;
-            width: 60%;
+            width: 50%;
             padding: 15px 0;
 
             .nav.navbar-nav {
@@ -158,6 +163,17 @@ header {
             }
         }
 	}
+
+    .navbar-toggle {
+        color: rgb(255, 255, 255);
+        font-size: 1em;
+        padding: 2px 7px;
+        margin-top: 20px;
+
+        i {
+            margin: 0;
+        }
+    }
 }
 
 footer {
@@ -391,9 +407,72 @@ footer {
 
 
 
+/*xxs*/
+@media (max-width: 340px) { 
+    header {
+        .navbar-nav {
+            margin: 0;
+        }
+        .main-menu {
+            padding: 10px 1% !important;
+        }
+        .navbar-header {
+            width: 100% !important;
+            
+            a.logo img {
+		        width: 50px !important;
+		        float: left;
+                margin: 0 5px;
+	        }
+
+	        a.logo h4 {
+		        float: left;
+		        margin-top: 10px !important;
+		        font-family: @font-comforta;
+		        font-size: 0.7em !important;
+                color: @text-color;
+
+                &:hover {
+                    color: @color-blue;
+                    transition: color 0.3s;
+                }
+	        }
+
+        }
+        .navbar-collapse {
+            width: 100% !important;
+            padding: 0 !important;
+            margin-top: 10px !important;
+            border-top: 1px solid @color-grey-border !important;
+
+            ul {
+                float: right !important;
+                text-align: right;
+                padding-right: 10px !important;
+            }
+        }
+        .navbar-toggle {
+            margin: 5px 10px 0 0 !important;
+            background: @color-red !important;
+            border: 0 !important;
+            padding: 5px;
+
+            &:focus {
+                background: @color-orange !important;
+            } 
+        }
+    }
+}
+
 /*xs*/
 @media (max-width: 767px) { 
     header {
+        .navbar-nav {
+            margin: 0;
+        }
+        .main-menu {
+            padding: 10px 1% !important;
+        }
         .navbar-header {
             width: 100% !important;
             
@@ -426,11 +505,11 @@ footer {
             ul {
                 float: right !important;
                 text-align: right;
-                padding-right: 20px !important;
+                padding-right: 10px !important;
             }
         }
         .navbar-toggle {
-            margin: 10px 10px 0 !important;
+            margin: 15px 10px 0 0;
             background: @color-red !important;
             border: 0 !important;
 
@@ -444,6 +523,9 @@ footer {
 /*sm*/
 @media (min-width: 768px) and (max-width: 991px) { 
     header {
+        .main-menu {
+            padding: 10px 2% !important;
+        }
         .navbar-header {
             width: 100% !important;
         }
@@ -461,6 +543,9 @@ footer {
 /*md*/
 @media (min-width: 992px) and (max-width: 1199px) { 
     header {
+        .main-menu {
+            padding: 10px 1% !important;
+        }
         .navbar {
 		    margin: 0px;
 		    border: none;
