@@ -2,6 +2,7 @@
 
 body {
 	color: @text-color;
+    font-family: @font-open-sans;
 }
 
 i {
@@ -59,9 +60,9 @@ i {
 }
 
 header {
-	.top-line {
-		padding: 10px 30px 10px 60px;
-	}
+    border-bottom: 1px solid @color-grey-border;
+    width: 100%;
+    padding: 10px 5%;
 
 	a {
 		&:hover {
@@ -73,9 +74,9 @@ header {
 	}
 
 	a.logo img {
-		height: 100px;
 		width: 100px;
 		float: left;
+        margin-right: 10px;
 	}
 
 	a.logo h4 {
@@ -83,15 +84,23 @@ header {
 		margin-top: 20px;
 		font-family: @font-comforta;
 		font-size: 1.4em;
+        color: @text-color;
+
+        &:hover {
+            color: @color-blue;
+            transition: color 0.3s;
+        }
 	}
 
+
 	.navbar {
-		margin-top: 20px;
+		margin: 0px;
 		border: none;
 		background: #FFFFFF;
 
 		.navbar-header {
-			.navbar-brand {
+			width: 40%;
+            .navbar-brand {
 				&.active,
 				&:hover {
 					color: #D1102E;
@@ -99,8 +108,55 @@ header {
 			}
 		}
 
-		ul.navbar-nav {
-		}
+        .navbar-collapse {
+            float: left;
+            width: 60%;
+            padding: 15px 0;
+
+            .nav.navbar-nav {
+                float: right;
+                padding: 0;
+
+                & li a {
+                    font-weight: bold;
+                    color: @text-color;
+                    font-size: 14px;
+                    text-transform: uppercase;
+
+                    & .fa.fa-home {
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        transition: color 0.3s;
+                    } 
+                }
+
+                & li:nth-child(1) a:hover {
+                    color: @color-red;
+                }
+                & li:nth-child(2) a:hover {
+                    color: @color-orange;
+                }
+                & li:nth-child(3) a:hover {
+                    color: @color-yellow;
+                }
+                & li:nth-child(4) a:hover {
+                    color: @color-green;
+                }
+                & li:nth-child(5) a:hover {
+                    color: @color-light-blue;
+                }
+                & li:nth-child(6) a:hover {
+                    color: @color-blue;
+                }
+                & li:nth-child(7) a:hover {
+                    color: @color-purple;
+                }
+
+                
+            }
+        }
 	}
 }
 
@@ -331,4 +387,115 @@ footer {
 			border-color: @color-purple;
 		}
 	}
+}
+
+
+
+/*xs*/
+@media (max-width: 767px) { 
+    header {
+        .navbar-header {
+            width: 100% !important;
+            
+            a.logo img {
+		        width: 60px;
+		        float: left;
+                margin: 0 5px;
+	        }
+
+	        a.logo h4 {
+		        float: left;
+		        margin-top: 15px;
+		        font-family: @font-comforta;
+		        font-size: 0.8em;
+                color: @text-color;
+
+                &:hover {
+                    color: @color-blue;
+                    transition: color 0.3s;
+                }
+	        }
+
+        }
+        .navbar-collapse {
+            width: 100% !important;
+            padding: 0 !important;
+            margin-top: 10px !important;
+            border-top: 1px solid @color-grey-border !important;
+
+            ul {
+                float: right !important;
+                text-align: right;
+                padding-right: 20px !important;
+            }
+        }
+        .navbar-toggle {
+            margin: 10px 10px 0 !important;
+            background: @color-red !important;
+            border: 0 !important;
+
+            &:focus {
+                background: @color-orange !important;
+            } 
+        }
+    }
+}
+
+/*sm*/
+@media (min-width: 768px) and (max-width: 991px) { 
+    header {
+        .navbar-header {
+            width: 100% !important;
+        }
+        .navbar-collapse {
+            width: 100% !important;
+            padding: 10px 0 0 !important;
+
+            ul {
+                float: left !important;
+            }
+        }
+    }
+}
+
+/*md*/
+@media (min-width: 992px) and (max-width: 1199px) { 
+    header {
+        .navbar {
+		    margin: 0px;
+		    border: none;
+		    background: #FFFFFF;
+
+            a.logo img {
+		        width: 90px;
+		        float: left;
+                margin-right: 10px;
+	        }
+
+            a.logo h4 {
+		        margin-top: 20px;
+		        font-size: 1.2em;
+	        }
+
+            .nav.navbar-nav {
+                & li a {
+                    font-weight: bold;
+                    color: @text-color;
+                    font-size: 12px !important;
+                    text-transform: uppercase;
+
+                    & .fa.fa-home {
+                        font-size: 20px;
+                    }
+                }                
+            }
+	    }
+    }
+
+
+}
+
+/*lg*/
+@media (min-width: 1200px) {
+
 }

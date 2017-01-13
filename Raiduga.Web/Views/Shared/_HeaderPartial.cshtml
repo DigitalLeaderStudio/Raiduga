@@ -1,20 +1,6 @@
-﻿
-<div class="row top-line">
-	<div class="col-md-5">
-		<a href="/" class="logo">
-			<img src="~/Content/img/logo.jpg" />
-			<h4>
-				Центр інтелектуального <br />
-				та творчого розвитку особистості
-			</h4>
-		</a>
-	</div>
-	<div class="col-md-7">
-		@Html.Partial("_MainMenuPartial")
-	</div>
+﻿<div class="row">
+	@Html.Partial("_MainMenuPartial")
 </div>
 <div class="row">
-	<div class="col-md-12">
-		@Html.Action("_SliderPartial", "Common")
-	</div>
+	@Html.Action("_SliderPartial", "Common")
 </div>
