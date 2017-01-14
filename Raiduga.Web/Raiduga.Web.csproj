@@ -172,12 +172,15 @@
     <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\Base\BaseAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HtmlContentController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserFeedbackController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\UserFeedbackController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
@@ -204,6 +207,7 @@
     <Compile Include="Models\Common\ContactRequestViewModel.cs" />
     <Compile Include="Models\Common\EmailViewModel.cs" />
     <Compile Include="Models\Common\HoursViewModel.cs" />
+    <Compile Include="Models\Common\HtmlContentViewModel.cs" />
     <Compile Include="Models\Common\PhoneViewModel.cs" />
     <Compile Include="Models\Common\SliderItemViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -298,6 +302,7 @@
     <Content Include="Areas\Admin\Views\UserFeedback\Create.cshtml" />
     <Content Include="Areas\Admin\Views\UserFeedback\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\UserFeedback\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\HtmlContent\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -324,8 +329,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -352,8 +357,8 @@
     <Content Include="Views\Shared\_MainMenuPartial.cshtml" />
     <Content Include="Views\Shared\_SliderPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_ContactFormPartial.cshtml" />
-    <Content Include="Views\Shared\_FastContactsPartial.cshtml" />
+    <Content Include="Views\Contact\_ContactFormPartial.cshtml" />
+    <Content Include="Views\Contact\_FastContactsPartial.cshtml" />
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Service\_ServiceHomePartial.cshtml" />
     <Content Include="Views\UserFeedback\_UserFeedbackHomePartial.cshtml" />

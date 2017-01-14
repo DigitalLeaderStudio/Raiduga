@@ -224,7 +224,14 @@ namespace Raiduga.DAL.Migrations
 			var preSchollService = new Service
 			{
 				Name = "Дошкольникам",
-				Description = "Осенью дни становятся короче, а ночи — длиннее. После теплых августовских дней наступают прохладные сентябрьские. Осеннее солнце поднимается уже не так высоко, как летом, поэтому его лучи уже не прогревают землю. Температура воздуха становится холоднее.",
+				Description = @"Центр «Райдуга» - це ігровий простір, в якому бережливо розвивають інтелект дітей та
+готують до дорослого життя у новій інформаційній епосі.Ми зустрічаємо малечу з 1,5 років та супроводжуємо її гармонічний розвиток до школи. 
+Батьки можуть обрати як окремий напрямок для занять, так і підібрати комплекс. До
+кожної дитини є індивідуальний підхід, складається індивідуальний план розвитку. 
+З 2,5 років можна відвідувати чотиригодинний міні-сад, а після адаптації - групу повного
+дня.
+Ми святкуємо веселі дні народження та проводимо тематичні свята. Щотижня малечу дивують майстер-класи по кулінарії, бісероплетінню, миловарінню тощо
+Проходять індивідуальні заняття з логопедом та консультації психолога.",
 				ImageId = image.Id
 			};
 			#endregion
@@ -543,7 +550,12 @@ namespace Raiduga.DAL.Migrations
 			var schollService = new Service
 			{
 				Name = "Школьникам",
-				Description = "Осенью дни становятся короче, а ночи — длиннее. После теплых августовских дней наступают прохладные сентябрьские. Осеннее солнце поднимается уже не так высоко, как летом, поэтому его лучи уже не прогревают землю. Температура воздуха становится холоднее.",
+				Description = @"Час після уроків – це можливість знайти своє покликання, розвинути хобі, знайти нових
+друзів, стати впевненішим в собі. У нас працює Еnglish club, школа хореографії та вокалу , активно проходять усі канікули, 
+готують до ДПА та ЗНО, вчать грати на фортепіано, малювати, конструювати з 
+паперу, виготовляти власноруч мило, свічки, прикраси та поробки з бісеру. 
+Психологічні тренінги допомагають покращити пам’ять, зрозуміти себе, 
+зорієнтуватись у просторі професій та відносин з однолітками та дорослими.",
 				BodyHtml = "",
 				ImageId = image.Id
 			};
@@ -603,7 +615,14 @@ namespace Raiduga.DAL.Migrations
 			var adultService = new Service
 			{
 				Name = "Взрослым",
-				Description = "Осенью дни становятся короче, а ночи — длиннее. После теплых августовских дней наступают прохладные сентябрьские. Осеннее солнце поднимается уже не так высоко, как летом, поэтому его лучи уже не прогревают землю. Температура воздуха становится холоднее.",
+				Description = @"Розвиток особистості не завершується отриманням атестату зрілості. На кожному етапі 
+життя ми стикаємось з проблемами, кризами, стресами, депресіями. Добре, коли на шляху 
+зустрічаються ті, хто вислухає, допоможе розібратись, порадить. Для вирішення багатьох 
+проблем у нас працюють клуби відкритого та закритого типів, індивідуальне психологічне 
+консультування. Ми не забуваємо і про творчий та фізичний розвиток, коли для хобі 
+потрібні однодумці, тому у нас можна і поспівати, і потанцювати, і при цьому ще 
+з’ясувати купу питань по вихованню малечі чи знаходженню спільної мови з підлітками 
+чи коханими.",
 				BodyHtml = "",
 				Courses = new List<Course>(),
 				ImageId = image.Id
@@ -730,6 +749,140 @@ namespace Raiduga.DAL.Migrations
 			context.SaveChanges();
 
 			#endregion
+
+			#endregion
+
+			#region HtmlContent
+
+			context.HtmlContents.AddOrUpdate(c => c.Name,
+				new HtmlContent
+				{
+					CreationDate = DateTime.Now,
+					Name = "About",
+					BodyHtml = @"<br />
+	<br />
+	<div class=""row"">
+		<div class=""col-md-2 col-md-offset-2"">
+			<img src=""~/Content/img/logo 500x422.png"" class=""img-responsive"" />
+		</div>
+		<div class=""col-md-6"">
+			Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.
+			Главными особенностями игры являются уровни «Разрушительного Дерби», знакомые игрокам по серии Flatout от студии Bugbear.
+			Также в игре представлены арены со свободными трюками, мультиплеер на 8 игроков,
+			а также режим разделенного экрана Split Screen, позволяющий сыграть вдвоем на одном компьютере.
+		</div>
+	</div>
+	<br />
+	<br />
+	<h3 class=""text-center""><strong>Наши достижения</strong></h3>
+	<br />
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">39</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Работников</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">230</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Клиентов за год</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">435</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Дошкольников</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">125</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Школьников</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">38</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Взрослых</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">8</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Лет опыта</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">3</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Филии</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=""row"">
+		<div class=""col-md-6 col-md-offset-3"">
+			<div class=""media"">
+				<div class=""media-left"">
+					<div class=""media-object"">67</div>
+				</div>
+				<div class=""media-body"">
+					<h4 class=""media-heading"">Курсов</h4>
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
+				</div>
+			</div>
+		</div>
+	</div>"
+				});
+
+			context.SaveChanges();
 
 			#endregion
 		}

@@ -1,30 +1,30 @@
 ﻿@using Raiduga.Web.Localization
 
 <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a href="/" class="logo">
-                <img src="~/Content/img/logo 500x422.png" />
-                <h4>
-                    Центр інтелектуального <br />
-                    та творчого розвитку особистості
-                </h4>
-            </a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="main-menu">
-            <ul class="nav navbar-nav">
-                <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li><a href="@Url.Action("Index", "Service", new { area = "" })">@Translations.Service_Title</a></li>
-                <li><a href="#">Новини</a></li>
-                <li><a href="#">Розклад</a></li>
-                <li><a href="#">Про нас</a></li>
-                <li><a href="@Url.Action("Contact", "Home")">@Translations.Contacts_Title</a></li>
-            </ul>
-        </div>
-    </div>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="/" class="logo">
+				<img src="~/Content/img/logo 500x422.png" />
+				<h4>
+					Центр інтелектуального <br />
+					та творчого розвитку особистості
+				</h4>
+			</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="main-menu">
+			<ul class="nav navbar-nav">
+				<li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+				<li><a href="@Url.Action("Index", "Service", new { area = "" })">@Translations.Service_Title</a></li>
+				<li><a href="#">Новини</a></li>
+				<li><a href="#">Розклад</a></li>
+				<li><a href="@Url.Action("Index", "About")">@Translations.About_PageTitle</a></li>
+				<li><a href="@Url.Action("Index", "Contact")">@Translations.Contacts_Title</a></li>
+			</ul>
+		</div>
+	</div>
 </nav>

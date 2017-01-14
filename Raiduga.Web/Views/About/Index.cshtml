@@ -1,0 +1,11 @@
+﻿@using Raiduga.Web.Localization
+@model Raiduga.Web.Models.Common.HtmlContentViewModel
+@{
+	ViewBag.Title = Translations.About_PageTitle;
+	var enFormatProvier = new System.Globalization.CultureInfo("en-EN");
+}
+
+<div class="about">
+	<h1 class="text-center"><strong> @Translations.About_PageTitle</strong></h1>
+	@Html.Raw(Model.BodyHtml)
+</div>

@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201701130940104_AddUserFeedback.Designer.cs">
       <DependentUpon>201701130940104_AddUserFeedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701131741518_AddHtmlContent.cs" />
+    <Compile Include="Migrations\201701131741518_AddHtmlContent.Designer.cs">
+      <DependentUpon>201701131741518_AddHtmlContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701130940104_AddUserFeedback.resx">
       <DependentUpon>201701130940104_AddUserFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701131741518_AddHtmlContent.resx">
+      <DependentUpon>201701131741518_AddHtmlContent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

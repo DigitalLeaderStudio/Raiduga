@@ -6,6 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title - Администрирование</title>
+	<link rel="icon" href="@Url.Content("~/content/img/favicon.ico")" type="image/x-icon">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
@@ -34,7 +35,9 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li>@Html.ActionLink("About", "About", "Home")</li>
+					<li>
+						<a href="@Url.Action( "Index", "HtmlContent", new { area = "Admin" })">@Translations.Content_Title</a>
+					</li>
 					<li>
 						<a href="@Url.Action( "Index", "Slider", new { area = "Admin" })">@Translations.Slider_Page_Title</a>
 					</li>

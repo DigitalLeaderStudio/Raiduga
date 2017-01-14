@@ -32,6 +32,8 @@
 
 		public virtual DbSet<UserFeedback> UserFeedbacks { get; set; }
 
+		public virtual DbSet<HtmlContent> HtmlContents { get; set; }
+
 		#endregion
 
 		protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
