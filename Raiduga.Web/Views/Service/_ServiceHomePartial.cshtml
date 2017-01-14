@@ -5,33 +5,30 @@
 	<div class="row">
 		@foreach (var item in Model)
 		{
-			<div class="service-block">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						@{			
-							var srcAction = item.ImageId.HasValue ?
-							Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
-							string.Empty;
-						}
-						<img src="@srcAction" alt="@item.Name" />
-						<div class="caption text-center">
-							<h3><strong>@item.Name</strong></h3>
-							<hr />
-							<p>
-								<ul class="text-left">
-									@foreach (var course in item.Courses.OrderBy(c => c.PriorityOrder).Take(5))
-									{
-										<li><i class="fa fa-certificate"></i> @course.Name</li>
-									}
-								</ul>
-							</p>
-						</div>
-						<p class="text-center">
-							<a href="#" class="btn btn-primary">@Translations.Service_AllCourses</a>
+			<div class="col-md-4 service-block">
+				<div class="thumbnail">
+					@{			
+						var srcAction = item.ImageId.HasValue ?
+						Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
+						string.Empty;
+					}
+					<img src="@srcAction" alt="@item.Name" />
+					<div class="caption text-center">
+						<h3><strong>@item.Name</strong></h3>
+						<hr />
+						<p>
+							<ul class="text-left">
+								@foreach (var course in item.Courses.OrderBy(c => c.PriorityOrder).Take(5))
+								{
+									<li><i class="fa fa-certificate"></i> @course.Name</li>
+								}
+							</ul>
 						</p>
 					</div>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary">@Translations.Service_AllCourses</a>
+					</p>
 				</div>
-				@*<div class="clearfix"></div>*@
 			</div>
 		}
 	</div>
