@@ -65,9 +65,9 @@ header {
     }
 
     .main-menu {
-        border-bottom: 1px solid @color-grey-border;
-        width: 100%;
-        padding: 10px 5%;
+    border-bottom: 1px solid @color-grey-border;
+    width: 100%;
+    padding: 10px 5%;
     }
 
 	a {
@@ -141,26 +141,30 @@ header {
                 & li:nth-child(1) a:hover {
                     color: @color-red;
                 }
+
                 & li:nth-child(2) a:hover {
                     color: @color-orange;
                 }
+
                 & li:nth-child(3) a:hover {
                     color: @color-yellow;
                 }
+
                 & li:nth-child(4) a:hover {
                     color: @color-green;
                 }
+
                 & li:nth-child(5) a:hover {
                     color: @color-light-blue;
                 }
+
                 & li:nth-child(6) a:hover {
                     color: @color-blue;
                 }
+
                 & li:nth-child(7) a:hover {
                     color: @color-purple;
                 }
-
-                
             }
         }
 	}
@@ -374,15 +378,15 @@ footer {
             float: left;
             width: 40%;
             vertical-align: middle;
-        }
+		}
         p {
             padding-top: 15%;
             float: left;
             width: 60%;
 
-        }
-    }
-    
+	}
+}
+
 }
 
 .feedbacks {
@@ -423,6 +427,54 @@ footer {
 	}
 }
 
+.about {
+	.row {
+		.media {
+			margin-bottom: 20px;
+
+			h4 {
+				font-weight: bold;
+				font-family: @font-open-sans;
+			}
+
+			.media-object {
+				float: left;
+				border: solid 5px;
+				border-radius: 50%;
+				padding: 10px;
+				margin: 10px;
+				font-size: 2em;
+				font-weight: bold;
+				font-family: @font-comforta;
+				min-width: 75px;
+				text-align: center;
+			}
+		}
+
+		&:nth-child(2n+1) .media {
+			.media-object {
+				float: left;
+				margin-right: 20px;
+			}
+		}
+
+		&:nth-child(2n+2) .media {
+			h4 {
+				text-align: right;
+			}
+
+			.media-object {
+				float: right;
+				margin-left: 20px;
+			}
+		}
+
+		&:nth-child(7n+1) {
+			.media .media-object {
+				border-color: @color-red;
+			}
+}
+
 
 
 /*xxs*/
@@ -455,24 +507,13 @@ footer {
                 }
 	        }
 
-        }
+}
         .navbar-collapse {
             width: 100% !important;
             padding: 0 !important;
             margin-top: 10px !important;
             border-top: 1px solid @color-grey-border !important;
 
-            ul {
-                float: right !important;
-                text-align: right;
-                padding-right: 10px !important;
-            }
-        }
-        .navbar-toggle {
-            margin: 5px 10px 0 0 !important;
-            background: @color-red !important;
-            border: 0 !important;
-            padding: 5px;
 
             &:focus {
                 background: @color-orange !important;
@@ -481,6 +522,25 @@ footer {
     }
 }
 
+		&:nth-child(7n+5) {
+			.media .media-object {
+				border-color: @color-light-blue;
+			}
+		}
+
+		&:nth-child(7n+6) {
+			.media .media-object {
+				border-color: @color-blue;
+			}
+		}
+
+		&:nth-child(7n+7) {
+			.media .media-object {
+				border-color: @color-purple;
+			}
+		}
+	}
+}
 /*xs*/
 @media (max-width: 767px) { 
     header {
@@ -510,8 +570,8 @@ footer {
                     transition: color 0.3s;
                 }
 	        }
+		}
 
-        }
         .navbar-collapse {
             width: 100% !important;
             padding: 0 !important;
@@ -524,6 +584,7 @@ footer {
                 padding-right: 10px !important;
             }
         }
+
         .navbar-toggle {
             margin: 15px 10px 0 0;
             background: @color-red !important;
@@ -535,7 +596,6 @@ footer {
         }
     }
 }
-
 /*sm*/
 @media (min-width: 768px) and (max-width: 991px) { 
     header {
@@ -545,6 +605,7 @@ footer {
         .navbar-header {
             width: 100% !important;
         }
+
         .navbar-collapse {
             width: 100% !important;
             padding: 10px 0 0 !important;
@@ -555,7 +616,6 @@ footer {
         }
     }
 }
-
 /*md*/
 @media (min-width: 992px) and (max-width: 1199px) { 
     header {
@@ -592,11 +652,7 @@ footer {
             }
 	    }
     }
-
-
 }
-
 /*lg*/
 @media (min-width: 1200px) {
-
 }

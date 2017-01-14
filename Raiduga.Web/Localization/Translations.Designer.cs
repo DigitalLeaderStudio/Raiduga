@@ -61,6 +61,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About us.
+        /// </summary>
+        public static string About_PageTitle {
+            get {
+                return ResourceManager.GetString("About_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back to list.
         /// </summary>
         public static string BackToList {
@@ -282,6 +291,15 @@ namespace Raiduga.Web.Localization {
         public static string ContactsForm_Title {
             get {
                 return ResourceManager.GetString("ContactsForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Html contents.
+        /// </summary>
+        public static string Content_Title {
+            get {
+                return ResourceManager.GetString("Content_Title", resourceCulture);
             }
         }
         

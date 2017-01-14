@@ -15,7 +15,7 @@
 		<div class="title">
 			@Translations.Contacts_Title
 		</div>
-		@Html.Partial("_FastContactsPartial")
+		@Html.Partial("~/Views/Contact/_FastContactsPartial.cshtml")
 	</div>
 	<div class="col-md-4">
 		<div class="title">
@@ -34,7 +34,7 @@
 				<a href="#">Новини</a>
 			</div>
 			<div class="col-md-6"><a href="#">Про нас</a></div>
-            <div class="col-md-6"><a href="@Url.Action("Index", "Admin", new { area = "Admin" })">Admin</a></div>
+			<div class="col-md-6"><a href="@Url.Action("Index", "Admin", new { area = "Admin" })">Admin</a></div>
 		</div>
 	</div>
 </div>

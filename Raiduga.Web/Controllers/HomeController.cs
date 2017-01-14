@@ -20,17 +20,5 @@
 
 			return View();
 		}
-
-		public ActionResult Contact()
-		{
-			var model = new List<AffiliateViewModel>();
-
-			foreach (var affiliate in DbContext.Affiliates.OrderByDescending(a => a.IsPrimary).ToArray())
-			{
-				model.Add(new AffiliateViewModel().FromDbModel(affiliate));
-			}
-
-			return View(model);
-		}
 	}
 }
