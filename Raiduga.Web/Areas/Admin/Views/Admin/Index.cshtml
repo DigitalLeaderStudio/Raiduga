@@ -1,15 +1,68 @@
-﻿@{
-	ViewBag.Title = "Index";
+﻿@using Raiduga.Web.Localization;
+
+@{
+	var title = Translations.Admin_HomeTitle;
+	ViewBag.Title = title;
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>@title</h2>
 
 <div class="row">
-	<div class="col-md-3">
-		<a href="@Url.Action("Index", "Slider", new { area = "Admin" })">Редактировать Slider</a>
+	<div class="col-md-10 col-md-offset-1">
+		<ul class="list-group">
+			<li class="list-group-item">
+				<a href="@Url.Action( "Index", "HtmlContent", new { area = "Admin" })">@Translations.Content_Title</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_ContentDescription
+				</span>
+			</li>
+			<li class="list-group-item">
+				<a href="@Url.Action( "Index", "Slider", new { area = "Admin" })">@Translations.Slider_Page_Title</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_SliderDescription
+				</span>
+			</li>
+			<li class="list-group-item">
+				<a href="@Url.Action( "Index", "UserFeedback", new { area = "Admin" })">@Translations.UserFeedback_Title</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_FeedbackDescription
+				</span>
+			</li>
+			<li class="list-group-item">
+				<a href="@Url.Action( "Index", "Service", new { area = "Admin" })">@Translations.Service_Title</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_ServiceDescription
+				</span>
+			</li>
+			<li class="list-group-item">
+				<a href="@Url.Action("Index", "Contact", new { area = "Admin"})">@Translations.Contacts_Title</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_ContactDescription
+				</span>
+			</li>
+			<li class="list-group-item">
+				@{
+					var count = ViewBag.NewMessagesCount;
+				}
+				<a href="@Url.Action("Index", "Messages", new { area = "Admin" })">@Translations.Messages_Title <span class="badge">@count</span></a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_MessageDescription
+				</span>
+			</li>
+		</ul>
 	</div>
-	<div class="col-md-3"></div>
-	<div class="col-md-3"></div>
-	<div class="col-md-3"></div>
+
 </div>

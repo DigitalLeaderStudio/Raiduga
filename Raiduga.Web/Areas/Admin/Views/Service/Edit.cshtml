@@ -27,12 +27,21 @@
 				</h4>
 				<hr />
 				<p>
-					@Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+					@Html.TextAreaFor(model => model.Description, new { @class = "form-control", @rows = "4" })
 				</p>
 				<br />
 				<button type="submit" class="btn btn-primary pull-right">@Translations.Save</button>
 			</div>
 		</div>
+
+		<div class="courses">
+			@foreach (var course in Model.Courses)
+			{
+				@course.Name<br />
+				@course.Description
+			}
+		</div>
+
 	</div>
 }
 <div>

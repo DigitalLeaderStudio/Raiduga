@@ -21,7 +21,7 @@
 
 </head>
 <body class="admin">
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,6 +36,9 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li>
+						<a href="@Url.Action( "Index", "Admin", new { area = "Admin" })"><i class="fa fa-home"></i></a>
+					</li>
+					<li>
 						<a href="@Url.Action( "Index", "HtmlContent", new { area = "Admin" })">@Translations.Content_Title</a>
 					</li>
 					<li>
@@ -47,15 +50,15 @@
 					<li>
 						<a href="@Url.Action( "Index", "Service", new { area = "Admin" })">@Translations.Service_Title</a>
 					</li>
-
-					<li>@Html.ActionLink(@Translations.Contacts_Title, "Index", "Contact")</li>
+					<li>
+						<a href="@Url.Action("Index", "Contact", new { area = "Admin"})">@Translations.Contacts_Title</a>
+					</li>
 					<li>
 						@{
 							var count = ViewBag.NewMessagesCount;
 						}
 						<a href="@Url.Action("Index", "Messages", new { area = "Admin" })">@Translations.Messages_Title <span class="badge">@count</span></a>
 					</li>
-					@*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
 				</ul>
 				@Html.Partial("_LoginPartial")
 			</div>
@@ -65,7 +68,17 @@
 		@RenderBody()
 		<hr />
 		<footer>
-			<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+			<p>
+				<address>
+					Разработано: &copy; <a href="http://www.nobugsexception.com/">noBugsException</a>
+				</address>
+				<address>
+					По всем вопросам связанным с сайтом и разработкой, обращайтесь <br />
+					<i class="fa fa-envelope"></i>
+					<a href="mailto:office@nobugsexception.com">office@nobugsexception.com</a><br />
+					<i class="fa fa-phone"></i><a href="tel:+380961212713">+38096 121 2713</a>
+				</address>
+			</p>
 		</footer>
 	</div>
 

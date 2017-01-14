@@ -21,6 +21,11 @@
 			return View(model);
 		}
 
+		public ActionResult CoursesList(int? id)
+		{
+			return View();
+		}
+
 		public ActionResult _ServiceHomePartial()
 		{
 			var dbData = DbContext.Services.ToArray();

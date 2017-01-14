@@ -120,6 +120,27 @@
   <data name="About_PageTitle" xml:space="preserve">
     <value>Про нас</value>
   </data>
+  <data name="Admin_HomeTitle" xml:space="preserve">
+    <value>Домашняя страница</value>
+  </data>
+  <data name="Admin_Home_ContactDescription" xml:space="preserve">
+    <value>Редактирование контактов (каждой филии)</value>
+  </data>
+  <data name="Admin_Home_ContentDescription" xml:space="preserve">
+    <value>Редактирование различного html контента (Страница о нас, блок - Наши особенности</value>
+  </data>
+  <data name="Admin_Home_FeedbackDescription" xml:space="preserve">
+    <value>Редактирование отзывов от клиентов</value>
+  </data>
+  <data name="Admin_Home_MessageDescription" xml:space="preserve">
+    <value>Просмотр сообщений, которые пользователи присылают через форму</value>
+  </data>
+  <data name="Admin_Home_ServiceDescription" xml:space="preserve">
+    <value>Редактирование Наших услуг а также курсов, которые входят в ту или иную услугу</value>
+  </data>
+  <data name="Admin_Home_SliderDescription" xml:space="preserve">
+    <value>Редактирования слайдера (тот что в шапка сайта)</value>
+  </data>
   <data name="BackToList" xml:space="preserve">
     <value>Назад к списку</value>
   </data>
@@ -227,6 +248,21 @@
   </data>
   <data name="Image_Caption" xml:space="preserve">
     <value>Изображение</value>
+  </data>
+  <data name="Login_HeadingPrompt" xml:space="preserve">
+    <value>Используйте локальный аккаунт для входа.</value>
+  </data>
+  <data name="Login_Hello" xml:space="preserve">
+    <value>Привет</value>
+  </data>
+  <data name="Login_LogOff" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="Login_RegisterNew" xml:space="preserve">
+    <value>Зарегистрировать нового пользователя</value>
+  </data>
+  <data name="Login_Title" xml:space="preserve">
+    <value>Войти</value>
   </data>
   <data name="Messages_Title" xml:space="preserve">
     <value>Сообщения</value>

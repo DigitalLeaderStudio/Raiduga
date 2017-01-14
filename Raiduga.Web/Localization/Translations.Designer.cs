@@ -70,6 +70,69 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit contacts by affiliates.
+        /// </summary>
+        public static string Admin_Home_ContactDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_ContactDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit content .
+        /// </summary>
+        public static string Admin_Home_ContentDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_ContentDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit client feebacks.
+        /// </summary>
+        public static string Admin_Home_FeedbackDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_FeedbackDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View messages uses sent through &quot;Contact us&quot; form.
+        /// </summary>
+        public static string Admin_Home_MessageDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_MessageDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit service and theirs courses.
+        /// </summary>
+        public static string Admin_Home_ServiceDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_ServiceDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit slider which is in the header.
+        /// </summary>
+        public static string Admin_Home_SliderDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_SliderDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home page.
+        /// </summary>
+        public static string Admin_HomeTitle {
+            get {
+                return ResourceManager.GetString("Admin_HomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back to list.
         /// </summary>
         public static string BackToList {
@@ -390,6 +453,51 @@ namespace Raiduga.Web.Localization {
         public static string Image_Caption {
             get {
                 return ResourceManager.GetString("Image_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use a local account to log in..
+        /// </summary>
+        public static string Login_HeadingPrompt {
+            get {
+                return ResourceManager.GetString("Login_HeadingPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hello.
+        /// </summary>
+        public static string Login_Hello {
+            get {
+                return ResourceManager.GetString("Login_Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log off.
+        /// </summary>
+        public static string Login_LogOff {
+            get {
+                return ResourceManager.GetString("Login_LogOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register a new user.
+        /// </summary>
+        public static string Login_RegisterNew {
+            get {
+                return ResourceManager.GetString("Login_RegisterNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log in.
+        /// </summary>
+        public static string Login_Title {
+            get {
+                return ResourceManager.GetString("Login_Title", resourceCulture);
             }
         }
         

@@ -631,7 +631,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\BaseAdmin\" />
     <Folder Include="Extentions\" />
-    <Folder Include="Views\Common\" />
     <Folder Include="Views\FileController\" />
   </ItemGroup>
   <ItemGroup>
