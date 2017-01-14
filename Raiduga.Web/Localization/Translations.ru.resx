@@ -195,6 +195,12 @@
   <data name="Contacts_Title" xml:space="preserve">
     <value>Контакты</value>
   </data>
+  <data name="Content_BodyHtml" xml:space="preserve">
+    <value>Контент</value>
+  </data>
+  <data name="Content_Name" xml:space="preserve">
+    <value>Название (ключевое значение)</value>
+  </data>
   <data name="Content_Title" xml:space="preserve">
     <value>Контент Html</value>
   </data>
@@ -206,6 +212,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Редактировать</value>
+  </data>
+  <data name="Features_Title" xml:space="preserve">
+    <value>Наши особенности</value>
   </data>
   <data name="Home_ContactsUsPrompt" xml:space="preserve">
     <value>Свяжитесь с нами</value>

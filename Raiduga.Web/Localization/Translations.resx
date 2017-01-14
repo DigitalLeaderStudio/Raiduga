@@ -195,6 +195,12 @@
   <data name="Contacts_Title" xml:space="preserve">
     <value>Contacts</value>
   </data>
+  <data name="Content_BodyHtml" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Content_Name" xml:space="preserve">
+    <value>Name (is a key value)</value>
+  </data>
   <data name="Content_Title" xml:space="preserve">
     <value>Html contents</value>
   </data>
@@ -206,6 +212,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="Features_Title" xml:space="preserve">
+    <value>Our features</value>
   </data>
   <data name="Home_ContactsUsPrompt" xml:space="preserve">
     <value>Contact us</value>

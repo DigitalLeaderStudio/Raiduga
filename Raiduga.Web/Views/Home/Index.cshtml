@@ -17,51 +17,26 @@
 </div>
 
 <div class="row features">
-    <div class="col-md-12">
-        <br />
-        <h1 class="text-center">            
-            <strong>Features</strong>
-            <br />
-        </h1>
-        <br />
-       <div class="row">
-           <div class="col-md-6">
-               <img src="~/Content/img/features/зірка.svg" />
-               <p>Ми ростем та розвиваємось, пропонуємо сучасні методики виховання, ефективніпрограми, комфортну атмосферу</p>
-           </div>
-           <div class="col-md-6">
-               <img src="~/Content/img/features/розвиток.svg" />
-               <p>Ми мотивуємо дітей до особистісного росту та умінню працювати в команді</p>
-           </div>
-           <div class="col-md-6">
-               <img src="~/Content/img/features/друзі.svg" />
-               <p>Ми залишаємо безцінні спогади та об'єднуємо друзів на все життя</p>
-           </div>
-           <div class="col-md-6">
-               <img src="~/Content/img/features/кульки.svg" />
-               <p>Доброзичливі та чуйні педагоги піднімуть самооцінку вашої дитини та укріплять її довіру до батьків</p>
-           </div>
-           <div class="col-md-6">
-               <img src="~/Content/img/features/стіна.svg" />
-               <p>Ми цінуємо кожну хвилину дитинства і допомагаємо будувати надійний фундамент всього життя</p>
-           </div>
-           <div class="col-md-6">
-               <img src="~/Content/img/features/двері.svg" />
-               <p>Ми відкриті до нових пропозицій та ідей</p>
-           </div>
-       </div>
-    </div>
+	<div class="col-md-12">
+		<br />
+		<h1 class="text-center">
+			<strong>@Translations.Features_Title</strong>
+			<br />
+		</h1>
+		<br />
+		@Html.Action("_HtmlContentPartial", "Common", new { contentName = "FeatureBlock" })
+	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
 		<h1 class="text-center">
 			<strong>@Translations.UserFeedback_Title</strong>
-		</h1> 
+		</h1>
 		<br />
 	</div>
 	<div class="col-md-8 col-md-offset-2">
-			@Html.Action("_UserFeedbackHomePartial", "UserFeedback")
+		@Html.Action("_UserFeedbackHomePartial", "UserFeedback")
 	</div>
 </div>
 <div class="row">

@@ -216,7 +216,7 @@ namespace Raiduga.DAL.Migrations
 			{
 				ContentType = "image/svg+xml",
 				FileName = "дошкільнятам.svg",
-				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/дошкільнятам.svg"))
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/services/дошкільнятам.svg"))
 			};
 			context.Files.AddOrUpdate(img => img.FileName, image);
 			context.SaveChanges();
@@ -542,7 +542,7 @@ namespace Raiduga.DAL.Migrations
 			{
 				ContentType = "image/svg+xml",
 				FileName = "школярам.svg",
-				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/школярам.svg"))
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/services/школярам.svg"))
 			};
 			context.Files.AddOrUpdate(img => img.FileName, image);
 			context.SaveChanges();
@@ -608,7 +608,7 @@ namespace Raiduga.DAL.Migrations
 			{
 				ContentType = "image/svg+xml",
 				FileName = "дорослим.svg",
-				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/дорослим.svg"))
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/services/дорослим.svg"))
 			};
 			context.Files.AddOrUpdate(img => img.FileName, image);
 			context.SaveChanges();
@@ -754,6 +754,8 @@ namespace Raiduga.DAL.Migrations
 
 			#region HtmlContent
 
+			#region About page
+
 			context.HtmlContents.AddOrUpdate(c => c.Name,
 				new HtmlContent
 				{
@@ -881,6 +883,45 @@ namespace Raiduga.DAL.Migrations
 		</div>
 	</div>"
 				});
+
+			#endregion
+
+			#region Features Main page part
+
+			context.HtmlContents.AddOrUpdate(hc => hc.Name,
+				new HtmlContent
+				{
+					CreationDate = DateTime.Now,
+					Name = "FeatureBlock",
+					BodyHtml = @"<div class=""row"">
+			<div class=""col-md-6"">
+				<img src=""~/Content/img/features/зірка.svg"" />
+				<h4>Ми ростем та розвиваємось, пропонуємо сучасні методики виховання, ефективніпрограми, комфортну атмосферу</h4>
+			</div>
+			<div class=""col-md-6"">
+				<img src=""~/Content/img/features/розвиток.svg"" />
+				<h4>Ми мотивуємо дітей до особистісного росту та умінню працювати в команді</h4>
+			</div>
+			<div class=""col-md-6"">
+				<img src=""~/Content/img/features/друзі.svg"" />
+				<h4>Ми залишаємо безцінні спогади та об'єднуємо друзів на все життя</h4>
+			</div>
+			<div class=""col-md-6"">
+				<img src=""~/Content/img/features/кульки.svg"" />
+				<h4>Доброзичливі та чуйні педагоги піднімуть самооцінку вашої дитини та укріплять її довіру до батьків</h4>
+			</div>
+			<div class=""col-md-6"">
+				<img src=""~/Content/img/features/стіна.svg"" />
+				<h4>Ми цінуємо кожну хвилину дитинства і допомагаємо будувати надійний фундамент всього життя</h4>
+			</div>
+			<div class=""col-md-6"">
+				<img src=""~/Content/img/features/двері.svg"" />
+				<h4>Ми відкриті до нових пропозицій та ідей</h4>
+			</div>
+		</div>"
+				});
+
+			#endregion
 
 			context.SaveChanges();
 

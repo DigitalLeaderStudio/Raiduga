@@ -11,7 +11,7 @@
 
 	public class HtmlContentController : BaseAdminController
 	{
-		// GET: Admin/UserFeedback
+		// GET: Admin/HtmlContent
 		public ActionResult Index()
 		{
 			var dbData = DbContext.HtmlContents.ToArray();
@@ -26,21 +26,21 @@
 			return View(model);
 		}
 
-		// GET: Admin/UserFeedback/Details/5
+		// GET: Admin/HtmlContent/Details/5
 		public ActionResult Details(int id)
 		{
 			return View();
 		}
 
-		// GET: Admin/UserFeedback/Create
+		// GET: Admin/HtmlContent/Create
 		public ActionResult Create()
 		{
 			return View();
 		}
 
-		// POST: Admin/UserFeedback/Create
+		// POST: Admin/HtmlContent/Create
 		[HttpPost]
-		public ActionResult Create(UserFeedbackViewModel model)
+		public ActionResult Create(HtmlContentViewModel model)
 		{
 			try
 			{
@@ -49,7 +49,7 @@
 					var item = model.ToDbModel();
 					item.CreationDate = DateTime.Now;
 
-					DbContext.UserFeedbacks.Add(item);
+					DbContext.HtmlContents.Add(item);
 					DbContext.SaveChanges();
 
 					return RedirectToAction("Index");
@@ -63,17 +63,17 @@
 			return View(model);
 		}
 
-		// GET: Admin/UserFeedback/Edit/5
+		// GET: Admin/HtmlContent/Edit/5
 		public ActionResult Edit(int id)
 		{
-			var originalItem = DbContext.UserFeedbacks.Find(id);
+			var originalItem = DbContext.HtmlContents.Find(id);
 
-			return View(new UserFeedbackViewModel().FromDbModel(originalItem));
+			return View(new HtmlContentViewModel().FromDbModel(originalItem));
 		}
 
-		// POST: Admin/UserFeedback/Edit/5
+		// POST: Admin/HtmlContent/Edit/5
 		[HttpPost]
-		public ActionResult Edit(int id, UserFeedbackViewModel model)
+		public ActionResult Edit(int id, HtmlContentViewModel model)
 		{
 			try
 			{
@@ -81,13 +81,11 @@
 				{
 					var item = model.ToDbModel();
 
-					var originalItem = DbContext.UserFeedbacks.Find(id);
+					var originalItem = DbContext.HtmlContents.Find(id);
 
-					originalItem.UserName = item.UserName;
-					originalItem.IsActive = item.IsActive;
-					originalItem.Text = item.Text;
 					originalItem.UpdationDate = DateTime.Now;
-					originalItem.Image = item.Image;
+					originalItem.Name = item.Name;
+					originalItem.BodyHtml = item.BodyHtml;
 
 					DbContext.SaveChanges();
 
@@ -102,22 +100,22 @@
 			return View(model);
 		}
 
-		// GET: Admin/UserFeedback/Delete/5
+		// GET: Admin/HtmlContent/Delete/5
 		public ActionResult Delete(int id)
 		{
-			var originalItem = DbContext.UserFeedbacks.Find(id);
+			var originalItem = DbContext.HtmlContents.Find(id);
 
-			return View(new UserFeedbackViewModel().FromDbModel(originalItem));
+			return View(new HtmlContentViewModel().FromDbModel(originalItem));
 		}
 
-		// POST: Admin/UserFeedback/Delete/5
+		// POST: Admin/HtmlContent/Delete/5
 		[HttpPost]
-		public ActionResult Delete(int id, UserFeedbackViewModel item)
+		public ActionResult Delete(int id, HtmlContentViewModel item)
 		{
 			try
 			{
-				var removableItem = DbContext.UserFeedbacks.Find(id);
-				DbContext.UserFeedbacks.Remove(removableItem);
+				var removableItem = DbContext.HtmlContents.Find(id);
+				DbContext.HtmlContents.Remove(removableItem);
 				DbContext.SaveChanges();
 
 				return RedirectToAction("Index");

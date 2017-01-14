@@ -2,15 +2,22 @@
 {
 	using Raiduga.Models;
 	using Raiduga.Models.Interfaces;
+	using Raiduga.Web.Localization;
 	using Raiduga.Web.Models.Interfaces;
 	using System;
+	using System.ComponentModel.DataAnnotations;
+	using System.Web.Mvc;
 
 	public class HtmlContentViewModel : IGeneratable<HtmlContent, HtmlContentViewModel>, IDateExtented
 	{
 		public int Id { get; set; }
 
+		[Display(ResourceType = typeof(Translations), Name = "Content_Name")]
 		public string Name { get; set; }
 
+		[Display(ResourceType = typeof(Translations), Name = "Content_BodyHtml")]
+		[AllowHtml]
+		[UIHint("tinymce_full_compressed")]
 		public string BodyHtml { get; set; }
 
 		public DateTime? CreationDate { get; set; }

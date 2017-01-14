@@ -28,5 +28,13 @@
 
 			return PartialView(model);
 		}
+
+		public ActionResult _HtmlContentPartial(string contentName)
+		{
+			var dbData = DbContext.HtmlContents.Where(hc => hc.Name == contentName).First();
+			var model = new HtmlContentViewModel().FromDbModel(dbData);
+
+			return PartialView(model);
+		}
 	}
 }
