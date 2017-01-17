@@ -4,3 +4,7 @@
 
 /.vs/Raiduga/v14/.suo
 /Raiduga.Models/obj/Debug
+/Raiduga.Web/bin
+/Raiduga.Web/obj/Debug/TempPE
+/Raiduga.Web/obj/Debug/uk
+/Raiduga.Web/obj/Debug

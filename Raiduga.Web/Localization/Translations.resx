@@ -237,6 +237,9 @@
   <data name="Features_Title" xml:space="preserve">
     <value>Our features</value>
   </data>
+  <data name="Header_Title" xml:space="preserve">
+    <value>Art and intelectual grows center</value>
+  </data>
   <data name="Home_ContactsUsPrompt" xml:space="preserve">
     <value>Contact us</value>
   </data>

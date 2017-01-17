@@ -1,5 +1,6 @@
 ﻿namespace Raiduga.Web
 {
+	using System.Threading;
 	using System.Web.Mvc;
 	using System.Web.Optimization;
 	using System.Web.Routing;
@@ -8,6 +9,9 @@
 	{
 		protected void Application_Start()
 		{
+			Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("uk-UA");
+			//Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("uk-UA");
+
 			AreaRegistration.RegisterAllAreas();
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);

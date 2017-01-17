@@ -9,7 +9,8 @@
 
 	public class ContactController : BaseController
 	{
-		public ActionResult Contact()
+		[Route("Контакти")]
+		public ActionResult Index()
 		{
 			var model = new List<AffiliateViewModel>();
 

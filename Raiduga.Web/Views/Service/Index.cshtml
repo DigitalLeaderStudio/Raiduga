@@ -5,7 +5,7 @@
 	ViewBag.Title = Translations.Service_Title;
 }
 
-<h1 class="text-center"><strong>@Translations.Service_Title</strong></h1>
+<h1 class="title">@Translations.Service_Title</h1>
 
 <div class="services">
 	@foreach (var item in Model)
@@ -28,7 +28,7 @@
 						@item.Description
 					</p>
 					<br />
-					<a href="@Url.Action("CoursesList", "Service", new { id = item.Id }, null)" class="btn btn-primary pull-right">@Translations.Service_Details</a>
+					<a href="@Url.Action("CourseList", "Service", new { name = item.Name }, null)" class="btn btn-primary pull-right">@Translations.Service_Details</a>
 				</div>
 			</div>
 		</div>

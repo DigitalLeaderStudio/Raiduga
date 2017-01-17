@@ -8,6 +8,7 @@
 
 	public class ServiceController : BaseController
 	{
+		[Route("Наші-послуги")]
 		public ActionResult Index()
 		{
 			var dbData = DbContext.Services.ToArray();
@@ -21,7 +22,8 @@
 			return View(model);
 		}
 
-		public ActionResult CoursesList(int? id)
+		[Route("Наші-послуги/{name}")]
+		public ActionResult CourseList(string name)
 		{
 			return View();
 		}

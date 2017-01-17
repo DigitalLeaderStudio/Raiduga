@@ -7,11 +7,9 @@
 <div class="row">
 	<div class="col-md-12">
 		<br />
-		<h1 class="text-center">
-			<strong>@Translations.Service_Title</strong>
-			<br />
+		<h1 class="title">
+			@Translations.Service_Title
 		</h1>
-		<br />
 		@Html.Action("_ServiceHomePartial", "Service")
 	</div>
 </div>
@@ -19,21 +17,18 @@
 <div class="row features">
 	<div class="col-md-12">
 		<br />
-		<h1 class="text-center">
-			<strong>@Translations.Features_Title</strong>
-			<br />
+		<h1 class="title">
+			@Translations.Features_Title
 		</h1>
-		<br />
 		@Html.Action("_HtmlContentPartial", "Common", new { contentName = "FeatureBlock" })
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h1 class="text-center">
-			<strong>@Translations.UserFeedback_Title</strong>
+		<h1 class="title">
+			@Translations.UserFeedback_Title
 		</h1>
-		<br />
 	</div>
 	<div class="col-md-8 col-md-offset-2">
 		@Html.Action("_UserFeedbackHomePartial", "UserFeedback")
@@ -41,8 +36,8 @@
 </div>
 <div class="row">
 	<div class="col-md-12">
-		<h1 class="text-center">
-			<strong>@Translations.Home_ContactsUsPrompt</strong>
+		<h1 class="title">
+			@Translations.Home_ContactsUsPrompt
 		</h1>
 	</div>
 	<div class="col-md-8 col-md-offset-2">

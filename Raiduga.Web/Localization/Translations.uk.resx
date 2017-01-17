@@ -121,225 +121,226 @@
     <value>Про нас</value>
   </data>
   <data name="Admin_HomeTitle" xml:space="preserve">
-    <value>Домашняя страница</value>
+    <value>Домашня сторінка</value>
   </data>
   <data name="Admin_Home_ContactDescription" xml:space="preserve">
-    <value>Редактирование контактов (каждой филии)</value>
+    <value>Редагування контактів (кожної з філій)</value>
   </data>
   <data name="Admin_Home_ContentDescription" xml:space="preserve">
-    <value>Редактирование различного html контента (Страница о нас, блок - Наши особенности</value>
+    <value>Редагування контенту (Сторінка Про нас, блок Наші відмінності, та ін)</value>
   </data>
   <data name="Admin_Home_FeedbackDescription" xml:space="preserve">
-    <value>Редактирование отзывов от клиентов</value>
+    <value>Редагування клієнтських відгуків.</value>
   </data>
   <data name="Admin_Home_MessageDescription" xml:space="preserve">
-    <value>Просмотр сообщений, которые пользователи присылают через форму</value>
+    <value>Перегляд повідомлень, які користувачі, відсилають через контактну форму</value>
   </data>
   <data name="Admin_Home_ServiceDescription" xml:space="preserve">
-    <value>Редактирование Наших услуг а также курсов, которые входят в ту или иную услугу</value>
+    <value>Редагування Наших послуг, а також курсів, які належать то певной послуги.</value>
   </data>
   <data name="Admin_Home_SliderDescription" xml:space="preserve">
-    <value>Редактирования слайдера (тот что в шапка сайта)</value>
+    <value>Редагування слайдера (той що в шапці сайту).</value>
   </data>
   <data name="BackToList" xml:space="preserve">
-    <value>Назад к списку</value>
+    <value>Назад до списку</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Отмена</value>
+    <value>Відміна</value>
   </data>
   <data name="ContactsForm_ClearForm" xml:space="preserve">
-    <value>Очистить форму</value>
+    <value>Очистит форму</value>
   </data>
   <data name="ContactsForm_Email" xml:space="preserve">
     <value>Email *</value>
   </data>
   <data name="ContactsForm_Email_Placeholder" xml:space="preserve">
-    <value>Пожалуйста, введите Ваш контактный email *</value>
+    <value>Будь-ласка, введіть Ваш контактних email *</value>
   </data>
   <data name="ContactsForm_MarkAsRead" xml:space="preserve">
     <value>Прочитано</value>
   </data>
   <data name="ContactsForm_Message" xml:space="preserve">
-    <value>Сообщение *</value>
+    <value>Повідомлення *</value>
   </data>
   <data name="ContactsForm_MessageIsNew" xml:space="preserve">
-    <value>Новое</value>
+    <value>Нове</value>
   </data>
   <data name="ContactsForm_Message_Placeholder" xml:space="preserve">
-    <value>Пожалуйста введите Ваше сообщение *</value>
+    <value>Будь-ласка, введіть Ваше повідомлення *</value>
   </data>
   <data name="ContactsForm_Phone" xml:space="preserve">
     <value>Телефон</value>
   </data>
   <data name="ContactsForm_PhoneNotSet" xml:space="preserve">
-    <value>Телефон не указан</value>
+    <value>Телефон не вказано</value>
   </data>
   <data name="ContactsForm_Phone_Placeholder" xml:space="preserve">
-    <value>Пожалуйста, введите Ваш контактный телефон</value>
+    <value>Будь-ласка, введіть Ваш контактний телефон</value>
   </data>
   <data name="ContactsForm_Primary" xml:space="preserve">
-    <value>Главное отделение</value>
+    <value>Головне відділеня</value>
   </data>
   <data name="ContactsForm_RequiredFieldsCaption" xml:space="preserve">
-    <value>* Эти поля являются обязательными.</value>
+    <value>* Ці поля є обов'яковими.</value>
   </data>
   <data name="ContactsForm_SendMessage" xml:space="preserve">
-    <value>Отправить сообщение</value>
+    <value>Відіслати повідомлення</value>
   </data>
   <data name="ContactsForm_SuccessfullySent" xml:space="preserve">
-    <value>Ваше сообщение было успешно отправленно!</value>
+    <value>Ваше повідомлення було успішно відіслано!</value>
   </data>
   <data name="ContactsForm_Title" xml:space="preserve">
-    <value>Контактная форма</value>
+    <value>Контактна форма</value>
   </data>
   <data name="Contacts_Address" xml:space="preserve">
-    <value>Адрес</value>
+    <value>Адреса</value>
   </data>
   <data name="Contacts_Hours" xml:space="preserve">
-    <value>Часы работы: с {0} до {1}</value>
+    <value>Години роботи: з {0} до {1}</value>
   </data>
   <data name="Contacts_Hours_From" xml:space="preserve">
-    <value>с </value>
+    <value>з</value>
   </data>
   <data name="Contacts_Hours_Prompt" xml:space="preserve">
-    <value>Часы работы: </value>
+    <value>Години роботи:</value>
   </data>
   <data name="Contacts_Hours_To" xml:space="preserve">
-    <value>до </value>
+    <value>до</value>
   </data>
   <data name="Contacts_Latitude" xml:space="preserve">
     <value>Широта</value>
   </data>
   <data name="Contacts_Longitude" xml:space="preserve">
-    <value>Долгота</value>
+    <value>Довтота</value>
   </data>
   <data name="Contacts_Title" xml:space="preserve">
-    <value>Контакты</value>
+    <value>Контакти</value>
   </data>
   <data name="Content_BodyHtml" xml:space="preserve">
     <value>Контент</value>
   </data>
   <data name="Content_Name" xml:space="preserve">
-    <value>Название (ключевое значение)</value>
+    <value>Назва (ключове поле)</value>
   </data>
   <data name="Content_Title" xml:space="preserve">
     <value>Контент Html</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Добавить новый елемент</value>
+    <value>Додати новий елемент</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Удалить</value>
+    <value>Видалити</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Редактировать</value>
+    <value>Редагувати</value>
   </data>
   <data name="Features_Title" xml:space="preserve">
-    <value>Наши особенности</value>
+    <value>Наші відмінності</value>
   </data>
   <data name="Header_Title" xml:space="preserve">
-    <value>Центр интелектуального и творческого развития личности</value>
+    <value>Центр інтелектуального
+та творчого розвитку особистості</value>
   </data>
   <data name="Home_ContactsUsPrompt" xml:space="preserve">
-    <value>Свяжитесь с нами</value>
+    <value>Зв'яжіться з нами</value>
   </data>
   <data name="Home_FastContacts_Title" xml:space="preserve">
-    <value>Быстрые контакты</value>
+    <value>Швидкі контакти</value>
   </data>
   <data name="Home_Title" xml:space="preserve">
-    <value>Домашняя</value>
+    <value>Домашня</value>
   </data>
   <data name="Image_Caption" xml:space="preserve">
-    <value>Изображение</value>
+    <value>Зображення</value>
   </data>
   <data name="Login_HeadingPrompt" xml:space="preserve">
-    <value>Используйте локальный аккаунт для входа.</value>
+    <value>Використовуйте локальний аккаунт для входу</value>
   </data>
   <data name="Login_Hello" xml:space="preserve">
-    <value>Привет</value>
+    <value>Привіт</value>
   </data>
   <data name="Login_LogOff" xml:space="preserve">
-    <value>Выйти</value>
+    <value>Вийти</value>
   </data>
   <data name="Login_RegisterNew" xml:space="preserve">
-    <value>Зарегистрировать нового пользователя</value>
+    <value>Зареєструвати нового користувача</value>
   </data>
   <data name="Login_Title" xml:space="preserve">
-    <value>Войти</value>
+    <value>Увійти</value>
   </data>
   <data name="Messages_Title" xml:space="preserve">
-    <value>Сообщения</value>
+    <value>Повідомлення</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Сохранить</value>
+    <value>Зберегти</value>
   </data>
   <data name="Service_AllCourses" xml:space="preserve">
-    <value>Все курсы</value>
+    <value>Всі курси</value>
   </data>
   <data name="Service_Details" xml:space="preserve">
-    <value>Детальнее</value>
+    <value>Детальніше</value>
   </data>
   <data name="Service_Title" xml:space="preserve">
-    <value>Наши услуги</value>
+    <value>Наші послуги</value>
   </data>
   <data name="SiteName" xml:space="preserve">
     <value>Райдуга</value>
   </data>
   <data name="Slider_BackToList" xml:space="preserve">
-    <value>К списку слайдов</value>
+    <value>До списку слайдів</value>
   </data>
   <data name="Slider_Cancel" xml:space="preserve">
-    <value>Отмена</value>
+    <value>Відміна</value>
   </data>
   <data name="Slider_CreateNewSlide" xml:space="preserve">
-    <value>Создать новый слайд</value>
+    <value>Додати новий слайд</value>
   </data>
   <data name="Slider_Delete" xml:space="preserve">
-    <value>Удалить</value>
+    <value>Видалити</value>
   </data>
   <data name="Slider_DeletePrompt" xml:space="preserve">
-    <value>Данный слайд будет удален. Вы действительно хотите удалить его?</value>
+    <value>Данний слайд, буде видалено</value>
   </data>
   <data name="Slider_DeleteTitle" xml:space="preserve">
-    <value>Удаление</value>
+    <value>Видалення</value>
   </data>
   <data name="Slider_Edit" xml:space="preserve">
-    <value>Редактировать</value>
+    <value>Редагувати</value>
   </data>
   <data name="Slider_Image" xml:space="preserve">
-    <value>Изображение для слайда</value>
+    <value>Зображення для слайду</value>
   </data>
   <data name="Slider_Name" xml:space="preserve">
-    <value>Новый слайд</value>
+    <value>Новий слайд</value>
   </data>
   <data name="Slider_Page_Title" xml:space="preserve">
     <value>Слайдер</value>
   </data>
   <data name="Slider_Save" xml:space="preserve">
-    <value>Сохранить</value>
+    <value>Зберегти</value>
   </data>
   <data name="Slider_SelectAnotherImage" xml:space="preserve">
-    <value>Выбрать другое изображение</value>
+    <value>Вибрати інше зображення</value>
   </data>
   <data name="Slider_SubTitle" xml:space="preserve">
-    <value>Подзаголовок слайда</value>
+    <value>Підзаголовок слайду</value>
   </data>
   <data name="Slider_Title" xml:space="preserve">
-    <value>Заголовок слайда</value>
+    <value>Заголовок слайду</value>
   </data>
   <data name="UserFeedback_DeletePrompt" xml:space="preserve">
-    <value>Данный отзыв будет удален. Вы действительно хотите удалить его?</value>
+    <value>Данний відгук буде видалено, продовжити?</value>
   </data>
   <data name="UserFeedback_IsActive" xml:space="preserve">
-    <value>Отзыв активный?</value>
+    <value>Відгук активний?</value>
   </data>
   <data name="UserFeedback_Text" xml:space="preserve">
-    <value>Текст отзыва</value>
+    <value>Текст відгуку</value>
   </data>
   <data name="UserFeedback_Title" xml:space="preserve">
-    <value>Отзывы</value>
+    <value>Відгуки</value>
   </data>
   <data name="UserFeedback_UserName" xml:space="preserve">
-    <value>Имя оставившего отзыв</value>
+    <value>Ім'я залишившого відгук</value>
   </data>
 </root>
