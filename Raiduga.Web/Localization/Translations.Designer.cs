@@ -70,6 +70,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Editing news.
+        /// </summary>
+        public static string Admin_Home_ArticleDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_ArticleDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit contacts by affiliates.
         /// </summary>
         public static string Admin_Home_ContactDescription {
@@ -129,6 +138,78 @@ namespace Raiduga.Web.Localization {
         public static string Admin_HomeTitle {
             get {
                 return ResourceManager.GetString("Admin_HomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        public static string Article_Author {
+            get {
+                return ResourceManager.GetString("Article_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Articles body.
+        /// </summary>
+        public static string Article_BodyHtml {
+            get {
+                return ResourceManager.GetString("Article_BodyHtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string Article_Description {
+            get {
+                return ResourceManager.GetString("Article_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is published?.
+        /// </summary>
+        public static string Article_IsPublished {
+            get {
+                return ResourceManager.GetString("Article_IsPublished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keywords.
+        /// </summary>
+        public static string Article_Keywords {
+            get {
+                return ResourceManager.GetString("Article_Keywords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Article_Title {
+            get {
+                return ResourceManager.GetString("Article_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to News.
+        /// </summary>
+        public static string Articles_Title {
+            get {
+                return ResourceManager.GetString("Articles_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read.
+        /// </summary>
+        public static string Articles_View {
+            get {
+                return ResourceManager.GetString("Articles_View", resourceCulture);
             }
         }
         

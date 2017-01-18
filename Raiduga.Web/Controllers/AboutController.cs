@@ -3,9 +3,6 @@
 	using Raiduga.Web.Models.Common;
 	using System.Linq;
 	using System.Web.Mvc;
-	using RouteLocalization.Mvc;
-	using RouteLocalization.Mvc.Extensions;
-	using RouteLocalization.Mvc.Setup;
 
 	public class AboutController : BaseController
 	{

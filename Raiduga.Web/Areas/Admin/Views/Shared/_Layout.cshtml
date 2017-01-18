@@ -54,6 +54,9 @@
 						<a href="@Url.Action("Index", "Contact", new { area = "Admin"})">@Translations.Contacts_Title</a>
 					</li>
 					<li>
+						<a href="@Url.Action("Index", "Article", new { area = "Admin"})">@Translations.Articles_Title</a>
+					</li>
+					<li>
 						@{
 							var count = ViewBag.NewMessagesCount;
 						}

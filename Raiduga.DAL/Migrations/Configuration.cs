@@ -765,7 +765,7 @@ namespace Raiduga.DAL.Migrations
 	<br />
 	<div class=""row"">
 		<div class=""col-md-2 col-md-offset-2"">
-			<img src=""~/Content/img/logo 500x422.png"" class=""img-responsive"" />
+			<img src=""/Content/img/logo 500x422.png"" class=""img-responsive"" />
 		</div>
 		<div class=""col-md-6"">
 			Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.

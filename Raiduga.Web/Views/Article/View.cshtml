@@ -1,0 +1,26 @@
+﻿@using Raiduga.Web.Localization
+@model Raiduga.Web.Models.Article.ArticleViewModel
+
+@{
+	ViewBag.Title = Model.Title;
+}
+<div class="articles">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h1 class="title">@Model.Title</h1>
+			@{
+				var srcAction = Model.ImageId.HasValue ?
+					Url.Action("Show", "File", new { area = "", id = Model.ImageId }) :
+					string.Empty;
+			}
+			<img class="img-responsive" src="@srcAction" alt="@Model.Title" />
+
+			<p>@Html.Raw(Model.BodyHtml)</p>
+			<br />
+			<p>
+				@Model.Author<br />
+				@Model.CreationDate.Value
+			</p>
+		</div>
+	</div>
+</div>

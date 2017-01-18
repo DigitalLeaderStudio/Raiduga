@@ -34,6 +34,8 @@
 
 		public virtual DbSet<HtmlContent> HtmlContents { get; set; }
 
+		public virtual DbSet<Article> Articles { get; set; }
+
 		#endregion
 
 		protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)

@@ -177,6 +177,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\Base\BaseAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\HtmlContentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ArticleController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserFeedbackController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
@@ -185,6 +186,7 @@
     <Compile Include="Configuration\CultureElement.cs" />
     <Compile Include="Configuration\CultureTranslationElement.cs" />
     <Compile Include="Configuration\CultureTranslationElementCollection.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -216,6 +218,7 @@
     <Compile Include="Managers\ApplicationSignInManager.cs" />
     <Compile Include="Managers\ApplicationUserManager.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Article\ArticleViewModel.cs" />
     <Compile Include="Models\Common\AddressViewModel.cs" />
     <Compile Include="Models\Common\AffiliateViewModel.cs" />
     <Compile Include="Models\Common\ContactRequestViewModel.cs" />
@@ -324,6 +327,10 @@
     <Content Include="Areas\Admin\Views\UserFeedback\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\HtmlContent\Index.cshtml" />
     <Content Include="Areas\Admin\Views\HtmlContent\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -641,6 +648,8 @@
     <Content Include="Views\Shared\EditorTemplates\tinymce_full.cshtml" />
     <Content Include="Views\Culture\_LanguagesPartial.cshtml" />
     <Content Include="Views\Service\CourseList.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
+    <Content Include="Views\Article\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -141,6 +141,30 @@
   <data name="Admin_Home_SliderDescription" xml:space="preserve">
     <value>Редагування слайдера (той що в шапці сайту).</value>
   </data>
+  <data name="Articles_Title" xml:space="preserve">
+    <value>Новини</value>
+  </data>
+  <data name="Articles_View" xml:space="preserve">
+    <value>Читати</value>
+  </data>
+  <data name="Article_Author" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="Article_BodyHtml" xml:space="preserve">
+    <value>Тіло статті</value>
+  </data>
+  <data name="Article_IsPublished" xml:space="preserve">
+    <value>Чи опублікована?</value>
+  </data>
+  <data name="Article_Keywords" xml:space="preserve">
+    <value>Ключові слова</value>
+  </data>
+  <data name="Article_Title" xml:space="preserve">
+    <value>Заголовок</value>
+  </data>
+  <data name="Article_Description" xml:space="preserve">
+    <value>Короткий опис</value>
+  </data>
   <data name="BackToList" xml:space="preserve">
     <value>Назад до списку</value>
   </data>
@@ -342,5 +366,8 @@
   </data>
   <data name="UserFeedback_UserName" xml:space="preserve">
     <value>Ім'я залишившого відгук</value>
+  </data>
+  <data name="Admin_Home_ArticleDescription" xml:space="preserve">
+    <value>Редагування новин</value>
   </data>
 </root>

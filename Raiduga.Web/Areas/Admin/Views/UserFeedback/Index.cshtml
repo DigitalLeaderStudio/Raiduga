@@ -9,9 +9,9 @@
 <h2>@Translations.UserFeedback_Title</h2>
 
 <div class="feedbacks">
-	<div class="row">
+	<p>
 		<a href="@Url.Action("Create", "UserFeedback", new { area = "Admin"})" class="btn btn-success navbar-btn">@Translations.Create</a>
-	</div>
+	</p>
 	@foreach (var item in Model)
 	{
 		<div class="panel panel-default">

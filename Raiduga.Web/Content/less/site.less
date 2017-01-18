@@ -389,7 +389,6 @@ footer {
 	}
 }
 
-
 .feedbacks {
 	.feedback-item {
 		margin-bottom: 40px;
@@ -510,6 +509,50 @@ footer {
 			.media .media-object {
 				border-color: @color-purple;
 			}
+		}
+	}
+}
+
+.articles {
+
+	.thumbnail {
+		margin: 20px 10px;
+	}
+
+	.thumbnail-wrapper {
+
+		.btn-default.btn-circle {
+			color: #FFF;
+			line-height: 55px;
+			border-radius: 50%;
+		}
+
+		&:nth-child(7n+1) .btn-default.btn-circle {
+			background-color: @color-red;
+		}
+
+		&:nth-child(7n+2) .btn-default.btn-circle {
+			background-color: @color-orange;
+		}
+
+		&:nth-child(7n+3) .btn-default.btn-circle {
+			background-color: @color-green;
+		}
+
+		&:nth-child(7n+4) .btn-default.btn-circle {
+			background-color: @color-yellow;
+		}
+
+		&:nth-child(7n+5) .btn-circle {
+			background-color: @color-light-blue;
+		}
+
+		&:nth-child(7n+6) .btn-circle {
+			background-color: @color-blue;
+		}
+
+		&:nth-child(7n+7) .btn-circle {
+			background-color: @color-purple;
 		}
 	}
 }

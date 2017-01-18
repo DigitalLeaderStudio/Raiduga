@@ -52,6 +52,14 @@
 				</span>
 			</li>
 			<li class="list-group-item">
+				<a href="@Url.Action("Index", "Articles", new { area = "Admin"})">@Translations.Articles_Title</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_ContactDescription
+				</span>
+			</li>
+			<li class="list-group-item">
 				@{
 					var count = ViewBag.NewMessagesCount;
 				}

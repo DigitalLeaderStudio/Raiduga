@@ -6,21 +6,32 @@
 	{
 		@Html.AntiForgeryToken()
 
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				@{
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fa fa-user"></i>&nbsp;<i class="fa fa-caret-down"></i>
+			</button>
+
+			<ul class="dropdown-menu">
+				<li>
+					@{
 		var hello = string.Format("{0} {1}!", Translations.Login_Hello, User.Identity.GetUserName());
-				}
-				@Html.ActionLink(hello, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-			</li>
-			<li><a href="javascript:document.getElementById('logoutForm').submit()">@Translations.Login_LogOff</a></li>
-		</ul>
+					}
+					@Html.ActionLink(hello, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+				</li>
+				<li><a href="javascript:document.getElementById('logoutForm').submit()">@Translations.Login_LogOff</a></li>
+			</ul>
+		</div>
 	}
 }
 else
 {
-	<ul class="nav navbar-nav navbar-right">
-		<li>@Html.ActionLink(Translations.Login_RegisterNew, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-		<li>@Html.ActionLink(Translations.Login_Title, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-	</ul>
+	<div class="btn-group">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<i class="fa fa-user"></i>&nbsp;<i class="fa fa-caret-down"></i>
+		</button>
+		<ul class="dropdown-menu">
+			<li>@Html.ActionLink(Translations.Login_RegisterNew, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+			<li>@Html.ActionLink(Translations.Login_Title, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+		</ul>
+	</div>
 }

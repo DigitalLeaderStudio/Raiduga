@@ -3,15 +3,18 @@
 @using Raiduga.Web.Localization;
 
 @{
-	ViewBag.Title = "Список слайдов";
+	ViewBag.Title = Translations.Slider_Page_Title;
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>@Translations.Slider_Page_Title</h2>
+
+<p>
+	<a href="@Url.Action("Create", "Slider", new { area = "Admin"})" class="btn btn-success navbar-btn">@Translations.Create</a>
+</p>
 
 <div class="slider row">
 	<div class="col-md-12">
-		<a href="@Url.Action("Create", "Slider")" class="btn btn-success navbar-btn">@Translations.Slider_CreateNewSlide</a>
 		@foreach (var item in Model)
 		{
 			<div class="panel panel-default">

@@ -1,0 +1,84 @@
+﻿@using Raiduga.Web.Localization
+@model Raiduga.Web.Models.Article.ArticleViewModel
+@{
+	ViewBag.Title = Translations.Articles_Title + " " + Translations.Edit;
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Translations.Edit</h2>
+
+<div class="afticles">
+
+	@using (Html.BeginForm("Edit", "Article", FormMethod.Post, new { enctype = "multipart/form-data" }))
+	{
+		var srcAction = Model.ImageId.HasValue ?
+					Url.Action("Show", "File", new { area = "", id = Model.ImageId }) :
+					string.Empty;
+
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(m => m.Id)
+
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-horizontal">
+
+			<div class="form-group">
+				@Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+					@Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextBoxFor(model => model.Author, new { @class = "form-control" })
+					@Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.Keywords, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextBoxFor(model => model.Keywords, new { @class = "form-control" })
+					@Html.ValidationMessageFor(model => model.Keywords, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5" })
+					@Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.IsPublished, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.CheckBoxFor(model => model.IsPublished)
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.File, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					<img src="@srcAction" alt="@Model.Title" />
+					@Html.TextBoxFor(model => model.File, new { @type = "file" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.BodyHtml, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-10">
+					@Html.EditorFor(model => model.BodyHtml, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.BodyHtml, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+					<input type="submit" value="@Translations.Save" class="btn btn-default" />
+				</div>
+			</div>
+		</div>
+
+	}
+</div>
+<div>
+	@Html.ActionLink(@Translations.BackToList, "Index")
+</div>
