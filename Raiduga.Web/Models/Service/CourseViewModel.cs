@@ -13,6 +13,10 @@
 
 		public string Name { get; set; }
 
+		public int ServiceId { get; set; }
+
+		public string ServiceName { get; set; }
+
 		public string Description { get; set; }
 
 		public string Price { get; set; }
@@ -30,11 +34,15 @@
 			this.Id = model.Id;
 			this.Name = model.Name;
 			this.Description = model.Description;
+			this.Duration = model.Duration;
 			this.BodyHtml = model.BodyHtml;
 			this.Price = model.Price;
 			this.CreationDate = model.CreationDate;
 			this.UpdationDate = model.UpdationDate;
 			this.PriorityOrder = model.PriorityOrder;
+
+			this.ServiceId = model.ServiceId;
+			this.ServiceName = model.Service.Name;
 
 			return this;
 		}
@@ -45,6 +53,7 @@
 			{
 				Id = this.Id,
 				Name = this.Name,
+				Duration = this.Duration,
 				Description = this.Description,
 				BodyHtml = this.BodyHtml,
 				PriorityOrder = this.PriorityOrder,

@@ -246,7 +246,7 @@ namespace Raiduga.DAL.Migrations
 				Name = "Подготовка к школе",
 				Description = "Подготовка к школе",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0),
+				Duration = new TimeSpan(0, 45, 0),
 				Price = "100",
 				PriorityOrder = 1,
 				BodyHtml = @"<div id=""they"">
@@ -477,7 +477,7 @@ namespace Raiduga.DAL.Migrations
 				Name = "Учимся с мамой",
 				Description = "Учимся с мамой",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0),
+				Duration = new TimeSpan(0, 45, 0),
 				Price = "100",
 				PriorityOrder = 1,
 				BodyHtml = @"<div id=""they"" style=""font-family: Verdana, Geneva, sans-serif; color: #000; font-size: 11px"">
@@ -568,7 +568,7 @@ namespace Raiduga.DAL.Migrations
 				Name = "Английский клуб",
 				Description = "Английский клуб",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0),
+				Duration = new TimeSpan(0, 45, 0),
 				PriorityOrder = 1,
 				Price = "110",
 				BodyHtml = @"<div id=""posts"">
@@ -630,24 +630,23 @@ namespace Raiduga.DAL.Migrations
 
 			adultService.Courses.Add(new Course
 			{
-				Name = "Восточные танцы",
+				Name = "Східні танці",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0),
+				Duration = new TimeSpan(1, 15, 0),
 				Price = "100",
 				PriorityOrder = 1,
-				Description = "Східні танці",
-				BodyHtml = @"<p>Рухи східного танцю, які прийшли із самої природи &mdash; це, в першу чергу, гнучкість,гарна пластика та гарна координація. Люди, маючи ці якості, завжди привертають до себе увагу. Привертають погляд хвилеподібні рухи рук, легкість в ногах, внутрішній вогонь, свобода і впевненість в своєму шармі. Танець стає дзеркалом, в якому можна по іншому побачити свої проблеми і зробити крок до їхнього подолання.
-</p>"
+				Description = "Рухи східного танцю, які прийшли із самої природи це, в першу чергу, гнучкість,гарна пластика та гарна координація. Люди, маючи ці якості, завжди привертають до себе увагу. Привертають погляд хвилеподібні рухи рук, легкість в ногах, внутрішній вогонь, свобода і впевненість в своєму шармі. Танець стає дзеркалом, в якому можна по іншому побачити свої проблеми і зробити крок до їхнього подолання.",
+				BodyHtml = @"<p></p>"
 			});
 
 			#region Cучасні танці
 
 			adultService.Courses.Add(new Course
 			{
-				Name = "Современные танцы",
+				Name = "Сучасні танці",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0),
-				Description = "Современные танцы",
+				Duration = new TimeSpan(1, 30, 0),
+				Description = " Сучасні танці – це сукупність різних найпопулярніших та найновіших стилів хореографії, ними можуть займатись як діти так і дорослі. В кожного століття були свої сучасні танці, в 21 столітті до сучасних танців відносяться : контемп, модерн, джаз, джаз – фанк, хіп – хоп, брейкданс , і багато інших. Заняття сучасними танцями корисно для дітей тим, що , покращує координацію рухів, пам’ять і мислення, розвиток емоційного стану, вирівнює поставу та тонус тіла, виробляє пластику та гнучкість, розтяжку, музичний слух та ритміку.",
 				Price = "100",
 				PriorityOrder = 2,
 				BodyHtml = @"<div id=""they"" style=""font-family: Verdana, Geneva, sans-serif; color: rgb(0, 0, 0); text-align: justify;"">
@@ -725,9 +724,9 @@ namespace Raiduga.DAL.Migrations
 			adultService.Courses.Add(new Course
 			{
 				Name = "Фітнес",
-				Description = "Фітнес",
+				Description = "Осінь - саме час зайнятися собою і нарешті зробити вже те, що збиралися зробити кожен понеділок з тих пір, як закінчилися новорічні свята . Записатися у фітнес-клуб! Як раз ще є час, щоб привести себе у форму до чергового виходу у світ, будь то новорічний корпоратив або дружня вечірка.",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0),
+				Duration = new TimeSpan(0, 45, 0),
 				Price = "100",
 				PriorityOrder = 3,
 				BodyHtml = @"<div class=""eText"" colspan=""2""><div id=""nativeroll_video_cont"" style=""display:none;""></div><p><span style=""font-size:14pt;"">Сочетание динамической аэробики с силовым комплексом, направленным на коррекцию проблемных зон. Тренировка состоит из разминки высокой интенсивности + силовые упражнения с использованием фитболов, гантель, гимнастических мячей и т.д. и растяжки.</span></p>

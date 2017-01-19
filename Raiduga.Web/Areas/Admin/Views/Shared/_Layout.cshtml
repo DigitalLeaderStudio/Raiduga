@@ -55,13 +55,7 @@
 					</li>
 					<li>
 						<a href="@Url.Action("Index", "Article", new { area = "Admin"})">@Translations.Articles_Title</a>
-					</li>
-					<li>
-						@{
-							var count = ViewBag.NewMessagesCount;
-						}
-						<a href="@Url.Action("Index", "Messages", new { area = "Admin" })">@Translations.Messages_Title <span class="badge">@count</span></a>
-					</li>
+					</li>					
 				</ul>
 				@Html.Partial("_LoginPartial")
 			</div>

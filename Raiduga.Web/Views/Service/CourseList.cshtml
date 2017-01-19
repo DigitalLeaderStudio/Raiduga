@@ -1,9 +1,45 @@
 ﻿@using Raiduga.Web.Localization
-@model List<Raiduga.Web.Models.Service.ServiceViewModel>
+@model Raiduga.Web.Models.Service.ServiceViewModel
 
 @{
-	ViewBag.Title = Translations.Service_Title;
+	var title = string.Format("{0} - {1}", Translations.Service_Title, Model.Name);
+	ViewBag.Title = title;
 }
 
-<h1 class="title">Course</h1>
+<ol class="breadcrumb">
+	<li><a href="@Url.Action("Index", "Service", new { area = "" })">@Translations.Service_Title</a></li>
+	<li class="active">@Model.Name</li>
+</ol>
+<h1 class="title">@Model.Name</h1>
+<div class="courses">
+	@foreach (var course in Model.Courses)
+	{
+	<div class="col-md-6 panel-wrapper">
+		<div class="panel">
+			<div class="panel-body">
+				<div class="title">
+					<h4>@course.Name</h4>
+				</div>
+				<hr />
+				<p class="ellipis">@course.Description</p>
 
+				<div class="course-footer">
+					<div class="row">
+						<div class="col-md-4">
+							<i class="fa fa-clock-o"></i>@course.Duration.ToString("hh\\:mm")
+						</div>
+						<div class="col-md-4">
+							<i class="fa fa-dollar"></i>@course.Price &nbsp; грн
+						</div>
+						<div class="col-md-4">
+							<a href="@Url.Action("CourseView", "Service", new { serviceName = Model.Name, courseName = course.Name }, null)"
+							   class="btn btn-primary pull-right">@Translations.Service_Details</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	}
+</div>

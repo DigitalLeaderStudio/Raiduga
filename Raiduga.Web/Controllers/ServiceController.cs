@@ -25,7 +25,23 @@
 		[Route("Наші-послуги/{name}")]
 		public ActionResult CourseList(string name)
 		{
-			return View();
+			var service = DbContext.Services.Where(s => s.Name == name).First();
+			var model = new ServiceViewModel().FromDbModel(service);
+
+			return View(model);
+		}
+
+		[Route("Наші-послуги/{serviceName}/{courseName}")]
+		public ActionResult CourseView(string serviceName, string courseName)
+		{
+			var dbItem = DbContext.Services
+				.Where(srv => srv.Name == serviceName)
+				.Select(x => x.Courses.Where(course => course.Name == courseName))
+				.First().First();
+
+			var model = new CourseViewModel().FromDbModel(dbItem);
+
+			return View(model);
 		}
 
 		public ActionResult _ServiceHomePartial()

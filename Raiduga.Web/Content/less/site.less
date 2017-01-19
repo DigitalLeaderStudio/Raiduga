@@ -374,6 +374,138 @@ footer {
 	}
 }
 
+.courses {
+	.panel-wrapper {
+		p.ellipis {
+			height: 100px;
+			overflow: hidden;
+			-ms-text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+			display: block;
+		}
+
+		.course-footer {
+			padding-top: 10px;
+
+			> .row > div {
+				font-weight: bold;
+				font-size: 1.2em;
+
+				i {
+					font-size: 1.3em;
+				}
+			}
+		}
+
+		.panel {
+			border-width: 2px;
+		}
+
+		hr {
+			border-width: 4px;
+		}
+
+		&:nth-child(7n+1) .panel, &:nth-child(7n+1) hr {
+			border-color: @color-red;
+		}
+
+		&:nth-child(7n+2) .panel, &:nth-child(7n+2) hr {
+			border-color: @color-orange;
+		}
+
+		&:nth-child(7n+3) .panel, &:nth-child(7n+3) hr {
+			border-color: @color-green;
+		}
+
+		&:nth-child(7n+4) .panel, &:nth-child(7n+4) hr {
+			border-color: @color-yellow;
+		}
+
+		&:nth-child(7n+5) .panel, &:nth-child(7n+5) hr {
+			border-color: @color-light-blue;
+		}
+
+		&:nth-child(7n+6) .panel, &:nth-child(7n+6) hr {
+			border-color: @color-blue;
+		}
+
+		&:nth-child(7n+7) .panel, &:nth-child(7n+7) hr {
+			border-color: @color-purple;
+		}
+
+		&:nth-child(7n+1) .btn-primary {
+			&:hover {
+				border-color: @color-red-hover;
+				background-color: @color-red-hover;
+			}
+
+			border-color: @color-red;
+			background-color: @color-red;
+		}
+
+		&:nth-child(7n+2) .btn-primary {
+			&:hover {
+				border-color: @color-orange-hover;
+				background-color: @color-orange-hover;
+			}
+
+			border-color: @color-orange;
+			background-color: @color-orange;
+		}
+
+		&:nth-child(7n+3) .btn-primary {
+			&:hover {
+				border-color: @color-green-hover;
+				background-color: @color-green-hover;
+			}
+
+			border-color: @color-green;
+			background-color: @color-green;
+		}
+
+		&:nth-child(7n+4) .btn-primary {
+			&:hover {
+				border-color: @color-yellow-hover;
+				background-color: @color-yellow-hover;
+			}
+
+			border-color: @color-yellow;
+			background-color: @color-yellow;
+		}
+
+		&:nth-child(7n+5) .btn-primary {
+			&:hover {
+				border-color: @color-light-blue-hover;
+				background-color: @color-light-blue-hover;
+			}
+
+			border-color: @color-light-blue;
+			background-color: @color-light-blue;
+		}
+
+		&:nth-child(7n+6) .btn-primary {
+			&:hover {
+				border-color: @color-blue-hover;
+				background-color: @color-blue-hover;
+			}
+
+			border-color: @color-blue;
+			background-color: @color-blue;
+		}
+
+		&:nth-child(7n+7) .btn-primary {
+			&:hover {
+				border-color: @color-purple-hover;
+				background-color: @color-purple-hover;
+			}
+
+			border-color: @color-purple;
+			background-color: @color-purple;
+		}
+	}
+}
+
 .features {
 	.row > div {
 		display: table;
@@ -527,19 +659,19 @@ footer {
 			border-radius: 50%;
 		}
 
-		&:nth-child(7n+1) .btn-default.btn-circle {
+		&:nth-child(7n+1) .btn-circle {
 			background-color: @color-red;
 		}
 
-		&:nth-child(7n+2) .btn-default.btn-circle {
+		&:nth-child(7n+2) .btn-circle {
 			background-color: @color-orange;
 		}
 
-		&:nth-child(7n+3) .btn-default.btn-circle {
+		&:nth-child(7n+3) .btn-circle {
 			background-color: @color-green;
 		}
 
-		&:nth-child(7n+4) .btn-default.btn-circle {
+		&:nth-child(7n+4) .btn-circle {
 			background-color: @color-yellow;
 		}
 

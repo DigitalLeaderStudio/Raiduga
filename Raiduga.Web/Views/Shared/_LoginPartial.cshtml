@@ -4,21 +4,55 @@
 {
 	using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
 	{
+		int? count = ViewBag.NewMessagesCount == null ? new int?() : ViewBag.NewMessagesCount;
 		@Html.AntiForgeryToken()
 
 		<div class="btn-group">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fa fa-user"></i>&nbsp;<i class="fa fa-caret-down"></i>
+				@if (count.HasValue)
+				{
+					if (count > 0)
+					{
+						<i class="fa fa-envelope"></i>
+					}
+					else
+					{
+						<i class="fa fa-envelope-open-o"></i>
+					}
+					<span class="badge">@count</span>
+				}
 			</button>
 
 			<ul class="dropdown-menu">
+
+				@if (count.HasValue)
+				{
+
+					<li>
+						<a href="@Url.Action("Index", "Messages", new { area = "Admin" })">
+							@if (count > 0)
+							{
+								<i class="fa fa-envelope"></i>
+							}
+							else
+							{
+								<i class="fa fa-envelope-open-o"></i>
+							}
+							@Translations.Messages_Title <span class="badge">@count</span>
+						</a>
+					</li>
+				}
+
 				<li>
 					@{
 		var hello = string.Format("{0} {1}!", Translations.Login_Hello, User.Identity.GetUserName());
 					}
-					@Html.ActionLink(hello, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+					<a href="@Url.Action("Index", "Manage")"><i class="fa fa-cog"></i>@hello</a>
 				</li>
-				<li><a href="javascript:document.getElementById('logoutForm').submit()">@Translations.Login_LogOff</a></li>
+				<li>
+					<a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out"></i>@Translations.Login_LogOff</a>
+				</li>
 			</ul>
 		</div>
 	}
@@ -30,8 +64,11 @@ else
 			<i class="fa fa-user"></i>&nbsp;<i class="fa fa-caret-down"></i>
 		</button>
 		<ul class="dropdown-menu">
-			<li>@Html.ActionLink(Translations.Login_RegisterNew, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-			<li>@Html.ActionLink(Translations.Login_Title, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+			<li>
+				<a href="@Url.Action("Register", "Account", new { @id = "registerLink" })">@Translations.Login_RegisterNew</a>
+			<li>
+				<a href="@Url.Action(" login", "Account" , new { @id="loginLink" })">@Translations.Login_Title</a>
+			</li>
 		</ul>
 	</div>
 }

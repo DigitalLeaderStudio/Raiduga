@@ -650,6 +650,7 @@
     <Content Include="Views\Service\CourseList.cshtml" />
     <Content Include="Views\Article\Index.cshtml" />
     <Content Include="Views\Article\View.cshtml" />
+    <Content Include="Views\Service\CourseView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

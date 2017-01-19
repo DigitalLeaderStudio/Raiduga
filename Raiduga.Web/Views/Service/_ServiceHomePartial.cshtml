@@ -7,10 +7,10 @@
 		{
 			<div class="col-md-4 service-block">
 				<div class="thumbnail">
-					@{			
-						var srcAction = item.ImageId.HasValue ?
-						Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
-						string.Empty;
+					@{
+			var srcAction = item.ImageId.HasValue ?
+			Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
+			string.Empty;
 					}
 					<img src="@srcAction" alt="@item.Name" />
 					<div class="caption text-center">
@@ -26,7 +26,7 @@
 						</p>
 					</div>
 					<p class="text-center">
-						<a href="#" class="btn btn-primary">@Translations.Service_AllCourses</a>
+						<a href="@Url.Action("CourseList", "Service", new { name = item.Name }, null)" class="btn btn-primary">@Translations.Service_AllCourses</a>
 					</p>
 				</div>
 			</div>
