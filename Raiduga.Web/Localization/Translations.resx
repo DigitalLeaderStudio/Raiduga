@@ -369,4 +369,22 @@
   <data name="Admin_Home_ArticleDescription" xml:space="preserve">
     <value>Editing news</value>
   </data>
+  <data name="Course_DeletePrompt" xml:space="preserve">
+    <value>The course will be deleted. Do you really want to delete it?</value>
+  </data>
+  <data name="Course_BodyHtml" xml:space="preserve">
+    <value>Html body</value>
+  </data>
+  <data name="Course_Description" xml:space="preserve">
+    <value>Short Description</value>
+  </data>
+  <data name="Course_Duration" xml:space="preserve">
+    <value>Course duration</value>
+  </data>
+  <data name="Course_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Course_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
 </root>

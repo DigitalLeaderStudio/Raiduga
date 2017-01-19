@@ -331,6 +331,9 @@
     <Content Include="Areas\Admin\Views\Article\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Article\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Article\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\DeleteCourse.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\EditCourse.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\CreateCourse.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

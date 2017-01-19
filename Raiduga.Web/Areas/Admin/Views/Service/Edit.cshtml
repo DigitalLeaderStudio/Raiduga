@@ -34,14 +34,46 @@
 			</div>
 		</div>
 		<hr />
+		<p>
+			<a href="@Url.Action("CreateCourse", "Service", new { area = "Admin", serviceId = Model.Id })" class="btn btn-success navbar-btn">
+				@Translations.Create
+			</a>
+		</p>
 		<div class="courses">
+
 			@foreach (var course in Model.Courses)
 			{
-				@course.Name<br />
-				@course.Description
+			<div class="col-md-6 panel-wrapper">
+				<div class="panel">
+					<div class="panel-body">
+						<div class="title">
+							<h4>@course.Name</h4>
+						</div>
+						<hr />
+						<p class="ellipis">@course.Description</p>
+
+						<div class="course-footer">
+							<div class="row">
+								<div class="col-md-4">
+									<i class="fa fa-clock-o"></i>@course.Duration.ToString("hh\\:mm")
+								</div>
+								<div class="col-md-4">
+									<i class="fa fa-dollar"></i>@course.Price &nbsp; грн
+								</div>
+								<div class="col-md-4">
+									<a href="@Url.Action("EditCourse", "Service", new { id = course.Id })"
+									   class="btn btn-primary pull-right">@Translations.Edit</a>
+									<a href="@Url.Action("DeleteCourse", new { id = @course.Id })" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
 			}
 		</div>
-
+		<div class="clearfix"></div>
 	</div>
 }
 <div>

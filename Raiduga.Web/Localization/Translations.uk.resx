@@ -370,4 +370,22 @@
   <data name="Admin_Home_ArticleDescription" xml:space="preserve">
     <value>Редагування новин</value>
   </data>
+  <data name="Course_DeletePrompt" xml:space="preserve">
+    <value>Данний курс буде видалено, продовжити?</value>
+  </data>
+  <data name="Course_BodyHtml" xml:space="preserve">
+    <value>Повний опис курсу Html</value>
+  </data>
+  <data name="Course_Description" xml:space="preserve">
+    <value>Короткий опис курсу</value>
+  </data>
+  <data name="Course_Duration" xml:space="preserve">
+    <value>Тривалість курсу</value>
+  </data>
+  <data name="Course_Name" xml:space="preserve">
+    <value>Назва курсу</value>
+  </data>
+  <data name="Course_Price" xml:space="preserve">
+    <value>Ціна</value>
+  </data>
 </root>

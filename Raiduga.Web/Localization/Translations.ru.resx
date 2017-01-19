@@ -369,4 +369,22 @@
   <data name="Admin_Home_ArticleDescription" xml:space="preserve">
     <value>Редактирование новостей</value>
   </data>
+  <data name="Course_DeletePrompt" xml:space="preserve">
+    <value>Данный курс будет удален. Вы действительно хотите удалить его?</value>
+  </data>
+  <data name="Course_BodyHtml" xml:space="preserve">
+    <value>Полное описание курса Html</value>
+  </data>
+  <data name="Course_Description" xml:space="preserve">
+    <value>Краткое описание курса</value>
+  </data>
+  <data name="Course_Duration" xml:space="preserve">
+    <value>Продолжительность курса</value>
+  </data>
+  <data name="Course_Name" xml:space="preserve">
+    <value>Название курса</value>
+  </data>
+  <data name="Course_Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
 </root>

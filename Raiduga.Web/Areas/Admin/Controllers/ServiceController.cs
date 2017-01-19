@@ -25,19 +25,30 @@
 			return View(model);
 		}
 
-		// GET: Admin/Slider/Details/5
+		// GET: Admin/Service/Details/5
 		public ActionResult Details(int id)
 		{
 			return View();
 		}
 
-		// GET: Admin/Slider/Create
+		// GET: Admin/Service/Create
 		public ActionResult Create()
 		{
 			return View();
 		}
 
-		// POST: Admin/Slider/Create
+		// GET: Admin/Service/5/CreateCourse
+		public ActionResult CreateCourse(int serviceId)
+		{
+			var model = new CourseViewModel
+			{
+				ServiceId = serviceId
+			};
+
+			return View(model);
+		}
+
+		// POST: Admin/Service/Create
 		[HttpPost]
 		public ActionResult Create(ServiceViewModel model)
 		{
@@ -61,7 +72,31 @@
 			return View(model);
 		}
 
-		// GET: Admin/Slider/Edit/5
+		// POST: Admin/Service/5/CreateCourse
+		[HttpPost]
+		public ActionResult CreateCourse(CourseViewModel model)
+		{
+			try
+			{
+				if (ModelState.IsValid)
+				{
+					var item = model.ToDbModel();
+
+					DbContext.Set<Course>().Add(item);
+					DbContext.SaveChanges();
+
+					return RedirectToAction("Edit", new { id = item.ServiceId });
+				}
+			}
+			catch (Exception e)
+			{
+				ModelState.AddModelError("", e.Message);
+			}
+
+			return View(model);
+		}
+
+		// GET: Admin/Service/Edit/5
 		public ActionResult Edit(int id)
 		{
 			var originalItem = DbContext.Set<Service>().Find(id);
@@ -69,7 +104,15 @@
 			return View(new ServiceViewModel().FromDbModel(originalItem));
 		}
 
-		// POST: Admin/Slider/Edit/5
+		// GET: Admin/Service/EditCourse/5
+		public ActionResult EditCourse(int id)
+		{
+			var item = DbContext.Set<Course>().Find(id);
+
+			return View(new CourseViewModel().FromDbModel(item));
+		}
+
+		// POST: Admin/Service/Edit/5
 		[HttpPost]
 		public ActionResult Edit(int id, ServiceViewModel model)
 		{
@@ -99,7 +142,39 @@
 			return View(model);
 		}
 
-		// GET: Admin/Slider/Delete/5
+		// POST: Admin/Service/EditCourse/5
+		[HttpPost]
+		public ActionResult EditCourse(int id, CourseViewModel model)
+		{
+			try
+			{
+				if (ModelState.IsValid)
+				{
+					var item = model.ToDbModel();
+
+					var originalItem = DbContext.Set<Course>().Find(id);
+
+					originalItem.Name = model.Name;
+					originalItem.Duration = model.Duration;
+					originalItem.Description = model.Description;
+					originalItem.Price = model.Price;
+					originalItem.UpdationDate = DateTime.Now;
+					originalItem.BodyHtml = model.BodyHtml;
+
+					DbContext.SaveChanges();
+
+					return RedirectToAction("Edit", new { id = originalItem.ServiceId });
+				}
+			}
+			catch (Exception e)
+			{
+				ModelState.AddModelError("", e.Message);
+			}
+
+			return View(model);
+		}
+
+		// GET: Admin/Service/Delete/5
 		public ActionResult Delete(int id)
 		{
 			var originalItem = DbContext.Set<Service>().Find(id);
@@ -107,7 +182,7 @@
 			return View(new ServiceViewModel().FromDbModel(originalItem));
 		}
 
-		// POST: Admin/Slider/Delete/5
+		// POST: Admin/Service/Delete/5
 		[HttpPost]
 		public ActionResult Delete(int id, ServiceViewModel item)
 		{
@@ -115,6 +190,32 @@
 			{
 				var removableItem = DbContext.Set<Service>().Find(id);
 				DbContext.Services.Remove(removableItem);
+				DbContext.SaveChanges();
+
+				return RedirectToAction("Index");
+			}
+			catch
+			{
+				return View();
+			}
+		}
+
+		// GET: Admin/Service/DeleteCourse/5
+		public ActionResult DeleteCourse(int id)
+		{
+			var originalItem = DbContext.Set<Course>().Find(id);
+
+			return View(new CourseViewModel().FromDbModel(originalItem));
+		}
+
+		// POST: Admin/Service/DeleteCourse/5
+		[HttpPost]
+		public ActionResult DeleteCourse(int id, CourseViewModel item)
+		{
+			try
+			{
+				var removableItem = DbContext.Set<Course>().Find(id);
+				DbContext.Set<Course>().Remove(removableItem);
 				DbContext.SaveChanges();
 
 				return RedirectToAction("Index");

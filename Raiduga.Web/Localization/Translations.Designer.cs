@@ -466,6 +466,60 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Html body.
+        /// </summary>
+        public static string Course_BodyHtml {
+            get {
+                return ResourceManager.GetString("Course_BodyHtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The course will be deleted. Do you really want to delete it?.
+        /// </summary>
+        public static string Course_DeletePrompt {
+            get {
+                return ResourceManager.GetString("Course_DeletePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Short Description.
+        /// </summary>
+        public static string Course_Description {
+            get {
+                return ResourceManager.GetString("Course_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Course duration.
+        /// </summary>
+        public static string Course_Duration {
+            get {
+                return ResourceManager.GetString("Course_Duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Course_Name {
+            get {
+                return ResourceManager.GetString("Course_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string Course_Price {
+            get {
+                return ResourceManager.GetString("Course_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create new item.
         /// </summary>
         public static string Create {
