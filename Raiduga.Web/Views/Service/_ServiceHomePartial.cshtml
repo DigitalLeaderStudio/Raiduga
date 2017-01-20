@@ -16,14 +16,12 @@
 					<div class="caption text-center">
 						<h3><strong>@item.Name</strong></h3>
 						<hr />
-						<p>
-							<ul class="text-left">
-								@foreach (var course in item.Courses.OrderBy(c => c.PriorityOrder).Take(5))
-								{
-									<li><i class="fa fa-certificate"></i> @course.Name</li>
-								}
-							</ul>
-						</p>
+						<ul class="text-left">
+							@foreach (var course in item.Courses.OrderBy(c => c.PriorityOrder).Take(5))
+							{
+								<li><i class="fa fa-certificate"></i> @course.Name</li>
+							}
+						</ul>
 					</div>
 					<p class="text-center">
 						<a href="@Url.Action("CourseList", "Service", new { name = item.Name }, null)" class="btn btn-primary">@Translations.Service_AllCourses</a>

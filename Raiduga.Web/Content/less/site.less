@@ -14,7 +14,7 @@ body {
 
 		h1 {
             font-size: 4em;
-
+            margin-top: 50px;
 			&.title {
 				margin-bottom: 30px;
 				text-align: center;
@@ -204,15 +204,16 @@ header {
 
 footer {
 	margin-top: 20px;
-	padding: 10px 30px 60px 80px;
-	background-color: #5A1595;
+	padding: 20px;
+	background-color: @color-purple;
 	color: #FFFFFF;
-	font-family: @font-open-sans;
+	font-family: @font-blogger-sans;
 
 	a {
 		color: #FFFFFF;
 
 		&:hover {
+            color: @color-yellow;
 			text-decoration: none;
 		}
 	}
@@ -223,14 +224,25 @@ footer {
 	}
 
 	.brand-caption {
-		font-size: 1.5em;
-		margin-bottom: 20px;
+		font-size: 1.2em;
+		font-family: @font-blogger-sans;
+        margin-bottom: 20px;
 	}
 
 	.title {
 		font-weight: bold;
 		margin: 15px 0;
 	}
+
+    .sitemap {
+        & > div {
+            padding: 0 15px 4px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
 
 	.row.social {
 		a {
@@ -314,18 +326,40 @@ footer {
 	.service-block {
 		margin-bottom: 20px;
 
-		hr {
-			border-width: 3px;
-		}
+        .text-center {
+            margin: 0;
+
+           .btn-primary {
+                width: 100%;
+                font-size:1.2em;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+
+
 
 		.thumbnail {
 			border-radius: 10px;
 			padding: 20px;
 
-			ul {
-				list-style: none;
-				margin: 30px 0 20px 0;
-			}
+            .caption {
+                h3 {
+                    margin: 0;
+                    font-size: 2em;
+                }
+                hr {
+			        border-width: 1px;
+                    margin: 10px 0 0;
+		        }
+                ul {
+                    margin: 15px 0;
+                    padding-left: 75px;
+                    list-style: none;
+                }
+
+            }
 		}
 
 		&:nth-child(4n+1) {
@@ -340,7 +374,13 @@ footer {
 			}
 
 			.thumbnail {
-				border: solid 3px @color-orange;
+				border: solid 1px @color-orange;
+
+                ul {
+                    i {
+                        color: @color-orange;
+                    }
+                }
 			}
 		}
 
@@ -356,7 +396,13 @@ footer {
 			}
 
 			.thumbnail {
-				border: solid 3px @color-green;
+				border: solid 1px @color-green;
+
+                ul {
+                    i {
+                        color: @color-green;
+                    }
+                }
 			}
 		}
 
@@ -372,7 +418,13 @@ footer {
 			}
 
 			.thumbnail {
-				border: solid 3px @color-purple;
+				border: solid 1px @color-purple;
+
+                ul {
+                    i {
+                        color: @color-purple;
+                    }
+                }
 			}
 		}
 	}
@@ -514,14 +566,27 @@ footer {
 	.row > div {
 		display: table;
 
-		img {
-		}
+        p {
+            padding-left: 15px;
+            font-size: 1.2em;
+        }
 
-		h4 {
-			width: 60%;
-			display: table-cell;
-			vertical-align: middle;
-		}
+        div:nth-child(1) {
+            display: table-cell;
+            width: 30%;
+            vertical-align: middle;
+
+            img {
+			    width: 100%;
+		    }
+        }
+        div:nth-child(2) {
+            display: table-cell;
+            width: 70%;
+            vertical-align: middle;
+        }
+
+
 	}
 }
 
@@ -695,6 +760,10 @@ footer {
 /*xxs*/
 @media (max-width: 375px) {
 	header {
+        .container-fluid {
+            margin: 0;
+            padding: 0;
+        }
 		.navbar-nav {
 			margin: 0;
 		}
@@ -705,6 +774,7 @@ footer {
 
 		.navbar-header {
 			width: 100% !important;
+            margin: 0;
 
 			a.logo img {
 				width: 60px !important;
@@ -747,6 +817,10 @@ footer {
 /*xs*/
 @media (min-width: 376px) and (max-width: 767px) {
 	header {
+        .container-fluid {
+            margin: 0;
+            padding: 0;
+        }
 		.navbar-nav {
 			margin: 0;
 		}
@@ -757,6 +831,7 @@ footer {
 
 		.navbar-header {
 			width: 100% !important;
+            margin: 0;
 
 			a.logo img {
 				width: 70px;
