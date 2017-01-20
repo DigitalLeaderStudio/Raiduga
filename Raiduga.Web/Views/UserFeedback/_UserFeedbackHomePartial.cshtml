@@ -6,7 +6,7 @@
 	{
 		<div class="feedback-item">
 			<div class="row">
-				<div class="col-md-3 col-md-offset-2">
+				<div class="col-md-3 col-md-offset-1">
 					@{
 						var srcAction = item.ImageId.HasValue ?
 						Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
@@ -16,10 +16,10 @@
 						 class="img-circle img-responsive"
 						 alt="@item.Text" />
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-7">
 					<p>@item.Text</p>
 					<hr />
-					<p>
+					<p class="testimonial-info">
 						@item.UserName
 						<span class="pull-right"><i class="fa fa-calendar "></i>@item.CreationDate.Value.ToShortDateString()</span>
 					</p>
