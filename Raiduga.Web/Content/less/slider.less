@@ -2,7 +2,7 @@
 
 .carousel {
 	.carousel-caption {
-		top: 7%;
+		top: 15%;
         text-shadow: none;
 	}
 
@@ -42,9 +42,10 @@
 
 		#text {
 			border-radius: 20px;
-			background: rgba(255, 255, 255, 0.7);
+			background: rgba(255, 255, 255, 0.8);
 			overflow: auto;
 			width: 100%;
+            padding: 20px 0;
 
 			.text {
 				width: 100%;
@@ -52,18 +53,18 @@
                 padding: 0 50px;
 
 				h1 {
-					font-size: 7vw;
+					font-size: 4vw  ;
 					font-weight: bold;
 					padding-top: 0px;
 					font-family: @font-comforta;
-					color: #1A0B77;
+					color: @color-blue;
 				}
 
 				h5 {
 					font-size: 2vw;
 					font-weight: bold;
-					font-family: @font-open-sans;
-					padding: 20px 0;
+                    font-family: @font-blogger-sans;
+					padding: 0 0 20px;
 					color: @color-primary;
                     font-weight: bold !important;
 				}
@@ -92,7 +93,7 @@
 
 
 /*xxs*/
-@media (max-width: 340px) { 
+@media (max-width: 319px) { 
     .carousel {
         .carousel-caption {
 		    top: 7% !important;
@@ -180,10 +181,10 @@
 }
 
 /*xs*/
-@media (max-width: 767px) { 
+@media (min-width: 320px) and (max-width: 767px) { 
       .carousel {
         .carousel-caption {
-		    top: 7% !important;
+		    top: 14% !important;
             padding: 0; 
 	    }
 
@@ -218,9 +219,7 @@
 
 		    #text {
 			    border-radius: 10px;
-			    background: rgba(255, 255, 255, 0.7);
-			    overflow: auto;
-			    width: 100%;
+                padding: 0;
 
 			    .text {
 				    width: 100%;
@@ -228,21 +227,11 @@
                     padding: 2% 20px;
 
 				    h1 {
-					    font-size: 9vw;
-					    font-weight: bold;
-					    padding-top: 0px;
-					    font-family: @font-comforta;
-					    color: #1A0B77;
-                        margin: 15px 0;
+                        margin: 5px 0 0;
 				    }
 
 				    h5 {
-					    font-size: 2vw;
-					    font-weight: bold;
-					    font-family: @font-comforta;
-					    padding: 0px 0;
-					    color: @color-primary;
-                        display: none;
+                        padding-bottom: 0;
 				    }
 			    }
 		    }
@@ -305,31 +294,14 @@
 		    display: table-cell;
 
 		    #text {
-			    border-radius: 20px;
-			    background: rgba(255, 255, 255, 0.7);
-			    overflow: auto;
-			    width: 100%;
-
 			    .text {
 				    width: 100%;
 				    text-align: center;
-                    padding: 0 50px;
-
-				    h1 {
-					    font-size: 7vw;
-					    font-weight: bold;
-					    padding-top: 0px;
-					    font-family: @font-comforta;
-					    color: #1A0B77;
-				    }
-
-				    h5 {
-					    font-size: 2vw;
-					    font-weight: bold;
-					    font-family: @font-comforta;
-					    padding: 0px 0;
-					    color: @color-primary;
-				    }
+                    padding: 0 20px;
+                
+                    h5 {
+                        padding-bottom: 0;
+                    }
 			    }
 		    }
 	    }
@@ -356,7 +328,7 @@
 @media (min-width: 992px) and (max-width: 1199px) { 
    	.carousel {
         .carousel-caption {
-		    top: 1% !important;
+		    top: 10% !important;
 	    }
 
         #leftButton,
