@@ -1,8 +1,9 @@
 ﻿@import url('lib.less');
 
 body {
+    font-size: 16px;
 	color: @text-color;
-	font-family: @font-open-sans;
+	font-family: @font-blogger-sans;
 
 	.body-content {
 		h1, h2, h3, h4 {
@@ -10,8 +11,15 @@ body {
 			font-family: @font-open-sans;
 			font-weight: bold;
 		}
+		h1, h2, h3, h4 {
+			color: @color-primary;
+			font-family: @font-bad-script;
+			font-weight: bold;
+		}
 
 		h1 {
+            font-size: 4em;
+
 			&.title {
 				margin-bottom: 30px;
 				text-align: center;
@@ -97,20 +105,21 @@ header {
 	a.logo img {
 		width: 100px;
 		float: left;
-		margin-right: 10px;
+		padding-right: 10px;
 	}
 
 	a.logo h1 {
 		float: left;
-		margin-top: 20px;
-		font-family: @font-open-sans;
+        margin: 0;
+		padding-top: 15px;
+        font-family: @font-blogger-sans;
 		font-weight: bold;
 		font-size: 1.4em;
-		color: @text-color;
-		width: 50%;
+		color: @color-blue;
+		width: 400px;
 
 		&:hover {
-			color: @color-blue;
+			color: @color-green;
 			transition: color 0.3s;
 		}
 	}
@@ -689,7 +698,7 @@ footer {
 	}
 }
 /*xxs*/
-@media (max-width: 340px) {
+@media (max-width: 375px) {
 	header {
 		.navbar-nav {
 			margin: 0;
@@ -703,22 +712,27 @@ footer {
 			width: 100% !important;
 
 			a.logo img {
-				width: 50px !important;
-				float: left;
-				margin: 0 5px;
+				width: 60px !important;
+				padding: 5px;
+                padding-bottom: 0;
 			}
 
-			a.logo h4 {
-				float: left;
-				margin-top: 10px !important;
-				font-size: 0.7em !important;
-				color: @text-color;
-
-				&:hover {
-					color: @color-blue;
-					transition: color 0.3s;
-				}
+			a.logo h1 {
+                padding-top: 10px;
+                font-size: 0.9em;
+                width: 200px;
 			}
+
+		    .navbar-toggle {
+			    margin: 15px 10px 0 0;
+			    background: @color-orange !important;
+			    border: 0 !important;
+
+			    &:focus {
+				    background: @color-light-blue !important;
+                    outline: none;
+			    }
+		    }
 		}
 
 		.navbar-collapse {
@@ -727,15 +741,16 @@ footer {
 			margin-top: 10px !important;
 			border-top: 1px solid @color-grey-border !important;
 
-
-			&:focus {
-				background: @color-orange !important;
+			ul {
+				float: right !important;
+				text-align: right;
+				padding-right: 10px !important;
 			}
 		}
 	}
 }
 /*xs*/
-@media (max-width: 767px) {
+@media (min-width: 376px) and (max-width: 767px) {
 	header {
 		.navbar-nav {
 			margin: 0;
@@ -749,21 +764,14 @@ footer {
 			width: 100% !important;
 
 			a.logo img {
-				width: 60px;
-				float: left;
-				margin: 0 5px;
+				width: 70px;
+                padding-right: 5px;
 			}
 
-			a.logo h4 {
-				float: left;
-				margin-top: 15px;
-				font-size: 0.8em;
-				color: @text-color;
-
-				&:hover {
-					color: @color-blue;
-					transition: color 0.3s;
-				}
+			a.logo h1 {
+                padding-top: 5px;
+                font-size: 1.2em;
+                width: 260px;
 			}
 		}
 
@@ -782,11 +790,12 @@ footer {
 
 		.navbar-toggle {
 			margin: 15px 10px 0 0;
-			background: @color-red !important;
+			background: @color-orange !important;
 			border: 0 !important;
 
 			&:focus {
-				background: @color-orange !important;
+				background: @color-light-blue !important;
+                outline: none;
 			}
 		}
 	}
@@ -827,12 +836,13 @@ footer {
 			a.logo img {
 				width: 90px;
 				float: left;
-				margin-right: 10px;
+				padding-right: 10px;
+                padding-top: 5px;
 			}
 
-			a.logo h4 {
-				margin-top: 20px;
-				font-size: 1.2em;
+			a.logo h1 {
+                width: 350px;
+				padding-top: 15px;
 			}
 
 			.nav.navbar-nav {
