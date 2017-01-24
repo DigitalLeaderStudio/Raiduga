@@ -7,36 +7,34 @@
 
 <h2>@Translations.Content_Title</h2>
 
-<div class="about features">
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		@foreach (var content in Model)
-		{
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="heading-@content.Id">
-					<h4 class="panel-title">
-						<a data-toggle="collapse"
-						   data-parent="#accordion"
-						   href="#collapse-@content.Id"
-						   aria-expanded="false"
-						   aria-controls="collapse-@content.Id">
-							<i class="fa fa-key"></i>@content.Name
-							<span class="pull-right">
-								<i class="fa fa-calendar"></i>
-								@content.CreationDate
-							</span>
-						</a>
-					</h4>
-				</div>
-				<div id="collapse-@content.Id" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-@content.Id">
-					<div class="panel-body">
-						@Html.Raw(content.BodyHtml)
-					</div>
-					<div class="panel-footer">
-						<a href="@Url.Action("Edit", "HtmlContent", new { area = "Admin", id = content.Id })" type="button" class="btn btn-default">@Translations.Edit</a>
-					</div>
-				</div>
-
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	@foreach (var content in Model)
+	{
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="heading-@content.Id">
+				<h4 class="panel-title">
+					<a data-toggle="collapse"
+					   data-parent="#accordion"
+					   href="#collapse-@content.Id"
+					   aria-expanded="false"
+					   aria-controls="collapse-@content.Id">
+						<i class="fa fa-key"></i>@content.Name
+						<span class="pull-right">
+							<i class="fa fa-calendar"></i>
+							@content.CreationDate
+						</span>
+					</a>
+				</h4>
 			</div>
-		}
-	</div>
+			<div id="collapse-@content.Id" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-@content.Id">
+				<div class="panel-body">
+					@Html.Raw(content.BodyHtml)
+				</div>
+				<div class="panel-footer">
+					<a href="@Url.Action("Edit", "HtmlContent", new { area = "Admin", id = content.Id })" type="button" class="btn btn-default">@Translations.Edit</a>
+				</div>
+			</div>
+
+		</div>
+	}
 </div>

@@ -555,6 +555,7 @@ namespace Raiduga.DAL.Migrations
 					CreationDate = DateTime.Now,
 					Name = "About",
 					BodyHtml = @"
+<div class=""about"">
                         <div class=""row about"">
                         <div class=""col-md-2 col-md-offset-2""><img src = ""/Content/img/logo 500x422.png"" class=""img-responsive"" /></div>
                         <div class=""col-md-6"">Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.Главными особенностями игры являются уровни &laquo;Разрушительного Дерби&raquo;, знакомые игрокам по серии Flatout от студии Bugbear.Также в игре представлены арены со свободными трюками, мультиплеер на 8 игроков, а также режим разделенного экрана Split Screen, позволяющий сыграть вдвоем на одном компьютере.</div>
@@ -694,8 +695,9 @@ namespace Raiduga.DAL.Migrations
                         </div>
                         </div>
                         </div>
+ </div>
                         "
-                });
+				});
 
 			#endregion
 
@@ -707,7 +709,8 @@ namespace Raiduga.DAL.Migrations
 					CreationDate = DateTime.Now,
 					Name = "FeatureBlock",
 					BodyHtml = @"
-                        <div class=""row"">
+<div class=""features"">
+                        <div class=""row features"">
                         <div class=""col-md-6"">
                         <div><img src=""../Content/img/features/зірка.svg"" /></div>
                         <div>
@@ -745,6 +748,7 @@ namespace Raiduga.DAL.Migrations
                         </div>
                         </div>
                         </div>
+</div>
                     "
 				});
 
