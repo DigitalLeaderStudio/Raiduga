@@ -396,4 +396,7 @@
   <data name="Login_RememberMe" xml:space="preserve">
     <value>Remember me?</value>
   </data>
+  <data name="DevelopedBy" xml:space="preserve">
+    <value>Website developed by digital services provider</value>
+  </data>
 </root>

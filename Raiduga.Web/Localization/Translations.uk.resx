@@ -397,4 +397,7 @@
   <data name="Login_RememberMe" xml:space="preserve">
     <value>Запам'ятати мене?</value>
   </data>
+  <data name="DevelopedBy" xml:space="preserve">
+    <value>Сайт розроблено провайдером цифрових послуг </value>
+  </data>
 </root>

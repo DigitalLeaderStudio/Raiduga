@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -193,6 +194,7 @@
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\UserFeedbackController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -252,9 +254,20 @@
     <Content Include="Content\img\features\кульки.svg" />
     <Content Include="Content\img\features\розвиток.svg" />
     <Content Include="Content\img\features\стіна.svg" />
+    <Content Include="Content\img\logo 500x422.png" />
     <Content Include="Content\img\services\дорослим.svg" />
     <Content Include="Content\img\services\дошкільнятам.svg" />
     <Content Include="Content\img\services\школярам.svg" />
+    <Content Include="Content\img\stuff\1.jpg" />
+    <Content Include="Content\img\stuff\2.jpg" />
+    <Content Include="Content\img\stuff\22.jpg" />
+    <Content Include="Content\img\stuff\3.jpg" />
+    <Content Include="Content\img\stuff\4.jpg" />
+    <Content Include="Content\img\stuff\44.jpg" />
+    <Content Include="Content\img\stuff\5.jpg" />
+    <Content Include="Content\img\stuff\6.jpg" />
+    <Content Include="Content\img\stuff\7.jpg" />
+    <Content Include="Content\img\stuff\8.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\ajax-loader.gif" />
     <Content Include="Content\img\arrow-left.svg" />
@@ -655,6 +668,7 @@
     <Content Include="Views\Article\Index.cshtml" />
     <Content Include="Views\Article\View.cshtml" />
     <Content Include="Views\Service\CourseView.cshtml" />
+    <Content Include="Views\Schedule\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

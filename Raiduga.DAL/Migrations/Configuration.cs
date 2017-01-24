@@ -761,107 +761,147 @@ namespace Raiduga.DAL.Migrations
 					CreationDate = DateTime.Now,
 					Name = "About",
 					BodyHtml = @"
-<div class=""row about"">
-< div class=""col-md-2 col-md-offset-2""><img src = ""/Content/img/logo 500x422.png"" class=""img-responsive"" /></div>
-<div class=""col-md-6"">Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.Главными особенностями игры являются уровни &laquo;Разрушительного Дерби&raquo;, знакомые игрокам по серии Flatout от студии Bugbear.Также в игре представлены арены со свободными трюками, мультиплеер на 8 игроков, а также режим разделенного экрана Split Screen, позволяющий сыграть вдвоем на одном компьютере.</div>
-</div>
-<div class=""row"">
-<h2 class=""text-center""><strong>Наши достижения</strong></h2>
-<div class=""achievements"">
-<div class=""row achievement"">
-<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-<div class=""description col-md-5 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-<div class=""description col-md-5 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-<div class=""description col-md-5 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-<div class=""description col-md-5 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-<div class=""description col-md-5 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-</div>
-<div class=""row achievement"">
-<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-<h4 class=""media-heading"">Работников</h4>
-<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-</div>
-<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-<div class=""media-object"">39</div>
-</div>
-</div>
-</div>
-</div>
-                                "
-				});
+                        <div class=""row about"">
+                        <div class=""col-md-2 col-md-offset-2""><img src = ""/Content/img/logo 500x422.png"" class=""img-responsive"" /></div>
+                        <div class=""col-md-6"">Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.Главными особенностями игры являются уровни &laquo;Разрушительного Дерби&raquo;, знакомые игрокам по серии Flatout от студии Bugbear.Также в игре представлены арены со свободными трюками, мультиплеер на 8 игроков, а также режим разделенного экрана Split Screen, позволяющий сыграть вдвоем на одном компьютере.</div>
+                        </div>
+                        <div class=""row"">
+                        <h2 class=""text-center""><strong>Наши достижения</strong></h2>
+                        <div class=""achievements"">
+                        <div class=""row achievement"">
+                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        </div>
+                        <div class=""row achievement"">
+                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                        <h4 class=""media-heading"">Работников</h4>
+                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+                        </div>
+                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                        <div class=""media-object"">39</div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class=""row staff"">
+                        <h2 class=""text-center""><strong>Наши достижения</strong></h2>
+                        <div class=""stuff-wrapper"">
+                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
+                        <h3> Вчителька Вчителька</h3>
+                        <h4>Посада</h4>
+                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
+                        </div>
+                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
+                        <h3> Вчителька Вчителька</h3>
+                        <h4>Посада</h4>
+                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
+                        </div>
+                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
+                        <h3> Вчителька Вчителька</h3>
+                        <h4>Посада</h4>
+                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
+                        </div>
+                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
+                        <h3> Вчителька Вчителька</h3>
+                        <h4>Посада</h4>
+                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
+                        </div>
+                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
+                        <h3> Вчителька Вчителька</h3>
+                        <h4>Посада</h4>
+                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
+                        </div>
+                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
+                        <h3> Вчителька Вчителька</h3>
+                        <h4>Посада</h4>
+                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
+                        </div>
+                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
+                        <h3> Вчителька Вчителька</h3>
+                        <h4>Посада</h4>
+                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
+                        </div>
+                        </div>
+                        </div>
+                        "
+                });
 
 			#endregion
 
