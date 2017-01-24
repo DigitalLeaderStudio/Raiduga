@@ -399,4 +399,7 @@
   <data name="DevelopedBy" xml:space="preserve">
     <value>Website developed by digital services provider</value>
   </data>
+  <data name="Schedule_PageTitle" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
 </root>
