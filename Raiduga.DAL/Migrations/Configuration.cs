@@ -22,6 +22,61 @@ namespace Raiduga.DAL.Migrations
 		{
 			char tab = '\u0009';
 
+			#region Slider
+
+			var slide1 = new Raiduga.Models.File
+			{
+				ContentType = "image/jpeg",
+				FileName = "райдуга-слайд-1.jpg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/slide1.jpg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, slide1);
+			context.SaveChanges();
+
+			context.SliderItems.AddOrUpdate(s => s.Title,
+				new SliderItem
+				{
+					Title = "Райдуга",
+					SubTitle = "Центра інтелектуального та творчого розвитку особистості",
+					ImageId = slide1.Id
+				});
+
+			var slide2 = new Raiduga.Models.File
+			{
+				ContentType = "image/jpeg",
+				FileName = "райдуга-слайд-2.jpg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/slide2.jpg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, slide2);
+			context.SaveChanges();
+
+			context.SliderItems.AddOrUpdate(s => s.Title,
+				new SliderItem
+				{
+					Title = "Щастя",
+					SubTitle = "Ми знаємо як зробити ваших дітей щасливими",
+					ImageId = slide2.Id
+				});
+
+			var slide3 = new Raiduga.Models.File
+			{
+				ContentType = "image/jpeg",
+				FileName = "райдуга-слайд-3.jpg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/slide3.jpg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, slide3);
+			context.SaveChanges();
+
+			context.SliderItems.AddOrUpdate(s => s.Title,
+				new SliderItem
+				{
+					Title = "Спогда та друзі",
+					SubTitle = "Ми залишаємо безцінні спогади та об’єднуємо друзів на все життя",
+					ImageId = slide3.Id
+				});
+
+			#endregion
+
 			#region User add
 
 			var role = new Role
@@ -239,294 +294,74 @@ namespace Raiduga.DAL.Migrations
 			#region Courses
 			preSchollService.Courses = new List<Course>();
 
-			#region Подготовка к школе
+			#region Інтенсивний курс підготовки до школи
 
 			preSchollService.Courses.Add(new Course
 			{
-				Name = "Подготовка к школе",
-				Description = "Подготовка к школе",
+				Name = "Інтенсивний курс підготовки до школи",
+				Description = @"Перехід з садочка до школи може виявитись тяжким випробуванням для дитини.
+Ми створимо сприятливі умови для того, щоб Ваш майбутній школяр здобув віру в себе, в свої сили та здібності.
+І почував себе дорослою людиною, гордо називаючись школярем.",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0, 45, 0),
-				Price = "100",
+				Duration = new TimeSpan(0, 90, 0),
+				Price = "120 грн",
 				PriorityOrder = 1,
-				BodyHtml = @"<div id=""they"">
-<p id=""they_head"">&nbsp;</p>
-
-<p style=""text-align: center;""><span style=""color:#A52A2A;""><span style=""font-family:comic sans ms,cursive;""><span style=""font-size:24px;""><strong>Комплекс підготовки до школи ""<u>Сходинки до знань</u>""</strong></span></span></span></p>
-
-<p style=""text-align: center;"">&nbsp;</p>
-
-<p style=""text-align: center;""><img alt="""" src=""/images.jpg"" style=""width: 248px; height: 204px;""></p>
-
-<ul>
- <li>
- <p><span style=""font-size:16px;"">Базова освіта (розвиток мови, читання;&nbsp;логіка, математика);</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Основи культури, розумове та естетичне виховання;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Інтелектуальний розвиток, що є фундаментом основ майбутніх знань, які будуть використовуватись у шкільному віці;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Ігрові форми діяльності під час занять;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Розвиток уваги, пам`яті, мислення;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Заняття, що проходять за затвердженими програмами;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Програми орієнтовані на вік дитини та рівень її розвитку;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Періодичне тестування з метою з'ясування рівня засвоєння матеріалу;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Психологічна підготовка до навчання;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Комунікативні навички спілкування з однолітками та старшими;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Індивідуальний підхід до розвитку, виховання та навчання кожної дитини;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Індивідуальні плани розвитку та пізнання оточуючого світу кожної дитини;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Кількість дітей не більше 8-10 в групі;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">Активна взаємодія з однолітками та викладачами.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#008000;""><span style=""font-size:18px;""><strong>Комплекс має чотири рівні навчання:</strong></span></span></p>
-
-<hr>
-<p><span style=""font-size:16px;""><strong><a href=""http://www.raiduga.kiev.ua/index/persha_skhodinka_do_znan/0-20""><span style=""color:#FF8C00;"">Рівень ""Карапузи""</span></a></strong><span style=""color:#FF8C00;"">&nbsp;</span>(діти від 2-х до 3-х років)</span></p>
-
-<p><span style=""font-size:16px;""><strong><a href=""http://www.raiduga.kiev.ua/index/druga_skhodinka_do_znan/0-21""><span style=""color:#EE82EE;"">Рівень ""Фантазери""</span></a></strong><span style=""color:#EE82EE;"">&nbsp;</span>(діти від 3-х до 4-х років)</span></p>
-
-<p><span style=""font-size:16px;""><strong><a href=""http://www.raiduga.kiev.ua/index/tretja_skhodinka_do_znan/0-22""><span style=""color:#40E0D0;"">Рівень ""Розумашки""</span></a></strong><span style=""color:#40E0D0;"">&nbsp;</span>(діти від 4-х до 5-ти років)</span></p>
-
-<p><span style=""font-size:16px;""><strong><a href=""http://www.raiduga.kiev.ua/index/chetverta_skhodinka_do_znan/0-26""><span style=""color:#0000CD;"">Рівень ""Знайки""</span></a></strong>&nbsp;(діти від 5-ти до 6-ти років)</span></p>
-
-<p>&nbsp;</p>
-
-<p id=""they_head"" style=""text-align: center;""><span style=""color:#B22222;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:18px;""><strong>НАДЗАВДАННЯ</strong></span></span></span></p>
-
-<p><span style=""font-size:18px;""><span style=""color:#006400;""><strong>Розвиток навичок спілкування у дітей дошкільного віку:</strong></span></span></p>
-
-<hr>
-<ul>
- <li>
- <p><span style=""font-size:16px;"">оволодіння дітьми навички встановлення контакту з однолітками, прояв взаємоповаги та уваги;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток здатності до взаємодії, вміння підкорювати свої дії інтересам групи;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток уміння поступатися один одному, стримувати свої безпосередні бажання та пориви;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння навичками вибору партнера по сумісній діяльності, вираження симпатії і приязні до однолітків.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><span style=""font-size:18px;""><span style=""color:#006400;""><strong>Розвиток довільної поведінки:</strong></span></span></p>
-
-<hr>
-<ul>
- <li>
- <p><span style=""font-size:16px;"">виховання здатності до свідомої мобілізації своїх зусиль на досягнення&nbsp;цілі;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">формування вольових якостей особистості і здатності до довільного управління своєю поведінкою;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">виховання організованості та здатності до вольового управління своєю поведінкою під час взаємодії з однолітками;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">виховання витримкм, уміння подолати безпосередні бажання.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#006400;""><span style=""font-size:18px;""><strong>Розвиток ціленаправленого слухового сприйняття:</strong></span></span></p>
-
-<hr>
-<ul>
- <li>
- <p><span style=""font-size:16px;"">розвиток уміння прислухатися до оточуючих звуків, цілеспрямовано сприймати та розрізняти їх;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток уміння розрізняти та відтворювати звуки;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток уміння виділяти звук серед решти і сприймати його як сигнал певної дії або події.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#006400;""><span style=""font-size:18px;""><strong>Формування цілеспрямованої уваги:</strong></span></span></p>
-
-<hr>
-<ul>
- <li>
- <p><span style=""font-size:16px;"">розвиток цілеспрямованої уваги;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння навичками одночасного виділення та враховування декількох різних умов розв'язання задачі;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток стійкої уваги;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток стійкої зосередженої уваги.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#006400;""><span style=""font-size:18px;""><strong>Розвиток пам'яті:</strong></span></span></p>
-
-<hr>
-<ul>
- <li>
- <p><span style=""font-size:16px;"">розвиток цілеспрямованого запам'ятовування та нагадування;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток навичок встановлення змістових зв'язків між об'єктами як способу усвідомленого запам'ятовування;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розширення об'єму пам'яті та уваги;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток вербальної пам'яті у дошкільників.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#006400;""><span style=""font-size:18px;""><strong>Розвиток мислення:</strong></span></span></p>
-
-<hr>
-<ul>
- <li>
- <p><span style=""font-size:16px;"">розвиток просторових уявлень дітей та їх словесне позначення;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння навичками самостійного виділення функцій предмета і позначення їх словом;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток цілісних уявлень про оточуючий світ;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння навичками елементарного аналізу та синтезу відмінних особливостей об'єктів, встановлення їх тотожності та різниці.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#006400;""><span style=""font-size:18px;""><strong>Підготовка дітей дошкільного віку до навчання читанню:</strong></span></span></p>
-
-<hr>
-<ul>
- <li><span style=""font-size:16px;"">оволодіння здатністю виділяти класи предметів;</span></li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння здатністю виділяти підкласи предметів всередині класів;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння дією виключення предмета чи слова з класу;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння дитиною навичкою сприймати слово окремо від конкретної ситуації, розуміти можливість існування різних значень одного слова;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток свідомої мови, відмежованої від конкретної ситуації та від безпосереднього життєвого досвіду дитини;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">оволодіння навичкою виділення з контексту нових, незнайомих дитині слів;</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">розвиток у дитини здатності на розділення мовного потоку на одиниці (виділяти слово як одиницю мови);</span></p>
- </li>
- <li>
- <p><span style=""font-size:16px;"">формування у дитини уяви про еквівалентність писемного та усного слова.</span></p>
- </li>
-</ul>
-
-<p>&nbsp;</p>
-</div>"
+				BodyHtml = @"
+Перехід з садочка до школи може виявитись тяжким випробуванням для дитини.
+Ми створимо сприятливі умови для того, щоб Ваш майбутній школяр здобув віру в себе, в свої сили та здібності.
+І почував себе дорослою людиною, гордо називаючись школярем.
+"
 			});
 
 			#endregion
 
-			#region Учимся с мамой
+			#region Сходинки до знань
+
 			preSchollService.Courses.Add(new Course
 			{
-				Name = "Учимся с мамой",
-				Description = "Учимся с мамой",
+				Name = "Сходинки до знань",
+				Description = "Запрошуємо на веселі та захоплюючі заняття з розвитку. Ми навчимо Ваших діточок читати, правильно і гарно писати, рахувати, вільно спілкуватися і комфортно почуватись себе в колективі, працювати в команді.",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0, 45, 0),
-				Price = "100",
+				Duration = new TimeSpan(0, 60, 0),
+				Price = "80 грн",
 				PriorityOrder = 1,
-				BodyHtml = @"<div id=""they"" style=""font-family: Verdana, Geneva, sans-serif; color: #000; font-size: 11px"">
-<p id=""they_head"" align=""center""><span style=""font-family:comic sans ms,cursive;""><span style=""font-size:24px;""><strong><span style=""color:#000000;"">Курс</span><span style=""color: #ff0000""> </span><span style=""color:#FF8C00;""><u>«<b>Навчаємось з мамою</b>»</u></span></strong></span></span></p>
+				BodyHtml = @"Запрошуємо на веселі та захоплюючі заняття з розвитку. Ми навчимо Ваших діточок читати, правильно і гарно писати, рахувати, вільно спілкуватися і комфортно почуватись себе в колективі, працювати в команді."
+			});
 
-<p align=""center""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:20px;""><strong><span style=""color: #ff0000""><img alt="""" src=""/mama.jpg"" style=""width: 500px; height: 306px;""></span></strong></span></span></p>
+			#endregion
 
-<p style=""text-align: center;""><span style=""color:#FFA500;""><span style=""font-family:verdana,geneva,sans-serif;""><strong><span style=""font-size:18px;"">Ми&nbsp;вітаємо молодих мам, які&nbsp;хочуть&nbsp;зробити&nbsp;життя&nbsp;своїх діточок&nbsp;цікавим, різноманітним та насиченим!</span></strong></span></span></p>
+			#region Навчаємось з мамою
+			preSchollService.Courses.Add(new Course
+			{
+				Name = "Навчаємось з мамою",
+				Description = @"Кожен день Вашого малюка - це крок у доросле життя.
+Разом ми спонукаємо його долучитися до світу Знань та Умінь, пізнати Себе й  Інших, навчимо справлятися зі своїми Хочу і Боюсь.
+А головне - ми зробимо дитину щасливішою від власного усвідомлення Я МОЖУ, Я САМ, Я РОСТУ !!!
+Наші психологи допоможуть мамам навчитися дозволяти дитині ставати самостійнішою, справлятися з капризами, допоможуть розвинути її найкращі якості, навчити вчитися.
+Ми допоможемо скласти карту розвитку Вашої дитини та впоратися з труднощами.",
+				CreationDate = DateTime.Now,
+				Duration = new TimeSpan(0, 50, 0),
+				Price = "80 грн",
+				PriorityOrder = 1,
+				BodyHtml = @"Кожен день Вашого малюка - це крок у доросле життя.
+Разом ми спонукаємо його долучитися до світу Знань та Умінь, пізнати Себе й  Інших, навчимо справлятися зі своїми Хочу і Боюсь.
+А головне - ми зробимо дитину щасливішою від власного усвідомлення Я МОЖУ, Я САМ, Я РОСТУ !!!
+Наші психологи допоможуть мамам навчитися дозволяти дитині ставати самостійнішою, справлятися з капризами, допоможуть розвинути її найкращі якості, навчити вчитися.
+Ми допоможемо скласти карту розвитку Вашої дитини та впоратися з труднощами."
+			});
 
-<hr>
-<blockquote>
-<p><span style=""display: none;"">&nbsp;</span><span style=""color:#800000;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:16px;"">Кожен день Вашого малюка - це крок у&nbsp;доросле&nbsp;життя.</span></span></span></p>
+			#endregion
 
-<p><span style=""color:#800000;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:16px;"">Разом ми спонукаємо його&nbsp;долучитися до світу Знань&nbsp;та Умінь, пізнати Себе й &nbsp;Інших, навчимо справлятися зі своїми Хочу і Боюсь.</span></span></span></p>
-
-<p><span style=""color:#800000;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:16px;"">А головне - ми зробимо дитину&nbsp;щасливішою&nbsp;від власного усвідомлення Я МОЖУ, Я САМ, Я РОСТУ !!!</span></span></span></p>
-
-<p><span style=""color:#800000;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:16px;"">Наші психологи допоможуть мамам навчитися дозволяти дитині ставати самостійнішою, справлятися з капризами, допоможуть розвинути&nbsp;її&nbsp;найкращі якості, навчити вчитися.</span></span></span></p>
-
-<p><span style=""color:#800000;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:16px;"">Ми допоможемо скласти карту розвитку Вашої дитини та&nbsp;впоратися з труднощами.</span></span></span></p>
-</blockquote>
-
-<p><span style=""display: none;"">&nbsp;</span>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p><span style=""font-size:16px;""><span style=""font-size:18px;""><span style=""color:#008000;""><strong>Коротка Програма курсу</strong></span></span></span><span style=""font-size:16px;""><strong><u> </u></strong></span></p>
-
-<hr>
-<ol>
- <li><span style=""font-size:16px;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""color:#FF8C00;""><strong>Завдання курсу</strong></span></span> вирішуються шляхом ігор-експериментів, що є&nbsp;</span><span style=""font-size: 16px; line-height: 1.6;"">основним видом пізнавальної діяльності. Кожне заняття складається з декількох незалежних блоків, що розділені фізкультхвилинками.</span></li>
- <li><span style=""font-size:16px;""><span style=""color:#DAA520;""><span style=""font-family:verdana,geneva,sans-serif;""><strong>Основне правило виховання</strong></span> </span>&ndash; допоможи дитині зробити <u>ЦЕ</u> самостійно.</span></li>
- <li><span style=""font-size:16px;""><span style=""color:#40E0D0;""><strong>Основні задачі курсу:</strong></span><span style=""color:#FF8C00;""> </span>розвиток дрібної моторики, сензитивної сфери дитини, її мислення, самостійності, формування емоційних уявлень про оточуючий світ.</span></li>
-</ol>
-
-<p style=""text-align: center;"">&nbsp;</p>
-
-<p><span style=""font-size:16px;""><span style=""color:#EE82EE;""><b><i>Етап ознайомлення</i></b>&nbsp;</span><span style=""color:#000000;"">На першому етапі малюки знайомляться&nbsp;з оточуючим середовищем, новим простором, цікавим для них світом, розвиваючими іграшками, незнайомими дорослими (викладачами). Викладач у цей період спостерігає за малюками, вивчає особливості їх поведінки, робить висновки, що допоможуть в подальшому планувати структуру занять.</span></span></p>
-
-<p><span style=""font-size:16px;""><span style=""color:#FFD700;""><em><strong>Етап індивідуального розвитку.</strong></em></span> <span style=""color:#000000;"">Навчання на даному етапі найбільш важливе як для дитини, так і для викладача. У цей період встановлюється тісний контакт між малюком і викладачем. В процесі ігрових занять викладач обов'язково знаходить час для індивідуального спілкування з кожною дитиною, ставить перед ним завдання і спостерігає за їх виконанням. В результаті, такий індивідуальний підхід допомагає викладачу визначити до якого виду діяльності у дитини є нахили, дає можливість звернути увагу батьків на ті моменти розвитку, що потребують додаткової роботи, або ж виявляти задатки таланту.</span></span></p>
-
-<p><span style=""font-size:16px;""><strong><span style=""color:#0000FF;"">Етап соціалізації.</span></strong><span style=""color:#000000;"">&nbsp;Грамотне виховання на заняттях курсу формує соціальні навички малюка: чи зможе він без комплексів активно спілкуватися зі своїми однолітками та дорослими;&nbsp;чи зможе успішно вирішувати конфлікти;&nbsp;яким буде його спілкування з&nbsp;людьми, що його оточують?</span></span></p>
-
-<p><span style=""font-size:16px;"">&nbsp;</span></p>
-
-<p><span style=""color:#800000;""><b><strong><span style=""font-size:16px;"">Під час навчального курсу ""Навчаємось з мамою"" малюк ознайомиться зі світом, що його оточує, вивчить кольори, розміри, форми, частини, зможе самостійно виконувати різні логічні вправи і завдання, розвиватиме дрібну моторику, навчиться грати на шумових музичних інструментах, співати перші пісні, ліпити та малювати.</span></strong></b></span></p>
-</div>"
+			#region Англійська мова (групова)
+			preSchollService.Courses.Add(new Course
+			{
+				Name = "Англійська мова (групова)",
+				Description = @"Завдяки комфортній психологічній обстановці, умінням та знанням педагога, а також захоплюючому процесу гри, заняття з англійської мови викликають в дошкільнят інтерес до навчання то в загальному до іноземної мови.",
+				CreationDate = DateTime.Now,
+				Duration = new TimeSpan(0, 50, 0),
+				Price = "50 грн",
+				PriorityOrder = 1,
+				BodyHtml = @"Завдяки комфортній психологічній обстановці, умінням та знанням педагога, а також захоплюючому процесу гри, заняття з англійської мови викликають в дошкільнят інтерес до навчання то в загальному до іноземної мови."
 			});
 
 			#endregion
@@ -565,36 +400,60 @@ namespace Raiduga.DAL.Migrations
 			schollService.Courses = new List<Course>();
 			schollService.Courses.Add(new Course
 			{
-				Name = "Английский клуб",
-				Description = "Английский клуб",
+				Name = "Англійська мова",
+				Description = "Англійська мова",
 				CreationDate = DateTime.Now,
-				Duration = new TimeSpan(0, 45, 0),
+				Duration = new TimeSpan(0, 60, 0),
 				PriorityOrder = 1,
-				Price = "110",
-				BodyHtml = @"<div id=""posts"">
- <!-- <body> --><div id=""nativeroll_video_cont"" style=""display:none;""></div><p style=""text-align: center;""><strong><span style=""color:#006400;""><span style=""font-size:24px;""><span style=""font-family:comic sans ms,cursive;""><u>""English Club""</u></span></span></span></strong></p>
-
-<p style=""text-align: center;""><img alt="""" src=""/Funny-English.jpg"" style=""width: 434px; height: 376px;""></p>
-
-<p style=""text-align: center;"">&nbsp;</p>
-
-<p><span style=""color:#006400;""><span style=""font-size:18px;""><span style=""font-family:verdana,geneva,sans-serif;"">Кожен із нас розуміє, що у сучасному суспільстві знання англійської мови є не просто важливим, а необхідним як у роботі, так і у житті.</span></span></span></p>
-
-<hr>
-<p><span style=""color:#000000;""><span style=""font-size:18px;""><span style=""font-family:verdana,geneva,sans-serif;"">Враховуючи динаміку та ритм всього що нас оточує, батьки активно розпочинають пошуки розвиваючих занять, мовних курсів&nbsp; для своєї дитини. І це правильно, адже у вивченні мови не можна втрачати час. Чим раніше ми починаємо вивчення, тим кращий буде результат.</span></span></span></p>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#000000;""><span style=""font-size:18px;""><span style=""font-family:verdana,geneva,sans-serif;"">Якщо у вашої дитини проблеми з англійською в школі, чи ви просто хочете поставити знання з іноземної мови на високий рівень &ndash; ми допоможемо Вам.</span></span></span></p>
-
-<p><span style=""font-size:18px;""><span style=""font-family:verdana,geneva,sans-serif;"">У нас ви знайдете унікальний сучасний підхід до вивчення англійської, де дитина з задоволенням буде займатися.</span></span></p>
-
-<p>&nbsp;</p>
-
-<p><span style=""color:#008000;""><strong><span style=""font-size:16px;"">Чекаємо на вас за попереднім записом у адміністратора.</span></strong></span></p><!-- </body> -->
- </div>"
+				Price = "100 грн",
+				BodyHtml = @""
 			});
 
+			#region Логопед (індивідуальні заняття)
+			schollService.Courses.Add(new Course
+			{
+				Name = "Логопед (індивідуальні заняття)",
+				Description = @"
+Говорити гарно та впевнено, використовуючи багатий словниковий запас – тобто так, що інші заслуховувались – Вашу дитину навчить професійний логопед. Після занять з нашим спеціалістом, розговориться навіть найсором`язливіший мовчун.
+",
+				CreationDate = DateTime.Now,
+				Duration = new TimeSpan(0, 60, 0),
+				PriorityOrder = 1,
+				Price = "150",
+				BodyHtml = @"
+Говорити гарно та впевнено, використовуючи багатий словниковий запас – тобто так, що інші заслуховувались – Вашу дитину навчить професійний логопед. Після занять з нашим спеціалістом, розговориться навіть найсором`язливіший мовчун.
+"
+			});
+
+			#endregion
+
+			#region Психолог
+			schollService.Courses.Add(new Course
+			{
+				Name = "Психолог (консультація)",
+				Description = @"Хто як не люблячі батьки помічає найменші зміни в настрої своєї дитини і тут же кидається їй допомогти? І часто досить однієї любові, ласки і терпіння, щоб допомогти малюкові, але в житті бувають такі ситуації, коли однією батьківською любов’ю не обійтися. Якщо у Вас виникають питання, проблеми з якими не можете справитись самостійно ми прийдемо Вам на допомогу. Наш психолог допоможе справитись з будь якою ситуацією.",
+				CreationDate = DateTime.Now,
+				Duration = new TimeSpan(0, 60, 0),
+				PriorityOrder = 1,
+				Price = "150",
+				BodyHtml = @"Хто як не люблячі батьки помічає найменші зміни в настрої своєї дитини і тут же кидається їй допомогти? І часто досить однієї любові, ласки і терпіння, щоб допомогти малюкові, але в житті бувають такі ситуації, коли однією батьківською любов’ю не обійтися. Якщо у Вас виникають питання, проблеми з якими не можете справитись самостійно ми прийдемо Вам на допомогу. Наш психолог допоможе справитись з будь якою ситуацією."
+			});
+
+			#endregion
+
+			#region Психолог
+			schollService.Courses.Add(new Course
+			{
+				Name = "Театральна студія",
+				Description = @"В кожній маленькій дитині живе великий актор. Його просто потрібно знайти та розворушити! На заняття театральної студії діти не тільки оволодівають акторською майстерністю, але і розвивають фантазію, уяву, стають товариськими і впевненими в собі.",
+				CreationDate = DateTime.Now,
+				Duration = new TimeSpan(0, 60, 0),
+				PriorityOrder = 1,
+				Price = "150",
+				BodyHtml = @"В кожній маленькій дитині живе великий актор. Його просто потрібно знайти та розворушити! На заняття театральної студії діти не тільки оволодівають акторською майстерністю, але і розвивають фантазію, уяву, стають товариськими і впевненими в собі."
+			});
+
+			#endregion
 
 			#endregion
 
@@ -649,72 +508,7 @@ namespace Raiduga.DAL.Migrations
 				Description = " Сучасні танці – це сукупність різних найпопулярніших та найновіших стилів хореографії, ними можуть займатись як діти так і дорослі. В кожного століття були свої сучасні танці, в 21 столітті до сучасних танців відносяться : контемп, модерн, джаз, джаз – фанк, хіп – хоп, брейкданс , і багато інших. Заняття сучасними танцями корисно для дітей тим, що , покращує координацію рухів, пам’ять і мислення, розвиток емоційного стану, вирівнює поставу та тонус тіла, виробляє пластику та гнучкість, розтяжку, музичний слух та ритміку.",
 				Price = "100",
 				PriorityOrder = 2,
-				BodyHtml = @"<div id=""they"" style=""font-family: Verdana, Geneva, sans-serif; color: rgb(0, 0, 0); text-align: justify;"">
-<p style=""font-size: 11px;""><img src=""http://www.raiduga.kiev.ua/News/img/1319540326_269140600_1-Mtv-style-Dance-city-.jpg"" style=""float:left; width:175px; padding: 0px 10px 10px 10px""></p>
-
-<p style=""font-size: 11px;""><span style=""color:#008000;""><span style=""font-size:24px;""><span style=""font-family:comic sans ms,cursive;""><strong><u>MTV-style</u>.&nbsp;</strong></span></span></span><span style=""font-size:16px;"">Це не просто стиль танцю,&nbsp;а&nbsp;ціле сузір'я танцювальних напрямків, зібраних в одне ціле. Тут присутні ритми хіп-хопу, стрибки з house, пластика, елементи джазу, фанку, сучасних танців. Свіжість, яскравість і енергійність гармонійно поєднується з пластикою і граційністю. MTV-style акцентований&nbsp;на точність, виразність і красу рухів, і саме тому цей стиль розвиває всі групи м'язів і сприяє загальній пластичності людини.</span></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-&nbsp;
-
-<p style=""font-size: 11px;""><img src=""http://www.raiduga.kiev.ua/News/img/jazz-funk.jpg"" style=""float:left; width:175px; padding:0px 10px 10px 10px""></p>
-
-<p style=""font-size: 11px;""><span style=""color:#40E0D0;""><span style=""font-family:comic sans ms,cursive;""><span style=""font-size:24px;""><u><strong>Джаз-Фанк</strong></u><strong>.</strong></span></span></span><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:18px;"">&nbsp;<span style=""font-size:16px;"">Стиль, що поєднав&nbsp;у&nbsp;собі пластику дівчат і різкість хлопців, агресивність і ніжність, скромність і розкутість, красиві лінії та неординарні рухи. Додайте сюди динаміку, емоції, ілюстрацію пісень, сексуальність і, здається, що немає нічого красивішого. Цей танець розвиває гнучкість, пластику, витривалість, а також формує красиву поставу і граційність. Видовищність, епатаж, манерність &ndash; головні складові Джаз-Фанку.</span></span></span></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;""><br>
-<br>
-&nbsp;</p>
-
-<p style=""font-size: 11px;""><img src=""http://www.raiduga.kiev.ua/News/img/contemporary-Dance.jpg"" style=""float:left; width:175px; padding:0px 10px 10px 10px""></p>
-
-<p style=""font-size: 11px;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""font-size:18px;""><span style=""font-size:24px;""><span style=""color:#696969;""><u><strong>Contemporary dance</strong></u><strong>.</strong></span></span> </span></span><span style=""font-size:16px;""><span style=""font-family:verdana,geneva,sans-serif;"">Стиль сучасного сценічного танцю. Часто виконується босоніж. Особливий тим, що приділяє увагу внутрішнім відчуттям танцівника, змісту самого руху, його взаємодії з простором, партнером, часом. У сучасному світі contemporary dance займаються не лише професійні танцівники, але й люди, які не мали раніше до танців&nbsp;жодного стосунку.</span></span></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;"">&nbsp;&nbsp;<img alt="""" src=""/7c4be12e95c2fc51ce672833a6ad4f07.jpeg"" style=""width: 153px; height: 118px;"">&nbsp;&nbsp; &nbsp;&nbsp;<span style=""color:#FF8C00;""><u><strong><span style=""font-family:comic sans ms,cursive;""><span style=""font-size:24px;"">Східні танці.</span></span></strong></u></span> <span style=""font-size:16px;""><span style=""font-family:verdana,geneva,sans-serif;"">Наразі найпопулярніший стиль танцю серед жінок абсолютно різної комплекції. Ми пропонуємо унікальний сид танців - східні танці з</span></span><span style=""font-size:16px;""><span style=""font-family:verdana,geneva,sans-serif;"">фітнеспрограмою!&nbsp;Розвиває силу, гнучкість, самоконтроль, жіночнісь. Ніжні мелодії та пластичні рухи домоможуть вам справитись </span></span><span style=""font-size:16px;""><span style=""font-family:verdana,geneva,sans-serif;"">з дипресією та набути впевненості у собі.</span></span></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;""><img src=""http://www.raiduga.kiev.ua/News/img/pilates5.jpg"" style=""float:left; width:175px; padding:0px 10px 10px 10px""></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;""><span style=""font-family:comic sans ms,cursive;""><span style=""color:#000000;""><span style=""font-size:24px;""><u><strong>Пілатес</strong></u><strong>.</strong></span></span></span><span style=""font-size:14px;""> </span><span style=""font-size:16px;""><span style=""font-family:verdana,geneva,sans-serif;"">Розвиває координацію, покращує гнучкість, вчить рухатися красиво і граційно. Заняття пілатесом корисні людям будь-якого віку і статі, всім, хто хоче добре виглядати і бути у відмінній формі. Він є одним з найбезпечніших видів тренування, що має м'яку дію на тіло, одночасно зміцнюючи його.</span></span></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;""><br>
-<br>
-<br>
-<br>
-<br>
-&nbsp;</p>
-
-<p style=""font-size: 11px;""><img src=""http://www.raiduga.kiev.ua/News/img/strip_2.jpg"" style=""float:left; width:175px; padding:0px 10px 10px 10px""></p>
-
-<p style=""font-size: 11px;""><span style=""color:#808080;""><span style=""font-family:comic sans ms,cursive;""><span style=""font-size:24px;""><u><strong>Strip-dance</strong></u><strong>.</strong></span></span></span><span style=""font-size:16px;""><span style=""color:#000000;""><span style=""font-family:verdana,geneva,sans-serif;""><span style=""line-height: 17.6000003814697px;"">Один</span>&nbsp;з наймодніших напрямків у клубних танцях. Завдяки йому можна не тільки набути і зберегти форму, але й відкрити в собі нові можливості , стати&nbsp;впевненішими. Ви створюєте себе самі! Адже одне з завдань уроку&nbsp;не тільки звикнути до свого тіла, але й полюбити себе.</span></span></span></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;""><span style=""color:#696969;""><strong><u><span style=""font-size:16px;"">Чекаємо на вас за попереднім записом у адміністратора!</span></u></strong></span></p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-
-<p style=""font-size: 11px;"">&nbsp;</p>
-</div>"
-
+				BodyHtml = @""
 			});
 
 			#endregion

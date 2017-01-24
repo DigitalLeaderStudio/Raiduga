@@ -28,7 +28,7 @@
 		}
 
 		[Route("~/Новини/{title}")]
-		public ActionResult View(string title)
+		public ActionResult Details(string title)
 		{
 			var dbItem = DbContext.Articles.Where(art => art.Title == title && art.IsPublished).First();
 

@@ -26,12 +26,6 @@
 			return View(model);
 		}
 
-		// GET: Admin/Article/Details/5
-		public ActionResult Details(int id)
-		{
-			return View();
-		}
-
 		// GET: Admin/Article/Create
 		public ActionResult Create()
 		{

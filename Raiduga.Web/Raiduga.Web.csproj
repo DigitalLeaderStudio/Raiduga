@@ -666,7 +666,7 @@
     <Content Include="Views\Culture\_LanguagesPartial.cshtml" />
     <Content Include="Views\Service\CourseList.cshtml" />
     <Content Include="Views\Article\Index.cshtml" />
-    <Content Include="Views\Article\View.cshtml" />
+    <Content Include="Views\Article\Details.cshtml" />
     <Content Include="Views\Service\CourseView.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
   </ItemGroup>
