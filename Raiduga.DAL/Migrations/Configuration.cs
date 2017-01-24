@@ -22,6 +22,61 @@ namespace Raiduga.DAL.Migrations
 		{
 			char tab = '\u0009';
 
+			#region Slider
+
+			var slide1 = new Raiduga.Models.File
+			{
+				ContentType = "image/jpeg",
+				FileName = "райдуга-слайд-1.jpg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/slide1.jpg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, slide1);
+			context.SaveChanges();
+
+			context.SliderItems.AddOrUpdate(s => s.Title,
+				new SliderItem
+				{
+					Title = "Райдуга",
+					SubTitle = "Центра інтелектуального та творчого розвитку особистості",
+					ImageId = slide1.Id
+				});
+
+			var slide2 = new Raiduga.Models.File
+			{
+				ContentType = "image/jpeg",
+				FileName = "райдуга-слайд-2.jpg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/slide2.jpg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, slide2);
+			context.SaveChanges();
+
+			context.SliderItems.AddOrUpdate(s => s.Title,
+				new SliderItem
+				{
+					Title = "Щастя",
+					SubTitle = "Ми знаємо як зробити ваших дітей щасливими",
+					ImageId = slide2.Id
+				});
+
+			var slide3 = new Raiduga.Models.File
+			{
+				ContentType = "image/jpeg",
+				FileName = "райдуга-слайд-3.jpg",
+				Content = System.IO.File.ReadAllBytes(MapPath("~/../../Raiduga.Web/Content/img/slide3.jpg"))
+			};
+			context.Files.AddOrUpdate(img => img.FileName, slide3);
+			context.SaveChanges();
+
+			context.SliderItems.AddOrUpdate(s => s.Title,
+				new SliderItem
+				{
+					Title = "Спогда та друзі",
+					SubTitle = "Ми залишаємо безцінні спогади та об’єднуємо друзів на все життя",
+					ImageId = slide3.Id
+				});
+
+			#endregion
+
 			#region User add
 
 			var role = new Role
