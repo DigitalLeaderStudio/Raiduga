@@ -387,4 +387,13 @@
   <data name="Course_Price" xml:space="preserve">
     <value>Price</value>
   </data>
+  <data name="Login_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Login_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Login_RememberMe" xml:space="preserve">
+    <value>Remember me?</value>
+  </data>
 </root>

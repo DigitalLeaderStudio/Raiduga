@@ -8,13 +8,13 @@
 			<div class="row">
 				<div class="col-md-3 col-md-offset-1">
 					@{
-						var srcAction = item.ImageId.HasValue ?
-						Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
-						string.Empty;
+		var srcAction = item.ImageId.HasValue ?
+		Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
+		"/Content/img/default-user.png";
 					}
 					<img src="@srcAction"
 						 class="img-circle img-responsive"
-						 alt="@item.Text" />
+						 alt="@item.UserName" />
 				</div>
 				<div class="col-md-7">
 					<p>@item.Text</p>

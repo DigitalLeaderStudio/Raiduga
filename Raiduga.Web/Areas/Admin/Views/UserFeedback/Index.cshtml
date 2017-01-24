@@ -20,9 +20,14 @@
 				<div class="feedback-item">
 					<div class="row">
 						<div class="col-md-3 col-md-offset-2">
-							<img src="@Url.Action("Show", "File", new { area = "", id = item.ImageId })"
+							@{
+		var srcAction = item.ImageId.HasValue ?
+		Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
+		"/Content/img/default-user.png";
+							}
+							<img src="@srcAction"
 								 class="img-circle img-responsive"
-								 alt="@item.Text" />
+								 alt="@item.UserName" />
 						</div>
 						<div class="col-md-4">
 							<p>@item.Text</p>

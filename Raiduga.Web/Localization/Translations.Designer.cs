@@ -601,6 +601,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Login_Email {
+            get {
+                return ResourceManager.GetString("Login_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use a local account to log in..
         /// </summary>
         public static string Login_HeadingPrompt {
@@ -628,11 +637,29 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Login_Password {
+            get {
+                return ResourceManager.GetString("Login_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register a new user.
         /// </summary>
         public static string Login_RegisterNew {
             get {
                 return ResourceManager.GetString("Login_RegisterNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remember me?.
+        /// </summary>
+        public static string Login_RememberMe {
+            get {
+                return ResourceManager.GetString("Login_RememberMe", resourceCulture);
             }
         }
         
