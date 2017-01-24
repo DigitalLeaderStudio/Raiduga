@@ -400,4 +400,7 @@
   <data name="DevelopedBy" xml:space="preserve">
     <value>Сайт розроблено провайдером цифрових послуг </value>
   </data>
+  <data name="Schedule_PageTitle" xml:space="preserve">
+    <value>Розклад</value>
+  </data>
 </root>

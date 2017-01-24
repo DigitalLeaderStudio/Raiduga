@@ -700,6 +700,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Schedule.
+        /// </summary>
+        public static string Schedule_PageTitle {
+            get {
+                return ResourceManager.GetString("Schedule_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Courses.
         /// </summary>
         public static string Service_AllCourses {
