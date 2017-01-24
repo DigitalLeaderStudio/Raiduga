@@ -760,127 +760,107 @@ namespace Raiduga.DAL.Migrations
 				{
 					CreationDate = DateTime.Now,
 					Name = "About",
-					BodyHtml = @"<br />
-	<br />
-	<div class=""row"">
-		<div class=""col-md-2 col-md-offset-2"">
-			<img src=""/Content/img/logo 500x422.png"" class=""img-responsive"" />
-		</div>
-		<div class=""col-md-6"">
-			Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.
-			Главными особенностями игры являются уровни «Разрушительного Дерби», знакомые игрокам по серии Flatout от студии Bugbear.
-			Также в игре представлены арены со свободными трюками, мультиплеер на 8 игроков,
-			а также режим разделенного экрана Split Screen, позволяющий сыграть вдвоем на одном компьютере.
-		</div>
-	</div>
-	<br />
-	<br />
-	<h3 class=""text-center""><strong>Наши достижения</strong></h3>
-	<br />
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">39</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Работников</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">230</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Клиентов за год</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">435</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Дошкольников</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">125</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Школьников</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">38</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Взрослых</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">8</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Лет опыта</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">3</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Филии</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class=""row"">
-		<div class=""col-md-6 col-md-offset-3"">
-			<div class=""media"">
-				<div class=""media-left"">
-					<div class=""media-object"">67</div>
-				</div>
-				<div class=""media-body"">
-					<h4 class=""media-heading"">Курсов</h4>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
-				</div>
-			</div>
-		</div>
-	</div>"
+					BodyHtml = @"
+<div class=""row about"">
+< div class=""col-md-2 col-md-offset-2""><img src = ""/Content/img/logo 500x422.png"" class=""img-responsive"" /></div>
+<div class=""col-md-6"">Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.Главными особенностями игры являются уровни &laquo;Разрушительного Дерби&raquo;, знакомые игрокам по серии Flatout от студии Bugbear.Также в игре представлены арены со свободными трюками, мультиплеер на 8 игроков, а также режим разделенного экрана Split Screen, позволяющий сыграть вдвоем на одном компьютере.</div>
+</div>
+<div class=""row"">
+<h2 class=""text-center""><strong>Наши достижения</strong></h2>
+<div class=""achievements"">
+<div class=""row achievement"">
+<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+<div class=""description col-md-5 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+<div class=""description col-md-5 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+<div class=""description col-md-5 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+<div class=""description col-md-5 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+<div class=""description col-md-5 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+</div>
+<div class=""row achievement"">
+<div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+<h4 class=""media-heading"">Работников</h4>
+<p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
+</div>
+<div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+<div class=""media-object"">39</div>
+</div>
+</div>
+</div>
+</div>
+                                "
 				});
 
 			#endregion
@@ -892,32 +872,46 @@ namespace Raiduga.DAL.Migrations
 				{
 					CreationDate = DateTime.Now,
 					Name = "FeatureBlock",
-					BodyHtml = @"<div class=""row"">
-			<div class=""col-md-6"">
-				<img src=""../Content/img/features/зірка.svg"" />
-				<h4>Ми допомагаємо дитині дорослішати, зберігаючи всі найкращі дитячі якості: відкритість, довіру, радісне сприйняття світу, інтерес до всього, що оточує.</h4>
-			</div>
-			<div class=""col-md-6"">
-				<img src=""../Content/img/features/розвиток.svg"" />
-				<h4>Ми мотивуємо дітей до особистого росту та умінню працювати в команді</h4>
-			</div>
-			<div class=""col-md-6"">
-				<img src=""../Content/img/features/друзі.svg"" />
-				<h4>Ми залишаємо безцінні спогади та об’єднуємо друзів на все життя</h4>
-			</div>
-			<div class=""col-md-6"">
-				<img src=""../Content/img/features/кульки.svg"" />
-				<h4>Ми знаходимо особливий підхід до кожної дитини, допомагаємо дітям і дорослим краще розуміти один одного, наповнюємо життя сім’ї активним спілкуванням, радістю, творчістю, любов’ю.</h4>
-			</div>
-			<div class=""col-md-6"">
-				<img src=""../Content/img/features/стіна.svg"" />
-				<h4>Ми цінуємо кожну хвилину дитинства і допомагаємо будувати надійний фундамент всього життя</h4>
-			</div>
-			<div class=""col-md-6"">
-				<img src=""../Content/img/features/двері.svg"" />
-				<h4>Ми відкриті до нових пропозицій та ідей</h4>
-			</div>
-		</div>"
+					BodyHtml = @"
+                        <div class=""row"">
+                        <div class=""col-md-6"">
+                        <div><img src=""../Content/img/features/зірка.svg"" /></div>
+                        <div>
+                        <p>Ми допомагаємо дитині дорослішати, зберігаючи всі найкращі дитячі якості: відкритість, довіру, радісне сприйняття світу, інтерес до всього, що оточує.</p>
+                        </div>
+                        </div>
+                        <div class=""col-md-6"">
+                        <div><img src=""../Content/img/features/розвиток.svg"" /></div>
+                        <div>
+                        <p>Ми мотивуємо дітей до особистого росту та умінню працювати в команді</p>
+                        </div>
+                        </div>
+                        <div class=""col-md-6"">
+                        <div><img src=""../Content/img/features/друзі.svg"" /></div>
+                        <div>
+                        <p>Ми залишаємо безцінні спогади та об&rsquo;єднуємо друзів на все життя</p>
+                        </div>
+                        </div>
+                        <div class=""col-md-6"">
+                        <div><img src=""../Content/img/features/кульки.svg"" /></div>
+                        <div>
+                        <p>Ми знаходимо особливий підхід до кожної дитини, допомагаємо дітям і дорослим краще розуміти один одного, наповнюємо життя сім&rsquo;ї активним спілкуванням, радістю, творчістю, любов&rsquo;ю.</p>
+                        </div>
+                        </div>
+                        <div class=""col-md-6"">
+                        <div><img src=""../Content/img/features/стіна.svg"" /></div>
+                        <div>
+                        <p>Ми цінуємо кожну хвилину дитинства і допомагаємо будувати надійний фундамент всього життя</p>
+                        </div>
+                        </div>
+                        <div class=""col-md-6"">
+                        <div><img src=""../Content/img/features/двері.svg"" /></div>
+                        <div>
+                        <p>Ми відкриті до нових пропозицій та ідей</p>
+                        </div>
+                        </div>
+                        </div>
+                    "
 				});
 
 			#endregion
