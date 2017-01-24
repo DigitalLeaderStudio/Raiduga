@@ -178,7 +178,7 @@
     <value>Email *</value>
   </data>
   <data name="ContactsForm_Email_Placeholder" xml:space="preserve">
-    <value>Будь-ласка, введіть Ваш контактних email *</value>
+    <value>Будь-ласка, введіть Ваш контактний email *</value>
   </data>
   <data name="ContactsForm_MarkAsRead" xml:space="preserve">
     <value>Прочитано</value>
