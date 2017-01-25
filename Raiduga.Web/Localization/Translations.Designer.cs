@@ -232,6 +232,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contact Form.
+        /// </summary>
+        public static string ContactFormTitle {
+            get {
+                return ResourceManager.GetString("ContactFormTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         public static string Contacts_Address {
@@ -732,6 +741,15 @@ namespace Raiduga.Web.Localization {
         public static string Service_Title {
             get {
                 return ResourceManager.GetString("Service_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign in to class.
+        /// </summary>
+        public static string SignInToClass {
+            get {
+                return ResourceManager.GetString("SignInToClass", resourceCulture);
             }
         }
         

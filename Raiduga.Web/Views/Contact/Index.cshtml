@@ -12,22 +12,19 @@
 		@foreach (var affiliate in Model)
 		{
 			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="heading-@affiliate.Id">
-					<h4 class="panel-title pull-left">
-						<a role="button"
-						   data-toggle="collapse"
-						   data-parent="#accordion"
-						   href="#collapse-@affiliate.Id"
-						   aria-expanded="@affiliate.IsPrimary"
-						   aria-controls="collapse-@affiliate.Id">
-							@*@affiliate.Title*@
-							<i class="fa fa-map-marker"></i>@affiliate.Address.Name
-						</a>
-
+				<a class="panel-heading" role="tab" id="heading-@affiliate.Id"
+					data-toggle="collapse"
+					data-parent="#accordion"
+					href="#collapse-@affiliate.Id"
+					aria-expanded="@affiliate.IsPrimary"
+					aria-controls="collapse-@affiliate.Id">
+					
+                    <h4 class="panel-title pull-left">
+						<i class="fa fa-map-marker"></i>@affiliate.Address.Name
 					</h4>
 
 					<div class="clearfix"></div>
-				</div>
+				</a>
 				<div id="collapse-@affiliate.Id" class="panel-collapse collapse @(affiliate.IsPrimary ? "in" : "")" role="tabpanel" aria-labelledby="heading-@affiliate.Id">
 					<div class="panel-body">
 						<div class="row">
@@ -52,7 +49,10 @@
 		}
 	</div>
 
-	@Html.Action("_ContactFormPartial", "Contact")
+    <div class="contact-form-wrapper">
+        <h2 class="text-center">@Translations.ContactFormTitle</h2>
+	    @Html.Action("_ContactFormPartial", "Contact")
+    </div>
 </div>
 <script>
 	var maps = [];

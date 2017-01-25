@@ -268,6 +268,7 @@
     <Content Include="Content\img\stuff\6.jpg" />
     <Content Include="Content\img\stuff\7.jpg" />
     <Content Include="Content\img\stuff\8.jpg" />
+    <Content Include="Content\img\uah-icon.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\ajax-loader.gif" />
     <Content Include="Content\img\arrow-left.svg" />

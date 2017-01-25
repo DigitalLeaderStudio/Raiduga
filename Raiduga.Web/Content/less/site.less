@@ -344,6 +344,23 @@ footer {
 			display: none;
 		}
 	}
+
+    .panel-heading {
+        display: block;
+        cursor: pointer;
+
+        h4 {
+            color: #fff;
+        }
+    }
+
+    .contact-form-wrapper {
+        padding: 20px 0;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .services {
@@ -571,8 +588,13 @@ footer {
 
 .courses {
 	.panel-wrapper {
+		position: relative;
+
+        .btn {
+            font-weight: bold;
+        }
+
 		p.ellipis {
-			height: 100px;
 			overflow: hidden;
 			-ms-text-overflow: ellipsis;
 			-o-text-overflow: ellipsis;
@@ -581,124 +603,188 @@ footer {
 		}
 
 		.course-footer {
-			padding-top: 10px;
+            position: absolute;
+            bottom:30px;
+            left: 0;
+            right: 0;
+			padding: 10px 25px 0;
+            width: 100%;
 
-			> .row > div {
-				font-weight: bold;
-				font-size: 1.2em;
+            .cta-wrapper {
+                margin: 10px 0 0;
 
-				i {
-					font-size: 1.3em;
-				}
+                a {
+                    width: 100%;
+                }
+            }
+
+			> .row {
+                width: 100%;
+                margin: 0;
+                
+                > div {
+				    font-weight: bold;
+				    font-size: 1em;
+                    padding: 0;
+
+                    &:nth-child(1), &:nth-child(2) {
+                        padding-top: 5px;
+                    }
+
+				    i {
+					    font-size: 1em;
+				    }
+
+                    .read-more {
+                        background: none;
+                        color: #333;
+                    }
+			    }
 			}
 		}
 
 		.panel {
-			border-width: 2px;
+			border-width: 1px;
+            min-height: 280px;
+
+            h3 {
+                margin: 0 0 10px 0;
+            }
+
 		}
 
 		hr {
-			border-width: 4px;
+			border: none;
+            height: 1px;
+            margin: 5px 0;
 		}
 
-		&:nth-child(7n+1) .panel, &:nth-child(7n+1) hr {
-			border-color: @color-red;
+		&:nth-child(7n+1) {
+            .panel {
+                border-color: @color-red;
+            }
+            hr {
+                background: @color-red;
+            }
+            .btn-primary {
+			    &:hover {
+				    border-color: @color-red-hover;
+				    background-color: @color-red-hover;
+			    }
+
+			    border-color: @color-red;
+			    background-color: @color-red;
+		    }
 		}
+        &:nth-child(7n+2) {
+            .panel {
+                border-color: @color-orange;
+            }
+            hr {
+                background: @color-orange;
+            }
+            .btn-primary {
+			    &:hover {
+				    border-color: @color-orange-hover;
+				    background-color: @color-orange-hover;
+			    }
 
-		&:nth-child(7n+2) .panel, &:nth-child(7n+2) hr {
-			border-color: @color-orange;
+			    border-color: @color-orange;
+			    background-color: @color-orange;
+		    }
 		}
+        &:nth-child(7n+3) {
+            .panel {
+                border-color: @color-yellow;
+            }
+            hr {
+                background: @color-yellow;
+            }
+            .btn-primary {
+			    &:hover {
+				    border-color: @color-yellow-hover;
+				    background-color: @color-yellow-hover;
+			    }
 
-		&:nth-child(7n+3) .panel, &:nth-child(7n+3) hr {
-			border-color: @color-green;
+			    border-color: @color-yellow;
+			    background-color: @color-yellow;
+		    }
 		}
+        &:nth-child(7n+4) {
+            .panel {
+                border-color: @color-green;
+            }
+            hr {
+                background: @color-green;
+            }
+            .btn-primary {
+			    &:hover {
+				    border-color: @color-green-hover;
+				    background-color: @color-green-hover;
+			    }
 
-		&:nth-child(7n+4) .panel, &:nth-child(7n+4) hr {
-			border-color: @color-yellow;
+			    border-color: @color-green;
+			    background-color: @color-green;
+		    }
 		}
+        &:nth-child(7n+5) {
+            .panel {
+                border-color: @color-light-blue;
+            }
+            hr {
+                background: @color-light-blue;
+            }
+            .btn-primary {
+			    &:hover {
+				    border-color: @color-light-blue;
+				    background-color: @color-light-blue;
+			    }
 
-		&:nth-child(7n+5) .panel, &:nth-child(7n+5) hr {
-			border-color: @color-light-blue;
+			    border-color: @color-light-blue;
+			    background-color: @color-light-blue;
+		    }
 		}
+        &:nth-child(7n+6) {
+            .panel {
+                border-color: @color-blue;
+            }
+            hr {
+                background: @color-blue;
+            }
+            .btn-primary {
+			    &:hover {
+				    border-color: @color-blue-hover;
+				    background-color: @color-blue-hover;
+			    }
 
-		&:nth-child(7n+6) .panel, &:nth-child(7n+6) hr {
-			border-color: @color-blue;
+			    border-color: @color-blue;
+			    background-color: @color-blue;
+		    }
 		}
+        &:nth-child(7n+7) {
+            .panel {
+                border-color: @color-purple;
+            }
+            hr {
+                background: @color-purple;
+            }
+            .btn-primary {
+			    &:hover {
+				    border-color: @color-purple-hover;
+				    background-color: @color-purple-hover;
+			    }
 
-		&:nth-child(7n+7) .panel, &:nth-child(7n+7) hr {
-			border-color: @color-purple;
-		}
-
-		&:nth-child(7n+1) .btn-primary {
-			&:hover {
-				border-color: @color-red-hover;
-				background-color: @color-red-hover;
-			}
-
-			border-color: @color-red;
-			background-color: @color-red;
-		}
-
-		&:nth-child(7n+2) .btn-primary {
-			&:hover {
-				border-color: @color-orange-hover;
-				background-color: @color-orange-hover;
-			}
-
-			border-color: @color-orange;
-			background-color: @color-orange;
-		}
-
-		&:nth-child(7n+3) .btn-primary {
-			&:hover {
-				border-color: @color-green-hover;
-				background-color: @color-green-hover;
-			}
-
-			border-color: @color-green;
-			background-color: @color-green;
-		}
-
-		&:nth-child(7n+4) .btn-primary {
-			&:hover {
-				border-color: @color-yellow-hover;
-				background-color: @color-yellow-hover;
-			}
-
-			border-color: @color-yellow;
-			background-color: @color-yellow;
-		}
-
-		&:nth-child(7n+5) .btn-primary {
-			&:hover {
-				border-color: @color-light-blue-hover;
-				background-color: @color-light-blue-hover;
-			}
-
-			border-color: @color-light-blue;
-			background-color: @color-light-blue;
-		}
-
-		&:nth-child(7n+6) .btn-primary {
-			&:hover {
-				border-color: @color-blue-hover;
-				background-color: @color-blue-hover;
-			}
-
-			border-color: @color-blue;
-			background-color: @color-blue;
-		}
-
-		&:nth-child(7n+7) .btn-primary {
-			&:hover {
-				border-color: @color-purple-hover;
-				background-color: @color-purple-hover;
-			}
-
-			border-color: @color-purple;
-			background-color: @color-purple;
+			    border-color: @color-purple;
+			    background-color: @color-purple;
+		    }
 		}
 	}
+
+    .currency-icon {
+        width: 13px;
+        margin-top: -5px;
+        margin-right: 5px;
+    }
 }
 
 .features {
@@ -1237,6 +1323,207 @@ footer {
 			}
 		}
 	}
+
+    .courses {
+	    .panel-wrapper {
+		    position: relative;
+
+            .btn {
+                font-weight: bold;
+            }
+
+		    p.ellipis {
+			    overflow: hidden;
+			    -ms-text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    text-overflow: ellipsis;
+			    display: block;
+		    }
+
+		    .course-footer {
+                position: relative;
+                bottom: unset;
+                left: unset;
+                right: unset;
+			    padding: 10px 0 0;
+                width: 100%;
+
+                .cta-wrapper {
+                    margin: 10px 0 0;
+
+                    a {
+                        width: 100%;
+                    }
+                }
+
+			    > .row {
+                    width: 100%;
+                    margin: 0;
+                
+                    > div {
+				        font-weight: bold;
+				        font-size: 1em;
+                        padding: 0;
+
+                        &:nth-child(1), &:nth-child(2) {
+                            padding-top: 5px;
+                        }
+
+				        i {
+					        font-size: 1em;
+				        }
+
+                        .read-more {
+                            background: none;
+                            color: #333;
+                        }
+			        }
+			    }
+		    }
+
+		    .panel {
+			    border-width: 1px;
+                min-height: unset;
+
+                h3 {
+                    margin: 0 0 10px 0;
+                }
+
+		    }
+
+		    hr {
+			    border: none;
+                height: 1px;
+                margin: 5px 0;
+		    }
+
+		    &:nth-child(7n+1) {
+                .panel {
+                    border-color: @color-red;
+                }
+                hr {
+                    background: @color-red;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-red-hover;
+				        background-color: @color-red-hover;
+			        }
+
+			        border-color: @color-red;
+			        background-color: @color-red;
+		        }
+		    }
+            &:nth-child(7n+2) {
+                .panel {
+                    border-color: @color-orange;
+                }
+                hr {
+                    background: @color-orange;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-orange-hover;
+				        background-color: @color-orange-hover;
+			        }
+
+			        border-color: @color-orange;
+			        background-color: @color-orange;
+		        }
+		    }
+            &:nth-child(7n+3) {
+                .panel {
+                    border-color: @color-yellow;
+                }
+                hr {
+                    background: @color-yellow;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-yellow-hover;
+				        background-color: @color-yellow-hover;
+			        }
+
+			        border-color: @color-yellow;
+			        background-color: @color-yellow;
+		        }
+		    }
+            &:nth-child(7n+4) {
+                .panel {
+                    border-color: @color-green;
+                }
+                hr {
+                    background: @color-green;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-green-hover;
+				        background-color: @color-green-hover;
+			        }
+
+			        border-color: @color-green;
+			        background-color: @color-green;
+		        }
+		    }
+            &:nth-child(7n+5) {
+                .panel {
+                    border-color: @color-light-blue;
+                }
+                hr {
+                    background: @color-light-blue;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-light-blue;
+				        background-color: @color-light-blue;
+			        }
+
+			        border-color: @color-light-blue;
+			        background-color: @color-light-blue;
+		        }
+		    }
+            &:nth-child(7n+6) {
+                .panel {
+                    border-color: @color-blue;
+                }
+                hr {
+                    background: @color-blue;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-blue-hover;
+				        background-color: @color-blue-hover;
+			        }
+
+			        border-color: @color-blue;
+			        background-color: @color-blue;
+		        }
+		    }
+            &:nth-child(7n+7) {
+                .panel {
+                    border-color: @color-purple;
+                }
+                hr {
+                    background: @color-purple;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-purple-hover;
+				        background-color: @color-purple-hover;
+			        }
+
+			        border-color: @color-purple;
+			        background-color: @color-purple;
+		        }
+		    }
+	    }
+
+        .currency-icon {
+            width: 13px;
+            margin-top: -5px;
+            margin-right: 5px;
+        }
+    }
 }
 /*xs*/
 @media (min-width: 376px) and (max-width: 767px) {
@@ -1413,6 +1700,206 @@ footer {
 			}
 		}
 	}
+    .courses {
+	    .panel-wrapper {
+		    position: relative;
+
+            .btn {
+                font-weight: bold;
+            }
+
+		    p.ellipis {
+			    overflow: hidden;
+			    -ms-text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    text-overflow: ellipsis;
+			    display: block;
+		    }
+
+		    .course-footer {
+                position: relative;
+                bottom: unset;
+                left: unset;
+                right: unset;
+			    padding: 10px 0 0;
+                width: 100%;
+
+                .cta-wrapper {
+                    margin: 10px 0 0;
+
+                    a {
+                        width: 100%;
+                    }
+                }
+
+			    > .row {
+                    width: 100%;
+                    margin: 0;
+                
+                    > div {
+				        font-weight: bold;
+				        font-size: 1em;
+                        padding: 0;
+
+                        &:nth-child(1), &:nth-child(2) {
+                            padding-top: 5px;
+                        }
+
+				        i {
+					        font-size: 1em;
+				        }
+
+                        .read-more {
+                            background: none;
+                            color: #333;
+                        }
+			        }
+			    }
+		    }
+
+		    .panel {
+			    border-width: 1px;
+                min-height: unset;
+
+                h3 {
+                    margin: 0 0 10px 0;
+                }
+
+		    }
+
+		    hr {
+			    border: none;
+                height: 1px;
+                margin: 5px 0;
+		    }
+
+		    &:nth-child(7n+1) {
+                .panel {
+                    border-color: @color-red;
+                }
+                hr {
+                    background: @color-red;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-red-hover;
+				        background-color: @color-red-hover;
+			        }
+
+			        border-color: @color-red;
+			        background-color: @color-red;
+		        }
+		    }
+            &:nth-child(7n+2) {
+                .panel {
+                    border-color: @color-orange;
+                }
+                hr {
+                    background: @color-orange;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-orange-hover;
+				        background-color: @color-orange-hover;
+			        }
+
+			        border-color: @color-orange;
+			        background-color: @color-orange;
+		        }
+		    }
+            &:nth-child(7n+3) {
+                .panel {
+                    border-color: @color-yellow;
+                }
+                hr {
+                    background: @color-yellow;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-yellow-hover;
+				        background-color: @color-yellow-hover;
+			        }
+
+			        border-color: @color-yellow;
+			        background-color: @color-yellow;
+		        }
+		    }
+            &:nth-child(7n+4) {
+                .panel {
+                    border-color: @color-green;
+                }
+                hr {
+                    background: @color-green;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-green-hover;
+				        background-color: @color-green-hover;
+			        }
+
+			        border-color: @color-green;
+			        background-color: @color-green;
+		        }
+		    }
+            &:nth-child(7n+5) {
+                .panel {
+                    border-color: @color-light-blue;
+                }
+                hr {
+                    background: @color-light-blue;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-light-blue;
+				        background-color: @color-light-blue;
+			        }
+
+			        border-color: @color-light-blue;
+			        background-color: @color-light-blue;
+		        }
+		    }
+            &:nth-child(7n+6) {
+                .panel {
+                    border-color: @color-blue;
+                }
+                hr {
+                    background: @color-blue;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-blue-hover;
+				        background-color: @color-blue-hover;
+			        }
+
+			        border-color: @color-blue;
+			        background-color: @color-blue;
+		        }
+		    }
+            &:nth-child(7n+7) {
+                .panel {
+                    border-color: @color-purple;
+                }
+                hr {
+                    background: @color-purple;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-purple-hover;
+				        background-color: @color-purple-hover;
+			        }
+
+			        border-color: @color-purple;
+			        background-color: @color-purple;
+		        }
+		    }
+	    }
+
+        .currency-icon {
+            width: 13px;
+            margin-top: -5px;
+            margin-right: 5px;
+        }
+    }
 }
 /*sm*/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1523,6 +2010,207 @@ footer {
 			}
 		}
 	}
+
+    .courses {
+	    .panel-wrapper {
+		    position: relative;
+
+            .btn {
+                font-weight: bold;
+            }
+
+		    p.ellipis {
+			    overflow: hidden;
+			    -ms-text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    text-overflow: ellipsis;
+			    display: block;
+		    }
+
+		    .course-footer {
+                position: relative;
+                bottom: unset;
+                left: unset;
+                right: unset;
+			    padding: 10px 0 0;
+                width: 100%;
+
+                .cta-wrapper {
+                    margin: 10px 0 0;
+
+                    a {
+                        width: 100%;
+                    }
+                }
+
+			    > .row {
+                    width: 100%;
+                    margin: 0;
+                
+                    > div {
+				        font-weight: bold;
+				        font-size: 1em;
+                        padding: 0;
+
+                        &:nth-child(1), &:nth-child(2) {
+                            padding-top: 5px;
+                        }
+
+				        i {
+					        font-size: 1em;
+				        }
+
+                        .read-more {
+                            background: none;
+                            color: #333;
+                        }
+			        }
+			    }
+		    }
+
+		    .panel {
+			    border-width: 1px;
+                min-height: unset;
+
+                h3 {
+                    margin: 0 0 10px 0;
+                }
+
+		    }
+
+		    hr {
+			    border: none;
+                height: 1px;
+                margin: 5px 0;
+		    }
+
+		    &:nth-child(7n+1) {
+                .panel {
+                    border-color: @color-red;
+                }
+                hr {
+                    background: @color-red;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-red-hover;
+				        background-color: @color-red-hover;
+			        }
+
+			        border-color: @color-red;
+			        background-color: @color-red;
+		        }
+		    }
+            &:nth-child(7n+2) {
+                .panel {
+                    border-color: @color-orange;
+                }
+                hr {
+                    background: @color-orange;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-orange-hover;
+				        background-color: @color-orange-hover;
+			        }
+
+			        border-color: @color-orange;
+			        background-color: @color-orange;
+		        }
+		    }
+            &:nth-child(7n+3) {
+                .panel {
+                    border-color: @color-yellow;
+                }
+                hr {
+                    background: @color-yellow;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-yellow-hover;
+				        background-color: @color-yellow-hover;
+			        }
+
+			        border-color: @color-yellow;
+			        background-color: @color-yellow;
+		        }
+		    }
+            &:nth-child(7n+4) {
+                .panel {
+                    border-color: @color-green;
+                }
+                hr {
+                    background: @color-green;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-green-hover;
+				        background-color: @color-green-hover;
+			        }
+
+			        border-color: @color-green;
+			        background-color: @color-green;
+		        }
+		    }
+            &:nth-child(7n+5) {
+                .panel {
+                    border-color: @color-light-blue;
+                }
+                hr {
+                    background: @color-light-blue;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-light-blue;
+				        background-color: @color-light-blue;
+			        }
+
+			        border-color: @color-light-blue;
+			        background-color: @color-light-blue;
+		        }
+		    }
+            &:nth-child(7n+6) {
+                .panel {
+                    border-color: @color-blue;
+                }
+                hr {
+                    background: @color-blue;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-blue-hover;
+				        background-color: @color-blue-hover;
+			        }
+
+			        border-color: @color-blue;
+			        background-color: @color-blue;
+		        }
+		    }
+            &:nth-child(7n+7) {
+                .panel {
+                    border-color: @color-purple;
+                }
+                hr {
+                    background: @color-purple;
+                }
+                .btn-primary {
+			        &:hover {
+				        border-color: @color-purple-hover;
+				        background-color: @color-purple-hover;
+			        }
+
+			        border-color: @color-purple;
+			        background-color: @color-purple;
+		        }
+		    }
+	    }
+
+        .currency-icon {
+            width: 13px;
+            margin-top: -5px;
+            margin-right: 5px;
+        }
+    }
 }
 /*md*/
 @media (min-width: 992px) and (max-width: 1199px) {

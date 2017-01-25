@@ -403,4 +403,10 @@
   <data name="Schedule_PageTitle" xml:space="preserve">
     <value>Розклад</value>
   </data>
+  <data name="ContactFormTitle" xml:space="preserve">
+    <value>Контактна форма</value>
+  </data>
+  <data name="SignInToClass" xml:space="preserve">
+    <value>Записатись на заняття</value>
+  </data>
 </root>

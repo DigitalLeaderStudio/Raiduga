@@ -402,4 +402,10 @@
   <data name="Schedule_PageTitle" xml:space="preserve">
     <value>Schedule</value>
   </data>
+  <data name="ContactFormTitle" xml:space="preserve">
+    <value>Contact Form</value>
+  </data>
+  <data name="SignInToClass" xml:space="preserve">
+    <value>Sign in to class</value>
+  </data>
 </root>
