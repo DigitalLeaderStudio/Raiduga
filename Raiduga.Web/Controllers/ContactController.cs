@@ -1,5 +1,6 @@
 ﻿namespace Raiduga.Web.Controllers
 {
+	using Raiduga.Web.Localization;
 	using Raiduga.Web.Models.Common;
 	using System;
 	using System.Collections.Generic;
@@ -40,6 +41,8 @@
 
 					DbContext.ContactRequests.Add(dbData);
 					item.SuccessfullySent = true;
+					
+					item.RedirectLink = Url.Action("Thanks", "Common");
 
 					await DbContext.SaveChangesAsync();
 				}

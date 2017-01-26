@@ -340,6 +340,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field &quot;Email&quot; is required.
+        /// </summary>
+        public static string ContactsForm_Email_Required {
+            get {
+                return ResourceManager.GetString("ContactsForm_Email_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mark as read.
         /// </summary>
         public static string ContactsForm_MarkAsRead {
@@ -363,6 +372,15 @@ namespace Raiduga.Web.Localization {
         public static string ContactsForm_Message_Placeholder {
             get {
                 return ResourceManager.GetString("ContactsForm_Message_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &quot;Message&quot; is required.
+        /// </summary>
+        public static string ContactsForm_Message_Required {
+            get {
+                return ResourceManager.GetString("ContactsForm_Message_Required", resourceCulture);
             }
         }
         
@@ -885,6 +903,24 @@ namespace Raiduga.Web.Localization {
         public static string Slider_Title {
             get {
                 return ResourceManager.GetString("Slider_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We will connect you asap.
+        /// </summary>
+        public static string Thanks_Text {
+            get {
+                return ResourceManager.GetString("Thanks_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thank you!.
+        /// </summary>
+        public static string Thanks_Title {
+            get {
+                return ResourceManager.GetString("Thanks_Title", resourceCulture);
             }
         }
         

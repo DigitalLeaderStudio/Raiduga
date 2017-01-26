@@ -172,7 +172,7 @@
     <value>Відміна</value>
   </data>
   <data name="ContactsForm_ClearForm" xml:space="preserve">
-    <value>Очистит форму</value>
+    <value>Очистити форму</value>
   </data>
   <data name="ContactsForm_Email" xml:space="preserve">
     <value>Email *</value>
@@ -408,5 +408,17 @@
   </data>
   <data name="SignInToClass" xml:space="preserve">
     <value>Записатись на заняття</value>
+  </data>
+  <data name="Thanks_Text" xml:space="preserve">
+    <value>Найближчим часом ми з Вами зв'яжемося</value>
+  </data>
+  <data name="Thanks_Title" xml:space="preserve">
+    <value>Дякуємо!</value>
+  </data>
+  <data name="ContactsForm_Email_Required" xml:space="preserve">
+    <value>Поле "Email" - обов'язкове</value>
+  </data>
+  <data name="ContactsForm_Message_Required" xml:space="preserve">
+    <value>Поле "Повідомлення" - обов'язкове</value>
   </data>
 </root>
