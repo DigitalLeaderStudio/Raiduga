@@ -94,95 +94,14 @@
 
 /*xxs*/
 @media (max-width: 319px) { 
-    .carousel {
-        .carousel-caption {
-		    top: 7% !important;
-            padding: 0; 
-	    }
-
-        #leftButton,
-	    #rightButton {
-            border: none;
-		    border-radius: 100px;
-		    background: rgba(255, 255, 255, 0.6);
-		    opacity: 1;
-		    display: block;
-		    outline: none;
-		    cursor: pointer;
-		    top: 30%;
-		    margin: 0 15px;
-		    height: 30px;
-		    width: 30px;
-
-		    &:hover {
-			    background: rgba(255, 255, 255, 0.1);
-			    opacity: 0.9;
-		    }
-
-		    img {
-			    width: 100%;
-			    opacity: 1;
-		    }
-	    }
-
-        .text-container {
-		    width: 55%;
-		    display: table-cell;
-
-		    #text {
-			    border-radius: 10px;
-			    background: rgba(255, 255, 255, 0.7);
-			    overflow: auto;
-			    width: 100%;
-
-			    .text {
-				    width: 100%;
-				    text-align: center;
-                    padding: 0 20px !important;
-
-				    h1 {
-					    font-size: 9vw;
-					    font-weight: bold;
-					    padding-top: 0px;
-					    color: #1A0B77;
-                        margin: 15px 0;
-				    }
-
-				    h5 {
-					    font-size: 2vw;
-					    font-weight: bold;
-					    font-family: @font-open-sans;
-					    padding: 0px 0;
-					    color: @color-primary;
-                        display: none;
-				    }
-			    }
-		    }
-	    }
-
-	    .carousel-indicators {
-            bottom: 0;
-            margin: 0 0 0 -30%;
-
-		    li {
-			    background-color: #FFF;
-			    border: none;
-			    opacity: 0.4;
-			    height: 6px;
-			    width: 6px;
-			    margin: 0 5px;
-
-			    &.active {
-				    opacity: 0.9;
-			    }
-		    }
-	    }
-    }  
-}
-
-/*xs*/
-@media (min-width: 320px) and (max-width: 767px) { 
       .carousel {
+        background: @color-green;
+        height: 220px; 
+
+        .item {
+            height: 220px; 
+        }
+
         .carousel-caption {
 		    top: 14% !important;
             padding: 0; 
@@ -224,13 +143,15 @@
 			    .text {
 				    width: 100%;
 				    text-align: center;
-                    padding: 2% 20px;
+                    padding: 5% 20px;
 
 				    h1 {
+                        font-size: 2em;
                         margin: 5px 0 0;
 				    }
 
 				    h5 {
+                        font-size: 1em;
                         padding-bottom: 0;
 				    }
 			    }
@@ -254,6 +175,100 @@
 			    }
 		    }
 	    }
+
+        .slide-image {
+            visibility: hidden;
+        }
+    }   
+}
+
+/*xs*/
+@media (min-width: 320px) and (max-width: 767px) { 
+      .carousel {
+        background: @color-green;
+        height: 240px; 
+
+        .item {
+            height: 240px; 
+        }
+
+        .carousel-caption {
+		    top: 14% !important;
+            padding: 0; 
+	    }
+
+        #leftButton,
+	    #rightButton {
+            border: none;
+		    border-radius: 100px;
+		    background: rgba(255, 255, 255, 0.6);
+		    opacity: 1;
+		    display: block;
+		    outline: none;
+		    cursor: pointer;
+		    top: 30%;
+		    margin: 0 10px;
+		    height: 30px;
+		    width: 30px;
+
+		    &:hover {
+			    background: rgba(255, 255, 255, 0.1);
+			    opacity: 0.9;
+		    }
+
+		    img {
+			    width: 100%;
+			    opacity: 1;
+		    }
+	    }
+
+        .text-container {
+		    width: 50%;
+		    display: table-cell;
+
+		    #text {
+			    border-radius: 10px;
+                padding: 0;
+
+			    .text {
+				    width: 100%;
+				    text-align: center;
+                    padding: 5% 20px;
+
+				    h1 {
+                        font-size: 2em;
+                        margin: 5px 0 0;
+				    }
+
+				    h5 {
+                        font-size: 1em;
+                        padding-bottom: 0;
+				    }
+			    }
+		    }
+	    }
+
+	    .carousel-indicators {
+            bottom: 0;
+            margin: 0 0 0 -30%;
+
+		    li {
+			    background-color: #FFF;
+			    border: none;
+			    opacity: 0.4;
+			    height: 6px;
+			    width: 6px;
+			    margin: 0 5px;
+
+			    &.active {
+				    opacity: 0.9;
+			    }
+		    }
+	    }
+
+        .slide-image {
+            visibility: hidden;
+        }
     }  
 }
 

@@ -421,4 +421,52 @@
   <data name="ContactsForm_Message_Required" xml:space="preserve">
     <value>Поле "Повідомлення" - обов'язкове</value>
   </data>
+  <data name="ContactsForm_Email_Type" xml:space="preserve">
+    <value>Формат Email не вірний</value>
+  </data>
+  <data name="ContactsForm_Phone_Type" xml:space="preserve">
+    <value>Формат номеру телефону не вірний</value>
+  </data>
+  <data name="ApplyToCourse_ChildBirthDate" xml:space="preserve">
+    <value>Дата народження дитини *</value>
+  </data>
+  <data name="ApplyToCourse_ChildBirthDate_Placeholder" xml:space="preserve">
+    <value>Будь ласка, введіть дату нароження дитини</value>
+  </data>
+  <data name="ApplyToCourse_ChildName" xml:space="preserve">
+    <value>Ім'я дитини</value>
+  </data>
+  <data name="ApplyToCourse_ChildName_Placeholder" xml:space="preserve">
+    <value>Будь ласка, введіть ім'я дитини</value>
+  </data>
+  <data name="ApplyToCourse_Email" xml:space="preserve">
+    <value>Ваш контактний email</value>
+  </data>
+  <data name="ApplyToCourse_Email_Placeholder" xml:space="preserve">
+    <value>Будь ласка, введіть Ваш контактный email</value>
+  </data>
+  <data name="ApplyToCourse_Phone" xml:space="preserve">
+    <value>Ваш контактний телефон *</value>
+  </data>
+  <data name="ApplyToCourse_Phone_Placeholder" xml:space="preserve">
+    <value>Будь ласка, введіть Ваш контактний номер телефону *</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>День</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Місяць</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Рік</value>
+  </data>
+  <data name="ApplyToCourse_ChildName_Required" xml:space="preserve">
+    <value>Поле "Им'я дитини" - обов'язкове</value>
+  </data>
+  <data name="ApplyToCourse_Phone_Required" xml:space="preserve">
+    <value>Поле "Контактний телефон" - обов'язкове</value>
+  </data>
+  <data name="ApplyToCourse_SuccessText" xml:space="preserve">
+    <value>Ваша заявка на курс "{0}" була успішно прийнята</value>
+  </data>
 </root>

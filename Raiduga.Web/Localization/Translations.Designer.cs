@@ -142,6 +142,105 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kid&apos;s birth date *.
+        /// </summary>
+        public static string ApplyToCourse_ChildBirthDate {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_ChildBirthDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleae enter your kid&apos;s birth date *.
+        /// </summary>
+        public static string ApplyToCourse_ChildBirthDate_Placeholder {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_ChildBirthDate_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kid&apos;s name *.
+        /// </summary>
+        public static string ApplyToCourse_ChildName {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_ChildName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleae enter your kid&apos;s name *.
+        /// </summary>
+        public static string ApplyToCourse_ChildName_Placeholder {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_ChildName_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &quot;Child&apos;s name&quot; is required.
+        /// </summary>
+        public static string ApplyToCourse_ChildName_Required {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_ChildName_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your contact email.
+        /// </summary>
+        public static string ApplyToCourse_Email {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleae enter your email.
+        /// </summary>
+        public static string ApplyToCourse_Email_Placeholder {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_Email_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your contact phone *.
+        /// </summary>
+        public static string ApplyToCourse_Phone {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleae enter your your contact phone *.
+        /// </summary>
+        public static string ApplyToCourse_Phone_Placeholder {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_Phone_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &quot;Phone&quot; is required.
+        /// </summary>
+        public static string ApplyToCourse_Phone_Required {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_Phone_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your application for course &quot;{0}&quot; was successfully accepted.
+        /// </summary>
+        public static string ApplyToCourse_SuccessText {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_SuccessText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Author.
         /// </summary>
         public static string Article_Author {
@@ -349,6 +448,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field &quot;Email&quot; is not a valid e-mail address.
+        /// </summary>
+        public static string ContactsForm_Email_Type {
+            get {
+                return ResourceManager.GetString("ContactsForm_Email_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mark as read.
         /// </summary>
         public static string ContactsForm_MarkAsRead {
@@ -408,6 +516,15 @@ namespace Raiduga.Web.Localization {
         public static string ContactsForm_Phone_Placeholder {
             get {
                 return ResourceManager.GetString("ContactsForm_Phone_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &quot;Phone&quot; is not a valid phone number.
+        /// </summary>
+        public static string ContactsForm_Phone_Type {
+            get {
+                return ResourceManager.GetString("ContactsForm_Phone_Type", resourceCulture);
             }
         }
         
@@ -552,6 +669,15 @@ namespace Raiduga.Web.Localization {
         public static string Create {
             get {
                 return ResourceManager.GetString("Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Day.
+        /// </summary>
+        public static string Day {
+            get {
+                return ResourceManager.GetString("Day", resourceCulture);
             }
         }
         
@@ -714,6 +840,15 @@ namespace Raiduga.Web.Localization {
         public static string Messages_Title {
             get {
                 return ResourceManager.GetString("Messages_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        public static string Month {
+            get {
+                return ResourceManager.GetString("Month", resourceCulture);
             }
         }
         
@@ -966,6 +1101,15 @@ namespace Raiduga.Web.Localization {
         public static string UserFeedback_UserName {
             get {
                 return ResourceManager.GetString("UserFeedback_UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
             }
         }
     }

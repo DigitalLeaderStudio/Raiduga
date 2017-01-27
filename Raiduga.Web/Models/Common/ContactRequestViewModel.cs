@@ -22,12 +22,12 @@
 		public string LastName { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Phone")]
-		[DataType(DataType.PhoneNumber)]
+		[Phone(ErrorMessageResourceName = "ContactsForm_Phone_Type", ErrorMessageResourceType = typeof(Translations))]
 		public string Phone { get; set; }
 
 		[Required(ErrorMessageResourceName = "ContactsForm_Email_Required", ErrorMessageResourceType = typeof(Translations))]
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Email")]
-		[DataType(DataType.EmailAddress)]
+		[EmailAddress(ErrorMessageResourceName = "ContactsForm_Email_Type", ErrorMessageResourceType = typeof(Translations))]
 		public string Email { get; set; }
 
 		[Required(ErrorMessageResourceName = "ContactsForm_Message_Required", ErrorMessageResourceType = typeof(Translations))]

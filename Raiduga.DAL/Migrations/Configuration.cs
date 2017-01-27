@@ -70,7 +70,7 @@ namespace Raiduga.DAL.Migrations
 			context.SliderItems.AddOrUpdate(s => s.Title,
 				new SliderItem
 				{
-					Title = "Спогда та друзі",
+					Title = "Спогади та друзі",
 					SubTitle = "Ми залишаємо безцінні спогади та об’єднуємо друзів на все життя",
 					ImageId = slide3.Id
 				});

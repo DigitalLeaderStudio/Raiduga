@@ -36,6 +36,8 @@
 
 		public virtual DbSet<Article> Articles { get; set; }
 
+		public virtual DbSet<ApplyToCourseRequest> ApplyToCourseRequests { get; set; }
+
 		#endregion
 
 		protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)

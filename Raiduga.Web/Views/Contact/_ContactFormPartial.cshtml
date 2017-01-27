@@ -24,7 +24,13 @@
 			@if (Model.SuccessfullySent)
 			{
 				<div class="panel-body">
-					<div class="alert alert-success" role="alert">@Translations.ContactsForm_SuccessfullySent</div>
+					<div class="alert alert-success text-center" role="alert">
+						<p>
+							<i class="fa fa-check"></i>
+						</p>
+						@Translations.ContactsForm_SuccessfullySent<br />
+						<i class="fa fa-info-circle"></i>@Translations.Thanks_Text
+					</div>
 				</div>
 			}
 			else
@@ -85,10 +91,6 @@
 
 		function OnComplete(data) {
 			$('.panel .fader').hide();
-			var link = '@Model.RedirectLink';
-			if (link) {
-				window.location.href = '@Model.RedirectLink';
-			}
 		}
 
 		function ClearForm() {

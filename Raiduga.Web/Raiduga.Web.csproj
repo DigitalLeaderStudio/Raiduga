@@ -224,6 +224,7 @@
     <Compile Include="Models\Common\AddressViewModel.cs" />
     <Compile Include="Models\Common\AffiliateViewModel.cs" />
     <Compile Include="Models\Common\ContactRequestViewModel.cs" />
+    <Compile Include="Models\Common\DateConstructorViewModel.cs" />
     <Compile Include="Models\Common\EmailViewModel.cs" />
     <Compile Include="Models\Common\HoursViewModel.cs" />
     <Compile Include="Models\Common\HtmlContentViewModel.cs" />
@@ -233,6 +234,7 @@
     <Compile Include="Models\Interfaces\AFileViewModel.cs" />
     <Compile Include="Models\Interfaces\IGeneratable.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Service\ApplyToCourseViewModel.cs" />
     <Compile Include="Models\Service\CourseViewModel.cs" />
     <Compile Include="Models\UserFeedback\UserFeedbackViewModel.cs" />
     <Compile Include="Models\Service\ServiceViewModel.cs" />
@@ -671,6 +673,8 @@
     <Content Include="Views\Service\CourseView.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Shared\Thanks.cshtml" />
+    <Content Include="Views\Service\_ApplyToCourseModalPartial.cshtml" />
+    <Content Include="Views\Service\_ApplyToCoursePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

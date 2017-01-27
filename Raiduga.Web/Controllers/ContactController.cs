@@ -30,19 +30,19 @@
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<PartialViewResult> ContactRequest(ContactRequestViewModel item)
+		public async Task<PartialViewResult> ContactRequest(ContactRequestViewModel model)
 		{
 			if (ModelState.IsValid)
 			{
 				try
 				{
-					var dbData = item.ToDbModel();
+					var dbData = model.ToDbModel();
 					dbData.CreationDate = DateTime.Now;
 
 					DbContext.ContactRequests.Add(dbData);
-					item.SuccessfullySent = true;
+					model.SuccessfullySent = true;
 					
-					item.RedirectLink = Url.Action("Thanks", "Common");
+					model.RedirectLink = Url.Action("Thanks", "Common");
 
 					await DbContext.SaveChangesAsync();
 				}
@@ -52,11 +52,11 @@
 				}
 			}
 
-			item.Errors = ModelState.Values.SelectMany(m => m.Errors)
+			model.Errors = ModelState.Values.SelectMany(m => m.Errors)
 								 .Select(e => e.ErrorMessage)
 								 .ToList();
 
-			return PartialView("_ContactFormPartial", item);
+			return PartialView("_ContactFormPartial", model);
 		}
 	}
 }

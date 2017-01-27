@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201701181200027_AddArticles.Designer.cs">
       <DependentUpon>201701181200027_AddArticles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701271540304_AddApplyToCourseRequest.cs" />
+    <Compile Include="Migrations\201701271540304_AddApplyToCourseRequest.Designer.cs">
+      <DependentUpon>201701271540304_AddApplyToCourseRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701181200027_AddArticles.resx">
       <DependentUpon>201701181200027_AddArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701271540304_AddApplyToCourseRequest.resx">
+      <DependentUpon>201701271540304_AddApplyToCourseRequest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -46,6 +46,38 @@ i {
 	margin-right: 5px;
 }
 
+.modal-dialog {
+	.fader {
+		border-radius: 4px;
+	}
+
+	.alert.alert-success {
+		padding-bottom: 30px;
+
+		p > i {
+			font-size: 3em;
+		}
+	}
+}
+
+.fader {
+	display: none;
+	background-color: #333;
+	border-radius: 8px;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 2000;
+	height: 100%;
+	width: 100%;
+
+	i {
+		color: #FFF;
+		position: absolute;
+		top: 45%;
+		left: 45%;
+	}
+}
+
 .material-switch {
 	> input[type="checkbox"] {
 		display: none;
@@ -323,21 +355,11 @@ footer {
 		border-radius: 10px;
 		border: 2px solid @color-light-blue;
 
-		.fader {
-			display: none;
-			background-color: #333;
-			border-radius: 8px;
-			opacity: 0.5;
-			position: absolute;
-			z-index: 2000;
-			height: 100%;
-			width: 100%;
+		.alert.alert-success {
+			padding-bottom: 30px;
 
-			i {
-				color: #FFF;
-				position: absolute;
-				top: 45%;
-				left: 50%;
+			p > i {
+				font-size: 3em;
 			}
 		}
 
@@ -356,11 +378,6 @@ footer {
 
 		.btn-margin {
 			margin: 5px;
-		}
-
-		#loader {
-			position: absolute;
-			display: block;
 		}
 	}
 
@@ -619,6 +636,7 @@ footer {
 			-o-text-overflow: ellipsis;
 			text-overflow: ellipsis;
 			display: block;
+			height: 90px;
 		}
 
 		.course-footer {
@@ -1234,6 +1252,15 @@ footer {
 				float: right !important;
 				text-align: right;
 				padding-right: 10px !important;
+
+
+				li {
+					padding: 5px 0;
+
+					a {
+						padding: 0;
+					}
+				}
 			}
 		}
 	}
@@ -1656,6 +1683,15 @@ footer {
 				float: right !important;
 				text-align: right;
 				padding-right: 10px !important;
+
+
+				li {
+					padding: 5px 0;
+
+					a {
+						padding: 0;
+					}
+				}
 			}
 		}
 
@@ -2003,6 +2039,14 @@ footer {
 
 			ul {
 				float: left !important;
+
+				li {
+					padding: 5px 20px;
+
+					a {
+						padding: 0;
+					}
+				}
 			}
 		}
 	}

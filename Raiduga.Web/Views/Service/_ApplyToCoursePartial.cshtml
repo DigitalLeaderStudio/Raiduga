@@ -1,0 +1,115 @@
+﻿@using Raiduga.Web.Localization
+@model Raiduga.Web.Models.Service.ApplyToCourseViewModel
+
+@{
+	var ajaxOptions = new AjaxOptions
+	{
+		Url = Url.Action("ApplyToCourse", "Service"),
+		UpdateTargetId = "modal-container",
+		InsertionMode = System.Web.Mvc.Ajax.InsertionMode.ReplaceWith,
+		OnComplete = "OnComplete",
+		OnBegin = "OnBegin"
+	};
+}
+
+<div class="modal-dialog" role="document" id="modal-container">
+	@using (Ajax.BeginForm(ajaxOptions))
+	{
+		@Html.AntiForgeryToken()
+		<div class="modal-content">
+			<div class="fader">
+				<i class="fa fa-refresh fa-spin fa-3x fa-fw text-center"></i>
+			</div>
+
+			@Html.HiddenFor(m => m.CourseId)
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">@Model.CourseName</h4>
+			</div>
+			@if (Model.SuccessfullySent)
+			{
+				<div class="modal-body">
+					<div class="alert alert-success text-center" role="alert">
+						<p>
+							<i class="fa fa-check"></i>
+						</p>
+						@string.Format(Translations.ApplyToCourse_SuccessText, Model.CourseName)<br />
+						<i class="fa fa-info-circle"></i> @Translations.Thanks_Text
+					</div>
+				</div>
+			}
+			else
+			{
+				<div class="modal-body">
+					@if (Model.Errors != null && Model.Errors.Count > 0)
+					{
+					<div class="alert alert-danger" role="alert">
+						@foreach (var error in Model.Errors)
+							{
+						@error <br />
+							}
+					</div>
+					}
+					<div class="controls">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									@Html.LabelFor(m => m.ChildName, new { @class = "control-label" })
+									@Html.TextBoxFor(m => m.ChildName, new { @class = "form-control", @placeholder = @Translations.ApplyToCourse_ChildName_Placeholder })
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									@Html.LabelFor(m => m.BirthDateConstructor, new { @class = "control-label" })
+									<div class="row">
+										<div class="col-md-3">
+											@Html.LabelFor(m => m.BirthDateConstructor.Year, new { @class = "control-label" })
+											@Html.DropDownListFor(m => m.BirthDateConstructor.Year, Model.BirthDateConstructor.Years, new { @class = "form-control" })
+										</div>
+										<div class="col-md-3">
+											@Html.LabelFor(m => m.BirthDateConstructor.Month, new { @class = "control-label" })
+											@Html.DropDownListFor(m => m.BirthDateConstructor.Month, Model.BirthDateConstructor.Months, new { @class = "form-control" })
+										</div>
+										<div class="col-md-3">
+											@Html.LabelFor(m => m.BirthDateConstructor.Day, new { @class = "control-label" })
+											@Html.DropDownListFor(m => m.BirthDateConstructor.Day, Model.BirthDateConstructor.Days, new { @class = "form-control" })
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									@Html.LabelFor(m => m.Phone, new { @class = "control-label" })
+									@Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = @Translations.ApplyToCourse_Phone_Placeholder })
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									@Html.LabelFor(m => m.Email, new { @class = "control-label" })
+									@Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = @Translations.ApplyToCourse_Email_Placeholder })
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<p class="text-muted">@Translations.ContactsForm_RequiredFieldsCaption</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">@Translations.Cancel</button>
+					<button type="submit" class="btn btn-success">@Translations.SignInToClass</button>
+				</div>
+			}
+		</div><!-- /.modal-content -->
+	}
+</div>	

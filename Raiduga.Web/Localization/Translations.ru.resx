@@ -420,4 +420,52 @@
   <data name="ContactsForm_Message_Required" xml:space="preserve">
     <value>Поле "Сообщение" - обязательное</value>
   </data>
+  <data name="ContactsForm_Email_Type" xml:space="preserve">
+    <value>Не верный формат e-mail</value>
+  </data>
+  <data name="ContactsForm_Phone_Type" xml:space="preserve">
+    <value>Не верный формат номера телефона</value>
+  </data>
+  <data name="ApplyToCourse_ChildBirthDate" xml:space="preserve">
+    <value>Дата рождения ребёнка *</value>
+  </data>
+  <data name="ApplyToCourse_ChildBirthDate_Placeholder" xml:space="preserve">
+    <value>Пожалуйста, введите дату рождения Вашего ребёнка *</value>
+  </data>
+  <data name="ApplyToCourse_ChildName" xml:space="preserve">
+    <value>Имя ребёнка *</value>
+  </data>
+  <data name="ApplyToCourse_ChildName_Placeholder" xml:space="preserve">
+    <value>Пожалуйста, введите имя Вашего ребёнка *</value>
+  </data>
+  <data name="ApplyToCourse_Email" xml:space="preserve">
+    <value>Ваш контактный email</value>
+  </data>
+  <data name="ApplyToCourse_Email_Placeholder" xml:space="preserve">
+    <value>Пожалуйста, введите Ваш контактный email</value>
+  </data>
+  <data name="ApplyToCourse_Phone" xml:space="preserve">
+    <value>Ваш контактный телефон *</value>
+  </data>
+  <data name="ApplyToCourse_Phone_Placeholder" xml:space="preserve">
+    <value>Пожалуйста, введите Ваш контактный номер телефона *</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>День</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="ApplyToCourse_ChildName_Required" xml:space="preserve">
+    <value>Поле "Имя ребёнка" - обязательное</value>
+  </data>
+  <data name="ApplyToCourse_Phone_Required" xml:space="preserve">
+    <value>Поле "Контактный телефон" - обязательное</value>
+  </data>
+  <data name="ApplyToCourse_SuccessText" xml:space="preserve">
+    <value>Ваша заявка на курс "{0}" была успешно принята</value>
+  </data>
 </root>
