@@ -474,4 +474,10 @@
   <data name="ApplyToCourse_Title" xml:space="preserve">
     <value>Apply to course requests</value>
   </data>
+  <data name="ApplyToCourse_EmailTitle" xml:space="preserve">
+    <value>Request to apply to course</value>
+  </data>
+  <data name="ContactsForm_Email_Subj" xml:space="preserve">
+    <value>A message has been sent from contact form</value>
+  </data>
 </root>

@@ -214,6 +214,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Request to apply to course.
+        /// </summary>
+        public static string ApplyToCourse_EmailTitle {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_EmailTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your contact phone *.
         /// </summary>
         public static string ApplyToCourse_Phone {
@@ -462,6 +471,15 @@ namespace Raiduga.Web.Localization {
         public static string ContactsForm_Email_Required {
             get {
                 return ResourceManager.GetString("ContactsForm_Email_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A message has been sent from contact form.
+        /// </summary>
+        public static string ContactsForm_Email_Subj {
+            get {
+                return ResourceManager.GetString("ContactsForm_Email_Subj", resourceCulture);
             }
         }
         

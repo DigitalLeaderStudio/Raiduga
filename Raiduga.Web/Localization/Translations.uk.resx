@@ -475,4 +475,10 @@
   <data name="ApplyToCourse_Title" xml:space="preserve">
     <value>Заявки на курсы</value>
   </data>
+  <data name="ApplyToCourse_EmailTitle" xml:space="preserve">
+    <value>Заявка на заняття</value>
+  </data>
+  <data name="ContactsForm_Email_Subj" xml:space="preserve">
+    <value>Відправлено повідомлення з контактної форми</value>
+  </data>
 </root>

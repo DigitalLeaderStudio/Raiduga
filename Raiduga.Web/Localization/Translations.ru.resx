@@ -474,4 +474,10 @@
   <data name="ApplyToCourse_Title" xml:space="preserve">
     <value>Заявки на курсы</value>
   </data>
+  <data name="ApplyToCourse_EmailTitle" xml:space="preserve">
+    <value>Заявка на занятие</value>
+  </data>
+  <data name="ContactsForm_Email_Subj" xml:space="preserve">
+    <value>Отправлено сообщение с контактной формы</value>
+  </data>
 </root>

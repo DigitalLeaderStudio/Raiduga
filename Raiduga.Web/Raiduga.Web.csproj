@@ -49,6 +49,10 @@
       <HintPath>..\packages\RouteLocalization.Mvc.2.3.0\lib\net40\RouteLocalization.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Simplify.Mail, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Simplify.Mail.1.3.0.0\lib\net45\Simplify.Mail.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />

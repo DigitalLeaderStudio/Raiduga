@@ -1,7 +1,9 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Raiduga.Models;
+	using Raiduga.Web.Localization;
 	using Raiduga.Web.Models.Service;
+	using Simplify.Mail;
 	using System;
 	using System.Collections.Generic;
 	using System.Data.Entity;
@@ -70,25 +72,55 @@
 			{
 				try
 				{
+					var course = DbContext.Set<Course>().Find(model.CourseId);
+					var serviceName = DbContext.Services.Find(course.ServiceId);
+
+					model.CourseName = course.Name;
 					var dbItem = model.ToDbModel();
 					dbItem.CreationDate = DateTime.Now;
-
-					model.SuccessfullySent = true;
 
 					DbContext.ApplyToCourseRequests.Add(dbItem);
 
 					await DbContext.SaveChangesAsync();
+
+					await MailSender.Default.SendAsync(
+						"admin@raiduga.kiev.ua",
+						model.Email,
+						Translations.ApplyToCourse_EmailTitle,
+						string.Format(@"<h1>{0}</h1>
+										<p><strong>{1}:</strong> {5}</p>
+                                        <p><strong>{2}:</strong> {6}</p>
+                                        <p><strong>{3}:</strong> <a href=""tel:{7}"">{7}</a></p>                                        
+                                        <p><strong>{4}:</strong> <a href=""mailto:{8}"">{8}</a></p>
+<p><strong>{9}</strong> <a href=""@{10}"">{11}</a></p>
+",
+							Translations.ApplyToCourse_EmailTitle,
+							Translations.ApplyToCourse_ChildName,
+							Translations.ApplyToCourse_ChildBirthDate,
+							Translations.ApplyToCourse_Phone,
+							Translations.ApplyToCourse_Email,
+							model.ChildName,
+							dbItem.BirthDate.ToShortDateString(),
+							model.Phone,
+							model.Email,
+							Translations.Course_Name,
+							Url.Action("CourseView", "Service", new { serviceName = serviceName, courseName = course.Name }),
+							course.Name));
+
+					model.SuccessfullySent = true;
 				}
 				catch (Exception e)
 				{
 					ModelState.AddModelError("", e.Message);
 				}
 			}
+			else
+			{
+				model.Errors = ModelState.Values.SelectMany(m => m.Errors)
+									 .Select(e => e.ErrorMessage)
+									 .ToList();
+			}
 
-			model.Errors = ModelState.Values.SelectMany(m => m.Errors)
-								 .Select(e => e.ErrorMessage)
-								 .ToList();
-			model.CourseName = DbContext.Set<Course>().Find(model.CourseId).Name;
 			return PartialView("_ApplyToCoursePartial", model);
 		}
 
