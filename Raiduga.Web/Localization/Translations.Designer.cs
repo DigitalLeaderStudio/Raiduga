@@ -70,6 +70,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to View all course requests.
+        /// </summary>
+        public static string Admin_Home_ApplyToCourseDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_ApplyToCourseDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Editing news.
         /// </summary>
         public static string Admin_Home_ArticleDescription {
@@ -237,6 +246,15 @@ namespace Raiduga.Web.Localization {
         public static string ApplyToCourse_SuccessText {
             get {
                 return ResourceManager.GetString("ApplyToCourse_SuccessText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply to course requests.
+        /// </summary>
+        public static string ApplyToCourse_Title {
+            get {
+                return ResourceManager.GetString("ApplyToCourse_Title", resourceCulture);
             }
         }
         

@@ -14,41 +14,47 @@
 <div class="courses">
 	@foreach (var course in Model.Courses)
 	{
-		<div class="col-md-6 panel-wrapper">
-			<div class="panel">
-				<div class="panel-body">
-					<div class="title">
-						<h3>@course.Name</h3>
-					</div>
-					<hr />
+	<div class="col-md-6 panel-wrapper">
+		<div class="panel">
+			<div class="panel-body">
+				<div class="title">
+					<h3>@course.Name</h3>
+				</div>
+				<hr />
 
-					<p class="ellipis">@course.Description</p>
+				<p class="ellipis">@course.Description</p>
 
-					<div class="course-footer">
-						<div class="row">
-							<div class="col-md-4 col-sm-4 col-xs-4">
-								<i class="fa fa-clock-o"></i>@course.Duration.ToString("hh\\:mm")
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-4">
-								<img class="currency-icon" src="~/Content/img/uah-icon.svg" />@course.Price
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-4">
-								<a href="@Url.Action("CourseView", "Service", new { serviceName = Model.Name, courseName = course.Name }, null)"
-								   class="btn btn-primary pull-right read-more">@Translations.Service_Details</a>
-							</div>
-							<div class="col-md-12 col-sm-12 col-xs-12 cta-wrapper">
+				<div class="course-footer">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<i class="fa fa-clock-o"></i>@course.Duration.ToString("hh\\:mm")
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<img class="currency-icon" src="~/Content/img/uah-icon.svg" />@course.Price
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<a href="@Url.Action("CourseView", "Service", new { serviceName = Model.Name, courseName = course.Name }, null)"
+							   class="btn btn-primary pull-right read-more">@Translations.Service_Details</a>
+						</div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 cta-wrapper">
 								<a href="javascript:void(0);" class="btn btn-primary pull-right"
 								   data-toggle="modal"
 								   data-course-id="@course.Id"
 								   data-course-title="@course.Name"
 								   data-target="#applyToCourse">@Translations.SignInToClass</a>
-							</div>
-						</div>
-
+                        </div>
 					</div>
+
 				</div>
 			</div>
 		</div>
+	</div>
 	}
 </div>
+
+
+@section SEOtags {
+    <meta name="description" content="@Model.Name. Список курсів Центру Райдуга, тривалість, ціни.">
+    <meta name="keywords" content="центр райдуга, @Model.Name, курси, тривалість, ціна">
+}
 @Html.Partial("_ApplyToCourseModalPartial")

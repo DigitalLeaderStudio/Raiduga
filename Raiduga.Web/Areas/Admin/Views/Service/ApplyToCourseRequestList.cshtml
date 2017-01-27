@@ -1,18 +1,17 @@
-﻿@model List<Raiduga.Web.Models.Common.ContactRequestViewModel>
-@using Raiduga.Web.Localization
+﻿@using Raiduga.Web.Localization
+@model List<Raiduga.Web.Models.Service.ApplyToCourseViewModel>
 
 @{
-	ViewBag.Title = Translations.Messages_Title;
-	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = Translations.ApplyToCourse_Title;
 }
 
-<h2 class="text-center">@Translations.Messages_Title</h2>
+<h2 class="text-center"><strong>@Translations.ApplyToCourse_Title</strong></h2>
 
-<div class="container">
+<div class="apply-request">
 
 	@foreach (var cr in Model)
 	{
-		using (Html.BeginForm("MarkAsRead", "Messages", new { area = "Admin" }))
+		using (Html.BeginForm("MarkAsRead", "Service", new { area = "Admin" }))
 		{
 			@Html.HiddenFor(m => cr.Id)
 			<div class="panel panel-default">
@@ -24,9 +23,19 @@
 					}
 				</div>
 				<div class="panel-body">
-					<p>
-						@cr.Message
-					</p>
+					<div class="row">
+						<div class="col-md-3">
+							<i class="fa fa-user"></i>
+							@cr.ChildName<br />
+							<i class="fa fa-birthday-cake" aria-hidden="true"></i>
+							@cr.BirthDate.Value.ToShortDateString()
+						</div>
+						<div class="col-md-4">
+							<i class="fa fa-users"></i>
+							@cr.CourseName
+						</div>
+					</div>
+
 				</div>
 				<div class="panel-footer">
 					<i class="fa fa-envelope"></i>
@@ -51,5 +60,8 @@
 			</div>
 		}
 	}
+</div>
 
+<div>
+	@Html.ActionLink(@Translations.BackToList, "Index")
 </div>

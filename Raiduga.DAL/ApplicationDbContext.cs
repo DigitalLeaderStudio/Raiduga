@@ -4,6 +4,7 @@
 	using Raiduga.Models;
 	using Raiduga.Models.Identity;
 	using System.Data.Entity;
+	using System.Linq;
 
 	public class ApplicationDbContext :
 		IdentityDbContext<User, Role, int, UserLogin, UserRole, UserClaim>

@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" href="@Url.Content("~/content/img/favicon.ico")" type="image/x-icon">
+	<link rel="icon" href="@Url.Content("~/content/img/logo/favicon.ico")" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title - @Translations.SiteName</title>
 
@@ -16,6 +16,11 @@
 	@Scripts.Render("~/bundles/modernizr")
 
 	@Scripts.Render("~/bundles/jquery")
+
+    @if (IsSectionDefined("SEOtags"))
+    {
+        @RenderSection("SEOtags")
+    }
 </head>
 <body>
     <script>

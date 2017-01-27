@@ -6,11 +6,26 @@
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@title</h2>
+<h2 class="text-center">@title</h2>
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
 		<ul class="list-group">
+			<li class="list-group-item">
+				@{
+					var applyToCourseRequestsCount = ViewBag.ApplyToCourseRequestsCount;
+				}
+				<a href="@Url.Action("ApplyToCourseRequestList", "Service", new { area = "Admin" })">
+					@Translations.ApplyToCourse_Title
+					<span class="badge">@applyToCourseRequestsCount</span>
+				</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>@Translations.Admin_Home_ApplyToCourseDescription
+				</span>
+			</li>
+
 			<li class="list-group-item">
 				<a href="@Url.Action( "Index", "HtmlContent", new { area = "Admin" })">@Translations.Content_Title</a>
 

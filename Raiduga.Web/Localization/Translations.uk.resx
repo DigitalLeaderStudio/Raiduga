@@ -133,13 +133,13 @@
     <value>Редагування клієнтських відгуків.</value>
   </data>
   <data name="Admin_Home_MessageDescription" xml:space="preserve">
-    <value>Перегляд повідомлень, які користувачі, відсилають через контактну форму</value>
+    <value>Перегляд повідомлень, які користувачі відсилають через контактну форму</value>
   </data>
   <data name="Admin_Home_ServiceDescription" xml:space="preserve">
-    <value>Редагування Наших послуг, а також курсів, які належать то певной послуги.</value>
+    <value>Редагування Наших послуг, а також курсів, які належать до певної послуги</value>
   </data>
   <data name="Admin_Home_SliderDescription" xml:space="preserve">
-    <value>Редагування слайдера (той що в шапці сайту).</value>
+    <value>Редагування слайдера (той, що в шапці сайту)</value>
   </data>
   <data name="Articles_Title" xml:space="preserve">
     <value>Новини</value>
@@ -202,10 +202,10 @@
     <value>Будь-ласка, введіть Ваш контактний телефон</value>
   </data>
   <data name="ContactsForm_Primary" xml:space="preserve">
-    <value>Головне відділеня</value>
+    <value>Головне відділення</value>
   </data>
   <data name="ContactsForm_RequiredFieldsCaption" xml:space="preserve">
-    <value>* Ці поля є обов'яковими.</value>
+    <value>* Ці поля є обов'яковими</value>
   </data>
   <data name="ContactsForm_SendMessage" xml:space="preserve">
     <value>Відіслати повідомлення</value>
@@ -235,7 +235,7 @@
     <value>Широта</value>
   </data>
   <data name="Contacts_Longitude" xml:space="preserve">
-    <value>Довтота</value>
+    <value>Довгота</value>
   </data>
   <data name="Contacts_Title" xml:space="preserve">
     <value>Контакти</value>
@@ -263,7 +263,7 @@
   </data>
   <data name="Header_Title" xml:space="preserve">
     <value>Центр інтелектуального
-та творчого розвитку особистості</value>
+ та творчого розвитку особистості</value>
   </data>
   <data name="Home_ContactsUsPrompt" xml:space="preserve">
     <value>Зв'яжіться з нами</value>
@@ -323,7 +323,7 @@
     <value>Видалити</value>
   </data>
   <data name="Slider_DeletePrompt" xml:space="preserve">
-    <value>Данний слайд, буде видалено</value>
+    <value>Данний слайд буде видалено</value>
   </data>
   <data name="Slider_DeleteTitle" xml:space="preserve">
     <value>Видалення</value>
@@ -353,7 +353,7 @@
     <value>Заголовок слайду</value>
   </data>
   <data name="UserFeedback_DeletePrompt" xml:space="preserve">
-    <value>Данний відгук буде видалено, продовжити?</value>
+    <value>Даний відгук буде видалено. Продовжити?</value>
   </data>
   <data name="UserFeedback_IsActive" xml:space="preserve">
     <value>Відгук активний?</value>
@@ -371,7 +371,7 @@
     <value>Редагування новин</value>
   </data>
   <data name="Course_DeletePrompt" xml:space="preserve">
-    <value>Данний курс буде видалено, продовжити?</value>
+    <value>Данний курс буде видалено. Продовжити?</value>
   </data>
   <data name="Course_BodyHtml" xml:space="preserve">
     <value>Повний опис курсу Html</value>
@@ -468,5 +468,11 @@
   </data>
   <data name="ApplyToCourse_SuccessText" xml:space="preserve">
     <value>Ваша заявка на курс "{0}" була успішно прийнята</value>
+  </data>
+  <data name="Admin_Home_ApplyToCourseDescription" xml:space="preserve">
+    <value>Перегляд усіх заявок на курси</value>
+  </data>
+  <data name="ApplyToCourse_Title" xml:space="preserve">
+    <value>Заявки на курсы</value>
   </data>
 </root>

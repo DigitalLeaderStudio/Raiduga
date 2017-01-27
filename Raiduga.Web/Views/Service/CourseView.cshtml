@@ -23,3 +23,9 @@
 		@Html.Raw(Model.BodyHtml)
 	</div>
 </div>
+
+
+@section SEOtags {
+    <meta name="description" content="Курс @Model.Name Центру Райдуга, тривалість, ціни, повний опис курсу.">
+    <meta name="keywords" content="центр райдуга, курс, @Model.Name, тривалість, ціна, опис">
+}

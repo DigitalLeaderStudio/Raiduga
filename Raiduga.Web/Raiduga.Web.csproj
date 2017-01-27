@@ -257,6 +257,10 @@
     <Content Include="Content\img\features\розвиток.svg" />
     <Content Include="Content\img\features\стіна.svg" />
     <Content Include="Content\img\logo 500x422.png" />
+    <Content Include="Content\img\logo\favicon.ico" />
+    <Content Include="Content\img\logo\logo 500x422.png" />
+    <Content Include="Content\img\logo\емблема-центру-райдуга.png" />
+    <Content Include="Content\img\logo\логотип-центр-райдуга.png" />
     <Content Include="Content\img\services\дорослим.svg" />
     <Content Include="Content\img\services\дошкільнятам.svg" />
     <Content Include="Content\img\services\школярам.svg" />
@@ -271,6 +275,7 @@
     <Content Include="Content\img\stuff\7.jpg" />
     <Content Include="Content\img\stuff\8.jpg" />
     <Content Include="Content\img\uah-icon.svg" />
+    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\ajax-loader.gif" />
     <Content Include="Content\img\arrow-left.svg" />
@@ -351,6 +356,8 @@
     <Content Include="Areas\Admin\Views\Service\DeleteCourse.cshtml" />
     <Content Include="Areas\Admin\Views\Service\EditCourse.cshtml" />
     <Content Include="Areas\Admin\Views\Service\CreateCourse.cshtml" />
+    <Content Include="Content\img\logo\емблема.psd" />
+    <Content Include="Areas\Admin\Views\Service\ApplyToCourseRequestList.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
