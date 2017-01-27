@@ -16,7 +16,7 @@
 		}
 		@foreach (var item in Model)
 		{
-			<div class="item @(isActive ? "active" : "")">
+			<div class="item @(isActive ? "active" : "")" style="background-image: url('@Url.Action("Show", "File", new { id = item.ImageId })')">
 				<img class="slide-image" src="@Url.Action("Show", "File", new { id = item.ImageId })" alt="@item.Title">
 				<div class="carousel-caption">
 					<div class="text-container">
