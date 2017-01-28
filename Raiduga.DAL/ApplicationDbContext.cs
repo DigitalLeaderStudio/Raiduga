@@ -4,6 +4,7 @@
 	using Raiduga.Models;
 	using Raiduga.Models.Identity;
 	using System.Data.Entity;
+	using System.Linq;
 
 	public class ApplicationDbContext :
 		IdentityDbContext<User, Role, int, UserLogin, UserRole, UserClaim>
@@ -35,6 +36,8 @@
 		public virtual DbSet<HtmlContent> HtmlContents { get; set; }
 
 		public virtual DbSet<Article> Articles { get; set; }
+
+		public virtual DbSet<ApplyToCourseRequest> ApplyToCourseRequests { get; set; }
 
 		#endregion
 

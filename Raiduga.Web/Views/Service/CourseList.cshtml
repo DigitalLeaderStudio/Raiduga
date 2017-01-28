@@ -21,6 +21,7 @@
 					<h3>@course.Name</h3>
 				</div>
 				<hr />
+
 				<p class="ellipis">@course.Description</p>
 
 				<div class="course-footer">
@@ -36,8 +37,11 @@
 							   class="btn btn-primary pull-right read-more">@Translations.Service_Details</a>
 						</div>
                         <div class="col-md-12 col-sm-12 col-xs-12 cta-wrapper">
-                            <a href="@Url.Action("CourseView", "Service", new { serviceName = Model.Name, courseName = course.Name }, null)"
-                               class="btn btn-primary pull-right">@Translations.SignInToClass</a>
+								<a href="javascript:void(0);" class="btn btn-primary pull-right"
+								   data-toggle="modal"
+								   data-course-id="@course.Id"
+								   data-course-title="@course.Name"
+								   data-target="#applyToCourse">@Translations.SignInToClass</a>
                         </div>
 					</div>
 
@@ -53,3 +57,4 @@
     <meta name="description" content="@Model.Name. Список курсів Центру Райдуга, тривалість, ціни.">
     <meta name="keywords" content="центр райдуга, @Model.Name, курси, тривалість, ціна">
 }
+@Html.Partial("_ApplyToCourseModalPartial")

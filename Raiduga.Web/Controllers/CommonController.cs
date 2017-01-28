@@ -8,6 +8,12 @@
 
 	public class CommonController : BaseController
 	{
+		[Route("~/Дякуємо")]
+		public ActionResult Thanks()
+		{
+			return View();
+		}
+
 		// GET: Common
 		public ActionResult _SliderPartial()
 		{

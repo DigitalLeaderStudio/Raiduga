@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Affiliate.cs" />
     <Compile Include="Address.cs" />
+    <Compile Include="ApplyToCourseRequest.cs" />
     <Compile Include="ContactRequest.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="File.cs" />

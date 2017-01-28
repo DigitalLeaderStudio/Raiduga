@@ -1,0 +1,29 @@
+﻿@using Raiduga.Web.Localization
+
+@Scripts.Render("~/bundles/unobtrusive")
+<div id="applyToCourse" class="modal fade" tabindex="-1" role="dialog">
+
+	@Html.Partial("_ApplyToCoursePartial", new Raiduga.Web.Models.Service.ApplyToCourseViewModel())
+
+	<script type="text/javascript">
+		$('#applyToCourse').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget);
+			var title = button.data('courseTitle');
+			var courseId = button.data('courseId');
+			var modal = $(this);
+
+			$.get('@Url.Action("_ApplyToCoursePartial", "Service")?courseId=' + courseId, function (data) {
+				modal.find('#modal-container').html(data);
+			});
+		});
+
+		function OnBegin() {
+			$('.fader').show();
+		}
+
+		function OnComplete(data) {
+			$('.fader').hide();
+		}
+	</script>
+
+</div><!-- /.modal -->

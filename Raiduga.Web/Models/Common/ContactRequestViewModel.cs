@@ -22,13 +22,15 @@
 		public string LastName { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Phone")]
+		[Phone(ErrorMessageResourceName = "ContactsForm_Phone_Type", ErrorMessageResourceType = typeof(Translations))]
 		public string Phone { get; set; }
 
-		[Required]
+		[Required(ErrorMessageResourceName = "ContactsForm_Email_Required", ErrorMessageResourceType = typeof(Translations))]
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Email")]
+		[EmailAddress(ErrorMessageResourceName = "ContactsForm_Email_Type", ErrorMessageResourceType = typeof(Translations))]
 		public string Email { get; set; }
 
-		[Required]
+		[Required(ErrorMessageResourceName = "ContactsForm_Message_Required", ErrorMessageResourceType = typeof(Translations))]
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Message")]
 		public string Message { get; set; }
 
@@ -39,6 +41,8 @@
 		public List<string> Errors { get; set; }
 
 		public bool SuccessfullySent { get; set; }
+
+		public string RedirectLink { get; set; }
 
 		public ContactRequestViewModel FromDbModel(ContactRequest model)
 		{

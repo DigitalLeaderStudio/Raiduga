@@ -14,7 +14,7 @@
 		// GET: Admin/Admin
 		public ActionResult Index()
 		{
-			var dbData = DbContext.ContactRequests.OrderBy(cr => cr.CreationDate);
+			var dbData = DbContext.ContactRequests.OrderByDescending(cr => cr.CreationDate);
 
 			var model = new List<ContactRequestViewModel>();
 			foreach (var dbItem in dbData)

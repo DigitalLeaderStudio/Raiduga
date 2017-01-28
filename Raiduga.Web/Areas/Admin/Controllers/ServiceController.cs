@@ -8,6 +8,7 @@
 	using System.Collections.Generic;
 	using System.Data.Entity;
 	using System.Linq;
+	using System.Threading.Tasks;
 	using System.Web.Mvc;
 
 	public class ServiceController : BaseAdminController
@@ -23,6 +24,31 @@
 			}
 
 			return View(model);
+		}
+
+		public ActionResult ApplyToCourseRequestList()
+		{
+			var model = new List<ApplyToCourseViewModel>();
+
+			foreach (var dbItem in DbContext.ApplyToCourseRequests.OrderByDescending(x => x.CreationDate).ToArray())
+			{
+				model.Add(new ApplyToCourseViewModel().FromDbModel(dbItem));
+			}
+
+			return View(model);
+		}
+
+		[HttpPost]
+		public async Task<ActionResult> MarkAsRead(FormCollection form)
+		{
+			var itemId = int.Parse(form["cr.Id"]);
+
+			var dbItem = DbContext.ApplyToCourseRequests.Find(itemId);
+			dbItem.UpdationDate = DateTime.Now;
+
+			await DbContext.SaveChangesAsync();
+
+			return RedirectToAction("ApplyToCourseRequestList");
 		}
 
 		// GET: Admin/Service/Details/5

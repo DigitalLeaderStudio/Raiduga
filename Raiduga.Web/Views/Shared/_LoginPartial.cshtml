@@ -5,6 +5,7 @@
 	using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
 	{
 		int? count = ViewBag.NewMessagesCount == null ? new int?() : ViewBag.NewMessagesCount;
+		int? applyCount = ViewBag.ApplyToCourseRequestsCount == null ? 0 : ViewBag.ApplyToCourseRequestsCount;
 		@Html.AntiForgeryToken()
 
 		<div class="btn-group">
@@ -22,9 +23,18 @@
 					}
 					<span class="badge">@count</span>
 				}
+				&nbsp;
+				<i class="fa fa-users"></i>
+				<span class="badge">@applyCount</span>
 			</button>
 
 			<ul class="dropdown-menu">
+				<li>
+					<a href="@Url.Action("ApplyToCourseRequestList", "Service", new { area = "Admin" })">
+						<i class="fa fa-users"></i>
+						@Translations.ApplyToCourse_Title <span class="badge">@applyCount</span>
+					</a>
+				</li>
 
 				@if (count.HasValue)
 				{

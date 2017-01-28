@@ -3,6 +3,7 @@
 	using Raiduga.DAL;
 	using System.Data.Entity;
 	using System.Web.Mvc;
+	using System.Linq;
 
 	[Authorize(Roles = "Admin")]
 	public class BaseAdminController : Controller
@@ -32,9 +33,9 @@
 		{
 			base.OnActionExecuting(filterContext);
 
-			var count = DbContext.ContactRequests.CountAsync(cr => !cr.UpdationDate.HasValue);
+			ViewBag.NewMessagesCount = DbContext.ContactRequests.Count(cr => !cr.UpdationDate.HasValue);
 
-			ViewBag.NewMessagesCount = count.Result;
+			ViewBag.ApplyToCourseRequestsCount = DbContext.ApplyToCourseRequests.Count(acr => !acr.UpdationDate.HasValue);
 		}
 	}
 }
