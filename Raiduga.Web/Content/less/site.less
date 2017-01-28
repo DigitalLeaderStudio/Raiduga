@@ -819,7 +819,7 @@ footer {
 
 .feedbacks {
 	.feedback-item {
-		font-size: 1.2em;
+		font-size: 1em;
 		margin-bottom: 40px;
 
 		img {
@@ -865,8 +865,8 @@ footer {
 	h2 {
 		margin-top: 50px;
 	}
-
-	.achievements {
+}
+.achievements {
 		padding-top: 10px;
 
 		.achievement:nth-child(2n) {
@@ -958,6 +958,12 @@ footer {
 			}
 		}
 	}
+.staff {
+    .person {
+        h5 {
+            font-style: italic;
+        }        
+    }
 }
 
 .articles {
@@ -1533,6 +1539,19 @@ footer {
             margin-right: 5px;
         }
     }
+
+    .about {
+        & > div:first-child {
+            padding: 0 20%;
+        }
+    }
+    .staff {
+        .person {
+            > div:first-child {
+                padding: 0 2%;
+            }      
+        }
+    }
 }
 /*xs*/
 @media (min-width: 376px) and (max-width: 767px) {
@@ -1918,6 +1937,19 @@ footer {
             margin-right: 5px;
         }
     }
+
+    .about {
+        & > div:first-child {
+            padding: 0 20%;
+        }
+    }
+    .staff {
+        .person {
+            > div:first-child {
+                padding: 0 5%;
+            }      
+        }
+    }
 }
 /*sm*/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2235,6 +2267,20 @@ footer {
             width: 13px;
             margin-top: -5px;
             margin-right: 5px;
+        }
+    }
+
+
+    .about {
+        & > div:first-child {
+            padding: 0 20%;
+        }
+    }
+    .staff {
+        .person {
+            > div:first-child {
+                padding: 0 20%;
+            }      
         }
     }
 }
