@@ -39,13 +39,14 @@
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
-					  "~/Content/site.css"));
+					  "~/Content/site.css",
+					  "~/Content/font-awesome.css"));
 
-			bundles.Add(new LessBundle("~/Content/less")
+			bundles.Add(new LessBundle("~/Content/less/styles")
 				.Include("~/Content/less/lib.less",
 						 "~/Content/less/site.less"));
 
-			bundles.Add(new LessBundle("~/Content/slider-less")
+			bundles.Add(new LessBundle("~/Content/slider-less/styles")
 			.Include("~/Content/less/slider.less"));
 
 			bundles.Add(new LessBundle("~/Content/timepicker-less").Include(
@@ -53,10 +54,6 @@
 
 			bundles.Add(new LessBundle("~/Content/bootstrap-datetimepicker-build.less").Include(
 				"~/Content/bootstrap-datetimepicker-build.less"));
-
-			bundles.Add(new StyleBundle("~/Content/fonts").Include(
-				"~/Content/font-awesome-4.7.0/css/font-awesome.css"
-				));
 
 			RegisterAdminBundles(bundles);
 		}

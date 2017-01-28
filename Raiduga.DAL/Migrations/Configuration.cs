@@ -37,7 +37,7 @@ namespace Raiduga.DAL.Migrations
 				new SliderItem
 				{
 					Title = "Райдуга",
-					SubTitle = "Центра інтелектуального та творчого розвитку особистості",
+					SubTitle = "Центр інтелектуального та творчого розвитку особистості",
 					ImageId = slide1.Id
 				});
 

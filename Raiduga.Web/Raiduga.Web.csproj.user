@@ -12,6 +12,7 @@
     <WebStackScaffolding_AreaDialogWidth>600</WebStackScaffolding_AreaDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>Raiduga.DAL.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
     <UseIISExpress>false</UseIISExpress>
+    <NameOfLastUsedPublishProfile>raiduga.nobugsexception.com - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
