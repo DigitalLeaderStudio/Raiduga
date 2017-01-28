@@ -44,9 +44,11 @@
 
 					await DbContext.SaveChangesAsync();
 
+					var adminEmialAddress = System.Configuration.ConfigurationManager.AppSettings["AdminEmail"].ToString();
+
 					await MailSender.Default.SendAsync(
-						"admin@raiduga.kiev.ua",
-						model.Email,
+						adminEmialAddress,
+						adminEmialAddress,
 						Translations.ContactsForm_Email_Subj,
 						string.Format(@"<h1>{0}</h1>
                                         <p><strong>{1}:</strong> <a href=""mailto:{4}"">{4}</a></p>
