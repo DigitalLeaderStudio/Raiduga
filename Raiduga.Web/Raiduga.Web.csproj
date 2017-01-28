@@ -328,9 +328,9 @@
     <Content Include="Areas\Admin\Views\Service\CreateCourse.cshtml" />
     <Content Include="Content\img\logo\емблема.psd" />
     <Content Include="Areas\Admin\Views\Service\ApplyToCourseRequestList.cshtml" />
-    <Content Include="fonts\Blogger Sans.ttf" />
+    <Content Include="fonts\BloggerSans.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="Properties\PublishProfiles\raiduga.nobugsexception.com - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\raiduga.kiev.ua - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -648,8 +648,6 @@
     <Content Include="Views\Service\_ServiceHomePartial.cshtml" />
     <Content Include="Views\UserFeedback\_UserFeedbackHomePartial.cshtml" />
     <Content Include="Views\Shared\_HtmlContentPartial.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\tinymce_full_compressed.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\tinymce_full.cshtml" />
     <Content Include="Views\Culture\_LanguagesPartial.cshtml" />
     <Content Include="Views\Service\CourseList.cshtml" />
     <Content Include="Views\Article\Index.cshtml" />
@@ -659,6 +657,8 @@
     <Content Include="Views\Shared\Thanks.cshtml" />
     <Content Include="Views\Service\_ApplyToCourseModalPartial.cshtml" />
     <Content Include="Views\Service\_ApplyToCoursePartial.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\tinymce_full_compressed.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\tinymce_full.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

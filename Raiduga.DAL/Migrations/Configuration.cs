@@ -88,11 +88,11 @@ namespace Raiduga.DAL.Migrations
 
 			var user = new User
 			{
-				UserName = "admin@admin.com",
-				Email = "admin@admin.com",
+				UserName = "admin@raiduga.kiev.ua",
+				Email = "admin@raiduga.kiev.ua",
 				EmailConfirmed = true,
 				SecurityStamp = "random",
-				PasswordHash = new PasswordHasher().HashPassword("admin11")
+				PasswordHash = new PasswordHasher().HashPassword("CenterRaiduga2008")
 			};
 
 			context.Users.AddOrUpdate(u => u.Email, user);
@@ -141,6 +141,9 @@ namespace Raiduga.DAL.Migrations
 						<address>
 							<i class=""fa fa-envelope""></i>
 							<a href=""mailto:office@raiduga.kiev.ua"">office@raiduga.kiev.ua</a>
+							<br>
+							<i class=""fa fa-envelope""></i>
+							<a href=""mailto:admin@raiduga.kiev.ua"">admin@raiduga.kiev.ua</a>
 							<br>
 						</address>".Replace(tab.ToString(), "")
 			};
@@ -191,6 +194,9 @@ namespace Raiduga.DAL.Migrations
 										<i class=""fa fa-envelope""></i>
 										<a href=""mailto:office@raiduga.kiev.ua"">office@raiduga.kiev.ua</a>
 										<br>
+										<i class=""fa fa-envelope""></i>
+										<a href=""mailto:admin@raiduga.kiev.ua"">admin@raiduga.kiev.ua</a>
+										<br>
 								</address>".Replace(tab.ToString(), "")
 			};
 
@@ -240,6 +246,9 @@ namespace Raiduga.DAL.Migrations
 								<address>
 										<i class=""fa fa-envelope""></i>
 										<a href=""mailto:office@raiduga.kiev.ua"">office@raiduga.kiev.ua</a>
+										<br>
+										<i class=""fa fa-envelope""></i>
+										<a href=""mailto:admin@raiduga.kiev.ua"">admin@raiduga.kiev.ua</a>
 										<br>
 								</address>".Replace(tab.ToString(), "")
 			};

@@ -32,15 +32,10 @@
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap-timepicker").Include(
 					  "~/Scripts/bootstrap-timepicker/bootstrap-timepicker.js"));
 
-			bundles.Add(new ScriptBundle("~/bundles/bootstrap-datepicker").Include(
-					  "~/Scripts/moment.js",
-					  "~/Scripts/moment-with-locales.js",
-					  "~/Scripts/bootstrap-datetimepicker.js"));
-
 			bundles.Add(new StyleBundle("~/Content/css").Include(
-					  "~/Content/bootstrap.css",
-					  "~/Content/site.css",
-					  "~/Content/font-awesome.css"));
+		  "~/Content/bootstrap.css",
+		  "~/Content/site.css",
+		  "~/Content/font-awesome.css"));
 
 			bundles.Add(new LessBundle("~/Content/less/styles")
 				.Include("~/Content/less/lib.less",
@@ -49,11 +44,8 @@
 			bundles.Add(new LessBundle("~/Content/slider-less/styles")
 			.Include("~/Content/less/slider.less"));
 
-			bundles.Add(new LessBundle("~/Content/timepicker-less").Include(
-				"~/Content/less/bootstrap-datetimepicker-build.less"));
-
-			bundles.Add(new LessBundle("~/Content/bootstrap-datetimepicker-build.less").Include(
-				"~/Content/bootstrap-datetimepicker-build.less"));
+			bundles.Add(new LessBundle("~/Content/timepicker-less/styles").Include(
+				"~/Content/less/timepicker.less"));
 
 			RegisterAdminBundles(bundles);
 		}
