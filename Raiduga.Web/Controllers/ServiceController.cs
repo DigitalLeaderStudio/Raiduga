@@ -83,16 +83,22 @@
 
 					await DbContext.SaveChangesAsync();
 
+					var adminEmialAddress = System.Configuration.ConfigurationManager.AppSettings["AdminEmail"].ToString();
+					var courseLink = Url.Action(
+						"CourseView",
+						"Service",
+						new { serviceName = serviceName.Name, courseName = course.Name },
+						this.Request.Url.Scheme);
 					await MailSender.Default.SendAsync(
-						"admin@raiduga.kiev.ua",
-						model.Email,
+						adminEmialAddress,
+						adminEmialAddress,
 						Translations.ApplyToCourse_EmailTitle,
 						string.Format(@"<h1>{0}</h1>
 										<p><strong>{1}:</strong> {5}</p>
                                         <p><strong>{2}:</strong> {6}</p>
                                         <p><strong>{3}:</strong> <a href=""tel:{7}"">{7}</a></p>                                        
                                         <p><strong>{4}:</strong> <a href=""mailto:{8}"">{8}</a></p>
-<p><strong>{9}</strong> <a href=""@{10}"">{11}</a></p>
+<p><strong>{9}</strong> <a href=""{10}"">{11}</a></p>
 ",
 							Translations.ApplyToCourse_EmailTitle,
 							Translations.ApplyToCourse_ChildName,
@@ -104,7 +110,7 @@
 							model.Phone,
 							model.Email,
 							Translations.Course_Name,
-							Url.Action("CourseView", "Service", new { serviceName = serviceName, courseName = course.Name }),
+							courseLink,
 							course.Name));
 
 					model.SuccessfullySent = true;

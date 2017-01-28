@@ -9,5 +9,6 @@ C:\Users\toha\Work\Projects\Raiduga\Raiduga.Models\bin\Debug\EntityFramework.xml
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.Models\obj\Debug\Raiduga.Models.csprojResolveAssemblyReference.cache
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.Models\obj\Debug\Raiduga.Models.dll
 C:\Users\toha\Work\Projects\Raiduga\Raiduga.Models\obj\Debug\Raiduga.Models.pdb
