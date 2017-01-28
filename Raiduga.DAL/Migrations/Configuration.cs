@@ -555,149 +555,246 @@ namespace Raiduga.DAL.Migrations
 					CreationDate = DateTime.Now,
 					Name = "About",
 					BodyHtml = @"
-<div class=""about"">
-                        <div class=""row about"">
-                        <div class=""col-md-2 col-md-offset-2""><img src = ""/Content/img/logo 500x422.png"" class=""img-responsive"" /></div>
-                        <div class=""col-md-6"">Гоночная аркада DiRT Showdown была выпущена компанией Codemasters в 2012 году.Главными особенностями игры являются уровни &laquo;Разрушительного Дерби&raquo;, знакомые игрокам по серии Flatout от студии Bugbear.Также в игре представлены арены со свободными трюками, мультиплеер на 8 игроков, а также режим разделенного экрана Split Screen, позволяющий сыграть вдвоем на одном компьютере.</div>
-                        </div>
-                        <div class=""row"">
-                        <h2 class=""text-center""><strong>Наши достижения</strong></h2>
-                        <div class=""achievements"">
-                        <div class=""row achievement"">
-                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        </div>
-                        <div class=""row achievement"">
-                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
-                        <h4 class=""media-heading"">Работников</h4>
-                        <p>Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus</p>
-                        </div>
-                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
-                        <div class=""media-object"">39</div>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        <div class=""row staff"">
-                        <h2 class=""text-center""><strong>Наши достижения</strong></h2>
-                        <div class=""stuff-wrapper"">
-                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
-                        <h3> Вчителька Вчителька</h3>
-                        <h4>Посада</h4>
-                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
-                        </div>
-                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
-                        <h3> Вчителька Вчителька</h3>
-                        <h4>Посада</h4>
-                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
-                        </div>
-                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
-                        <h3> Вчителька Вчителька</h3>
-                        <h4>Посада</h4>
-                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
-                        </div>
-                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
-                        <h3> Вчителька Вчителька</h3>
-                        <h4>Посада</h4>
-                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
-                        </div>
-                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
-                        <h3> Вчителька Вчителька</h3>
-                        <h4>Посада</h4>
-                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
-                        </div>
-                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
-                        <h3> Вчителька Вчителька</h3>
-                        <h4>Посада</h4>
-                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
-                        </div>
-                        <div class=""col-md-4 person""><img src = ""/Content/img/default-user.png"" />
-                        <h3> Вчителька Вчителька</h3>
-                        <h4>Посада</h4>
-                        <p>. Яна Анатоліївна(якщо можна вирізати - справа, або у наступному фото зліва), адміністратор Вища освіта : Державний університет телекомунікацій 6.Юлія Миколаївна(попросила ее прислать тебе фото), викладач-методист Вища освіта : НПУ ім.М.Драгоманова</p>
-                        </div>
-                        </div>
-                        </div>
- </div>
+                                                            <div class=""row about"">
+                                < div class=""col-md-2 col-md-offset-2"">
+                                    <img src = ""/Content/img/logo/логотип-центр-райдуга.png"" class=""img-responsive"" />
+                                </div>
+                                <div class=""col-md-6"">
+                                    Ідея створення Центру розвитку  виникла у мене після свідомого народження третьої дитини.Мені конче потрібно було поділитися з іншими батьками своїми уміннями, спостереженнями, досягненнями, навичками, успіхами.Було бажання дати якомога більше дітям можливість отримати гідну гарну освіту та знайти своє місце в житті.Я прагнула створити таке «райське» середовище для дітей та дорослих, де будь-кому можна було б поспілкуватись стосовно виховання чи навчання своєї дитини, отримати пораду та підтримку, розвинути свої таланти.
+                                    Безумовно поруч  з’явилися однодумці і тепер – це наш міцний творчий педагогічний колектив, де кожен викладач віддано відноситься до своєї справи, цінує кожну мить швидкоплинного дитинства і віддає часточку свого серця кожній дитині.
+                                </div>
+                            </div>
+
+                            <div class=""row"">
+                                <br />
+                                <br />
+                                <h2 class=""text-center""><strong>Наші досягнення</strong></h2>
+                                <div class=""achievements"">
+                                    <div class=""row achievement"">
+                                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">18</div>
+                                        </div>
+                                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Працівників</h4>
+                                            <p>У нас працюють висококваліфіковані викладачі з вищою освітою, які закохані у свою справу</p>
+                                        </div>
+                                    </div>
+                                    <div class=""row achievement"">
+                                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Філій</h4>
+                                            <p>Філії на вул.Волгоградській, вул.Пітерській та вул.Донця, а ще наші викладачі надають
+                                          додаткові освітні послуги у дитячих садочках №17 та №374 Солом’янського району міста Києва</p>
+                                        </div>
+                                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">5</div>
+                                        </div>
+                                    </div>
+
+                                    <div class=""row achievement"">
+                                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">7</div>
+                                        </div>
+                                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Років досвіду</h4>
+                                            <p>Робота за передовими сучасними та авторськими методиками навчання,
+                                            індивідуальний підхід до розвитку та потреб кожного клієнта</p>
+                                        </div>
+                                    </div>
+                                    <div class=""row achievement"">
+                                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Клієнтів за рік</h4>
+                                            <p>
+                                                Саме стільки людей за минулий рік довірили нам своїх дітей, співпрацювали з нами, отримали результати та продовжили
+                                                навчання далі на новому рівні
+                                            </p>
+                                        </div>
+                                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">310</div>
+                                        </div>
+                                    </div>
+
+                                    <div class=""row achievement"">
+                                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">219</div>
+                                        </div>
+                                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Дошкільнят</h4>
+                                            <p>
+                                                Щороку близько двохсот дошкільнят відвідують розвиваючі заняття, 
+                                                вчаться малювати, співати, творити, грають у різні
+                                                ігри, святкують дні народження, просто живуть щасливо разом з нами
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class=""row achievement"">
+                                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Школярів</h4>
+                                            <p>
+                                                Продовжили навчання за напрямками «Англійська мова», «Хореографія», «Вокал», підтягнули
+                                                деякі предмети, були з нами під час усіх канікул, стали дорослішими, впевненими в собі, знайшли
+                                                улюблену справу та не зупинились на досягнутому
+                                            </p>
+                                        </div>
+                                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">37</div>
+                                        </div>
+                                    </div>
+
+                                    <div class=""row achievement"">
+                                        <div class=""number col-md-1 col-md-offset-3 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">54</div>
+                                        </div>
+                                        <div class=""description col-md-5 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Дорослих</h4>
+                                            <p>
+                                                Отримали консультації, відвідали майстер-класи, тренінги, розібралися в собі, поставили цілі
+                                                та досягли результатів
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class=""row achievement"">
+                                        <div class=""description col-md-5 col-md-offset-3 col-sm-9 col-xs-8"">
+                                            <h4 class=""media-heading"">Курсів</h4>
+                                            <p>
+                                                Курси охоплюють творчу та інтелектуальну сферу розвитку особистості, починаючи  від народження та закінчуючи …,
+                                                не закінчуються ніколи для тих, хто не зупиняється на досягненому
+                                            </p>
+                                        </div>
+                                        <div class=""number col-md-1 col-md-offset-0 col-sm-3 col-xs-4"">
+                                            <div class=""media-object"">30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                            </div>
+
+                            <div class=""row staff"">
+                                <h2 class=""text-center""><strong>Наш колектив</strong></h2>
+                                <div class=""staff-wrapper"">
+                                    <div class=""row"">
+                                        <div class=""col-md-4 person"">
+                                            <div>
+                                                <img src = ""/Content/img/staff/1.jpg"" class=""img-circle img-responsive"" />
+                                            </div>
+                                            <h3>Раковська Ірина Едуардівна</h3>
+                                            <h4>директор, психолог</h4>
+                                            <h5>НПУ ім.Драгоманова</h5>
+                                            <p>
+                                                Любов до справи щиру має, <br />
+                                                І душу всю у Центр вкладає. <br />
+                                                Світ радості, добра і миру<br />
+                                                Вона у «Райдузі» створила. <br />
+                                                Найбільша цінність – наші діти, <br />
+                                                Їх успіхам будем радіти!
+                                            </p>
+                                        </div>
+                                        <div class=""col-md-4 person"">
+                                            <div>
+                                                <img src = ""/Content/img/staff/2.jpg"" class=""img-circle img-responsive"" />
+                                            </div>
+                                            <h3>Калайда Юлія Миколаївна</h3>
+                                            <h4>викладач-методист</h4>
+                                            <h5>НПУ ім.М.Драгоманова</h5>
+                                            <p>
+                                                Мабуть немає в світі справи, <br />
+                                                Яка була б не до снаги <br />
+                                                І в психології цікавій, <br />
+                                                І в творчості – шлях до мети!
+                                            </p>
+                                        </div>
+                                        <div class=""col-md-4 person"">
+                                            <div>
+                                                <img src = ""/Content/img/staff/3.jpg"" class=""img-circle img-responsive"" />
+                                            </div>
+                                            <h3>Кременюк Аліна Олександрівна</h3>
+                                            <h4>вихователь, логопед, підготовка до школи</h4>
+                                            <h5>Уманський педагогічний інститут</h5>
+                                            <p>
+                                                Чудову мову гарно знає, <br />
+                                                Логопедію викладає<br />
+                                                Підхід до кожного знайде <br />
+                                                В країну знань всіх проведе.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class=""row"">
+                                        <div class=""col-md-4 person"">
+                                            <div>
+                                                <img src = ""/Content/img/default-user.png"" class=""img-circle img-responsive"" />
+                                            </div>
+                                            <h3>Федорчук Вікторія Миколаївна</h3>
+                                            <h4>ранній розвиток, підготовка до школи</h4>
+                                            <h5>НПУ ім. М.Драгоманова</h5>
+                                            <p>
+                                                Привітність, чіткість, компетентність<br />
+                                                Та доброзичливість завжди <br />
+                                                А ще чутливість, динамічність, <br />
+                                                Й подяки щирі за труди.
+                                            </p>
+                                        </div>
+                                        <div class=""col-md-4 person"">
+                                            <div><img src = ""/Content/img/staff/5.jpg"" class=""img-circle img-responsive"" /></div>
+                                            <h3>Чуєнко Катерина Володимирівна</h3>
+                                            <h4>викладач англійської мови, логіки</h4>
+                                            <h5>НПУ ім.Драгоманова</h5>
+                                            <p>
+                                                Наполеглива в роботі<br />
+                                                Чутлива  до чужих проблем<br />
+                                                А Творчий рух – завжди в польоті, <br />
+                                                Працює з радістю без схем.
+                                            </p>
+                                        </div>
+                                        <div class=""col-md-4 person"">
+                                            <div><img src = ""/Content/img/staff/6.jpg"" class=""img-circle img-responsive"" /></div>
+                                            <h3>Бабенюк Марина Олегівна</h3>
+                                            <h4>викладач вокалу</h4>
+                                            <h5>Академія керівних кадрів культури</h5>
+                                            <p>
+                                                Ноти, ритми – не проблема, <br />
+                                                Інструментом голос став. <br />
+                                                Для дітей завжди приємна. <br />
+                                                В співі – безліч гарних вправ!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class=""row"">
+                                        <div class=""col-md-4 col-md-offset-2 person"">
+                                            <div>
+                                                <img src = ""/Content/img/default-user.png"" class=""img-circle img-responsive"" />
+                                            </div>
+                                            <h3>Яцун Оксана Сергіївна</h3>
+                                            <h4>викладач математики, логіки, інформатики</h4>
+                                            <h5>НПУ ім.М.Драгоманова</h5>
+                                            <p>
+                                                Педагогічний шлях обрала, <br />
+                                                Бажання щире є навчать, <br />
+                                                І часом разом малишнею <br />
+                                                Задачі з логіки складать.
+                                            </p>
+                                        </div>
+                                        <div class=""col-md-4 person"">
+                                            <div>
+                                                <img src = ""/Content/img/staff/8.jpg"" class=""img-circle img-responsive"" />
+                                            </div>
+                                            <h3>Оганесян Яна Анатоліївна</h3>
+                                            <h4>адміністратор</h4>
+                                            <h5>Державний університет телекомунікацій</h5>
+                                            <p>
+                                                Уважна, чуйна та привітна<br />
+                                                Усім на поміч радо йде, <br />
+                                                Турбот немає другорядних - <br />
+                                                Порядок в офісі веде.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         "
-				});
+                });
 
 			#endregion
 
