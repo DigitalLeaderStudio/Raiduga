@@ -637,21 +637,21 @@ namespace Raiduga.DAL.Migrations
                                                 <div><img src = ""/Content/img/staff/1.jpg"" class=""img-circle img-responsive"" /></div>
                                                 <h3>Раковська Ірина Едуардівна</h3>
                                                 <h4>директор, психолог</h4>
-                                                <h5>НПУ ім.Драгоманова</h5>
+                                                <h5>НПУ ім. М.Драгоманова</h5>
                                                 <p>Любов до справи щиру має, <br /> І душу всю у Центр вкладає. <br /> Світ радості, добра і миру<br /> Вона у &laquo; Райдузі&raquo; створила. <br /> Найбільша цінність &ndash; наші діти, <br /> Їх успіхам будем радіти!</p>
                                             </div>
                                             <div class=""col-md-4 person"">
                                                 <div><img src = ""/Content/img/staff/2.jpg"" class=""img-circle img-responsive"" /></div>
                                                 <h3>Калайда Юлія Миколаївна</h3>
                                                 <h4>викладач-методист</h4>
-                                                <h5>НПУ ім.М.Драгоманова</h5>
+                                                <h5>НПУ ім. М.Драгоманова</h5>
                                                 <p>Мабуть немає в світі справи, <br /> Яка була б не до снаги <br /> І в психології цікавій, <br /> І в творчості &ndash; шлях до мети!</p>
                                             </div>
                                             <div class=""col-md-4 person"">
                                                 <div><img src = ""/Content/img/staff/3.jpg"" class=""img-circle img-responsive"" /></div>
                                                 <h3>Кременюк Аліна Олександрівна</h3>
                                                 <h4>вихователь, логопед, підготовка до школи</h4>
-                                                <h5>Уманський педагогічний інститут</h5>
+                                                <h5>УДПУ им. П.Тичины</h5>
                                                 <p>Чудову мову гарно знає, <br /> Логопедію викладає<br /> Підхід до кожного знайде <br /> В країну знань всіх проведе.</p>
                                             </div>
                                         </div>
@@ -667,7 +667,7 @@ namespace Raiduga.DAL.Migrations
                                                 <div><img src = ""/Content/img/staff/5.jpg"" class=""img-circle img-responsive"" /></div>
                                                 <h3>Чуєнко Катерина Володимирівна</h3>
                                                 <h4>викладач англійської мови, логіки</h4>
-                                                <h5>НПУ ім.Драгоманова</h5>
+                                                <h5>НПУ ім. М.Драгоманова</h5>
                                                 <p>Наполеглива в роботі<br /> Чутлива до чужих проблем<br /> А Творчий рух &ndash; завжди в польоті, <br /> Працює з радістю без схем.</p>
                                             </div>
                                             <div class=""col-md-4 person"">
@@ -683,7 +683,7 @@ namespace Raiduga.DAL.Migrations
                                                 <div><img src = ""/Content/img/staff/7.jpg"" class=""img-circle img-responsive"" /></div>
                                                 <h3>Яцун Оксана Сергіївна</h3>
                                                 <h4>викладач математики, логіки, інформатики</h4>
-                                                <h5>НПУ ім.М.Драгоманова</h5>
+                                                <h5>НПУ ім. М.Драгоманова</h5>
                                                 <p>Педагогічний шлях обрала, <br /> Бажання щире є навчать, <br /> І часом разом малишнею <br /> Задачі з логіки складать.</p>
                                             </div>
                                             <div class=""col-md-4 person"">
@@ -698,7 +698,7 @@ namespace Raiduga.DAL.Migrations
                                 </div>
                             </div>
                             "
-                });
+				});
 
 			#endregion
 
