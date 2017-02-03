@@ -1,5 +1,9 @@
 ﻿namespace Raiduga.Web.Controllers
 {
+	using Autofac;
+	using Raiduga.Interface;
+	using Raiduga.Models;
+	using Raiduga.ModelTransformers;
 	using Raiduga.Web.Localization;
 	using Raiduga.Web.Models.Common;
 	using Simplify.Mail;
@@ -11,6 +15,15 @@
 
 	public class ContactController : BaseController
 	{
+		private IModelTransformer<Affiliate, AffiliateViewModel> _affiliateTransformer;
+		private IModelTransformer<ContactRequest, ContactRequestViewModel> _crTransformer;
+
+		public ContactController(IComponentContext componentContext)
+		{
+			_affiliateTransformer = componentContext.Resolve<IModelTransformer<Affiliate, AffiliateViewModel>>();
+			_crTransformer = componentContext.Resolve<IModelTransformer<ContactRequest, ContactRequestViewModel>>();
+		}
+
 		[Route("Контакти")]
 		public ActionResult Index()
 		{
@@ -18,7 +31,7 @@
 
 			foreach (var affiliate in DbContext.Affiliates.OrderByDescending(a => a.IsPrimary).ToArray())
 			{
-				model.Add(new AffiliateViewModel().FromDbModel(affiliate));
+				model.Add(_affiliateTransformer.GetViewModel(affiliate));
 			}
 
 			return View(model);
@@ -31,16 +44,16 @@
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<PartialViewResult> ContactRequest(ContactRequestViewModel model)
+		public async Task<PartialViewResult> ContactRequest(ContactRequestViewModel viewModel)
 		{
 			if (ModelState.IsValid)
 			{
 				try
 				{
-					var dbData = model.ToDbModel();
-					dbData.CreationDate = DateTime.Now;
+					var entity = _crTransformer.GetEntity(viewModel);
+					entity.CreationDate = DateTime.Now;
 
-					DbContext.ContactRequests.Add(dbData);
+					DbContext.ContactRequests.Add(entity);
 
 					await DbContext.SaveChangesAsync();
 
@@ -58,12 +71,12 @@
 							Translations.ContactsForm_Email,
 							Translations.ContactsForm_Phone,
 							Translations.ContactsForm_Message,
-							model.Email,
-							model.Phone,
-							model.Message));
+							viewModel.Email,
+							viewModel.Phone,
+							viewModel.Message));
 
-					model.RedirectLink = Url.Action("Thanks", "Common");
-					model.SuccessfullySent = true;
+					viewModel.RedirectLink = Url.Action("Thanks", "Common");
+					viewModel.SuccessfullySent = true;
 				}
 				catch (Exception e)
 				{
@@ -72,12 +85,12 @@
 			}
 			else
 			{
-				model.Errors = ModelState.Values.SelectMany(m => m.Errors)
+				viewModel.Errors = ModelState.Values.SelectMany(m => m.Errors)
 									 .Select(e => e.ErrorMessage)
 									 .ToList();
 			}
 
-			return PartialView("_ContactFormPartial", model);
+			return PartialView("_ContactFormPartial", viewModel);
 		}
 	}
 }

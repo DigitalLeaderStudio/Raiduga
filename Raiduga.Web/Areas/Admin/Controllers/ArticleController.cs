@@ -1,5 +1,8 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
+	using Autofac;
+	using Raiduga.Interface;
+	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.Article;
 	using Raiduga.Web.Models.UserFeedback;
@@ -11,6 +14,14 @@
 
 	public class ArticleController : BaseAdminController
 	{
+		private IModelTransformer<Article, ArticleViewModel> _articleTransformer;
+
+		public ArticleController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_articleTransformer = componentContext.Resolve<IModelTransformer<Article, ArticleViewModel>>();
+		}
+
 		// GET: Admin/Article
 		public ActionResult Index()
 		{
@@ -20,7 +31,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new ArticleViewModel().FromDbModel(dbItem));
+				model.Add(_articleTransformer.GetViewModel(dbItem));
 			}
 
 			return View(model);
@@ -34,13 +45,13 @@
 
 		// POST: Admin/Article/Create
 		[HttpPost]
-		public ActionResult Create(ArticleViewModel model)
+		public ActionResult Create(ArticleViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
+					var item = _articleTransformer.GetEntity(viewModel);
 					item.CreationDate = DateTime.Now;
 
 					DbContext.Articles.Add(item);
@@ -54,37 +65,37 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// GET: Admin/Article/Edit/5
 		public ActionResult Edit(int id)
 		{
 			var originalItem = DbContext.Articles.Find(id);
+			var viewModel = _articleTransformer.GetViewModel(originalItem);
 
-			return View(new ArticleViewModel().FromDbModel(originalItem));
+			return View(viewModel);
 		}
 
 		// POST: Admin/Article/Edit/5
 		[HttpPost]
-		public ActionResult Edit(int id, ArticleViewModel model)
+		public ActionResult Edit(int id, ArticleViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
-
+					var entity = _articleTransformer.GetEntity(viewModel);
 					var originalItem = DbContext.Articles.Find(id);
 
-					originalItem.Author = item.Author;
-					originalItem.BodyHtml = item.BodyHtml;
-					originalItem.Description = item.Description;
-					originalItem.IsPublished = item.IsPublished;
-					originalItem.Keywords = item.Keywords;
-					originalItem.Title = item.Title;
+					originalItem.Author = viewModel.Author;
+					originalItem.BodyHtml = viewModel.BodyHtml;
+					originalItem.Description = viewModel.Description;
+					originalItem.IsPublished = viewModel.IsPublished;
+					originalItem.Keywords = viewModel.Keywords;
+					originalItem.Title = viewModel.Title;
 					originalItem.UpdationDate = DateTime.Now;
-					originalItem.Image = item.Image;
+					originalItem.Image = entity.Image;
 
 					DbContext.SaveChanges();
 
@@ -96,25 +107,26 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// GET: Admin/Article/Delete/5
 		public ActionResult Delete(int id)
 		{
-			var originalItem = DbContext.UserFeedbacks.Find(id);
+			var originalItem = DbContext.Articles.Find(id);
+			var viewModel = _articleTransformer.GetViewModel(originalItem);
 
-			return View(new UserFeedbackViewModel().FromDbModel(originalItem));
+			return View(viewModel);
 		}
 
 		// POST: Admin/Article/Delete/5
 		[HttpPost]
-		public ActionResult Delete(int id, UserFeedbackViewModel item)
+		public ActionResult Delete(int id, ArticleViewModel viewModel)
 		{
 			try
 			{
-				var removableItem = DbContext.UserFeedbacks.Find(id);
-				DbContext.UserFeedbacks.Remove(removableItem);
+				var removableItem = DbContext.Articles.Find(id);
+				DbContext.Articles.Remove(removableItem);
 				DbContext.SaveChanges();
 
 				return RedirectToAction("Index");

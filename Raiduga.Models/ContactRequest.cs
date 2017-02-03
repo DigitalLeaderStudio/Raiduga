@@ -1,11 +1,12 @@
 ﻿namespace Raiduga.Models
 {
+	using Raiduga.Interface;
 	using Raiduga.Models.Interfaces;
 	using System;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
 
-	public class ContactRequest : IKey<int>, IDateExtented
+	public class ContactRequest : IKey<int>, IDateExtented, IEntity
 	{
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]

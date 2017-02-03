@@ -1,5 +1,7 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
+	using Autofac;
+	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.Common;
@@ -11,17 +13,25 @@
 
 	public class SliderController : BaseAdminController
 	{
+		private IModelTransformer<SliderItem, SliderItemViewModel> _sliderTransformer;
+
+		public SliderController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_sliderTransformer = _componentContext.Resolve<IModelTransformer<SliderItem, SliderItemViewModel>>();
+		}
+
 		// GET: Admin/Slider
 		public ActionResult Index()
 		{
-			var model = new List<SliderItemViewModel>();
+			var viewModel = new List<SliderItemViewModel>();
 
 			foreach (var dbItem in DbContext.SliderItems.ToArray())
 			{
-				model.Add(new SliderItemViewModel().FromDbModel(dbItem));
+				viewModel.Add(_sliderTransformer.GetViewModel(dbItem));
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// GET: Admin/Slider/Details/5
@@ -38,13 +48,13 @@
 
 		// POST: Admin/Slider/Create
 		[HttpPost]
-		public ActionResult Create(SliderItemViewModel item)
+		public ActionResult Create(SliderItemViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var sliderItem = item.ToDbModel();
+					var sliderItem = _sliderTransformer.GetEntity(viewModel);
 
 					DbContext.SliderItems.Add(sliderItem);
 					DbContext.SaveChanges();
@@ -57,28 +67,29 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(item);
+			return View(viewModel);
 		}
 
 		// GET: Admin/Slider/Edit/5
 		public ActionResult Edit(int id)
 		{
 			var originalItem = DbContext.Set<SliderItem>().Find(id);
+			var viewModel = _sliderTransformer.GetViewModel(originalItem);
 
-			return View(new SliderItemViewModel().FromDbModel(originalItem));
+			return View(viewModel);
 		}
 
 		// POST: Admin/Slider/Edit/5
 		[HttpPost]
-		public ActionResult Edit(int id, SliderItemViewModel item)
+		public ActionResult Edit(int id, SliderItemViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var sliderItem = item.ToDbModel();
+					var sliderItem = _sliderTransformer.GetEntity(viewModel);
 
-					var originalItem = DbContext.Set<SliderItem>().Find(item.Id);
+					var originalItem = DbContext.Set<SliderItem>().Find(viewModel.Id);
 
 					originalItem.Title = sliderItem.Title;
 					originalItem.SubTitle = sliderItem.SubTitle;
@@ -94,15 +105,16 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(item);
+			return View(viewModel);
 		}
 
 		// GET: Admin/Slider/Delete/5
 		public ActionResult Delete(int id)
 		{
 			var originalItem = DbContext.Set<SliderItem>().Find(id);
+			var viewModel = _sliderTransformer.GetViewModel(originalItem);
 
-			return View(new SliderItemViewModel().FromDbModel(originalItem));
+			return View(viewModel);
 		}
 
 		// POST: Admin/Slider/Delete/5

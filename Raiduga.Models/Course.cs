@@ -1,11 +1,12 @@
 ﻿namespace Raiduga.Models
 {
+	using Raiduga.Interface;
 	using Raiduga.Models.Interfaces;
 	using System;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
 
-	public class Course : IKey<int>, IDateExtented, IBodyHtml
+	public class Course : IKey<int>, IDateExtented, IBodyHtml, IEntity
 	{
 		public Course()
 		{

@@ -1,6 +1,8 @@
 ﻿namespace Raiduga.Web.Controllers
 {
-	using Raiduga.Web.Models.Service;
+	using Autofac;
+	using Raiduga.Interface;
+	using Raiduga.Models;
 	using Raiduga.Web.Models.UserFeedback;
 	using System.Collections.Generic;
 	using System.Data.Entity;
@@ -9,17 +11,25 @@
 
 	public class UserFeedbackController : BaseController
 	{
+		private IModelTransformer<UserFeedback, UserFeedbackViewModel> _userFeedbackTransformer;
+
+		public UserFeedbackController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_userFeedbackTransformer = componentContext.Resolve<IModelTransformer<UserFeedback, UserFeedbackViewModel>>();
+		}
+
 		public ActionResult Index()
 		{
-			var dbData = DbContext.Services.ToArray();
-			var model = new List<ServiceViewModel>();
+			var dbData = DbContext.UserFeedbacks.ToArray();
+			var viewModel = new List<UserFeedbackViewModel>();
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new ServiceViewModel().FromDbModel(dbItem));
+				viewModel.Add(_userFeedbackTransformer.GetViewModel(dbItem));
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		public ActionResult _UserFeedbackHomePartial()
@@ -29,14 +39,14 @@
 				.Take(3)
 				.ToArray();
 
-			var model = new List<UserFeedbackViewModel>();
+			var viewModel = new List<UserFeedbackViewModel>();
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new UserFeedbackViewModel().FromDbModel(dbItem));
+				viewModel.Add(_userFeedbackTransformer.GetViewModel(dbItem));
 			}
 
-			return PartialView(model);
+			return PartialView(viewModel);
 		}
 	}
 }

@@ -86,6 +86,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Raiduga.Interface\Raiduga.Interface.csproj">
+      <Project>{f12130f9-650d-4ca8-8ecf-c34de43023a0}</Project>
+      <Name>Raiduga.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Raiduga.Models\Raiduga.Models.csproj">
       <Project>{9cd51a64-8908-42ac-ae4b-9f47b63932a3}</Project>
       <Name>Raiduga.Models</Name>

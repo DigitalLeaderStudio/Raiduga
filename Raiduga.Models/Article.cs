@@ -1,10 +1,11 @@
 ﻿namespace Raiduga.Models
 {
+	using Raiduga.Interface;
 	using Raiduga.Models.Interfaces;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
 
-	public class Article : IKey<int>, IDateExtented, IBodyHtml, IImageble
+	public class Article : IKey<int>, IDateExtented, IBodyHtml, IImageble, IEntity
 	{
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -9,6 +9,8 @@
 	{
 		protected void Application_Start()
 		{
+			AutofacConfig.ConfigureContainer();
+
 			Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("uk-UA");
 			//Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("uk-UA");
 

@@ -1,10 +1,11 @@
 ﻿namespace Raiduga.Models
 {
+	using Raiduga.Interface;
 	using Raiduga.Models.Interfaces;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
 
-	public class SliderItem : IKey<int>, IImageble
+	public class SliderItem : IKey<int>, IImageble, IEntity
 	{
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]

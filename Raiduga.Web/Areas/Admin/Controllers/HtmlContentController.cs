@@ -1,8 +1,10 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
+	using Autofac;
+	using Raiduga.Interface;
+	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.Common;
-	using Raiduga.Web.Models.UserFeedback;
 	using System;
 	using System.Collections.Generic;
 	using System.Data.Entity;
@@ -11,6 +13,14 @@
 
 	public class HtmlContentController : BaseAdminController
 	{
+		private IModelTransformer<HtmlContent, HtmlContentViewModel> _htmlContentTransformer;
+
+		public HtmlContentController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_htmlContentTransformer = componentContext.Resolve<IModelTransformer<HtmlContent, HtmlContentViewModel>>();
+		}
+
 		// GET: Admin/HtmlContent
 		public ActionResult Index()
 		{
@@ -20,7 +30,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new HtmlContentViewModel().FromDbModel(dbItem));
+				model.Add(_htmlContentTransformer.GetViewModel(dbItem));
 			}
 
 			return View(model);
@@ -40,13 +50,14 @@
 
 		// POST: Admin/HtmlContent/Create
 		[HttpPost]
-		public ActionResult Create(HtmlContentViewModel model)
+		public ActionResult Create(HtmlContentViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
+					//var item = model.ToDbModel();
+					var item = _htmlContentTransformer.GetEntity(viewModel);
 					item.CreationDate = DateTime.Now;
 
 					DbContext.HtmlContents.Add(item);
@@ -60,7 +71,7 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// GET: Admin/HtmlContent/Edit/5
@@ -68,24 +79,22 @@
 		{
 			var originalItem = DbContext.HtmlContents.Find(id);
 
-			return View(new HtmlContentViewModel().FromDbModel(originalItem));
+			return View(_htmlContentTransformer.GetViewModel(originalItem));
 		}
 
 		// POST: Admin/HtmlContent/Edit/5
 		[HttpPost]
-		public ActionResult Edit(int id, HtmlContentViewModel model)
+		public ActionResult Edit(int id, HtmlContentViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
-
 					var originalItem = DbContext.HtmlContents.Find(id);
 
 					originalItem.UpdationDate = DateTime.Now;
-					originalItem.Name = item.Name;
-					originalItem.BodyHtml = item.BodyHtml;
+					originalItem.Name = viewModel.Name;
+					originalItem.BodyHtml = viewModel.BodyHtml;
 
 					DbContext.SaveChanges();
 
@@ -97,7 +106,7 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// GET: Admin/HtmlContent/Delete/5
@@ -105,7 +114,7 @@
 		{
 			var originalItem = DbContext.HtmlContents.Find(id);
 
-			return View(new HtmlContentViewModel().FromDbModel(originalItem));
+			return View(_htmlContentTransformer.GetViewModel(originalItem));
 		}
 
 		// POST: Admin/HtmlContent/Delete/5

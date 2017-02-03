@@ -8,9 +8,18 @@
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 	using System;
+	using Autofac;
+	using Raiduga.Interface;
 
 	public class MessagesController : BaseAdminController
 	{
+		private IModelTransformer<ContactRequest, ContactRequestViewModel> _crTransformer;
+
+		public MessagesController(IComponentContext componentContext)
+		{
+			_crTransformer = componentContext.Resolve<IModelTransformer<ContactRequest, ContactRequestViewModel>>();
+		}
+
 		// GET: Admin/Admin
 		public ActionResult Index()
 		{
@@ -19,7 +28,7 @@
 			var model = new List<ContactRequestViewModel>();
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new ContactRequestViewModel().FromDbModel(dbItem));
+				model.Add(_crTransformer.GetViewModel(dbItem));
 			}
 
 			return View(model);

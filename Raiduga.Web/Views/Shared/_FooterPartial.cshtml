@@ -1,5 +1,5 @@
 ﻿@using Raiduga.Web.Localization
-
+@model Raiduga.Web.Models.Common.AffiliateViewModel
 
 <div class="container-fluid">
 	<div class="row">
@@ -17,7 +17,7 @@
 			<div class="title">
 				@Translations.Contacts_Title
 			</div>
-			@Html.Partial("~/Views/Contact/_FastContactsPartial.cshtml")
+			@Html.Partial("~/Views/Contact/_FastContactsPartial.cshtml", Model)
 		</div>
 		<div class="col-md-4">
 			<div class="title">

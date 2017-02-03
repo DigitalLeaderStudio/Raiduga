@@ -8,9 +8,21 @@
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 	using System;
+	using Raiduga.Interface;
+	using Autofac;
 
 	public class ContactController : BaseAdminController
 	{
+		private IModelTransformer<Affiliate, AffiliateViewModel> _affiliateTransformer;
+		private IModelTransformer<Address, AddressViewModel> _addressTransformer;
+
+		public ContactController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_affiliateTransformer = _componentContext.Resolve<IModelTransformer<Affiliate, AffiliateViewModel>>();
+			_addressTransformer = _componentContext.Resolve<IModelTransformer<Address, AddressViewModel>>();
+		}
+
 		// GET: Admin/Admin
 		public ActionResult Index()
 		{
@@ -19,7 +31,7 @@
 
 			foreach (var item in dbData)
 			{
-				model.Add(new AffiliateViewModel().FromDbModel(item));
+				model.Add(_affiliateTransformer.GetViewModel(item));
 			}
 
 			return View(model);
@@ -30,21 +42,21 @@
 		{
 			var dbItem = DbContext.Set<Affiliate>().Find(id);
 
-			return View(new AffiliateViewModel().FromDbModel(dbItem));
+			return View(_affiliateTransformer.GetViewModel(dbItem));
 		}
 
 		// POST: Admin/Contact/Edit/5
-		[HttpPost]		
-		public ActionResult Edit(int id, AffiliateViewModel item)
+		[HttpPost]
+		public ActionResult Edit(int id, AffiliateViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
-				{					
-					var originalItem = DbContext.Set<Affiliate>().Find(item.Id);
+				{
+					var originalItem = DbContext.Set<Affiliate>().Find(viewModel.Id);
 
 					//If affiliate goes to be primary, reset the others affiliates IsPrimary to false
-					if (item.IsPrimary)
+					if (viewModel.IsPrimary)
 					{
 						if (!originalItem.IsPrimary)
 						{
@@ -52,17 +64,18 @@
 							{
 								affiliate.IsPrimary = false;
 							}
-							originalItem.IsPrimary = item.IsPrimary;
+							originalItem.IsPrimary = viewModel.IsPrimary;
 						}
 					}
 
-					originalItem.Address = item.Address.ToDbModel();
-					var originalHours = originalItem.Hours.First();
-					originalHours.Start = item.Hours.Start;
-					originalHours.End = item.Hours.End;
+					originalItem.Address = _addressTransformer.GetEntity(viewModel.Address);
 
-					originalItem.HtmlDataContacts = item.HtmlDataContacts;
-					originalItem.Description = item.Description;
+					var originalHours = originalItem.Hours.First();
+					originalHours.Start = viewModel.Hours.Start;
+					originalHours.End = viewModel.Hours.End;
+
+					originalItem.HtmlDataContacts = viewModel.HtmlDataContacts;
+					originalItem.Description = viewModel.Description;
 
 					DbContext.SaveChanges();
 
@@ -74,7 +87,7 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(item);
+			return View(viewModel);
 		}
 	}
 }

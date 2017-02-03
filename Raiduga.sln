@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiduga.Models", "Raiduga.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiduga.DAL", "Raiduga.DAL\Raiduga.DAL.csproj", "{DD6F6172-60A5-4679-BF82-79AF72B80B07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiduga.Interface", "Raiduga.Interface\Raiduga.Interface.csproj", "{F12130F9-650D-4CA8-8ECF-C34DE43023A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiduga.ModelTransformers", "Raiduga.ModelTransformer\Raiduga.ModelTransformers.csproj", "{172102B0-AC06-4447-BC83-B942CB9256B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{DD6F6172-60A5-4679-BF82-79AF72B80B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD6F6172-60A5-4679-BF82-79AF72B80B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD6F6172-60A5-4679-BF82-79AF72B80B07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12130F9-650D-4CA8-8ECF-C34DE43023A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12130F9-650D-4CA8-8ECF-C34DE43023A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12130F9-650D-4CA8-8ECF-C34DE43023A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12130F9-650D-4CA8-8ECF-C34DE43023A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172102B0-AC06-4447-BC83-B942CB9256B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172102B0-AC06-4447-BC83-B942CB9256B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172102B0-AC06-4447-BC83-B942CB9256B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172102B0-AC06-4447-BC83-B942CB9256B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@
 	using Raiduga.Models;
 	using Raiduga.Web.Models.Interfaces;
 
-	public class PhoneViewModel : IGeneratable<Phone, PhoneViewModel>
+	public class PhoneViewModel
 	{
 		public int Id { get; set; }
 

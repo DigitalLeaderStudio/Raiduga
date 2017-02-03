@@ -1,17 +1,20 @@
 ﻿namespace Raiduga.Web.Models.Interfaces
 {
+	using Raiduga.Interface.Attribute;
 	using Raiduga.Models;
 	using Raiduga.Web.Localization;
 	using System.ComponentModel.DataAnnotations;
 	using System.Web;
 
-	public abstract class AFileViewModel
+	public abstract class AbstractFileViewModel
 	{
 		[Display(ResourceType = typeof(Translations), Name = "Image_Caption")]
 		public virtual HttpPostedFileBase File { get; set; }
 
+		[MapToEntityValue]
 		public virtual int? ImageId { get; set; }
 
+		[MapToFile(EntityPropertyName = "Image")]
 		public File GetFile()
 		{
 			File result = null;

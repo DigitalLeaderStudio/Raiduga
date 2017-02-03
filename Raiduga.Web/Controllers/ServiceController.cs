@@ -1,5 +1,7 @@
 ﻿namespace Raiduga.Web.Controllers
 {
+	using Autofac;
+	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Localization;
 	using Raiduga.Web.Models.Service;
@@ -13,27 +15,37 @@
 
 	public class ServiceController : BaseController
 	{
+		private IModelTransformer<Service, ServiceViewModel> _serviceTransformer;
+		private IModelTransformer<Course, CourseViewModel> _courseTransformer;
+
+		public ServiceController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_serviceTransformer = componentContext.Resolve<IModelTransformer<Service, ServiceViewModel>>();
+			_courseTransformer = componentContext.Resolve<IModelTransformer<Course, CourseViewModel>>();
+		}
+
 		[Route("Наші-послуги")]
 		public ActionResult Index()
 		{
 			var dbData = DbContext.Services.ToArray();
-			var model = new List<ServiceViewModel>();
+			var viewModel = new List<ServiceViewModel>();
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new ServiceViewModel().FromDbModel(dbItem));
+				viewModel.Add(_serviceTransformer.GetViewModel(dbItem));
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		[Route("Наші-послуги/{name}")]
 		public ActionResult CourseList(string name)
 		{
 			var service = DbContext.Services.Where(s => s.Name == name).First();
-			var model = new ServiceViewModel().FromDbModel(service);
+			var viewModel = _serviceTransformer.GetViewModel(service);
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		[Route("Наші-послуги/{serviceName}/{courseName}")]
@@ -44,11 +56,11 @@
 				.Select(x => x.Courses.Where(course => course.Name == courseName))
 				.First().First();
 
-			var model = new CourseViewModel().FromDbModel(dbItem);
+			var viewModel = _courseTransformer.GetViewModel(dbItem);
+			viewModel.ServiceName = serviceName;
 
-			return View(model);
+			return View(viewModel);
 		}
-
 
 		[HttpGet]
 		public PartialViewResult _ApplyToCoursePartial(int courseId)
@@ -134,14 +146,14 @@
 		{
 			var dbData = DbContext.Services.ToArray();
 
-			var model = new List<ServiceViewModel>();
+			var viewModel = new List<ServiceViewModel>();
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new ServiceViewModel().FromDbModel(dbItem));
+				viewModel.Add(_serviceTransformer.GetViewModel(dbItem));
 			}
 
-			return PartialView(model);
+			return PartialView(viewModel);
 		}
 	}
 }

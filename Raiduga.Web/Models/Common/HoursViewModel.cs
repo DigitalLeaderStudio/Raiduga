@@ -1,15 +1,20 @@
 ﻿namespace Raiduga.Web.Models.Common
 {
+	using Raiduga.Interface;
+	using Raiduga.Interface.Attribute;
 	using Raiduga.Models;
 	using Raiduga.Web.Models.Interfaces;
 	using System;
 
-	public class HoursViewModel : IGeneratable<Hours, HoursViewModel>
+	public class HoursViewModel : IEntity
 	{
+		[MapToEntityValue]
 		public int Id { get; set; }
 
+		[MapToEntityValue]
 		public TimeSpan Start { get; set; }
 
+		[MapToEntityValue]
 		public TimeSpan End { get; set; }
 
 		public HoursViewModel FromDbModel(Hours model)

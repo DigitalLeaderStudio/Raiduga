@@ -9,7 +9,7 @@
 	using System.Collections.Generic;
 	using System.ComponentModel.DataAnnotations;
 
-	public class ApplyToCourseViewModel : IGeneratable<ApplyToCourseRequest, ApplyToCourseViewModel>, IDateExtented
+	public class ApplyToCourseViewModel :  IDateExtented
 	{
 		public ApplyToCourseViewModel()
 		{

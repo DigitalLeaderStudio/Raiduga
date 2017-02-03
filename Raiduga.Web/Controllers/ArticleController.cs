@@ -1,39 +1,45 @@
 ﻿namespace Raiduga.Web.Controllers
 {
-	using Raiduga.Web.Models.Common;
+	using Autofac;
+	using Raiduga.Interface;
+	using Raiduga.Models;
+	using Raiduga.Web.Models.Article;
+	using System.Collections.Generic;
 	using System.Linq;
 	using System.Web.Mvc;
-	using RouteLocalization.Mvc;
-	using RouteLocalization.Mvc.Extensions;
-	using RouteLocalization.Mvc.Setup;
-	using Raiduga.Web.Localization;
-	using System.Collections.Generic;
-	using Raiduga.Web.Models.Article;
 
 	public class ArticleController : BaseController
 	{
+		private IModelTransformer<Article, ArticleViewModel> _articleTransformer;
+
+		public ArticleController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_articleTransformer = componentContext.Resolve<IModelTransformer<Article, ArticleViewModel>>();
+		}
+
 		[Route("~/Новини")]
 		public ActionResult Index()
 		{
 			var dbData = DbContext.Articles.Where(a => a.IsPublished);
 
-			var model = new List<ArticleViewModel>();
+			var viewModel = new List<ArticleViewModel>();
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(new ArticleViewModel().FromDbModel(dbItem));
+				viewModel.Add(_articleTransformer.GetViewModel(dbItem));
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		[Route("~/Новини/{title}")]
 		public ActionResult Details(string title)
 		{
 			var dbItem = DbContext.Articles.Where(art => art.Title == title && art.IsPublished).First();
+			var viewModel = _articleTransformer.GetViewModel(dbItem);
 
-			var model = new ArticleViewModel().FromDbModel(dbItem);
-			return View(model);
+			return View(viewModel);
 		}
 	}
 }

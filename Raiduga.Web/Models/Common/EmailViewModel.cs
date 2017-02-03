@@ -1,29 +1,15 @@
 ﻿namespace Raiduga.Web.Models.Common
 {
+	using Raiduga.Interface.Attribute;
 	using Raiduga.Models;
 	using Raiduga.Web.Models.Interfaces;
 
-	public class EmailViewModel : IGeneratable<Email, EmailViewModel>
+	public class EmailViewModel
 	{
+		[MapToEntityValue]
 		public int Id { get; set; }
 
+		[MapToEntityValue]
 		public string Value { get; set; }
-
-		public EmailViewModel FromDbModel(Email model)
-		{
-			this.Id = model.Id;
-			this.Value = model.Value;
-
-			return this;
-		}
-
-		public Email ToDbModel()
-		{
-			return new Email
-			{
-				Id = this.Id,
-				Value = this.Value
-			};
-		}
 	}
 }

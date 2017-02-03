@@ -1,16 +1,15 @@
 ﻿namespace Raiduga.Web.Controllers
 {
+	using Autofac;
 	using Raiduga.DAL;
-	using Raiduga.Web.Models.Common;
-	using System;
-	using System.Collections.Generic;
-	using System.Data.Entity;
-	using System.Linq;
-	using System.Web;
 	using System.Web.Mvc;
 
 	public class BaseController : Controller
 	{
+		#region fields and props
+
+		private readonly IComponentContext _componentContext;
+
 		private ApplicationDbContext dbContext = null;
 		public ApplicationDbContext DbContext
 		{
@@ -26,11 +25,24 @@
 			}
 		}
 
+		#endregion
+
+		#region constructors
+
+		public BaseController()
+		{
+
+		}
+
+		public BaseController(IComponentContext componentContext)
+		{
+			_componentContext = componentContext;
+		}
+
+		#endregion
+
 		protected override void OnActionExecuting(ActionExecutingContext filterContext)
 		{
-			var viewModel = new AffiliateViewModel().FromDbModel(DbContext.Affiliates.First(a => a.IsPrimary));
-			ViewBag.Affiliate = viewModel;
-
 			base.OnActionExecuting(filterContext);
 		}
 

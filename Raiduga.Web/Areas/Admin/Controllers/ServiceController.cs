@@ -1,8 +1,9 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
+	using Autofac;
+	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
-	using Raiduga.Web.Models.Common;
 	using Raiduga.Web.Models.Service;
 	using System;
 	using System.Collections.Generic;
@@ -13,29 +14,39 @@
 
 	public class ServiceController : BaseAdminController
 	{
+		private IModelTransformer<Service, ServiceViewModel> _serviceTransformer;
+		private IModelTransformer<Course, CourseViewModel> _courseTransformer;
+
+		public ServiceController(IComponentContext componentContext)
+			: base(componentContext)
+		{
+			_serviceTransformer = componentContext.Resolve<IModelTransformer<Service, ServiceViewModel>>();
+			_courseTransformer = componentContext.Resolve<IModelTransformer<Course, CourseViewModel>>();
+		}
+
 		// GET: Admin/Serivce
 		public ActionResult Index()
 		{
-			var model = new List<ServiceViewModel>();
+			var viewModel = new List<ServiceViewModel>();
 
 			foreach (var dbItem in DbContext.Services.ToArray())
 			{
-				model.Add(new ServiceViewModel().FromDbModel(dbItem));
+				viewModel.Add(_serviceTransformer.GetViewModel(dbItem));
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		public ActionResult ApplyToCourseRequestList()
 		{
-			var model = new List<ApplyToCourseViewModel>();
+			var viewModel = new List<ApplyToCourseViewModel>();
 
 			foreach (var dbItem in DbContext.ApplyToCourseRequests.OrderByDescending(x => x.CreationDate).ToArray())
 			{
-				model.Add(new ApplyToCourseViewModel().FromDbModel(dbItem));
+				viewModel.Add(new ApplyToCourseViewModel().FromDbModel(dbItem));
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		[HttpPost]
@@ -76,13 +87,13 @@
 
 		// POST: Admin/Service/Create
 		[HttpPost]
-		public ActionResult Create(ServiceViewModel model)
+		public ActionResult Create(ServiceViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
+					var item = _serviceTransformer.GetEntity(viewModel);
 
 					DbContext.Services.Add(item);
 					DbContext.SaveChanges();
@@ -95,18 +106,18 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// POST: Admin/Service/5/CreateCourse
 		[HttpPost]
-		public ActionResult CreateCourse(CourseViewModel model)
+		public ActionResult CreateCourse(CourseViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
+					var item = _courseTransformer.GetEntity(viewModel);
 
 					DbContext.Set<Course>().Add(item);
 					DbContext.SaveChanges();
@@ -119,7 +130,7 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// GET: Admin/Service/Edit/5
@@ -127,32 +138,33 @@
 		{
 			var originalItem = DbContext.Set<Service>().Find(id);
 
-			return View(new ServiceViewModel().FromDbModel(originalItem));
+			return View(_serviceTransformer.GetViewModel(originalItem));
 		}
 
 		// GET: Admin/Service/EditCourse/5
 		public ActionResult EditCourse(int id)
 		{
 			var item = DbContext.Set<Course>().Find(id);
+			var viewModel = _courseTransformer.GetViewModel(item);
 
-			return View(new CourseViewModel().FromDbModel(item));
+			return View(viewModel);
 		}
 
 		// POST: Admin/Service/Edit/5
 		[HttpPost]
-		public ActionResult Edit(int id, ServiceViewModel model)
+		public ActionResult Edit(int id, ServiceViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
+					var item = _serviceTransformer.GetEntity(viewModel);
 
 					var originalItem = DbContext.Set<Service>().Find(id);
 
-					originalItem.Name = model.Name;
-					originalItem.Description = model.Description;
-					originalItem.BodyHtml = model.BodyHtml;
+					originalItem.Name = viewModel.Name;
+					originalItem.Description = viewModel.Description;
+					originalItem.BodyHtml = viewModel.BodyHtml;
 					originalItem.Image = item.Image;
 
 					DbContext.SaveChanges();
@@ -165,27 +177,27 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// POST: Admin/Service/EditCourse/5
 		[HttpPost]
-		public ActionResult EditCourse(int id, CourseViewModel model)
+		public ActionResult EditCourse(int id, CourseViewModel viewModel)
 		{
 			try
 			{
 				if (ModelState.IsValid)
 				{
-					var item = model.ToDbModel();
+					var item = _courseTransformer.GetEntity(viewModel);
 
 					var originalItem = DbContext.Set<Course>().Find(id);
 
-					originalItem.Name = model.Name;
-					originalItem.Duration = model.Duration;
-					originalItem.Description = model.Description;
-					originalItem.Price = model.Price;
+					originalItem.Name = viewModel.Name;
+					originalItem.Duration = viewModel.Duration;
+					originalItem.Description = viewModel.Description;
+					originalItem.Price = viewModel.Price;
 					originalItem.UpdationDate = DateTime.Now;
-					originalItem.BodyHtml = model.BodyHtml;
+					originalItem.BodyHtml = viewModel.BodyHtml;
 
 					DbContext.SaveChanges();
 
@@ -197,7 +209,7 @@
 				ModelState.AddModelError("", e.Message);
 			}
 
-			return View(model);
+			return View(viewModel);
 		}
 
 		// GET: Admin/Service/Delete/5
@@ -205,12 +217,12 @@
 		{
 			var originalItem = DbContext.Set<Service>().Find(id);
 
-			return View(new ServiceViewModel().FromDbModel(originalItem));
+			return View(_serviceTransformer.GetViewModel(originalItem));
 		}
 
 		// POST: Admin/Service/Delete/5
 		[HttpPost]
-		public ActionResult Delete(int id, ServiceViewModel item)
+		public ActionResult Delete(int id, ServiceViewModel viewModel)
 		{
 			try
 			{
@@ -230,8 +242,9 @@
 		public ActionResult DeleteCourse(int id)
 		{
 			var originalItem = DbContext.Set<Course>().Find(id);
+			var viewModel = _courseTransformer.GetViewModel(originalItem);
 
-			return View(new CourseViewModel().FromDbModel(originalItem));
+			return View(viewModel);
 		}
 
 		// POST: Admin/Service/DeleteCourse/5
