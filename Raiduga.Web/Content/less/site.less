@@ -46,6 +46,15 @@ i {
 	margin-right: 5px;
 }
 
+.ellipis {
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: block;
+	height: 24px;
+}
+
 .modal-dialog {
 	.fader {
 		border-radius: 4px;
@@ -238,6 +247,31 @@ header {
 					color: @color-purple;
 				}
 			}
+		}
+
+		li.open {
+			& > a {
+				background-color: #F5F5F5 !important;
+			}
+		}
+
+		a.dropdown-toggle {
+			float: left;
+			padding-left: 0px;
+		}
+
+		a.btn-group {
+			float: left;
+			padding-right: 5px;
+		}
+
+		.dropdown-menu li a {
+			padding: 5px 25px 5px;
+		}
+
+		.service-menu-img {
+			height: 30px;
+			width: 50px;
 		}
 	}
 
@@ -442,7 +476,7 @@ footer {
 					margin: 15px 0;
 					padding-left: 15px;
 					list-style: none;
-					min-height: 100px;
+					min-height: 120px;
 				}
 			}
 		}
@@ -1102,21 +1136,22 @@ footer {
 	}
 
 	table {
-        margin-bottom: 60px;
-		
-        th {
+		margin-bottom: 60px;
+
+		th {
 			color: @text-color;
 		}
 
 		tr {
 			td {
-                text-align: left;
+				text-align: left;
+
 				&.course-name {
 					font-size: 1.1em;
 					/*font-weight: bold;*/
 				}
 
-				&.group-name{
+				&.group-name {
 					/*font-weight: bold;*/
 					text-transform: capitalize;
 				}
@@ -1181,10 +1216,10 @@ footer {
 		}
 	}
 
-    h3 {
-        font-size: 25px;
-        margin: 20px 0 10px;
-    }
+	h3 {
+		font-size: 25px;
+		margin: 20px 0 10px;
+	}
 }
 
 

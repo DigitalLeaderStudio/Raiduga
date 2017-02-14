@@ -63,6 +63,7 @@
 								Courses = courses
 									.Select(course => new CourseViewModel
 									{
+										Id = course.Id,
 										Name = course.Name,
 										Description = course.Description,
 										Price = course.Price,
@@ -196,6 +197,33 @@
 									.Take(5)
 									.Select(course => new CourseViewModel { Name = course.Name })
 									.ToList()
+							}
+						).ToList()
+					).First();
+
+			return PartialView(viewModel);
+		}
+
+		public ActionResult _ServicesMenuPartial()
+		{
+			var viewModel = new List<ServiceViewModel>();
+
+			viewModel = DbContext.Set<Affiliate>()
+				.Where(affiliate => affiliate.IsPrimary)
+				.Select(affiliate =>
+					affiliate.Courses
+						.GroupBy(course => new
+						{
+							course.ServiceId,
+							course.Service.Name,
+							course.Service.ImageId
+						})
+						.OrderBy(serviceGroup => serviceGroup.Key.ServiceId)
+						.Select(courses =>
+							new ServiceViewModel
+							{
+								Name = courses.Key.Name,
+								ImageId = courses.Key.ImageId
 							}
 						).ToList()
 					).First();
