@@ -28,7 +28,7 @@
 	function _timeChange(e) {
 		var selectedOption = $courseSelect.find('option:selected');
 		var courseDuration = moment.duration($(selectedOption).attr('duration'));
-		
+
 		var newToTime = courseDuration.add(moment.duration(e.time));
 
 		$toTimeSpan.html(moment(newToTime._data).format('HH:mm'));

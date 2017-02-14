@@ -8,6 +8,7 @@
 
 <h2>@Translations.Create</h2>
 
+@Scripts.Render("~/bundles/momentJs")
 
 <div class="afticles">
 
@@ -35,17 +36,15 @@
 			<div class="form-group">
 				@Html.LabelFor(m => m.Courses, new { @class = "control-label col-md-2" })
 				<div class="col-md-6">
-					<div class="col-md-6">
-						<select id="@Html.IdFor(m => m.CourseId)"
-								name="@Html.NameFor(m => m.CourseId)"
-								data-course=""
-								class="form-control">
-							@foreach (var course in Model.CoursesCustom)
-							{
-								<option value="@course.Id" duration="@course.Duration">@course.Name</option>
-							}
-						</select>
-					</div>
+					<select id="@Html.IdFor(m => m.CourseId)"
+							name="@Html.NameFor(m => m.CourseId)"
+							data-course=""
+							class="form-control">
+						@foreach (var course in Model.CoursesCustom)
+						{
+							<option value="@course.Id" duration="@course.Duration">@course.Name</option>
+						}
+					</select>
 				</div>
 			</div>
 			<div class="form-group">
