@@ -19,7 +19,9 @@
 						<ul class="text-left">
 							@foreach (var course in item.Courses.OrderBy(c => c.PriorityOrder).Take(5))
 							{
-								<li><i class="fa fa-certificate"></i> @course.Name</li>
+								<li>
+									<div class="ellipis" title="@course.Name"><i class="fa fa-certificate"></i>@course.Name</div>
+								</li>
 							}
 						</ul>
 					</div>

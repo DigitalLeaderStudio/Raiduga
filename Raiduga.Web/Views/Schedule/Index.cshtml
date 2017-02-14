@@ -5,11 +5,8 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-	<h1 class="title">@Translations.Schedule_PageTitle</h1>
-</div>
-
 <div class="container schedule">
+	<h1 class="title">@Translations.Schedule_PageTitle</h1>
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		@foreach (var affiliate in Model)
 		{

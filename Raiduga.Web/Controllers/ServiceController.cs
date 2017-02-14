@@ -202,5 +202,32 @@
 
 			return PartialView(viewModel);
 		}
+
+		public ActionResult _ServicesMenuPartial()
+		{
+			var viewModel = new List<ServiceViewModel>();
+
+			viewModel = DbContext.Set<Affiliate>()
+				.Where(affiliate => affiliate.IsPrimary)
+				.Select(affiliate =>
+					affiliate.Courses
+						.GroupBy(course => new
+						{
+							course.ServiceId,
+							course.Service.Name,
+							course.Service.ImageId
+						})
+						.OrderBy(serviceGroup => serviceGroup.Key.ServiceId)
+						.Select(courses =>
+							new ServiceViewModel
+							{
+								Name = courses.Key.Name,
+								ImageId = courses.Key.ImageId
+							}
+						).ToList()
+					).First();
+
+			return PartialView(viewModel);
+		}
 	}
 }

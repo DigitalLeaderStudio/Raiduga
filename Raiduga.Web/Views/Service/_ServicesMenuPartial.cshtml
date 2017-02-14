@@ -1,0 +1,37 @@
+﻿@using Raiduga.Web.Localization
+@model List<Raiduga.Web.Models.Service.ServiceViewModel>
+
+@*<a href="@Url.Action("Index", "Service", new { area = "" })"
+	   class="dropdown-toggle"
+	   data-toggle="dropdown"
+	   role="button"
+	   aria-haspopup="true"
+	   aria-expanded="false">
+		@Translations.Service_Title
+		<span class="caret"></span>
+	</a>*@
+
+<a class="btn-group" href="@Url.Action("Index", "Service", new { area = "" })">
+	@Translations.Service_Title
+</a>
+<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<span class="caret"></span>
+	<span class="sr-only"></span>
+</a>
+<ul class="dropdown-menu">
+	@foreach (var service in Model)
+	{
+		<li>
+			<a href="@Url.Action("CourseList", "Service", new { name = service.Name }, null)">
+				@{
+		var srcAction = service.ImageId.HasValue ?
+		Url.Action("Show", "File", new { area = "", id = service.ImageId }) :
+		string.Empty;
+				}
+				<img src="@srcAction" alt="@service.Name" class="service-menu-img" />
+				@service.Name
+			</a>
+		</li>
+	}
+</ul>
+
