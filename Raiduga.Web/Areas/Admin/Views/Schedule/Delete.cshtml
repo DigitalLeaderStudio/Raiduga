@@ -1,0 +1,31 @@
+﻿@model Raiduga.Web.Models.Service.LessonViewModel
+@using Raiduga.Web.Localization;
+
+@{
+	var title = Translations.Delete;
+	ViewBag.Title = title;
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@title</h2>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3>@title</h3>
+	</div>
+	<div class="panel-body">
+		<p>
+			@Translations.Schedule_DeletePrompt
+		</p>
+	</div>
+	<div class="panel-footer">
+		@using (Html.BeginForm())
+		{
+			@Html.AntiForgeryToken()
+			@Html.HiddenFor(m => m.Id)
+
+			<a href="@Url.Action("Index", "Schedule")" class="btn btn-default">@Translations.Cancel</a>
+			<input type="submit" class="btn btn-danger" value="@Translations.Delete" />
+		}
+	</div>
+</div>
