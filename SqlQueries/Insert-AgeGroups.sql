@@ -29,14 +29,7 @@ GO
            ('4-5 років'
            ,'4-5 років')
 GO
-		   INSERT INTO [dbo].[AgeGroups]
-           ([Name]
-           ,[Description])
-     VALUES
-           ('1-2 роки'
-           ,'1-2 роки')
-GO
-		   INSERT INTO [dbo].[AgeGroups]
+		  INSERT INTO [dbo].[AgeGroups]
            ([Name]
            ,[Description])
      VALUES
