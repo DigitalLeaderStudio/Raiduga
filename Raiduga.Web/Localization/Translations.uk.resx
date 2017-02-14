@@ -505,4 +505,10 @@
   <data name="NoLessons" xml:space="preserve">
     <value>На даний час, заняття по даній категорії не проводяться</value>
   </data>
+  <data name="Admin_Home_ScheduleDescription" xml:space="preserve">
+    <value>Редагування розкладу</value>
+  </data>
+  <data name="Schedule_DeletePrompt" xml:space="preserve">
+    <value>Заняття буде видалено із розкладу. Продовжити?</value>
+  </data>
 </root>

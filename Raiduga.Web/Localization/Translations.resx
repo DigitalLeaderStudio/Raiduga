@@ -504,4 +504,10 @@
   <data name="NoLessons" xml:space="preserve">
     <value>There are no lessons for the category yet.</value>
   </data>
+  <data name="Admin_Home_ScheduleDescription" xml:space="preserve">
+    <value>Schedule editing</value>
+  </data>
+  <data name="Schedule_DeletePrompt" xml:space="preserve">
+    <value>The lesson will be removed from schedule. Continue?</value>
+  </data>
 </root>

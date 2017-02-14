@@ -107,6 +107,14 @@
 																		@time
 																	</td>
 																	<td class="text-center">@groupItem.TeacherFullName</td>
+																	<td>
+																		<a href="@Url.Action("Edit", "Schedule", new { id = groupItem.Id })">
+																			<i class="fa fa-edit"></i>
+																		</a>
+																		<a href="@Url.Action("Delete", "Schedule", new { id = groupItem.Id })">
+																			<i class="fa fa-trash text-danger"></i>
+																		</a>
+																	</td>
 																</tr>
 															}
 														}

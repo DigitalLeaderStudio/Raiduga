@@ -124,6 +124,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Schedule editing.
+        /// </summary>
+        public static string Admin_Home_ScheduleDescription {
+            get {
+                return ResourceManager.GetString("Admin_Home_ScheduleDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit service and theirs courses.
         /// </summary>
         public static string Admin_Home_ServiceDescription {
@@ -930,6 +939,15 @@ namespace Raiduga.Web.Localization {
         public static string Schedule_Course_Name {
             get {
                 return ResourceManager.GetString("Schedule_Course_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The lesson will be removed from schedule. Continue?.
+        /// </summary>
+        public static string Schedule_DeletePrompt {
+            get {
+                return ResourceManager.GetString("Schedule_DeletePrompt", resourceCulture);
             }
         }
         

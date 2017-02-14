@@ -52,6 +52,7 @@
 										Duration = courseGroup.Key.Duration,
 										Lessons = courseGroup.Select(lesson => new LessonViewModel
 										{
+											Id = lesson.Id,
 											TeacherFullName = lesson.TeacherFullName,
 											StartTime = lesson.StartTime,
 											GroupName = lesson.GroupName,

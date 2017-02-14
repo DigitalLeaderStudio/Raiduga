@@ -504,4 +504,10 @@
   <data name="NoLessons" xml:space="preserve">
     <value>На данный момент, занятия для данной категрии, не проводятся</value>
   </data>
+  <data name="Admin_Home_ScheduleDescription" xml:space="preserve">
+    <value>Редактирование рассписания</value>
+  </data>
+  <data name="Schedule_DeletePrompt" xml:space="preserve">
+    <value>Занятие будет удалено из расписания. Продолжить?</value>
+  </data>
 </root>
