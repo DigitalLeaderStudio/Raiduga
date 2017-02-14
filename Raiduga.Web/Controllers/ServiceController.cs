@@ -63,6 +63,7 @@
 								Courses = courses
 									.Select(course => new CourseViewModel
 									{
+										Id = course.Id,
 										Name = course.Name,
 										Description = course.Description,
 										Price = course.Price,
