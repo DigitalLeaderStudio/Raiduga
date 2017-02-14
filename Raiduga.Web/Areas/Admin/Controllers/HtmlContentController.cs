@@ -1,7 +1,6 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.Common;
@@ -13,12 +12,9 @@
 
 	public class HtmlContentController : BaseAdminController
 	{
-		private IModelTransformer<HtmlContent, HtmlContentViewModel> _htmlContentTransformer;
-
 		public HtmlContentController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_htmlContentTransformer = componentContext.Resolve<IModelTransformer<HtmlContent, HtmlContentViewModel>>();
 		}
 
 		// GET: Admin/HtmlContent
@@ -30,7 +26,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(_htmlContentTransformer.GetViewModel(dbItem));
+				model.Add(_modelTransformer.GetViewModel<HtmlContentViewModel>(dbItem));
 			}
 
 			return View(model);
@@ -57,7 +53,7 @@
 				if (ModelState.IsValid)
 				{
 					//var item = model.ToDbModel();
-					var item = _htmlContentTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<HtmlContent>(viewModel);
 					item.CreationDate = DateTime.Now;
 
 					DbContext.HtmlContents.Add(item);
@@ -79,7 +75,7 @@
 		{
 			var originalItem = DbContext.HtmlContents.Find(id);
 
-			return View(_htmlContentTransformer.GetViewModel(originalItem));
+			return View(_modelTransformer.GetViewModel<HtmlContentViewModel>(originalItem));
 		}
 
 		// POST: Admin/HtmlContent/Edit/5
@@ -114,7 +110,7 @@
 		{
 			var originalItem = DbContext.HtmlContents.Find(id);
 
-			return View(_htmlContentTransformer.GetViewModel(originalItem));
+			return View(_modelTransformer.GetViewModel<HtmlContentViewModel>(originalItem));
 		}
 
 		// POST: Admin/HtmlContent/Delete/5

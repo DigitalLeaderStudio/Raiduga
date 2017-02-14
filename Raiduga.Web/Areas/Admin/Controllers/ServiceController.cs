@@ -1,7 +1,6 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.Service;
@@ -14,14 +13,9 @@
 
 	public class ServiceController : BaseAdminController
 	{
-		private IModelTransformer<Service, ServiceViewModel> _serviceTransformer;
-		private IModelTransformer<Course, CourseViewModel> _courseTransformer;
-
 		public ServiceController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_serviceTransformer = componentContext.Resolve<IModelTransformer<Service, ServiceViewModel>>();
-			_courseTransformer = componentContext.Resolve<IModelTransformer<Course, CourseViewModel>>();
 		}
 
 		// GET: Admin/Serivce
@@ -31,7 +25,7 @@
 
 			foreach (var dbItem in DbContext.Services.ToArray())
 			{
-				viewModel.Add(_serviceTransformer.GetViewModel(dbItem));
+				viewModel.Add(_modelTransformer.GetViewModel<ServiceViewModel>(dbItem));
 			}
 
 			return View(viewModel);
@@ -77,9 +71,14 @@
 		// GET: Admin/Service/5/CreateCourse
 		public ActionResult CreateCourse(int serviceId)
 		{
+			var affiliatesSelectList = DbContext.Set<Affiliate>().Select(affiliate =>
+				new SelectListItem { Text = affiliate.Address.Name, Value = affiliate.Id.ToString() })
+				.ToList();
+
 			var model = new CourseViewModel
 			{
-				ServiceId = serviceId
+				ServiceId = serviceId,
+				Affiliates = affiliatesSelectList
 			};
 
 			return View(model);
@@ -93,7 +92,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var item = _serviceTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<Service>(viewModel);
 
 					DbContext.Services.Add(item);
 					DbContext.SaveChanges();
@@ -117,7 +116,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var item = _courseTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<Course>(viewModel);
 
 					DbContext.Set<Course>().Add(item);
 					DbContext.SaveChanges();
@@ -138,14 +137,14 @@
 		{
 			var originalItem = DbContext.Set<Service>().Find(id);
 
-			return View(_serviceTransformer.GetViewModel(originalItem));
+			return View(_modelTransformer.GetViewModel<ServiceViewModel>(originalItem));
 		}
 
 		// GET: Admin/Service/EditCourse/5
 		public ActionResult EditCourse(int id)
 		{
 			var item = DbContext.Set<Course>().Find(id);
-			var viewModel = _courseTransformer.GetViewModel(item);
+			var viewModel = _modelTransformer.GetViewModel<CourseViewModel>(item);
 
 			return View(viewModel);
 		}
@@ -158,7 +157,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var item = _serviceTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<Service>(viewModel);
 
 					var originalItem = DbContext.Set<Service>().Find(id);
 
@@ -188,7 +187,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var item = _courseTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<Course>(viewModel);
 
 					var originalItem = DbContext.Set<Course>().Find(id);
 
@@ -217,7 +216,7 @@
 		{
 			var originalItem = DbContext.Set<Service>().Find(id);
 
-			return View(_serviceTransformer.GetViewModel(originalItem));
+			return View(_modelTransformer.GetViewModel<ServiceViewModel>(originalItem));
 		}
 
 		// POST: Admin/Service/Delete/5
@@ -242,7 +241,7 @@
 		public ActionResult DeleteCourse(int id)
 		{
 			var originalItem = DbContext.Set<Course>().Find(id);
-			var viewModel = _courseTransformer.GetViewModel(originalItem);
+			var viewModel = _modelTransformer.GetViewModel<CourseViewModel>(originalItem);
 
 			return View(viewModel);
 		}

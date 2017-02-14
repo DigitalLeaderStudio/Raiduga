@@ -1,7 +1,6 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Models.UserFeedback;
 	using System.Collections.Generic;
@@ -11,12 +10,9 @@
 
 	public class UserFeedbackController : BaseController
 	{
-		private IModelTransformer<UserFeedback, UserFeedbackViewModel> _userFeedbackTransformer;
-
 		public UserFeedbackController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_userFeedbackTransformer = componentContext.Resolve<IModelTransformer<UserFeedback, UserFeedbackViewModel>>();
 		}
 
 		public ActionResult Index()
@@ -26,7 +22,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				viewModel.Add(_userFeedbackTransformer.GetViewModel(dbItem));
+				viewModel.Add(_modelTransformer.GetViewModel<UserFeedbackViewModel>(dbItem));
 			}
 
 			return View(viewModel);
@@ -34,8 +30,8 @@
 
 		public ActionResult _UserFeedbackHomePartial()
 		{
-			var dbData = DbContext.UserFeedbacks
-				.Where(uf => uf.IsActive)
+			var dbData = DbContext.Set<UserFeedback>()
+				.Where(userFeedback => userFeedback.IsActive)
 				.Take(3)
 				.ToArray();
 
@@ -43,7 +39,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				viewModel.Add(_userFeedbackTransformer.GetViewModel(dbItem));
+				viewModel.Add(_modelTransformer.GetViewModel<UserFeedbackViewModel>(dbItem));
 			}
 
 			return PartialView(viewModel);

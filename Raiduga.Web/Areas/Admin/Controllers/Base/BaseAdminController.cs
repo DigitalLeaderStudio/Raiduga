@@ -5,11 +5,14 @@
 	using System.Web.Mvc;
 	using System.Linq;
 	using Autofac;
+	using Raiduga.Interface;
 
 	[Authorize(Roles = "Admin")]
 	public class BaseAdminController : Controller
 	{
 		protected readonly IComponentContext _componentContext;
+		protected IModelTransformer _modelTransformer;
+
 		private ApplicationDbContext dbContext = null;
 
 		public ApplicationDbContext DbContext
@@ -34,6 +37,7 @@
 		public BaseAdminController(IComponentContext componentContext)
 		{
 			_componentContext = componentContext;
+			_modelTransformer = componentContext.Resolve<IModelTransformer>();
 		}
 
 		protected override void Dispose(bool disposing)

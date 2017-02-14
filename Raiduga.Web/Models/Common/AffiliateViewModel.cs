@@ -4,29 +4,32 @@
 	using Raiduga.Interface.Attribute;
 	using Raiduga.Models;
 	using Raiduga.Web.Models.Interfaces;
+	using Raiduga.Web.Models.Service;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Web.Mvc;
 
 	public class AffiliateViewModel : IViewModel
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
-		[MapToEntityValue]
+		public string Name { get; set; }
+
+		[MapToValue]
 		public string Title { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public string Description { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public bool IsPrimary { get; set; }
 
 		[AllowHtml]
-		[MapToEntityValue]
+		[MapToValue]
 		public string HtmlDataContacts { get; set; }
 
-		[MapToEntityComplex]
+		[MapToEntity]
 		public AddressViewModel Address { get; set; }
 
 		#region Profi mod solution
@@ -37,7 +40,12 @@
 
 		#endregion
 
-		[MapToEntityComplex]
+		[MapToEntity]
 		public HoursViewModel Hours { get; set; }
+
+		[MapToList]
+		public List<CourseViewModel> Courses { get; set; }
+
+		public List<ServiceViewModel> Services { get; set; }
 	}
 }

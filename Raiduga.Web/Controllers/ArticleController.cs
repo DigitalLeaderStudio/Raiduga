@@ -1,8 +1,6 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
-	using Raiduga.Models;
 	using Raiduga.Web.Models.Article;
 	using System.Collections.Generic;
 	using System.Linq;
@@ -10,12 +8,9 @@
 
 	public class ArticleController : BaseController
 	{
-		private IModelTransformer<Article, ArticleViewModel> _articleTransformer;
-
 		public ArticleController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_articleTransformer = componentContext.Resolve<IModelTransformer<Article, ArticleViewModel>>();
 		}
 
 		[Route("~/Новини")]
@@ -27,7 +22,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				viewModel.Add(_articleTransformer.GetViewModel(dbItem));
+				viewModel.Add(_modelTransformer.GetViewModel<ArticleViewModel>(dbItem));
 			}
 
 			return View(viewModel);
@@ -37,7 +32,7 @@
 		public ActionResult Details(string title)
 		{
 			var dbItem = DbContext.Articles.Where(art => art.Title == title && art.IsPublished).First();
-			var viewModel = _articleTransformer.GetViewModel(dbItem);
+			var viewModel = _modelTransformer.GetViewModel<ArticleViewModel>(dbItem);
 
 			return View(viewModel);
 		}

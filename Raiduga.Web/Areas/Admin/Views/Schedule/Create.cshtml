@@ -1,0 +1,107 @@
+﻿@using Raiduga.Web.Localization
+@model Raiduga.Web.Models.Service.LessonViewModel
+
+@{
+	ViewBag.Title = Translations.Schedule_PageTitle + " " + Translations.Create;
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Translations.Create</h2>
+
+
+<div class="afticles">
+
+	@using (Html.BeginForm("Create", "Schedule", FormMethod.Post))
+	{
+		@Html.AntiForgeryToken()
+
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-horizontal">
+			<div class="form-group">
+				@Html.LabelFor(m => m.Affiliates, new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.DropDownListFor(m => m.AffiliateId, Model.Affiliates,
+					new { @class = "form-control", data_affiliate = "" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Services, new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.DropDownListFor(m => m.ServiceId, Model.Services,
+					new { @class = "form-control", data_service = "" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Courses, new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					<div class="col-md-6">
+						<select id="@Html.IdFor(m => m.CourseId)"
+								name="@Html.NameFor(m => m.CourseId)"
+								data-course=""
+								class="form-control">
+							@foreach (var course in Model.CoursesCustom)
+							{
+								<option value="@course.Id" duration="@course.Duration">@course.Name</option>
+							}
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.AgeGroups, new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+
+					@Html.DropDownListFor(m => m.AgeGroupId, Model.AgeGroups, new { @class = "form-control" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.GroupName, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextBoxFor(model => model.GroupName, new { @class = "form-control" })
+					@Html.ValidationMessageFor(model => model.GroupName, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.TeacherFullName, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-6">
+					@Html.TextBoxFor(model => model.TeacherFullName, new { @class = "form-control" })
+					@Html.ValidationMessageFor(model => model.TeacherFullName, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.WeekDays, new { @class = "control-label col-md-2" })
+				<div class="col-md-2">
+					@Html.DropDownListFor(m => m.WeekDay, Model.WeekDays, new { @class = "form-control" })
+				</div>
+				@Html.LabelFor(model => model.StartTime, htmlAttributes: new { @class = "control-label col-md-1" })
+				<div class="col-md-3">
+					<div class="input-group bootstrap-timepicker timepicker col-md-6">
+						<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+						@Html.TextBoxFor(model => model.StartTime, new
+							   {
+								   @class = "form-control ",
+								   data_minute_step = "15",
+								   data_max_hours = 24,
+								   data_show_meridian = "false"
+							   })
+					</div>
+					@Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
+					<div class="pull-left">@Translations.Contacts_Hours_To - <span id="to-time"></span></div>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+					<input type="submit" value="@Translations.Save" class="btn btn-default" />
+				</div>
+			</div>
+		</div>
+	}
+</div>
+<div>
+	@Html.ActionLink(@Translations.BackToList, "Index")
+</div>
+
+<script src="~/Areas/Admin/Scripts/schedule.js"></script>

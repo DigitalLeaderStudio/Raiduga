@@ -11,7 +11,7 @@
 	{
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-		
+
 		public int Id { get; set; }
 
 		[StringLength(64)]
@@ -22,7 +22,7 @@
 		public string Title { get; set; }
 
 		public string Description { get; set; }
-		
+
 		public bool IsPrimary { get; set; }
 
 		public virtual Address Address { get; set; }
@@ -37,5 +37,9 @@
 		/// Hides each field solution. Short (easy) solution
 		/// </summary>
 		public string HtmlDataContacts { get; set; }
+
+		public virtual ICollection<Service> Services { get; set; }
+
+		public virtual ICollection<Course> Courses { get; set; }
 	}
 }

@@ -10,3 +10,16 @@
 /Raiduga.Web/obj/Debug
 /Raiduga.DAL/obj/Debug
 /.vs/config
+/Raiduga.Interface/bin/Debug
+/Raiduga.Interface/obj/Debug
+/Raiduga.Interface/IEntity.cs
+/Raiduga.Models/bin
+/Raiduga.Models/obj
+/Raiduga.Models/bin/Debug
+/Raiduga.Models/bin/Debug
+/Raiduga.DAL/bin
+/Raiduga.DAL/obj
+/Raiduga.ModelTransformer/bin/Debug
+/Raiduga.ModelTransformer/obj/Debug
+/Raiduga.DAL/obj/Debug
+/Raiduga.Web/obj/Release

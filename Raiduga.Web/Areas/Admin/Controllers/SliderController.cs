@@ -1,7 +1,6 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.Common;
@@ -13,12 +12,9 @@
 
 	public class SliderController : BaseAdminController
 	{
-		private IModelTransformer<SliderItem, SliderItemViewModel> _sliderTransformer;
-
 		public SliderController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_sliderTransformer = _componentContext.Resolve<IModelTransformer<SliderItem, SliderItemViewModel>>();
 		}
 
 		// GET: Admin/Slider
@@ -28,7 +24,7 @@
 
 			foreach (var dbItem in DbContext.SliderItems.ToArray())
 			{
-				viewModel.Add(_sliderTransformer.GetViewModel(dbItem));
+				viewModel.Add(_modelTransformer.GetViewModel<SliderItemViewModel>(dbItem));
 			}
 
 			return View(viewModel);
@@ -54,7 +50,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var sliderItem = _sliderTransformer.GetEntity(viewModel);
+					var sliderItem = _modelTransformer.GetEntity<SliderItem>(viewModel);
 
 					DbContext.SliderItems.Add(sliderItem);
 					DbContext.SaveChanges();
@@ -74,7 +70,7 @@
 		public ActionResult Edit(int id)
 		{
 			var originalItem = DbContext.Set<SliderItem>().Find(id);
-			var viewModel = _sliderTransformer.GetViewModel(originalItem);
+			var viewModel = _modelTransformer.GetViewModel<SliderItemViewModel>(originalItem);
 
 			return View(viewModel);
 		}
@@ -87,7 +83,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var sliderItem = _sliderTransformer.GetEntity(viewModel);
+					var sliderItem = _modelTransformer.GetEntity<SliderItem>(viewModel);
 
 					var originalItem = DbContext.Set<SliderItem>().Find(viewModel.Id);
 
@@ -112,7 +108,7 @@
 		public ActionResult Delete(int id)
 		{
 			var originalItem = DbContext.Set<SliderItem>().Find(id);
-			var viewModel = _sliderTransformer.GetViewModel(originalItem);
+			var viewModel = _modelTransformer.GetViewModel<SliderItemViewModel>(originalItem);
 
 			return View(viewModel);
 		}

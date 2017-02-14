@@ -10,25 +10,25 @@
 
 	public class UserFeedbackViewModel : AbstractFileViewModel, IDateExtented, IViewModel
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "UserFeedback_UserName")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string UserName { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "UserFeedback_Text")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string Text { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "UserFeedback_IsActive")]
-		[MapToEntityValue]
+		[MapToValue]
 		public bool IsActive { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public DateTime? CreationDate { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public DateTime? UpdationDate { get; set; }
 	}
 }

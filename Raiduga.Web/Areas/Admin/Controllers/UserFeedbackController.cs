@@ -1,7 +1,6 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.UserFeedback;
@@ -13,12 +12,9 @@
 
 	public class UserFeedbackController : BaseAdminController
 	{
-		private IModelTransformer<UserFeedback, UserFeedbackViewModel> _userFeedbackTransformer;
-
 		public UserFeedbackController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_userFeedbackTransformer = componentContext.Resolve<IModelTransformer<UserFeedback, UserFeedbackViewModel>>();
 		}
 
 		// GET: Admin/UserFeedback
@@ -30,7 +26,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				viewModel.Add(_userFeedbackTransformer.GetViewModel(dbItem));
+				viewModel.Add(_modelTransformer.GetViewModel<UserFeedbackViewModel>(dbItem));
 			}
 
 			return View(viewModel);
@@ -56,7 +52,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var item = _userFeedbackTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<UserFeedback>(viewModel);
 					item.CreationDate = DateTime.Now;
 
 					DbContext.UserFeedbacks.Add(item);
@@ -77,7 +73,7 @@
 		public ActionResult Edit(int id)
 		{
 			var originalItem = DbContext.UserFeedbacks.Find(id);
-			var viewModel = _userFeedbackTransformer.GetViewModel(originalItem);
+			var viewModel = _modelTransformer.GetViewModel<UserFeedbackViewModel>(originalItem);
 
 			return View(viewModel);
 		}
@@ -90,7 +86,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var item = _userFeedbackTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<UserFeedback>(viewModel);
 
 					var originalItem = DbContext.UserFeedbacks.Find(id);
 
@@ -117,7 +113,7 @@
 		public ActionResult Delete(int id)
 		{
 			var originalItem = DbContext.UserFeedbacks.Find(id);
-			var viewModel = _userFeedbackTransformer.GetViewModel(originalItem);
+			var viewModel = _modelTransformer.GetViewModel<UserFeedbackViewModel>(originalItem);
 
 			return View(viewModel);
 		}

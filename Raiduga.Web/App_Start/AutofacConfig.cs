@@ -2,9 +2,9 @@
 {
 	using Autofac;
 	using Autofac.Integration.Mvc;
-	using System.Web.Mvc;
 	using ModelTransformers;
 	using Raiduga.Interface;
+	using System.Web.Mvc;
 
 
 	public class AutofacConfig
@@ -16,9 +16,8 @@
 			// Register dependencies in controllers
 			builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
-			builder
-				.RegisterGeneric(typeof(ModelTransformer<,>))
-				.As(typeof(IModelTransformer<,>));
+
+			builder.RegisterType<ModelTransformer>().As<IModelTransformer>();
 
 
 			// Register dependencies in filter attributes

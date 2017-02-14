@@ -12,48 +12,23 @@
 
 	public class HtmlContentViewModel : IDateExtented, IViewModel
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "Content_Name")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string Name { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "Content_BodyHtml")]
 		[AllowHtml]
 		[UIHint("tinymce_full_compressed")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string BodyHtml { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public DateTime? CreationDate { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public DateTime? UpdationDate { get; set; }
-
-		//public HtmlContentViewModel FromDbModel(HtmlContent model)
-		//{
-		//	this.Id = model.Id;
-		//	this.Name = model.Name;
-		//	this.BodyHtml = model.BodyHtml;
-		//	this.CreationDate = model.CreationDate;
-		//	this.UpdationDate = model.UpdationDate;
-
-		//	return this;
-		//}
-
-		//public HtmlContent ToDbModel()
-		//{
-		//	var result = new HtmlContent
-		//	{
-		//		Id = this.Id,
-		//		Name = this.Name,
-		//		BodyHtml = this.BodyHtml,
-		//		CreationDate = this.CreationDate,
-		//		UpdationDate = this.UpdationDate
-		//	};
-
-		//	return result;
-		//}
 	}
 }

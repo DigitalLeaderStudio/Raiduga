@@ -349,6 +349,15 @@ footer {
 		}
 	}
 
+	.panel-heading {
+		display: block;
+		cursor: pointer;
+
+		h4 {
+			color: #fff;
+		}
+	}
+
 	.contact-form {
 		margin-top: 0;
 		position: relative;
@@ -378,15 +387,6 @@ footer {
 
 		.btn-margin {
 			margin: 5px;
-		}
-	}
-
-	.panel-heading {
-		display: block;
-		cursor: pointer;
-
-		h4 {
-			color: #fff;
 		}
 	}
 
@@ -738,6 +738,10 @@ footer {
 		&:nth-child(7n+3) {
 			.panel {
 				border-color: @color-yellow;
+
+				.course-footer .cta-wrapper a {
+					color: @text-color;
+				}
 			}
 
 			hr {
@@ -1084,12 +1088,18 @@ footer {
 		margin-bottom: 30px;
 	}
 
+	.no-lessons {
+		font-size: 1.1em;
+		font-family: @font-open-sans;
+		padding: 10px 0;
+		margin-bottom: 20px;
+	}
+
 	table {
 		th {
-			color: #FFF;
+			color: @text-color;
 			text-align: center;
-
-			&:nth-child(7n+1) {
+			/*&:nth-child(7n+1) {
 				color: @color-primary;
 			}
 
@@ -1121,13 +1131,17 @@ footer {
 			&:nth-child(7n+8) {
 				background-color: @color-purple;
 				color: #FFF;
-			}
+			}*/
 		}
 
 		tr {
 			td {
-				&:nth-of-type(1) {
+				&.course-name {
 					font-size: 1.1em;
+					font-weight: bold;
+				}
+
+				&.group-name{
 					font-weight: bold;
 				}
 
@@ -1135,6 +1149,57 @@ footer {
 					text-align: left;
 					margin-bottom: 5px;
 				}
+			}
+		}
+	}
+
+	.panel-default {
+		& > .panel-heading > h4 a {
+			color: #fff;
+		}
+
+		&:nth-child(7n+1) > .panel-heading {
+			background-color: @color-red;
+		}
+
+		&:nth-child(7n+2) > .panel-heading {
+			background-color: @color-orange;
+		}
+
+		&:nth-child(7n+3) > .panel-heading {
+			background-color: @color-green;
+		}
+
+		&:nth-child(7n+4) > .panel-heading {
+			background-color: @color-purple;
+		}
+
+		&:nth-child(7n+5) > .panel-heading {
+			background-color: @color-yellow;
+		}
+
+		&:nth-child(7n+5) > .panel-heading {
+			background-color: @color-light-blue;
+		}
+
+		&:nth-child(7n+6) > .panel-heading {
+			background-color: @color-blue;
+		}
+	}
+
+	.panel-heading {
+		display: block;
+		cursor: pointer;
+
+		h4 {
+			color: #fff;
+		}
+	}
+
+	.panel-body {
+		.text-center {
+			h4 {
+				padding-top: 10px;
 			}
 		}
 	}

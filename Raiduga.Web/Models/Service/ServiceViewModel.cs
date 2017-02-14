@@ -8,50 +8,22 @@
 
 	public class ServiceViewModel : AbstractFileViewModel, IBodyHtml, IViewModel
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public string Name { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public string Description { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public string BodyHtml { get; set; }
 
 		[MapToListAttribute]
 		public List<CourseViewModel> Courses { get; set; }
 
-		//public ServiceViewModel FromDbModel(Service model)
-		//{
-		//	this.Id = model.Id;
-		//	this.Name = model.Name;
-		//	this.Description = model.Description;
-		//	this.BodyHtml = model.BodyHtml;
-		//	this.ImageId = model.ImageId;
-		//	this.Courses = new List<CourseViewModel>();
+		public List<AgeGroupViewModel> AgeGroups { get; set; }
 
-		//	foreach (var course in model.Courses)
-		//	{
-		//		this.Courses.Add(new CourseViewModel().FromDbModel(course));
-		//	}
-
-		//	return this;
-		//}
-
-		//public Service ToDbModel()
-		//{
-		//	var result = new Service
-		//	{
-		//		Id = this.Id,
-		//		Name = this.Name,
-		//		Description = this.Description,
-		//		BodyHtml = this.BodyHtml,
-		//		Image = this.GetFile()
-		//	};
-
-		//	return result;
-		//}
 	}
 }

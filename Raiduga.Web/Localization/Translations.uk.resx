@@ -481,4 +481,28 @@
   <data name="ContactsForm_Email_Subj" xml:space="preserve">
     <value>Відправлено повідомлення з контактної форми</value>
   </data>
+  <data name="Schedule_Affiliate_Name" xml:space="preserve">
+    <value>Філія</value>
+  </data>
+  <data name="Schedule_AgeGroup_Name" xml:space="preserve">
+    <value>Вікова група</value>
+  </data>
+  <data name="Schedule_Course_Name" xml:space="preserve">
+    <value>Курс</value>
+  </data>
+  <data name="Schedule_Group_Name" xml:space="preserve">
+    <value>Група</value>
+  </data>
+  <data name="Schedule_Service_Name" xml:space="preserve">
+    <value>Послуга</value>
+  </data>
+  <data name="Schedule_StartTime_Name" xml:space="preserve">
+    <value>Початок о</value>
+  </data>
+  <data name="Schedule_Teacher_Name" xml:space="preserve">
+    <value>Викладач</value>
+  </data>
+  <data name="NoLessons" xml:space="preserve">
+    <value>На даний час, заняття по даній категорії не проводяться</value>
+  </data>
 </root>

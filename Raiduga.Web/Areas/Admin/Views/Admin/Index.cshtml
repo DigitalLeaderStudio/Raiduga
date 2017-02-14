@@ -75,6 +75,16 @@
 					@Translations.Admin_Home_ArticleDescription
 				</span>
 			</li>
+
+			<li class="list-group-item">
+				<a href="@Url.Action("Index", "Schedule", new { area = "Admin"})">@Translations.Schedule_PageTitle</a>
+
+				<span class="pull-right">
+					<i class="fa fa-info-circle">
+					</i>
+					
+				</span>
+			</li>
 			<li class="list-group-item">
 				@{
 					var count = ViewBag.NewMessagesCount;

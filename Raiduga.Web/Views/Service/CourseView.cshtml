@@ -9,7 +9,7 @@
 	<ol class="breadcrumb">
 		<li><a href="@Url.Action("Index", "Service", new { area = "" })">@Translations.Service_Title</a></li>
 		<li>
-			<a href="@Url.Action("CourseList", "Service", new { name = Model.ServiceName }, null)">@Model.ServiceName</a>
+			<a href="@Url.Action("CourseList", "Service", new { name = Model.Service.Name }, null)">@Model.Service.Name</a>
 		</li>
 		<li class="active">@Model.Name</li>
 	</ol>

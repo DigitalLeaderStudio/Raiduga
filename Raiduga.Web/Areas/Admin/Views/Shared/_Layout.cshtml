@@ -18,6 +18,12 @@
 
 	@Scripts.Render("~/bundles/modernizr")
 
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/unobtrusive")
+	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/bootstrap-timepicker")
+	@RenderSection("scripts", required: false)
+
 </head>
 <body class="admin">
 	<div class="navbar navbar-inverse">
@@ -55,6 +61,9 @@
 					<li>
 						<a href="@Url.Action("Index", "Article", new { area = "Admin"})">@Translations.Articles_Title</a>
 					</li>					
+					<li>
+						<a href="@Url.Action("Index", "Schedule", new { area = "Admin"})">@Translations.Schedule_PageTitle</a>
+					</li>
 				</ul>
 				@Html.Partial("_LoginPartial")
 			</div>
@@ -65,7 +74,7 @@
 		<hr />
 		<footer>
 			<address>
-				@Translations.DevelopedBy <a href="http://www.digitalleader.solutions"><strong>Digital Leader</strong></a>
+				@Translations.DevelopedBy <a href="https://www.digitalleader.solutions"><strong>Digital Leader</strong></a>
 			</address>
             <p>Контакти підтримки та обслуговування клієнтів:</p>
 			<address>
@@ -77,10 +86,6 @@
 		</footer>
 	</div>
 
-	@Scripts.Render("~/bundles/jquery")
-	@Scripts.Render("~/bundles/unobtrusive")
-	@Scripts.Render("~/bundles/bootstrap")
-	@Scripts.Render("~/bundles/bootstrap-timepicker")
-	@RenderSection("scripts", required: false)
+
 </body>
 </html>

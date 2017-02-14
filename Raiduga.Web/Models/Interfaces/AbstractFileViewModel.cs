@@ -11,7 +11,7 @@
 		[Display(ResourceType = typeof(Translations), Name = "Image_Caption")]
 		public virtual HttpPostedFileBase File { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public virtual int? ImageId { get; set; }
 
 		[MapToFile(EntityPropertyName = "Image")]

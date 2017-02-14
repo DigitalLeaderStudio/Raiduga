@@ -8,19 +8,19 @@
 
 	public class AddressViewModel : IViewModel
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "Contacts_Address")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string Name { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "Contacts_Latitude")]
-		[MapToEntityValue]
+		[MapToValue]
 		public double Latitude { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "Contacts_Longitude")]
-		[MapToEntityValue]
+		[MapToValue]
 		public double Longitude { get; set; }
 
 		public AddressViewModel FromDbModel(Address model)

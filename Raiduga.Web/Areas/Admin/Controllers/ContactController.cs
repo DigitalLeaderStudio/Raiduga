@@ -1,26 +1,19 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
+	using Autofac;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
-	using System.Web.Mvc;
-	using System.Linq;
 	using Raiduga.Web.Models.Common;
-	using System.Collections.Generic;
-	using System.Threading.Tasks;
 	using System;
-	using Raiduga.Interface;
-	using Autofac;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Web.Mvc;
 
 	public class ContactController : BaseAdminController
 	{
-		private IModelTransformer<Affiliate, AffiliateViewModel> _affiliateTransformer;
-		private IModelTransformer<Address, AddressViewModel> _addressTransformer;
-
 		public ContactController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_affiliateTransformer = _componentContext.Resolve<IModelTransformer<Affiliate, AffiliateViewModel>>();
-			_addressTransformer = _componentContext.Resolve<IModelTransformer<Address, AddressViewModel>>();
 		}
 
 		// GET: Admin/Admin
@@ -31,7 +24,7 @@
 
 			foreach (var item in dbData)
 			{
-				model.Add(_affiliateTransformer.GetViewModel(item));
+				model.Add(_modelTransformer.GetViewModel<AffiliateViewModel>(item));
 			}
 
 			return View(model);
@@ -42,7 +35,7 @@
 		{
 			var dbItem = DbContext.Set<Affiliate>().Find(id);
 
-			return View(_affiliateTransformer.GetViewModel(dbItem));
+			return View(_modelTransformer.GetViewModel<AffiliateViewModel>(dbItem));
 		}
 
 		// POST: Admin/Contact/Edit/5
@@ -68,7 +61,7 @@
 						}
 					}
 
-					originalItem.Address = _addressTransformer.GetEntity(viewModel.Address);
+					originalItem.Address = _modelTransformer.GetEntity<Address>(viewModel.Address);
 
 					var originalHours = originalItem.Hours.First();
 					originalHours.Start = viewModel.Hours.Start;

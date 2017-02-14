@@ -78,6 +78,22 @@
     <Compile Include="Migrations\201701271540304_AddApplyToCourseRequest.Designer.cs">
       <DependentUpon>201701271540304_AddApplyToCourseRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702041129367_CourseExtending.cs" />
+    <Compile Include="Migrations\201702041129367_CourseExtending.Designer.cs">
+      <DependentUpon>201702041129367_CourseExtending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702041202060_AffiliateExtends.cs" />
+    <Compile Include="Migrations\201702041202060_AffiliateExtends.Designer.cs">
+      <DependentUpon>201702041202060_AffiliateExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702041407361_ChangeCourseSectionToAgeGroup.cs" />
+    <Compile Include="Migrations\201702041407361_ChangeCourseSectionToAgeGroup.Designer.cs">
+      <DependentUpon>201702041407361_ChangeCourseSectionToAgeGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702061136259_MapCourseToAffiliate.cs" />
+    <Compile Include="Migrations\201702061136259_MapCourseToAffiliate.Designer.cs">
+      <DependentUpon>201702061136259_MapCourseToAffiliate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -110,6 +126,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701271540304_AddApplyToCourseRequest.resx">
       <DependentUpon>201701271540304_AddApplyToCourseRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702041129367_CourseExtending.resx">
+      <DependentUpon>201702041129367_CourseExtending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702041202060_AffiliateExtends.resx">
+      <DependentUpon>201702041202060_AffiliateExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702041407361_ChangeCourseSectionToAgeGroup.resx">
+      <DependentUpon>201702041407361_ChangeCourseSectionToAgeGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702061136259_MapCourseToAffiliate.resx">
+      <DependentUpon>201702061136259_MapCourseToAffiliate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

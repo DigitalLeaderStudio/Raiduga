@@ -1,11 +1,9 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Areas.Admin.Controllers.Base;
 	using Raiduga.Web.Models.Article;
-	using Raiduga.Web.Models.UserFeedback;
 	using System;
 	using System.Collections.Generic;
 	using System.Data.Entity;
@@ -14,12 +12,9 @@
 
 	public class ArticleController : BaseAdminController
 	{
-		private IModelTransformer<Article, ArticleViewModel> _articleTransformer;
-
 		public ArticleController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_articleTransformer = componentContext.Resolve<IModelTransformer<Article, ArticleViewModel>>();
 		}
 
 		// GET: Admin/Article
@@ -31,7 +26,7 @@
 
 			foreach (var dbItem in dbData)
 			{
-				model.Add(_articleTransformer.GetViewModel(dbItem));
+				model.Add(_modelTransformer.GetViewModel<ArticleViewModel>(dbItem));
 			}
 
 			return View(model);
@@ -51,7 +46,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var item = _articleTransformer.GetEntity(viewModel);
+					var item = _modelTransformer.GetEntity<Article>(viewModel);
 					item.CreationDate = DateTime.Now;
 
 					DbContext.Articles.Add(item);
@@ -72,7 +67,7 @@
 		public ActionResult Edit(int id)
 		{
 			var originalItem = DbContext.Articles.Find(id);
-			var viewModel = _articleTransformer.GetViewModel(originalItem);
+			var viewModel = _modelTransformer.GetViewModel<ArticleViewModel>(originalItem);
 
 			return View(viewModel);
 		}
@@ -85,7 +80,7 @@
 			{
 				if (ModelState.IsValid)
 				{
-					var entity = _articleTransformer.GetEntity(viewModel);
+					var entity = _modelTransformer.GetEntity<Article>(viewModel);
 					var originalItem = DbContext.Articles.Find(id);
 
 					originalItem.Author = viewModel.Author;
@@ -114,7 +109,7 @@
 		public ActionResult Delete(int id)
 		{
 			var originalItem = DbContext.Articles.Find(id);
-			var viewModel = _articleTransformer.GetViewModel(originalItem);
+			var viewModel = _modelTransformer.GetViewModel<ArticleViewModel>(originalItem);
 
 			return View(viewModel);
 		}

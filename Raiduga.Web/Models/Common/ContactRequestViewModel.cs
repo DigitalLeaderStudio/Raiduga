@@ -17,35 +17,35 @@
 			SuccessfullySent = false;
 		}
 
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public string FirstName { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public string LastName { get; set; }
 
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Phone")]
 		[Phone(ErrorMessageResourceName = "ContactsForm_Phone_Type", ErrorMessageResourceType = typeof(Translations))]
-		[MapToEntityValue]
+		[MapToValue]
 		public string Phone { get; set; }
 
 		[Required(ErrorMessageResourceName = "ContactsForm_Email_Required", ErrorMessageResourceType = typeof(Translations))]
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Email")]
 		[EmailAddress(ErrorMessageResourceName = "ContactsForm_Email_Type", ErrorMessageResourceType = typeof(Translations))]
-		[MapToEntityValue]
+		[MapToValue]
 		public string Email { get; set; }
 
 		[Required(ErrorMessageResourceName = "ContactsForm_Message_Required", ErrorMessageResourceType = typeof(Translations))]
 		[Display(ResourceType = typeof(Translations), Name = "ContactsForm_Message")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string Message { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public DateTime? CreationDate { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public DateTime? UpdationDate { get; set; }
 
 		public List<string> Errors { get; set; }

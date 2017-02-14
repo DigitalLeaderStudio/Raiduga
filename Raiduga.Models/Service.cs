@@ -23,5 +23,9 @@
 		public virtual File Image { get; set; }
 
 		public virtual ICollection<Course> Courses { get; set; }
+
+		public int? AffiliateId { get; set; }
+
+		public virtual Affiliate Affiliate { get; set; }
 	}
 }

@@ -480,4 +480,28 @@
   <data name="ContactsForm_Email_Subj" xml:space="preserve">
     <value>Отправлено сообщение с контактной формы</value>
   </data>
+  <data name="Schedule_Affiliate_Name" xml:space="preserve">
+    <value>Филия</value>
+  </data>
+  <data name="Schedule_AgeGroup_Name" xml:space="preserve">
+    <value>Возрастная группа</value>
+  </data>
+  <data name="Schedule_Course_Name" xml:space="preserve">
+    <value>Курс</value>
+  </data>
+  <data name="Schedule_Group_Name" xml:space="preserve">
+    <value>Группа</value>
+  </data>
+  <data name="Schedule_StartTime_Name" xml:space="preserve">
+    <value>Начало в </value>
+  </data>
+  <data name="Schedule_Teacher_Name" xml:space="preserve">
+    <value>Учитель</value>
+  </data>
+  <data name="Schedule_Service_Name" xml:space="preserve">
+    <value>Услуга</value>
+  </data>
+  <data name="NoLessons" xml:space="preserve">
+    <value>На данный момент, занятия для данной категрии, не проводятся</value>
+  </data>
 </root>

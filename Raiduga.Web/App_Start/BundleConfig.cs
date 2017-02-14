@@ -29,6 +29,10 @@
 					  "~/Scripts/bootstrap.js",
 					  "~/Scripts/respond.js"));
 
+			bundles.Add(new ScriptBundle("~/bundles/momentJs").Include(
+				"~/Scripts/moment.js"
+				));
+
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap-timepicker").Include(
 					  "~/Scripts/bootstrap-timepicker/bootstrap-timepicker.js"));
 

@@ -480,4 +480,28 @@
   <data name="ContactsForm_Email_Subj" xml:space="preserve">
     <value>A message has been sent from contact form</value>
   </data>
+  <data name="Schedule_Affiliate_Name" xml:space="preserve">
+    <value>Affiliate</value>
+  </data>
+  <data name="Schedule_AgeGroup_Name" xml:space="preserve">
+    <value>Age Group</value>
+  </data>
+  <data name="Schedule_Course_Name" xml:space="preserve">
+    <value>Course</value>
+  </data>
+  <data name="Schedule_Group_Name" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Schedule_Service_Name" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Schedule_StartTime_Name" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="Schedule_Teacher_Name" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
+  <data name="NoLessons" xml:space="preserve">
+    <value>There are no lessons for the category yet.</value>
+  </data>
 </root>

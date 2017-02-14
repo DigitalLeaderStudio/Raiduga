@@ -186,6 +186,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ScheduleController.cs" />
     <Compile Include="Areas\Admin\Controllers\MessagesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
@@ -246,7 +247,11 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Interfaces\AbstractFileViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Schedule\ScheduleViewModel.cs" />
+    <Compile Include="Models\Schedule\ScheduleViewModelBuilder.cs" />
     <Compile Include="Models\Service\ApplyToCourseViewModel.cs" />
+    <Compile Include="Models\Service\AgeGroupViewModel.cs" />
+    <Compile Include="Models\Service\LessonViewModel.cs" />
     <Compile Include="Models\Service\CourseViewModel.cs" />
     <Compile Include="Models\UserFeedback\UserFeedbackViewModel.cs" />
     <Compile Include="Models\Service\ServiceViewModel.cs" />
@@ -254,6 +259,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Scripts\schedule.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
@@ -339,6 +345,8 @@
     <Content Include="Areas\Admin\Views\Service\ApplyToCourseRequestList.cshtml" />
     <Content Include="fonts\BloggerSans.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\Schedule\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Schedule\Create.cshtml" />
     <None Include="Properties\PublishProfiles\raiduga.kiev.ua - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -351,6 +359,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\site.js" />
@@ -662,7 +674,6 @@
     <Content Include="Views\Article\Index.cshtml" />
     <Content Include="Views\Article\Details.cshtml" />
     <Content Include="Views\Service\CourseView.cshtml" />
-    <Content Include="Views\Schedule\Index-google-calendar.cshtml" />
     <Content Include="Views\Shared\Thanks.cshtml" />
     <Content Include="Views\Service\_ApplyToCourseModalPartial.cshtml" />
     <Content Include="Views\Service\_ApplyToCoursePartial.cshtml" />

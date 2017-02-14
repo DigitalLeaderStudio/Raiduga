@@ -6,10 +6,10 @@
 
 	public class EmailViewModel
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public string Value { get; set; }
 	}
 }

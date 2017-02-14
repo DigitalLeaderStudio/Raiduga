@@ -1,23 +1,17 @@
 ﻿namespace Raiduga.Web.Areas.Admin.Controllers
 {
-	using Raiduga.Models;
-	using Raiduga.Web.Areas.Admin.Controllers.Base;
-	using System.Web.Mvc;
-	using System.Linq;
-	using Raiduga.Web.Models.Common;
-	using System.Collections.Generic;
-	using System.Threading.Tasks;
-	using System;
 	using Autofac;
-	using Raiduga.Interface;
+	using Raiduga.Web.Areas.Admin.Controllers.Base;
+	using Raiduga.Web.Models.Common;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Web.Mvc;
 
 	public class MessagesController : BaseAdminController
 	{
-		private IModelTransformer<ContactRequest, ContactRequestViewModel> _crTransformer;
-
 		public MessagesController(IComponentContext componentContext)
 		{
-			_crTransformer = componentContext.Resolve<IModelTransformer<ContactRequest, ContactRequestViewModel>>();
 		}
 
 		// GET: Admin/Admin
@@ -28,7 +22,7 @@
 			var model = new List<ContactRequestViewModel>();
 			foreach (var dbItem in dbData)
 			{
-				model.Add(_crTransformer.GetViewModel(dbItem));
+				model.Add(_modelTransformer.GetViewModel<ContactRequestViewModel>(dbItem));
 			}
 
 			return View(model);

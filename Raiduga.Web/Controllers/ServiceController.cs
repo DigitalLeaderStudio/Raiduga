@@ -1,7 +1,6 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
 	using Raiduga.Web.Localization;
 	using Raiduga.Web.Models.Service;
@@ -15,25 +14,26 @@
 
 	public class ServiceController : BaseController
 	{
-		private IModelTransformer<Service, ServiceViewModel> _serviceTransformer;
-		private IModelTransformer<Course, CourseViewModel> _courseTransformer;
-
 		public ServiceController(IComponentContext componentContext)
 			: base(componentContext)
 		{
-			_serviceTransformer = componentContext.Resolve<IModelTransformer<Service, ServiceViewModel>>();
-			_courseTransformer = componentContext.Resolve<IModelTransformer<Course, CourseViewModel>>();
 		}
 
 		[Route("Наші-послуги")]
 		public ActionResult Index()
 		{
-			var dbData = DbContext.Services.ToArray();
+			var entities = DbContext.Services.OrderBy(s => s.Id).ToArray();
 			var viewModel = new List<ServiceViewModel>();
 
-			foreach (var dbItem in dbData)
+			foreach (var entity in entities)
 			{
-				viewModel.Add(_serviceTransformer.GetViewModel(dbItem));
+				viewModel.Add(new ServiceViewModel
+				{
+					Id = entity.Id,
+					Name = entity.Name,
+					Description = entity.Description,
+					ImageId = entity.ImageId
+				});
 			}
 
 			return View(viewModel);
@@ -42,8 +42,38 @@
 		[Route("Наші-послуги/{name}")]
 		public ActionResult CourseList(string name)
 		{
-			var service = DbContext.Services.Where(s => s.Name == name).First();
-			var viewModel = _serviceTransformer.GetViewModel(service);
+			var viewModel = new ServiceViewModel();
+
+			viewModel = DbContext.Set<Affiliate>()
+				.Where(affiliate => affiliate.IsPrimary)
+				.Select(affiliate =>
+					affiliate.Courses
+						.Where(course => course.Service.Name == name)
+						.OrderBy(course => course.Name)
+						.GroupBy(course => new
+						{
+							course.ServiceId,
+							course.Service.Name
+						})
+						.Select(courses =>
+							new ServiceViewModel
+							{
+								Id = courses.Key.ServiceId,
+								Name = courses.Key.Name,
+								Courses = courses
+									.Select(course => new CourseViewModel
+									{
+										Name = course.Name,
+										Description = course.Description,
+										Price = course.Price,
+										Duration = course.Duration
+									})
+									.ToList()
+							}
+						).ToList()
+					)
+					.First()
+					.First();
 
 			return View(viewModel);
 		}
@@ -54,10 +84,10 @@
 			var dbItem = DbContext.Services
 				.Where(srv => srv.Name == serviceName)
 				.Select(x => x.Courses.Where(course => course.Name == courseName))
-				.First().First();
+				.First()
+				.First();
 
-			var viewModel = _courseTransformer.GetViewModel(dbItem);
-			viewModel.ServiceName = serviceName;
+			var viewModel = _modelTransformer.GetViewModel<CourseViewModel>(dbItem);
 
 			return View(viewModel);
 		}
@@ -144,14 +174,31 @@
 
 		public ActionResult _ServiceHomePartial()
 		{
-			var dbData = DbContext.Services.ToArray();
-
 			var viewModel = new List<ServiceViewModel>();
 
-			foreach (var dbItem in dbData)
-			{
-				viewModel.Add(_serviceTransformer.GetViewModel(dbItem));
-			}
+			viewModel = DbContext.Set<Affiliate>()
+				.Where(affiliate => affiliate.IsPrimary)
+				.Select(affiliate =>
+					affiliate.Courses
+						.GroupBy(course => new
+						{
+							course.ServiceId,
+							course.Service.Name,
+							course.Service.ImageId
+						})
+						.OrderBy(serviceGroup => serviceGroup.Key.ServiceId)
+						.Select(courses =>
+							new ServiceViewModel
+							{
+								Name = courses.Key.Name,
+								ImageId = courses.Key.ImageId,
+								Courses = courses
+									.Take(5)
+									.Select(course => new CourseViewModel { Name = course.Name })
+									.ToList()
+							}
+						).ToList()
+					).First();
 
 			return PartialView(viewModel);
 		}

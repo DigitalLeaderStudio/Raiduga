@@ -889,6 +889,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There are no lessons for the category yet..
+        /// </summary>
+        public static string NoLessons {
+            get {
+                return ResourceManager.GetString("NoLessons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         public static string Save {
@@ -898,11 +907,74 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Affiliate.
+        /// </summary>
+        public static string Schedule_Affiliate_Name {
+            get {
+                return ResourceManager.GetString("Schedule_Affiliate_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age Group.
+        /// </summary>
+        public static string Schedule_AgeGroup_Name {
+            get {
+                return ResourceManager.GetString("Schedule_AgeGroup_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Course.
+        /// </summary>
+        public static string Schedule_Course_Name {
+            get {
+                return ResourceManager.GetString("Schedule_Course_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group.
+        /// </summary>
+        public static string Schedule_Group_Name {
+            get {
+                return ResourceManager.GetString("Schedule_Group_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Schedule.
         /// </summary>
         public static string Schedule_PageTitle {
             get {
                 return ResourceManager.GetString("Schedule_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service.
+        /// </summary>
+        public static string Schedule_Service_Name {
+            get {
+                return ResourceManager.GetString("Schedule_Service_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start time.
+        /// </summary>
+        public static string Schedule_StartTime_Name {
+            get {
+                return ResourceManager.GetString("Schedule_StartTime_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teacher.
+        /// </summary>
+        public static string Schedule_Teacher_Name {
+            get {
+                return ResourceManager.GetString("Schedule_Teacher_Name", resourceCulture);
             }
         }
         

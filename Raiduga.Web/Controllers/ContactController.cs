@@ -1,9 +1,7 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Autofac;
-	using Raiduga.Interface;
 	using Raiduga.Models;
-	using Raiduga.ModelTransformers;
 	using Raiduga.Web.Localization;
 	using Raiduga.Web.Models.Common;
 	using Simplify.Mail;
@@ -15,13 +13,9 @@
 
 	public class ContactController : BaseController
 	{
-		private IModelTransformer<Affiliate, AffiliateViewModel> _affiliateTransformer;
-		private IModelTransformer<ContactRequest, ContactRequestViewModel> _crTransformer;
-
 		public ContactController(IComponentContext componentContext)
+			: base(componentContext)
 		{
-			_affiliateTransformer = componentContext.Resolve<IModelTransformer<Affiliate, AffiliateViewModel>>();
-			_crTransformer = componentContext.Resolve<IModelTransformer<ContactRequest, ContactRequestViewModel>>();
 		}
 
 		[Route("Контакти")]
@@ -31,7 +25,7 @@
 
 			foreach (var affiliate in DbContext.Affiliates.OrderByDescending(a => a.IsPrimary).ToArray())
 			{
-				model.Add(_affiliateTransformer.GetViewModel(affiliate));
+				model.Add(_modelTransformer.GetViewModel<AffiliateViewModel>(affiliate));
 			}
 
 			return View(model);
@@ -50,7 +44,7 @@
 			{
 				try
 				{
-					var entity = _crTransformer.GetEntity(viewModel);
+					var entity = _modelTransformer.GetEntity<ContactRequest>(viewModel);
 					entity.CreationDate = DateTime.Now;
 
 					DbContext.ContactRequests.Add(entity);

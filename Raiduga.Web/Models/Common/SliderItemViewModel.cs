@@ -8,17 +8,17 @@
 
 	public class SliderItemViewModel : AbstractFileViewModel, IViewModel
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
 		[Required]
 		[Display(ResourceType = typeof(Translations), Name = "Slider_Title")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string Title { get; set; }
 
 		[Required]
 		[Display(ResourceType = typeof(Translations), Name = "Slider_SubTitle")]
-		[MapToEntityValue]
+		[MapToValue]
 		public string SubTitle { get; set; }
 	}
 }

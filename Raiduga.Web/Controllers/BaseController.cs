@@ -2,13 +2,15 @@
 {
 	using Autofac;
 	using Raiduga.DAL;
+	using Raiduga.Interface;
 	using System.Web.Mvc;
 
 	public class BaseController : Controller
 	{
 		#region fields and props
 
-		private readonly IComponentContext _componentContext;
+		protected readonly IComponentContext _componentContext;
+		protected IModelTransformer _modelTransformer;
 
 		private ApplicationDbContext dbContext = null;
 		public ApplicationDbContext DbContext
@@ -37,6 +39,7 @@
 		public BaseController(IComponentContext componentContext)
 		{
 			_componentContext = componentContext;
+			_modelTransformer = componentContext.Resolve<IModelTransformer>();
 		}
 
 		#endregion

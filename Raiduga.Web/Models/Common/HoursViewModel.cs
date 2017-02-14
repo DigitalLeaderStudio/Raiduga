@@ -8,34 +8,34 @@
 
 	public class HoursViewModel : IEntity
 	{
-		[MapToEntityValue]
+		[MapToValue]
 		public int Id { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public TimeSpan Start { get; set; }
 
-		[MapToEntityValue]
+		[MapToValue]
 		public TimeSpan End { get; set; }
 
-		public HoursViewModel FromDbModel(Hours model)
-		{
-			this.Id = model.Id;
-			this.Start = model.Start;
-			this.End = model.End;
+		//public HoursViewModel FromDbModel(Hours model)
+		//{
+		//	this.Id = model.Id;
+		//	this.Start = model.Start;
+		//	this.End = model.End;
 
-			return this;
-		}
+		//	return this;
+		//}
 
-		public Hours ToDbModel()
-		{
-			var result = new Hours
-			{
-				Id = this.Id,
-				Start = this.Start,
-				End = this.End
-			};
+		//public Hours ToDbModel()
+		//{
+		//	var result = new Hours
+		//	{
+		//		Id = this.Id,
+		//		Start = this.Start,
+		//		End = this.End
+		//	};
 
-			return result;
-		}
+		//	return result;
+		//}
 	}
 }

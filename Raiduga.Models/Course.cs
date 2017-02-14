@@ -3,6 +3,7 @@
 	using Raiduga.Interface;
 	using Raiduga.Models.Interfaces;
 	using System;
+	using System.Collections.Generic;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
 
@@ -36,5 +37,11 @@
 		public int ServiceId { get; set; }
 
 		public virtual Service Service { get; set; }
+
+		public int? AffiliateId { get; set; }
+
+		public virtual Affiliate Affiliate { get; set; }
+
+		public virtual ICollection<Lesson> Lessons { get; set; }
 	}
 }
