@@ -208,25 +208,14 @@
 		{
 			var viewModel = new List<ServiceViewModel>();
 
-			viewModel = DbContext.Set<Affiliate>()
-				.Where(affiliate => affiliate.IsPrimary)
-				.Select(affiliate =>
-					affiliate.Courses
-						.GroupBy(course => new
-						{
-							course.ServiceId,
-							course.Service.Name,
-							course.Service.ImageId
-						})
-						.OrderBy(serviceGroup => serviceGroup.Key.ServiceId)
-						.Select(courses =>
-							new ServiceViewModel
-							{
-								Name = courses.Key.Name,
-								ImageId = courses.Key.ImageId
-							}
-						).ToList()
-					).First();
+			viewModel = DbContext.Set<Service>()
+				.Select(service => new ServiceViewModel
+				{
+					Id = service.Id,
+					Name = service.Name,
+					ImageId = service.ImageId
+				})
+				.ToList();
 
 			return PartialView(viewModel);
 		}
