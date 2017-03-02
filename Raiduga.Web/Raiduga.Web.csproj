@@ -244,7 +244,6 @@
     <Compile Include="Models\Common\HtmlContentViewModel.cs" />
     <Compile Include="Models\Common\PhoneViewModel.cs" />
     <Compile Include="Models\Common\SliderItemViewModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Interfaces\AbstractFileViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Schedule\ScheduleViewModel.cs" />

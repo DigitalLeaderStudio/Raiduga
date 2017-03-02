@@ -37,16 +37,16 @@
 					  "~/Scripts/bootstrap-timepicker/bootstrap-timepicker.js"));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
-		  "~/Content/bootstrap.css",
-		  "~/Content/site.css",
-		  "~/Content/font-awesome.css"));
+					  "~/Content/bootstrap.css",
+					  "~/Content/site.css",
+					  "~/Content/font-awesome.css"));
 
 			bundles.Add(new LessBundle("~/Content/less/styles")
 				.Include("~/Content/less/lib.less",
 						 "~/Content/less/site.less"));
 
 			bundles.Add(new LessBundle("~/Content/slider-less/styles")
-			.Include("~/Content/less/slider.less"));
+				.Include("~/Content/less/slider.less"));
 
 			bundles.Add(new LessBundle("~/Content/timepicker-less/styles").Include(
 				"~/Content/less/timepicker.less"));
