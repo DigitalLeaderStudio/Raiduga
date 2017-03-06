@@ -28,6 +28,7 @@
 									l.AgeGroup.Id,
 									l.AgeGroup.Name
 								})
+								.OrderBy(ag => ag.Key.Name)
 								.ToArray();
 							#endregion
 
@@ -62,6 +63,7 @@
 
 									#endregion
 								}
+
 								#region age group view model creation
 								ageGroupsViewModel.Add(new AgeGroupViewModel
 								{
