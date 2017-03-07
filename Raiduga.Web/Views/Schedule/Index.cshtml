@@ -10,7 +10,7 @@
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		@foreach (var affiliate in Model)
 		{
-			bool isActive = true;
+			var serviceIndex = 0;
 			<div class="panel panel-default">
 				<a class="panel-heading" role="tab" id="heading-@affiliate.Id"
 				   data-toggle="collapse"
@@ -27,9 +27,10 @@
 				<div id="collapse-@affiliate.Id" class="panel-collapse collapse @(affiliate.IsPrimary ? "in" : "")"
 					 role="tabpanel" aria-labelledby="heading-@affiliate.Id">
 					<div class="panel-body">
-
 						@foreach (var service in affiliate.Services)
 						{
+							bool isActive = true;
+							serviceIndex++;
 							<div class="text-center">
 								<h3>@service.Name</h3>
 							</div>
@@ -45,8 +46,9 @@
 								<ul class="nav nav-tabs">
 									@foreach (var ageGroup in service.AgeGroups)
 									{
+										var tabId = string.Format("{0}-{1}-{2}", affiliate.Id, serviceIndex, ageGroup.Id);
 										<li role="presentation" class="@(isActive ? "active" : "")">
-											<a aria-controls="@ageGroup.Id" href="#@ageGroup.Id" role="tab" data-toggle="tab">@ageGroup.Name</a>
+											<a aria-controls="@tabId" href="#@tabId" role="tab" data-toggle="tab">@ageGroup.Name</a>
 										</li>
 										isActive = false;
 									}
@@ -56,7 +58,8 @@
 									@{isActive = true;}
 									@foreach (var ageGroup in service.AgeGroups)
 									{
-										<div id="@ageGroup.Id" role="tabpanel" class="tab-pane @(isActive ? "active" : "")">
+										var tabId = string.Format("{0}-{1}-{2}", affiliate.Id, serviceIndex, ageGroup.Id);
+										<div id="@tabId" role="tabpanel" class="tab-pane @(isActive ? "active" : "")">
 											<table class="table table-striped table-hover">
 												<thead>
 													<tr>
@@ -81,29 +84,29 @@
 																var endTime = groupItem.StartTime.Add(course.Duration);
 
 																string time = string.Format("{0} - {1}",
-																	groupItem.StartTime.ToString(@"hh\:mm"),
-																	endTime.ToString(@"hh\:mm"));
+																groupItem.StartTime.ToString(@"hh\:mm"),
+																endTime.ToString(@"hh\:mm"));
 
-																<tr>
-																	@if (showCourseName)
+													<tr>
+														@if (showCourseName)
 																	{
-																		<td class="course-name" rowspan="@course.Lessons.Count">@course.Name</td>
+														<td class="course-name" rowspan="@course.Lessons.Count">@course.Name</td>
 																		showCourseName = false;
 																	}
 
-																	@if (showGroupName)
+														@if (showGroupName)
 																	{
-																		<td class="group-name text-center" rowspan="@group.Count()">@groupItem.GroupName</td>
+														<td class="group-name text-center" rowspan="@group.Count()">@groupItem.GroupName</td>
 																		showGroupName = false;
 																	}
-																	<td class="text-center">
-																		@(System.Globalization.DateTimeFormatInfo.CurrentInfo.GetDayName((DayOfWeek)groupItem.WeekDay))
-																	</td>
-																	<td class="text-center">
-																		@time
-																	</td>
-																	<td class="text-center">@groupItem.TeacherFullName</td>
-																</tr>
+														<td class="text-center">
+															@(System.Globalization.DateTimeFormatInfo.CurrentInfo.GetDayName((DayOfWeek)groupItem.WeekDay))
+														</td>
+														<td class="text-center">
+															@time
+														</td>
+														<td class="text-center">@groupItem.TeacherFullName</td>
+													</tr>
 															}
 														}
 													}

@@ -1,10 +1,7 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Autofac;
-	using Raiduga.Web.Models.Common;
 	using Raiduga.Web.Models.Schedule;
-	using Raiduga.Web.Models.Service;
-	using System.Collections.Generic;
 	using System.Linq;
 	using System.Web.Mvc;
 

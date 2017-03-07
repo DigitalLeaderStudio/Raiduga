@@ -138,10 +138,15 @@
 				});
 			}
 
+			viewModel.ServiceId = entity.Course.ServiceId;
 			viewModel.Services = servicesListItems;
-			viewModel.AgeGroups = ageGroupsListItems;
+
+			viewModel.AffiliateId = entity.Course.AffiliateId.HasValue ? entity.Course.AffiliateId.Value : 0;
 			viewModel.Affiliates = affiliatesListItems;
-			viewModel.CoursesCustom = GetCoursesSelectListItems(allAffiliates.First().Id, allAffiliates.First().Id);
+
+			viewModel.AgeGroups = ageGroupsListItems;
+
+			viewModel.CoursesCustom = GetCoursesSelectListItems(viewModel.AffiliateId, viewModel.ServiceId);
 
 			return View(viewModel);
 		}

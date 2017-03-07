@@ -2,8 +2,6 @@
 {
 	using Raiduga.Interface;
 	using Raiduga.Interface.Attribute;
-	using Raiduga.Models;
-	using Raiduga.Models.Interfaces;
 	using Raiduga.Web.Localization;
 	using System;
 	using System.Collections.Generic;

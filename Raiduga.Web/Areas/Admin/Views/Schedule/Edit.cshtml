@@ -42,7 +42,7 @@
 							class="form-control">
 						@foreach (var course in Model.CoursesCustom)
 						{
-							<option value="@course.Id" duration="@course.Duration">@course.Name</option>
+							<option value="@course.Id" selected="@(course.Id == Model.CourseId)" duration="@course.Duration">@course.Name</option>
 						}
 					</select>
 				</div>
