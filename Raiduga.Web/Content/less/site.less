@@ -288,7 +288,7 @@ header {
 }
 
 footer {
-	margin-top: 20px;
+	margin-top: 100px;
 	padding: 20px;
 	background-color: @color-purple;
 	color: #FFFFFF;
@@ -1099,6 +1099,7 @@ footer {
 
 		&:nth-child(7n+4) .btn-circle {
 			background-color: @color-yellow;
+			color: @color-primary;
 		}
 
 		&:nth-child(7n+5) .btn-circle {
@@ -2540,7 +2541,6 @@ footer {
 		}
 	}
 
-
 	.about {
 		& > div:first-child {
 			padding: 0 20%;
@@ -2591,6 +2591,19 @@ footer {
 					}
 				}
 			}
+		}
+	}
+
+	.articles {
+		-moz-column-count: 2;
+		-moz-column-gap: 10px;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 10px;
+		column-count: 2;
+		column-gap: 10px;
+		
+		.thumbnail {
+			margin-top: 0;
 		}
 	}
 
@@ -2704,4 +2717,16 @@ footer {
 }
 /*lg*/
 @media (min-width: 1200px) {
+	.articles {
+		-moz-column-count: 2;
+		-moz-column-gap: 10px;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 10px;
+		column-count: 2;
+		column-gap: 10px;
+
+		.thumbnail {
+			margin-top: 0;
+		}
+	}
 }

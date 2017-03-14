@@ -8,31 +8,29 @@
 <h1 class="title">@Translations.Articles_Title</h1>
 
 <div class="articles">
-	<div class="row">
-		@foreach (var item in Model)
-		{
-			var srcAction = item.ImageId.HasValue ?
-				Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
-				string.Empty;
-			<div class="col-md-6 thumbnail-wrapper">
-				<div class="thumbnail">
-					<img src="@srcAction" alt="@item.Title" />
-					<div class="caption">
-						<h3>@item.Title</h3>
-						<p>@item.Description</p>
 
-						<p>
-							<a href="@Url.Action("Details", "Article", new { title = @item.Title })" class="btn btn-default btn-circle pull-right">@Translations.Articles_View</a>
-						</p>
-						<div class="clearfix"></div>
-					</div>
+	@foreach (var item in Model)
+	{
+		var srcAction = item.ImageId.HasValue ?
+			Url.Action("Show", "File", new { area = "", id = item.ImageId }) :
+			string.Empty;
+		<div class="thumbnail-wrapper">
+			<div class="thumbnail">
+				<img src="@srcAction" alt="@item.Title" />
+				<div class="caption">
+					<h3>@item.Title</h3>
+					<p class="col-md-10">@item.Description</p>
+
+					<a href="@Url.Action("Details", "Article", new { title = @item.Title })" class="btn btn-default btn-circle pull-right">@Translations.Articles_View</a>
+					<div class="clearfix"></div>
 				</div>
 			</div>
-		}
-	</div>
+		</div>
+	}
+
 </div>
 
 @section SEOtags {
-    <meta name="description" content="Блог Центру інтелектуального і творчого розвитку особистості Райдуга, новини та статті">
-    <meta name="keywords" content="новини, блог, статті, центр розвитку особистості">
+	<meta name="description" content="Блог Центру інтелектуального і творчого розвитку особистості Райдуга, новини та статті">
+	<meta name="keywords" content="новини, блог, статті, центр розвитку особистості">
 }

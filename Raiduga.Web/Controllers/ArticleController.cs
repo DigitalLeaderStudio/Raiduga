@@ -16,7 +16,9 @@
 		[Route("~/Новини")]
 		public ActionResult Index()
 		{
-			var dbData = DbContext.Articles.Where(a => a.IsPublished);
+			var dbData = DbContext.Articles
+				.Where(a => a.IsPublished)
+				.OrderByDescending(a => a.CreationDate);
 
 			var viewModel = new List<ArticleViewModel>();
 
