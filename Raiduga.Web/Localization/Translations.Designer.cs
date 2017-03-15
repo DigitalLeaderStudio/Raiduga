@@ -412,6 +412,15 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Campaigns.
+        /// </summary>
+        public static string Campaign_Title {
+            get {
+                return ResourceManager.GetString("Campaign_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
