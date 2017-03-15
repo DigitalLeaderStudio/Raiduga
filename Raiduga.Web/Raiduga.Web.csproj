@@ -267,8 +267,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\HTML\Campaign.html" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\HTML\Campaign.html" />
     <Content Include="Content\img\staff\7.jpg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Content\img\default-user.png" />
