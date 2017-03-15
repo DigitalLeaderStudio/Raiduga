@@ -1,4 +1,4 @@
-﻿namespace Raiduga.Web.Models.Common
+﻿namespace Raiduga.Web.Models.Campaign
 {
 	using Raiduga.Interface;
 	using Raiduga.Interface.Attribute;
