@@ -511,4 +511,22 @@
   <data name="Schedule_DeletePrompt" xml:space="preserve">
     <value>Заняття буде видалено із розкладу. Продовжити?</value>
   </data>
+  <data name="Campaign_BodyHtml" xml:space="preserve">
+    <value>Контент</value>
+  </data>
+  <data name="Campaign_EndDate" xml:space="preserve">
+    <value>Дата завершення кампанії</value>
+  </data>
+  <data name="Campaign_IsActive" xml:space="preserve">
+    <value>Чи кампанія активна?</value>
+  </data>
+  <data name="Campaign_IsContactFormVisible" xml:space="preserve">
+    <value>Показувати Контактну форму?</value>
+  </data>
+  <data name="Campaign_Name" xml:space="preserve">
+    <value>Назва акції (буде відображено у ссилці)</value>
+  </data>
+  <data name="Campaign_StartDate" xml:space="preserve">
+    <value>Дата початку кампанії</value>
+  </data>
 </root>

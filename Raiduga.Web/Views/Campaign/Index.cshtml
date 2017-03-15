@@ -1,0 +1,8 @@
+﻿@model Raiduga.Web.Models.Common.HtmlContentViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Raw(Model.BodyHtml)

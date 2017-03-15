@@ -358,6 +358,60 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Content.
+        /// </summary>
+        public static string Campaign_BodyHtml {
+            get {
+                return ResourceManager.GetString("Campaign_BodyHtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaign end date.
+        /// </summary>
+        public static string Campaign_EndDate {
+            get {
+                return ResourceManager.GetString("Campaign_EndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is campaign is active?.
+        /// </summary>
+        public static string Campaign_IsActive {
+            get {
+                return ResourceManager.GetString("Campaign_IsActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show contact form?.
+        /// </summary>
+        public static string Campaign_IsContactFormVisible {
+            get {
+                return ResourceManager.GetString("Campaign_IsContactFormVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaign name.
+        /// </summary>
+        public static string Campaign_Name {
+            get {
+                return ResourceManager.GetString("Campaign_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Campaing start date.
+        /// </summary>
+        public static string Campaign_StartDate {
+            get {
+                return ResourceManager.GetString("Campaign_StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {

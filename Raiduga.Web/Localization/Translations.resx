@@ -510,4 +510,22 @@
   <data name="Schedule_DeletePrompt" xml:space="preserve">
     <value>The lesson will be removed from schedule. Continue?</value>
   </data>
+  <data name="Campaign_BodyHtml" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Campaign_EndDate" xml:space="preserve">
+    <value>Campaign end date</value>
+  </data>
+  <data name="Campaign_IsActive" xml:space="preserve">
+    <value>Is campaign is active?</value>
+  </data>
+  <data name="Campaign_IsContactFormVisible" xml:space="preserve">
+    <value>Show contact form?</value>
+  </data>
+  <data name="Campaign_Name" xml:space="preserve">
+    <value>Campaign name</value>
+  </data>
+  <data name="Campaign_StartDate" xml:space="preserve">
+    <value>Campaing start date</value>
+  </data>
 </root>
