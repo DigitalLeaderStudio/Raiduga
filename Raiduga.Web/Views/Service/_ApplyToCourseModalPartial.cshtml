@@ -3,7 +3,7 @@
 @Scripts.Render("~/bundles/unobtrusive")
 <div id="applyToCourse" class="modal fade" tabindex="-1" role="dialog">
 
-	@Html.Partial("_ApplyToCoursePartial", new Raiduga.Web.Models.Service.ApplyToCourseViewModel())
+	@Html.Partial("~/Views/Service/_ApplyToCoursePartial.cshtml", new Raiduga.Web.Models.Service.ApplyToCourseViewModel())
 
 	<script type="text/javascript">
 		$('#applyToCourse').on('show.bs.modal', function (event) {

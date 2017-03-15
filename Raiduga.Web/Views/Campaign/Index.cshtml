@@ -1,8 +1,10 @@
 ﻿@model Raiduga.Web.Models.Campaign.CampaignViewModel
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = Model.Name;
+	Layout = "~/Views/Shared/_LayoutWithoutSlider.cshtml";
 }
 
 @Html.Raw(Model.BodyHtml)
+
+@Html.Partial("~/Views/Service/_ApplyToCourseModalPartial.cshtml")

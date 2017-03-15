@@ -1,13 +1,8 @@
 ﻿namespace Raiduga.Web.Controllers
 {
 	using Autofac;
-	using Raiduga.Models;
-	using Raiduga.Web.Localization;
-	using Raiduga.Web.Models.Common;
-	using Simplify.Mail;
+	using Raiduga.Web.Models.Campaign;
 	using System.Data.Entity;
-	using System;
-	using System.Collections.Generic;
 	using System.Linq;
 	using System.Threading.Tasks;
 	using System.Web.Mvc;
@@ -22,11 +17,20 @@
 		[Route("Акції/{compaignName}")]
 		public async Task<ActionResult> Index(string compaignName)
 		{
-			var dbData = await DbContext.HtmlContents.Where(hc => hc.Name == compaignName).FirstOrDefaultAsync();
+			try
+			{
+				var entity = await DbContext.Campaigns
+					.Where(c => c.Name == c.Name && c.IsActive)
+					.FirstOrDefaultAsync();
 
-			var viewModel = _modelTransformer.GetViewModel<HtmlContentViewModel>(dbData);
+				var viewModel = _modelTransformer.GetViewModel<CampaignViewModel>(entity);
 
-			return View(viewModel);
+				return View(viewModel);
+			}
+			catch
+			{
+				return RedirectToAction("Index", "Home");
+			}
 		}
 	}
 }
