@@ -528,4 +528,7 @@
   <data name="Campaign_StartDate" xml:space="preserve">
     <value>Campaing start date</value>
   </data>
+  <data name="Campaign_Title" xml:space="preserve">
+    <value>Campaigns</value>
+  </data>
 </root>

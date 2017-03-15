@@ -23,7 +23,7 @@
 		{
 			@Html.AntiForgeryToken()
 			@Html.HiddenFor(m => m.Id)
-			<a href="@Url.Action("Index", "UserFeedback")" class="btn btn-default">@Translations.Cancel</a>
+			<a href="@Url.Action("Index", "Article")" class="btn btn-default">@Translations.Cancel</a>
 			<input type="submit" class="btn btn-danger" value="@Translations.Delete" />
 		}
 	</div>

@@ -36,6 +36,9 @@
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap-timepicker").Include(
 					  "~/Scripts/bootstrap-timepicker/bootstrap-timepicker.js"));
 
+			bundles.Add(new ScriptBundle("~/bundles/bootstrap-datetimepicker").Include(
+					  "~/Scripts/bootstrap-datetimepicker.js"));
+
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
 					  "~/Content/site.css",

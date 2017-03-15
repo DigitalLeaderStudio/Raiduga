@@ -7,6 +7,9 @@
 
 	try {
 		$('.timepicker > input').timepicker();
+		$('.datetimepicker > input').datetimepicker({
+			format: "DD/MM/YYYY"
+		});
 	}
 	catch (e) {
 
