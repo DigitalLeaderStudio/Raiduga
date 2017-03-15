@@ -269,6 +269,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\HTML\Campaign.html" />
+    <Content Include="Content\img\campaign\picture.png" />
     <Content Include="Content\img\staff\7.jpg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Content\img\default-user.png" />
@@ -437,6 +438,7 @@
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Areas\Admin\Views\Campaign\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Campaign\Delete.cshtml" />
+    <Content Include="Content\less\compaign.less" />
     <None Include="Properties\PublishProfiles\raiduga.kiev.ua - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
