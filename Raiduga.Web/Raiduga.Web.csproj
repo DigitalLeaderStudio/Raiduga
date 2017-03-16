@@ -304,6 +304,7 @@
     <Content Include="Content\img\slide2.jpg" />
     <Content Include="Content\img\slide3.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="Properties\PublishProfiles\raiduga.kiev.ua - Web Deploy.pubxml.user" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap-timepicker\bootstrap-timepicker.js" />
