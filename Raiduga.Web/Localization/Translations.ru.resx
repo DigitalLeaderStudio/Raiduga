@@ -531,4 +531,10 @@
   <data name="Campaign_Title" xml:space="preserve">
     <value>Акции</value>
   </data>
+  <data name="Campaign_Item_Title" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="Campaign_NotFound" xml:space="preserve">
+    <value>Акция не найдена или акция уже завершена</value>
+  </data>
 </root>

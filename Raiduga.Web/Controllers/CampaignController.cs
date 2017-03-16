@@ -23,7 +23,9 @@
 					.Where(c => c.Name == c.Name && c.IsActive)
 					.FirstOrDefaultAsync();
 
-				var viewModel = _modelTransformer.GetViewModel<CampaignViewModel>(entity);
+				var viewModel = entity == null
+					? null
+					: _modelTransformer.GetViewModel<CampaignViewModel>(entity);
 
 				return View(viewModel);
 			}
@@ -33,10 +35,11 @@
 			}
 		}
 
-        public ActionResult Index() {
+		public ActionResult Index()
+		{
 
-            return View();
+			return View();
 
-        }
+		}
 	}
 }

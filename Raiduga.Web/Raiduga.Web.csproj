@@ -774,7 +774,7 @@
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Service\_ServicesMenuPartial.cshtml" />
     <Content Include="Views\Campaign\Index.cshtml" />
-    <Content Include="Views\CAMPAIGN1\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutWithoutSlider.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

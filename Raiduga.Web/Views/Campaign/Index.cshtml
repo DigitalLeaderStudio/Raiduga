@@ -1,214 +1,82 @@
 ﻿@model Raiduga.Web.Models.Campaign.CampaignViewModel
 
 @{
-    //ViewBag.Title = Model.Name;
-    Layout = "~/Views/Shared/_LayoutWithoutSlider.cshtml";
+	ViewBag.Title = Model == null
+		? Raiduga.Web.Localization.Translations.Campaign_NotFound
+		: Model.Title;
+	Layout = "~/Views/Shared/_LayoutWithoutSlider.cshtml";
 }
 
-@*Html.Raw(Model.BodyHtml)*@
+@if (Model == null)
+{
+	<p>@Raiduga.Web.Localization.Translations.Campaign_NotFound</p>
+}
+else
+{
+	<style type="text/css">
+		.compaign {
+		}
 
-<style>
-    .compaign {
+			.compaign .row {
+				padding-top: 20px;
+			}
 
-    }
+			.compaign li {
+				list-style: none;
+				text-align: left;
+				font-size: 20px;
+			}
 
-        .compaign .row {
-            padding-top: 20px;
-        }
+				.compaign li:before {
+					font-family: FontAwesome;
+					content: "\f00c   ";
+				}
 
-        .compaign li {
-            list-style: none;
-            text-align: left;
-            font-size: 20px;
-        }
+			.compaign .termin {
+				font-size: 40px;
+				font-weight: 500;
+			}
 
-            .compaign li:before {
-                font-family: FontAwesome;
-                content: "\f00c   ";
-            }
+			.compaign .places-number {
+				width: 200px;
+				height: 200px;
+				border: solid #e28d45 8px;
+				border-radius: 100%;
+				font-size: 50px;
+				font-weight: 700;
+				text-align: center;
+				display: inline-block;
+				padding-top: 57px;
+				font-size: 3.5em;
+				letter-spacing: 5px;
+			}
 
-        .compaign .termin {
-            font-size: 40px;
-            font-weight: 500;
-        }
+			.compaign .row {
+				text-align: center;
+			}
 
-        .compaign .places-number {
-            width: 200px;
-            height: 200px;
-            border: solid #e28d45 8px;
-            border-radius: 100%;
-            font-size: 50px;
-            font-weight: 700;
-            text-align: center;
-            display: inline-block;
-            padding-top: 57px;
-            font-size: 3.5em;
-            letter-spacing: 5px;
-        }
+			.compaign .btn.btn-info {
+				background-color: #ff66b3;
+				width: 50%;
+			}
 
-        .compaign .row {
-            text-align: center;
-        }
+			.compaign .for-parents {
+				text-align: left;
+				font-size: 22px;
+			}
 
-        .compaign .btn.btn-info {
-            background-color: #ff66b3;
-            width: 50%;
-        }
+				.compaign .for-parents li {
+					font-size: 22px !important;
+					margin-bottom: 5px;
+					list-style: disc;
+				}
 
-        .compaign .for-parents {
-            text-align: left;
-            font-size: 22px;
-        }
-            .compaign .for-parents li {
-                font-size: 22px !important;
-                margin-bottom: 5px;
-                list-style: disc;
-            }
-            .compaign .for-parents li:before {
-                content: "";
-            }
-</style>
+					.compaign .for-parents li:before {
+						content: "";
+					}
+	</style>
 
-<div class="container compaign">
-    <div class="row">
-        <div class="col-md-6" style="margin-bottom: 50px;">
-            <div class="row">
+	@Html.Raw(Model.BodyHtml)
 
-            <div class="col-md-12">
-                <h2 style="color: #ce6baa">ДАЙ ДИТИНІ НАЙКРАЩЕ</h2>
-                <h3 style="text-transform:lowercase ">НАБІР У ГРУПИ</h3>
-                <h1 style="color: #2479be;
-                margin-top: 0;
-                border: 3px solid #fff323;
-                border-radius: 10px;
-                padding: 15px 0 5px;">
-                    МІНІ-САД
-                </h1>
-                <p style="font-size: 24px;">для дітей віком <span style="font-weight: bold;">від 2 до 6 років</span></p>
-                <p style="font-size: 22px; color: #5e5e5e"><strong>протягом тижня дошкільнята отримують 20 занять за такими курсами:</strong></p>
-
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <ul>
-                    <li>підготовка до школи</li>
-                    <li>ранній розвиток</li>
-                    <li>англійська мова</li>
-                    <li>ерудит</li>
-                    <li>логопедія</li>
-                    <li>логоритміка</li>
-                    <li>експерименти</li>
-                </ul>
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <ul>
-                    <li>світ навколо</li>
-                    <li>етикет</li>
-                    <li>танці для дошкільнят</li>
-                    <li>вокал</li>
-                    <li>творча майстерня</li>
-                    <li>театральна майстерня</li>
-                    <li>ліпка</li>
-                </ul>
-            </div>
-            </div>
-            
-        </div>
-        <div class="col-md-6">
-            <h1 style="font-size: 100px;
-                        margin-top: 70px;
-                        color: #f98d3b;"><span style="color: #00b6f3; font-size: 100px;">15%</span><i class="fa fa-gift" aria-hidden="true"></i></h1>
-            <h1 style="font-size: 36px;
-                        margin-top: 0px;">ЗНИЖКА</h1>
-            <h4>з 15 березня до 15 квітня</h4>
-            <h3 style="margin-top: 0;
-                        color: #43b659;
-                        font-weight: bold;"><s style="color: #979797;font-size: 1.3em;">2800</s> 2400 грн</h3>
-            <a href="javascript:void(0);" class="cta-btn btn btn-primary"
-               data-toggle="modal"
-               data-course-id="12"
-               data-course-title="Міні-сад"
-               data-target="#applyToCourse">ЗАБРОНЮВАТИ місце</a>
-
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2 style="font-size: 36px; margin-top: 60px;">
-                <i class="fa fa-puzzle-piece" aria-hidden="true" style="color: #ce6baa;font-size: 65px;"></i>
-                Міні-сад це</h2>
-            <p style="font-size: 22px;text-align: left">
-                базовий курс, який включає в себе цикл підготовки до школи "Сходинки до знань",
-                англійську мову, логоритміку, логіку, хореографію, вокал, творчість.
-                Для гармонічного та всебічного розвитку малята знайомляться зі світом навколо,
-                поглиблюють свою ерудицію, вивчають правила етикету. Головне - вони почувають себе
-                щасливими у грі та спілкуванні з однолітками. У цьому їм допомагають досвідчені викладачі, 
-                які притримуються індивідуального підходу до навчання та виховання.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2 style="font-size: 36px; margin-top: 60px;">
-                <i class="fa fa-key" aria-hidden="true" style="color: #fff323;font-size: 65px;margin-right: 20px;"></i>Для батьків, які</h2>
-            <ul class="for-parents">
-                <li>Мріють дати дитині найкраще навчання та виховання</li>
-                <li>Піклуються про здоров'я дитини</li>
-                <li>Не довіряють державним установам</li>
-                <li>Розуміють необхідність адаптації у колективі</li>
-                <li>Хочуть провести тестування своєї дитини на готовність до школи</li>
-                <li>Мають дітей, які потребують розвитку мовлення</li>
-                <li>Потребують додаткової уваги до дітей і до самих себе</li>
-                <li>Хочуть вивільнити час для особистого розвитку</li>
-                <li>Бажають щоденно бачити щасливу усмішку своєї дитини</li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2 style="font-size: 36px; margin-top: 60px;">
-                <i class="fa fa-clock-o" aria-hidden="true" style="color: #375d95;font-size: 65px;margin-right: 20px;"></i>Розклад роботи груп</h2>
-            <p style="font-size: 22px;text-align: center">по буднях з 8.30 до 13.00</p>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2 style="font-size: 36px; margin-top: 60px;">Поспішіть записатись!</h2>
-            <p style="font-size: 22px;text-align: center">Лишилось місць:</p>
-            <p style="text-align: center;"><span class="places-number"><span style="color: #43b659;">5</span>/<span style="color: #2479be;">27</span></span></p>
-        </div>
-    </div>
-    
-    <div class="row" style="margin-top: 50px;">
-        <div class="col-md-12">
-            <h1 class="happy-kid">
-                ВАША ДИТИНА БУДЕ ЩАСЛИВОЮ!</h1>
-            <a href="javascript:void(0);" class="cta-btn btn btn-primary"
-               data-toggle="modal"
-               data-course-id="12"
-               data-course-title="Міні-сад"
-               data-target="#applyToCourse">ЗАБРОНЮВАТИ місце</a>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 100px;">
-        <div class="col-md-8">
-            <img src="~/Content/img/campaign/picture.png" style="width: 100%;" />
-        </div>
-        <div class="col-md-4">
-            <h1 style="margin-top: 100px;"><i class="fa fa-question-circle" aria-hidden="true" style="font-size: 85px;margin-right: 20px;"></i></h1>
-            <h2>Виникли запитання?</h2>
-            <p style="font-size: 24px; margin-bottom: 20px;">Запитайте у професіоналів</p>
-            <a href="/contacts" class="btn btn-primary"
-               style="padding: 10px 30px;
-                        font-size: 25px;
-                        text-transform: uppercase;
-                        background-color: #337ab7;
-                        border:0;
-                        border-radius: 10px;">Контакти <i class="fa fa-angle-right" aria-hidden="true" style="margin-left: 10px;"></i></a>
-        </div>
-    </div>
-
-</div>
-
-@Html.Partial("~/Views/Service/_ApplyToCourseModalPartial.cshtml")
+	@Html.Partial("~/Views/Service/_ApplyToCourseModalPartial.cshtml")
+}

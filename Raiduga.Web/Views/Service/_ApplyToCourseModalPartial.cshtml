@@ -10,11 +10,14 @@
 			var button = $(event.relatedTarget);
 			var title = button.data('courseTitle');
 			var courseId = button.data('courseId');
+			var redirectAfter = button.data('redirectAfter');
+			var redirectPrm = redirectAfter ? '&redirectAfter=ok' : '';
 			var modal = $(this);
 
-			$.get('@Url.Action("_ApplyToCoursePartial", "Service")?courseId=' + courseId, function (data) {
-				modal.find('#modal-container').html(data);
-			});
+			$.get('@Url.Action("_ApplyToCoursePartial", "Service")?courseId=' + courseId + redirectPrm,
+				function (data) {
+					modal.find('#modal-container').html(data);
+				});
 		});
 
 		function OnBegin() {

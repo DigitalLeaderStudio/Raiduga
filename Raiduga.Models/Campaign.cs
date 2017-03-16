@@ -14,6 +14,8 @@
 
 		public string Name { get; set; }
 
+		public string Title { get; set; }
+
 		public string BodyHtml { get; set; }
 
 		public bool IsActive { get; set; }

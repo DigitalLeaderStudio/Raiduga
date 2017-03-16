@@ -531,4 +531,10 @@
   <data name="Campaign_Title" xml:space="preserve">
     <value>Campaigns</value>
   </data>
+  <data name="Campaign_Item_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Campaign_NotFound" xml:space="preserve">
+    <value>Compain not found or has been expired</value>
+  </data>
 </root>

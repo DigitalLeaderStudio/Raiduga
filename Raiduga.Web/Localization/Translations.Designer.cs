@@ -394,11 +394,29 @@ namespace Raiduga.Web.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Campaign_Item_Title {
+            get {
+                return ResourceManager.GetString("Campaign_Item_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Campaign name.
         /// </summary>
         public static string Campaign_Name {
             get {
                 return ResourceManager.GetString("Campaign_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compain not found or has been expired.
+        /// </summary>
+        public static string Campaign_NotFound {
+            get {
+                return ResourceManager.GetString("Campaign_NotFound", resourceCulture);
             }
         }
         

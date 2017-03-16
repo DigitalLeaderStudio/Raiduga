@@ -17,6 +17,10 @@
 		[MapToValue]		
 		public string Name { get; set; }
 
+		[Display(ResourceType = typeof(Translations), Name = "Campaign_Item_Title")]
+		[MapToValue]
+		public string Title { get; set; }
+
 		[Display(ResourceType = typeof(Translations), Name = "Campaign_BodyHtml")]
 		[AllowHtml]
 		[UIHint("tinymce_full_compressed")]

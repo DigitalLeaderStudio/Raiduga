@@ -94,14 +94,15 @@
 		}
 
 		[HttpGet]
-		public PartialViewResult _ApplyToCoursePartial(int courseId)
+		public PartialViewResult _ApplyToCoursePartial(int courseId, string redirectAfter)
 		{
 			var course = DbContext.Set<Course>().Find(courseId);
 
 			var model = new ApplyToCourseViewModel
 			{
 				CourseId = course.Id,
-				CourseName = course.Name
+				CourseName = course.Name,
+				RedirectUrl = string.IsNullOrWhiteSpace(redirectAfter) ? null : Url.Action("Thanks", "Common")
 			};
 
 			return PartialView(model);

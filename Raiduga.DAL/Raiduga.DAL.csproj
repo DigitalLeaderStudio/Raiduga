@@ -98,6 +98,10 @@
     <Compile Include="Migrations\201703151134057_Add-Campaigns.Designer.cs">
       <DependentUpon>201703151134057_Add-Campaigns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703160932098_ExtendCampaign.cs" />
+    <Compile Include="Migrations\201703160932098_ExtendCampaign.Designer.cs">
+      <DependentUpon>201703160932098_ExtendCampaign.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703151134057_Add-Campaigns.resx">
       <DependentUpon>201703151134057_Add-Campaigns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703160932098_ExtendCampaign.resx">
+      <DependentUpon>201703160932098_ExtendCampaign.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

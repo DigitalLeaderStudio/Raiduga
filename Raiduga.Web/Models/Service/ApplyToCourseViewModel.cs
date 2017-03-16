@@ -46,6 +46,8 @@
 
 		public bool SuccessfullySent { get; set; }
 
+		public string RedirectUrl { get; set; }
+
 		public List<string> Errors { get; set; }
 
 		public ApplyToCourseViewModel FromDbModel(ApplyToCourseRequest model)

@@ -34,6 +34,7 @@
 			</div>
 			<div id="collapse-@content.Id" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-@content.Id">
 				<div class="panel-body">
+					Link: <a href="@Url.Action("Index", "Campaign", new { area = "", compaignName = content.Name })">View campaign</a>
 					@Html.Raw(content.BodyHtml)
 				</div>
 				<div class="panel-footer">
