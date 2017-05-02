@@ -1,0 +1,141 @@
+﻿@model Raiduga.Web.Models.Campaign.CampaignViewModel
+
+@{
+    ViewBag.Title = Model == null
+        ? Raiduga.Web.Localization.Translations.Campaign_NotFound
+        : Model.Title;
+    Layout = "~/Views/Shared/_LayoutWithoutSlider.cshtml";
+}
+
+@if (Model == null)
+{
+    <p>@Raiduga.Web.Localization.Translations.Campaign_NotFound</p>
+}
+else
+{
+    <style type="text/css">
+        .compaign {
+        }
+
+            .compaign .row {
+                padding-top: 20px;
+            }
+
+            .compaign li {
+                list-style: none;
+                text-align: left;
+                font-size: 20px;
+            }
+
+                .compaign li:before {
+                    font-family: FontAwesome;
+                    content: "\f00c   ";
+                }
+
+            .compaign .termin {
+                font-size: 40px;
+                font-weight: 500;
+            }
+
+            .compaign .places-number {
+                width: 200px;
+                height: 200px;
+                border: solid #e28d45 8px;
+                border-radius: 100%;
+                font-size: 50px;
+                font-weight: 700;
+                text-align: center;
+                display: inline-block;
+                padding-top: 57px;
+                font-size: 3.5em;
+                letter-spacing: 5px;
+            }
+
+            .compaign .row {
+                text-align: center;
+            }
+
+            .compaign .btn.btn-info {
+                background-color: #ff66b3;
+                width: 50%;
+            }
+
+            .compaign .for-parents {
+                text-align: left;
+                font-size: 22px;
+            }
+
+                .compaign .for-parents li {
+                    font-size: 22px !important;
+                    margin-bottom: 5px;
+                    list-style: disc;
+                }
+
+                    .compaign .for-parents li:before {
+                        content: "";
+                    }
+    </style>
+
+
+    <div class="container compaign">
+        <!-- heading -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <h2>Бажаєте зробити літо дитини не забутнім?</h2>
+                    <h1>Літній табір у місті</h1>
+                    <p>"Літо в місті" - це програма для дітей від 6 до 12 років, що працюватиме в робочі дні з 8.30 до 18.30 протягом трьох літніх місяців на базі двох філій: по вул. Волгоградській та вул. Пітерській.   Набираємо 2 групи по 8 чоловік, з якими будуть працювати досвідчені педагоги-психологи та вихователі.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                        <li>Географічна</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <img class="image-responsive" src="~/Content/img/campaign/campaign2/team.png" />
+                <a href="javascript:void(0);" class="cta-btn btn btn-primary" data-toggle="modal" data-course-id="12" data-course-title="Міні-сад" data-target="#applyToCourse" data-redirect-after="ok">ЗАБРОНЮВАТИ місце</a>
+            </div>
+        </div>
+
+        <!-- розклад дня -->
+        <div class="row">
+            <div class="col-md-12">
+                <table>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- прайс -->
+        <div class="row">
+            <div class="col-md-12">
+                <table></table>
+            </div>
+        </div>
+
+        <!-- футер -->
+        <div class="row">
+            <div class="col-md-12">
+                <table></table>
+            </div>
+        </div>
+    </div>
+
+
+    @Html.Partial("~/Views/Service/_ApplyToCourseModalPartial.cshtml")
+}
