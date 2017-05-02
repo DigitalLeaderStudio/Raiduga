@@ -1,9 +1,13 @@
-﻿
-@*<%= Html.ActionLink("eng", "ChangeCulture", "Account",
-    new { lang = (int)MvcLocalization.Helpers.Culture.en, returnUrl =
-    this.Request.RawUrl }, new { @class = "culture-link" })%>
+﻿@*@{
+        var routeDictionaryRu = new RouteValueDictionary(ViewContext.RouteData.Values);
+        routeDictionaryRu["culture"] = "ru";
 
-<%= Html.ActionLink("рус", "ChangeCulture", "Account",
-    new { lang = (int)MvcLocalization.Helpers.Culture.ru, returnUrl =
-    this.Request.RawUrl }, new { @class = "culture-link" })%>*@
+        var routeDictionaryUA = new RouteValueDictionary(ViewContext.RouteData.Values);
+        routeDictionaryUA["culture"] = "uk";
 
+        var routeDictionaryEng = new RouteValueDictionary(ViewContext.RouteData.Values);
+        routeDictionaryEng["culture"] = "en";
+    }
+    <a href="@Url.RouteUrl(routeDictionaryRu)">ru</a>
+    <a href="@Url.RouteUrl(routeDictionaryUA)">ua</a>
+    <a href="@Url.RouteUrl(routeDictionaryEng)">eng</a>*@

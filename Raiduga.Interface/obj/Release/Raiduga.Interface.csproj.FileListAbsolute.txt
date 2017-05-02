@@ -1,0 +1,5 @@
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.Interface\bin\Release\Raiduga.Interface.dll
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.Interface\bin\Release\Raiduga.Interface.pdb
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.Interface\obj\Release\Raiduga.Interface.csprojResolveAssemblyReference.cache
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.Interface\obj\Release\Raiduga.Interface.dll
+C:\Users\toha\Work\Projects\Raiduga\Raiduga.Interface\obj\Release\Raiduga.Interface.pdb
