@@ -24,3 +24,8 @@
 /Raiduga.DAL/obj/Debug
 /Raiduga.Web/obj/Release
 /packages
+/Raiduga.Tests/obj
+/Raiduga.ModelTransformer
+/Raiduga.Interface/obj/Release
+/.vs
+/Raiduga.Interface/bin/Release
