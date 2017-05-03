@@ -7,135 +7,316 @@
     Layout = "~/Views/Shared/_LayoutWithoutSlider.cshtml";
 }
 
-@if (Model == null)
-{
-    <p>@Raiduga.Web.Localization.Translations.Campaign_NotFound</p>
-}
-else
-{
-    <style type="text/css">
-        .compaign {
+<style type="text/css">
+    .compaign {
+    }
+
+        .compaign .row {
+            padding-top: 20px;
         }
 
-            .compaign .row {
-                padding-top: 20px;
+        .compaign li {
+            list-style: none;
+            text-align: left;
+            font-size: 20px;
+        }
+
+            .compaign li:before {
+                font-family: FontAwesome;
+                content: "\f00c   ";
             }
 
-            .compaign li {
-                list-style: none;
-                text-align: left;
-                font-size: 20px;
-            }
+        .compaign .termin {
+            font-size: 40px;
+            font-weight: 500;
+        }
 
-                .compaign li:before {
-                    font-family: FontAwesome;
-                    content: "\f00c   ";
-                }
+        .compaign .places-number {
+            width: 200px;
+            height: 200px;
+            border: solid #e28d45 8px;
+            border-radius: 100%;
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            display: inline-block;
+            padding-top: 57px;
+            font-size: 3.5em;
+            letter-spacing: 5px;
+        }
 
-            .compaign .termin {
-                font-size: 40px;
-                font-weight: 500;
-            }
+        .compaign .row {
+            text-align: center;
+        }
 
-            .compaign .places-number {
-                width: 200px;
-                height: 200px;
-                border: solid #e28d45 8px;
-                border-radius: 100%;
-                font-size: 50px;
-                font-weight: 700;
-                text-align: center;
-                display: inline-block;
-                padding-top: 57px;
-                font-size: 3.5em;
-                letter-spacing: 5px;
-            }
+        .compaign .btn.btn-info {
+            background-color: #ff66b3;
+            width: 50%;
+        }
 
-            .compaign .row {
-                text-align: center;
-            }
-
-            .compaign .btn.btn-info {
-                background-color: #ff66b3;
-                width: 50%;
-            }
-
-            .compaign .for-parents {
-                text-align: left;
-                font-size: 22px;
-            }
-
-                .compaign .for-parents li {
-                    font-size: 22px !important;
-                    margin-bottom: 5px;
-                    list-style: disc;
-                }
-
-                    .compaign .for-parents li:before {
-                        content: "";
-                    }
-    </style>
+</style>
 
 
-    <div class="container compaign">
-        <!-- heading -->
-        <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12">
-                    <h2>Бажаєте зробити літо дитини не забутнім?</h2>
-                    <h1>Літній табір у місті</h1>
-                    <p>"Літо в місті" - це програма для дітей від 6 до 12 років, що працюватиме в робочі дні з 8.30 до 18.30 протягом трьох літніх місяців на базі двох філій: по вул. Волгоградській та вул. Пітерській.   Набираємо 2 групи по 8 чоловік, з якими будуть працювати досвідчені педагоги-психологи та вихователі.</p>
-                </div>
-                <div class="col-md-6">
+<div class="container compaign">
+    <!-- heading -->
+    <div class="row heading">
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <h2 class="subtitle">
+                    Бажаєте зробити літо дитини незабутнім?
+                </h2>
+                <h1 class="main-title">
+                    Літній табір у місті
+                </h1>
+                <p class="age">для дітей віком <span style="font-weight: bold;">від 6 до 12 років</span></p>
+                <p style="text-align: justify;">"Літо в місті" - це програма для дітей від 6 до 12 років, що працюватиме в робочі дні з 8.30 до 18.30 протягом трьох літніх місяців на базі двох філій: по вул. Волгоградській та вул. Пітерській.   Набираємо 2 групи по 8 чоловік, з якими будуть працювати досвідчені педагоги-психологи та вихователі. До програми входять: </p>
+            </div>
+            <div class="list-wrapper col-md-12 clearfix">
+                <div class="col-md-6 col-sm-6">
                     <ul>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
+                        <li>відпочинок у парковій зоні</li>
+                        <li>екскурсії</li>
+                        <li>квести</li>
+                        <li>ігри</li>
+                        <li>шоу-програми</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6">
                     <ul>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
-                        <li>Географічна</li>
+                        <li>майстер-класи</li>
+                        <li>творчі майстерні</li>
+                        <li>психологічні тренінги</li>
+                        <li>харчування</li>
+                        <li>розважальні програми</li>
                     </ul>
                 </div>
-
-            </div>
-            <div class="col-md-6">
-                <img class="image-responsive" src="~/Content/img/campaign/campaign2/team.png" />
-                <a href="javascript:void(0);" class="cta-btn btn btn-primary" data-toggle="modal" data-course-id="12" data-course-title="Міні-сад" data-target="#applyToCourse" data-redirect-after="ok">ЗАБРОНЮВАТИ місце</a>
             </div>
         </div>
-
-        <!-- розклад дня -->
-        <div class="row">
-            <div class="col-md-12">
-                <table>
-
-                </table>
-            </div>
+        <div class="col-md-6 image">
+            <img style="margin-bottom: 15px; border-radius: 20px;" class="img-responsive" src="~/Content/img/campaign/campaign2/camp.jpg" />
+            <a style="background: #ce6baa;" href="javascript:void(0);" class="cta-btn btn btn-primary" data-toggle="modal" data-course-id="12" data-course-title="Міні-сад" data-target="#applyToCourse" data-redirect-after="ok">ЗАБРОНЮВАТИ місце</a>
         </div>
+    </div>
 
-        <!-- прайс -->
-        <div class="row">
-            <div class="col-md-12">
-                <table></table>
-            </div>
-        </div>
-
-        <!-- футер -->
-        <div class="row">
-            <div class="col-md-12">
-                <table></table>
-            </div>
+    <!-- розклад дня -->
+    <div class="row schedule">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                Програма дня
+            </h2>
+            <ul class="for-parents">
+                <li><span>08.30 - 09.30</span> збір, ранкове засідання</li>
+                <li><span>09.30 - 11.30</span> практики, майстер-класи, екскурсії, квести</li>
+                <li><span>11.30 - 11.45</span> ланч</li>
+                <li><span>11.30 - 13.00</span> рухливі ігри на свіжому повітрі</li>
+                <li><span>13.00 - 14.00</span> обід</li>
+                <li><span>14.00 - 16.00</span> інтелектуальні ігри, творчі майтерні, тренінги</li>
+                <li><span>16.00 - 16.15</span> полуденок</li>
+                <li><span>16.15 - 17.15</span> English Speaking Club</li>
+                <li><span>17.15 - 18.30</span> прогулянка, поверненя додому</li>
+            </ul>
         </div>
     </div>
 
 
-    @Html.Partial("~/Views/Service/_ApplyToCourseModalPartial.cshtml")
-}
+    <!-- прайс -->
+    <div class="row price">
+        <h2>
+            <i class="fa fa-money" aria-hidden="true"></i>
+            Скільки коштує?
+        </h2>
+        <p>До нас можна приєднатися у будь-який день та обрати зручний час перебування</p>
+        <div class="col-md-12 clearfix" style="float: none;">
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 20px;">
+                    <div style="border: 2px solid #ce6baa; border-radius: 15px; padding: 0 20px 20px; ">
+                        <h3>Повний день</h3>
+                        <h4 style="border-bottom: 2px solid #ce6baa; padding-bottom:15px;">(8.30 - 18.30)</h4>
+                        <p>1500 грн за 1 тиждень / 300 грн за день</p>
+                        <p>2500 грн за 2 тижні / 250 грн за день</p>
+                        <p>3300 грн за 3 тижні / 220 грн за день</p>
+                        <p>4200 грн за 4 тижні / 210 грн за день</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-top: 20px;">
+                    <div style="border: 2px solid #00b6f3; border-radius: 15px; padding: 0 20px 20px;">
+                        <h3>Подовжений день</h3>
+                        <h4 style="border-bottom: 2px solid #00b6f3; padding-bottom:15px;">(8.30 - 15.30)</h4>
+                        <p>1000 грн за 1 тиждень / 200 грн за день</p>
+                        <p>1800 грн за 2 тижні / 180 грн за день</p>
+                        <p>2400 грн за 3 тижні / 160 грн за день</p>
+                        <p>3000 грн за 4 тижні / 150 грн за день</p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-top: 20px;">
+                    <div style="border: 2px solid #f98d3b; border-radius: 15px; padding: 0 20px 20px;">
+                        <h3>Півдня</h3>
+                        <h4 style="border-bottom: 2px solid #f98d3b; padding-bottom:15px;">(8.30 - 13.00)</h4>
+                        <p>750 грн за 1 тиждень / 150 грн за день</p>
+                        <p>1400 грн за 2 тижні / 140 грн за день</p>
+                        <p>2000 грн за 3 тижні / 130 грн за день</p>
+                        <p>2500 грн за 4 тижні / 125 грн за день</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p style="margin-top: 15px;text-align: left;">* Харчування (комплексний обід за бажанням) оплачується окремо з розрахунку 60 грн день.</p>
+        <p style="margin-top: 10px;text-align: left;">Для постійних клієнтів працює накопичувальна система знижок: 1 тиждень - 1500 грн, 
+            2 тижні - 2500 грн, 3 тижні - 3300 грн, 4 тижні - 4200 грн, 5 тижнів - 5000 грн!
+        </p>
+    </div>
+
+
+    <!-- опис тижнів -->
+    <div class="row themes">
+        <div class="col-md-12">
+            <h2>
+                <i class="fa fa-table" aria-hidden="true"></i>
+                Теми тижнів
+            </h2>
+            <p style="font-size: 16px;">ваші дітлахи будуть займатися такими цікавостями</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="color: #f98d3b;">Зміна "Географічна"</h3>
+                    <h4>Мандрівка по країнам світу</h4>
+                    <ul>
+                        <li>Здійснять віртуальні мандрівки по країнам на різних континентах</li>
+                        <li>Складуть щоденник мандрівника</li>
+                        <li>Дізнаються про культуру та традиціїї різних народів</li>
+                        <li>Зроблять поробки-сувеніри у стилі культури  країни, з якою знайомляться</li>
+                        <li>Вивчать слова  вітання та чемності</li>
+                        <li>Пограють у ігри та забави народів світу</li>
+                        <li>Навчаться працювати в команді</li>
+                        <li>Видадуть свою газету</li>
+                        <li>Пробудять інтерес до географії</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 style="color: #f14840;">Зміна "Історична"</h3>
+                    <h4>Мандрівки в глиб сторіч</h4>
+                    <ul>
+                        <li>Здійснять віртуальні мандрівки в глиб сторіч</li>
+                        <li>Складуть щоденник мандрівок</li>
+                        <li>Дізнаються про розвиток науки і культури</li>
+                        <li>Виконають поробки у стилі епох</li>
+                        <li>Проведуть лицарські турніри</li>
+                        <li>Намалюють картини</li>
+                        <li>Видадуть свій журнал</li>
+                        <li>Пограють у стародавні ігри</li>
+                        <li>Знайдуть "справжні" скарби</li>
+                        <li>Навчаться працювати в команді</li>
+                        <li>Пробудять інтерес до історії</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="color: #43b659;">Зміна "Економічна"</h3>
+                    <h4>Мандрівка у світ грошей та бізнесу</h4>
+                    <ul>
+                        <li>Дізнаються про походження грошей та грошових потоках</li>
+                        <li>Навчаться складати та планувати бюджет</li>
+                        <li>Підвисять самооцінку</li>
+                        <li>Визначать свої цілі</li>
+                        <li>Взначать свої сильні сторони</li>
+                        <li>Пограють у командну гру "Кеш-фло" та  "Монополію"</li>
+                        <li>Складуть свій бізнес-план</li>
+                        <li>Створять власні поробки та приймуть участь у благодійному ярмарку</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 style="color: #00b6f3;">Зміна "Профорієнтаційна"</h3>
+                    <h4>Мандрівка у світ професій</h4>
+                    <ul>
+                        <li>Познайомляться з професіями сфери послуг, тощо</li>
+                        <li>Визначать свої сильні сторони та таланти.</li>
+                        <li>Визначать свої цілі</li>
+                        <li>Приймуть участь у майстер-класах</li>
+                        <li>Дізнаються про нові сучасні професії</li>
+                        <li>Спробують себе у ролі менеджера, маркетолога, журналіста, фотографа, актора, кулінара тощо</li>
+                        <li>Навчаться працювати в команді</li>
+                        <li>Видадуть свій дайджест професій</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="color: #2479be;">Зміна "Пізнавально-експериментальна"</h3>
+                    <h4>Мандрівка у світ науки</h4>
+                    <ul>
+                        <li>Поекспериментують з фізичними явищами</li>
+                        <li>Зробрять хімічні досліди</li>
+                        <li>Дізнаються про Нобелевських лауреатів та їх досягнення</li>
+                        <li>Дізнаються про видатних людей світу</li>
+                        <li>Дізнаються звідки до нас прийшла їжа та інші корисні речі</li>
+                        <li>Дізнаються про свої нахили та здібності</li>
+                        <li>Підвисять свою самооцінку</li>
+                        <li>Зроблять оберіг ляльку-мотанку</li>
+                        <li>Пробудять інтерес до наук</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 style="color: #ce6baa;">Зміна "Танцювально-артистична"</h3>
+                    <h4>Мандрівка у світ театру</h4>
+                    <ul>
+                        <li>Розкриють свій творчий потенціал</li>
+                        <li>Спробують танцювати у різних стилях</li>
+                        <li>Дізнаються про видатних танцюристів світу</li>
+                        <li>Отримають танцювальне безумство і драйв на дискотеці</li>
+                        <li>Спробують себе у ролі актора, режисера, оператора</li>
+                        <li>Пограють з книжними героями</li>
+                        <li>Складуть власний сценарій п'єси та реалізують його</li>
+                        <li>Навчаться працювати в команді</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- футер -->
+    <div class="row ending-text">
+        <div class="col-md-12">
+            <h2>
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                ВАША ДИТИНА БУДЕ ЩАСЛИВОЮ!
+            </h2>
+            <p>
+                Щодня обов'язкові прогулянки та рухливі ігри, спортивні турніри, квести на свіжому повітрі у парковій зоні
+                у супроводі уважних друзів-викладачів та друзів-однолітків.
+
+                І все це <span style="font-weight: bold;">за 175 грн на день при виборі 4х тижнів програм</span>.
+
+                Чому так дешево?
+
+                Тому, що це наш акт доброї волі, ми бажаємо зробити цікаве і корисне літо доступним  для багатьох дітей.
+
+                Проте ця ціна діє лише для найшвидших, які запишуться до 25 травня. Надалі ціна буде становити 300 грн на день.
+
+                Нагадуємо: <span style="font-weight: bold;">набираємо лише 2 групи по 8 чоловік</span>.
+            </p>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <h1 style="font-size: 100px; margin-top: 20px; color: #f98d3b;"><span style="color: #00b6f3; font-size: 100px;">-15%</span><i class="fa fa-gift" aria-hidden="true"></i></h1>
+            <h1 style="font-size: 36px; margin-top: 0px;">ЗНИЖКА</h1>
+            <h4 style="font-family: 'Blogger Sans'; font-weight: normal; font-size: 23px;">до 15 травня</h4>
+            <h3 style="margin: 0 0 40px; font-family: 'Blogger Sans'; color: #43b659; font-weight: normal; font-size: 33px;"><s style="color: #979797; font-size: 1.3em;">4200</s> 3500 грн</h3>
+
+            <a href="javascript:void(0);" class="cta-btn btn btn-primary" data-toggle="modal" data-course-id="12" data-course-title="Міні-сад" data-target="#applyToCourse" data-redirect-after="ok">ЗАБРОНЮВАТИ місце</a>
+
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-8"><img src="~/Content/img/campaign/team.png" style="width: 100%;" /></div>
+        <div class="col-md-4">
+            <h1 style="margin-top: 50px;"></h1>
+            <h2 class="need-help">Виникли запитання?</h2>
+            <p style="font-size: 24px; margin-bottom: 20px;">Запитайте у професіоналів</p>
+            <a href="/uk/%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8" class="btn btn-primary" style="padding: 10px 30px; font-size: 25px; text-transform: uppercase; background-color: #337ab7; border: 0; border-radius: 10px;">Контакти<i class="fa fa-angle-right" aria-hidden="true" style="margin-left: 10px;"></i></a>
+        </div>
+    </div>
+</div>
