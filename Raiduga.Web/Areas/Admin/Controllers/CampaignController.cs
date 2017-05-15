@@ -24,7 +24,7 @@
 		// GET: Admin/Campaign
 		public ActionResult Index()
 		{
-			var dbData = DbContext.Campaigns.ToArray();
+			var dbData = DbContext.Campaigns.OrderByDescending(x => x.CreationDate).ToArray();
 
 			var model = new List<CampaignViewModel>();
 

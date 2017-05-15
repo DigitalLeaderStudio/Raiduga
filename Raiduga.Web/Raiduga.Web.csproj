@@ -262,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Scripts\schedule.js" />
+    <Content Include="Areas\Admin\Views\Campaign\HtmlPage1.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
@@ -269,7 +270,18 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\HTML\Campaign.html" />
     <Content Include="Content\img\campaign\campaign2\camp.jpg" />
+    <Content Include="Content\img\campaign\campaign2\sun32.png" />
+    <Content Include="Content\img\campaign\campaign2\sun64.png" />
+    <Content Include="Content\img\campaign\campaign2\sun24.png" />
     <Content Include="Content\img\campaign\campaign2\team.png" />
+    <Content Include="Content\img\campaign\campaign2\головна.jpg" />
+    <Content Include="Content\img\campaign\campaign2\маленьке-щастя.jpg" />
+    <Content Include="Content\img\campaign\campaign2\Мандрівка по країнам світу.jpg" />
+    <Content Include="Content\img\campaign\campaign2\Мандрівка у світ грошей та бізнесу.jpg" />
+    <Content Include="Content\img\campaign\campaign2\Мандрівка у світ науки.jpg" />
+    <Content Include="Content\img\campaign\campaign2\Мандрівка у світ професій.jpg" />
+    <Content Include="Content\img\campaign\campaign2\Мандрівка у світ театру.jpg" />
+    <Content Include="Content\img\campaign\campaign2\Мандрівки в глиб сторіч.JPG" />
     <Content Include="Content\img\campaign\team.png" />
     <Content Include="Content\img\staff\7.jpg" />
     <Content Include="fonts\fontawesome-webfont.svg" />

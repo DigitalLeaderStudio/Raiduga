@@ -45,14 +45,23 @@
 					<li>
 						<a href="@Url.Action( "Index", "Admin", new { area = "Admin" })"><i class="fa fa-home"></i></a>
 					</li>
-					<li>
-						<a href="@Url.Action( "Index", "HtmlContent", new { area = "Admin" })">@Translations.Content_Title</a>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Контент <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="@Url.Action( "Index", "HtmlContent", new { area = "Admin" })">@Translations.Content_Title</a>
+							</li>
+							<li>
+								<a href="@Url.Action( "Index", "Slider", new { area = "Admin" })">@Translations.Slider_Page_Title</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="@Url.Action( "Index", "UserFeedback", new { area = "Admin" })">@Translations.UserFeedback_Title</a>
+							</li>
+						</ul>
 					</li>
 					<li>
-						<a href="@Url.Action( "Index", "Slider", new { area = "Admin" })">@Translations.Slider_Page_Title</a>
-					</li>
-					<li>
-						<a href="@Url.Action( "Index", "UserFeedback", new { area = "Admin" })">@Translations.UserFeedback_Title</a>
+						<a href="@Url.Action( "Index", "Campaign", new { area = "Admin" })">@Translations.Campaign_Title</a>
 					</li>
 					<li>
 						<a href="@Url.Action( "Index", "Service", new { area = "Admin" })">@Translations.Service_Title</a>
@@ -62,7 +71,7 @@
 					</li>
 					<li>
 						<a href="@Url.Action("Index", "Article", new { area = "Admin"})">@Translations.Articles_Title</a>
-					</li>					
+					</li>
 					<li>
 						<a href="@Url.Action("Index", "Schedule", new { area = "Admin"})">@Translations.Schedule_PageTitle</a>
 					</li>
@@ -78,9 +87,9 @@
 			<address>
 				@Translations.DevelopedBy <a href="https://digitalleader.solutions"><strong>Digital Leader</strong></a>
 			</address>
-            <p>Контакти підтримки та обслуговування клієнтів:</p>
+			<p>Контакти підтримки та обслуговування клієнтів:</p>
 			<address>
-				
+
 				<i class="fa fa-envelope"></i>
 				<a href="mailto:support@digitalleader.solutions">support@digitalleader.solutions</a><br />
 				<i class="fa fa-phone"></i><a href="tel:+380961212713">+380 96 121 2713</a>
