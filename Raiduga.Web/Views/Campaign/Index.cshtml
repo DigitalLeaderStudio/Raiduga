@@ -13,69 +13,6 @@
 }
 else
 {
-	<style type="text/css">
-		.compaign {
-		}
-
-			.compaign .row {
-				padding-top: 20px;
-			}
-
-			.compaign li {
-				list-style: none;
-				text-align: left;
-				font-size: 20px;
-			}
-
-				.compaign li:before {
-					font-family: FontAwesome;
-					content: "\f00c   ";
-				}
-
-			.compaign .termin {
-				font-size: 40px;
-				font-weight: 500;
-			}
-
-			.compaign .places-number {
-				width: 200px;
-				height: 200px;
-				border: solid #e28d45 8px;
-				border-radius: 100%;
-				font-size: 50px;
-				font-weight: 700;
-				text-align: center;
-				display: inline-block;
-				padding-top: 57px;
-				font-size: 3.5em;
-				letter-spacing: 5px;
-			}
-
-			.compaign .row {
-				text-align: center;
-			}
-
-			.compaign .btn.btn-info {
-				background-color: #ff66b3;
-				width: 50%;
-			}
-
-			.compaign .for-parents {
-				text-align: left;
-				font-size: 22px;
-			}
-
-				.compaign .for-parents li {
-					font-size: 22px !important;
-					margin-bottom: 5px;
-					list-style: disc;
-				}
-
-					.compaign .for-parents li:before {
-						content: "";
-					}
-	</style>
-
 	@Html.Raw(Model.BodyHtml)
 
 	@Html.Partial("~/Views/Service/_ApplyToCourseModalPartial.cshtml")

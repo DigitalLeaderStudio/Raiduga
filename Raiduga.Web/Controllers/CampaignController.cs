@@ -20,7 +20,7 @@
 			try
 			{
 				var entity = await DbContext.Campaigns
-					.Where(c => c.Name == c.Name && c.IsActive)
+					.Where(c => c.Name == compaignName && c.IsActive)
 					.FirstOrDefaultAsync();
 
 				var viewModel = entity == null
