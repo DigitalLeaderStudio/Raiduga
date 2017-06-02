@@ -269,7 +269,9 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\HTML\Campaign.html" />
+    <Content Include="Content\img\campaign\campaign2\a-kid.png" />
     <Content Include="Content\img\campaign\campaign2\camp.jpg" />
+    <Content Include="Content\img\campaign\campaign2\cources.png" />
     <Content Include="Content\img\campaign\campaign2\sun32.png" />
     <Content Include="Content\img\campaign\campaign2\sun64.png" />
     <Content Include="Content\img\campaign\campaign2\sun24.png" />
