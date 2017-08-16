@@ -1,19 +1,64 @@
 ﻿@model Raiduga.Web.Models.Common.AffiliateViewModel
 
 @{
-	var enFormatProvier = new System.Globalization.CultureInfo("en");
+    var enFormatProvier = new System.Globalization.CultureInfo("en");
 }
 
 <div class="row">
-	<div class="col-md-12">
-		@Html.Raw(Model.HtmlDataContacts)
-	</div>
-	<div class="col-md-12">
-		<address>
-			<i class="fa fa-map-marker" aria-hidden="true"></i>
-			<a target="_blank" href="http://www.google.com/maps/place/@Model.Address.Latitude.ToString(enFormatProvier),@Model.Address.Longitude.ToString(enFormatProvier)">
-				@Model.Address.Name
-			</a>
-		</address>
-	</div>
-</div>
+    <div class="col-md-12">
+        <address>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <a href="#">
+                м. Київ, вул. Волгоградська, 18
+            </a>
+        </address>
+        <address>
+            <i class="fa fa-phone"></i>
+            <a href="tel:(044) 275-17-79">(044) 275-17-79</a>
+            <br>
+            <i class="fa fa-phone"></i>
+            <a href="tel:(096) 003-31-14">(096) 003-31-14</a>
+            <br>
+            <i class="fa fa-phone"></i>
+            <a href="tel:(099) 007-59-54">(099) 007-59-54</a>
+            <br>
+        </address>
+        <address>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <a href="#">
+                м. Київ, вул. Пітерська, 4а
+            </a>
+        </address>
+        <address>
+            <i class="fa fa-phone"></i>
+            <a href="tel:(050) 448-49-07">(050) 448-49-07</a>
+            <br>
+            <i class="fa fa-phone"></i>
+            <a href="tel:(068) 455-04-26">(068) 455-04-26</a>
+            <br>
+        </address>
+        <address>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:office@raiduga.kiev.ua">office@raiduga.kiev.ua</a>
+            <br>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:admin@raiduga.kiev.ua">admin@raiduga.kiev.ua</a>
+            <br>
+        </address>
+    </div>
+</div>  
+
+
+@*<div class="row">
+        <div class="col-md-12">
+            @Html.Raw(Model.HtmlDataContacts)
+        </div>
+        <div class="col-md-12">
+            <address>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <a target="_blank" href="http://www.google.com/maps/place/@Model.Address.Latitude.ToString(enFormatProvier),@Model.Address.Longitude.ToString(enFormatProvier)">
+                    @Model.Address.Name
+                </a>
+            </address>
+        </div>
+    </div>*@

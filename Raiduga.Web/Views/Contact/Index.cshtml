@@ -7,53 +7,48 @@
 
 <div class="contacts">
 	<h1 class="title">@Translations.Contacts_Title</h1>
-
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		@foreach (var affiliate in Model)
-		{
-			<div class="panel panel-default">
-				<a class="panel-heading" role="tab" id="heading-@affiliate.Id"
-					data-toggle="collapse"
-					data-parent="#accordion"
-					href="#collapse-@affiliate.Id"
-					aria-expanded="@affiliate.IsPrimary"
-					aria-controls="collapse-@affiliate.Id">
-					
-                    <h4 class="panel-title pull-left">
-						<i class="fa fa-map-marker"></i>@affiliate.Address.Name
-					</h4>
-
-					<div class="clearfix"></div>
-				</a>
-				<div id="collapse-@affiliate.Id" class="panel-collapse collapse @(affiliate.IsPrimary ? "in" : "")" role="tabpanel" aria-labelledby="heading-@affiliate.Id">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-3">
-								<address>
-									<i class="fa fa-clock-o"></i>
-									@Translations.Contacts_Hours_Prompt
-									<br />
-									@Translations.Contacts_Hours_From @affiliate.Hours.Start.ToString(@"hh\:mm")
-									&nbsp;@Translations.Contacts_Hours_To@affiliate.Hours.End.ToString(@"hh\:mm")
-								</address>
-								@Html.Raw(affiliate.HtmlDataContacts)
-								<p>@affiliate.Description</p>
-							</div>
-							<div class="col-md-9">
-								<div id="map-@affiliate.Id" lat="@affiliate.Address.Latitude.ToString(enFormatProvier)" lng="@affiliate.Address.Longitude.ToString(enFormatProvier)" class="map"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		}
-	</div>
-
-    <div class="contact-form-wrapper">
-        <h2 class="text-center">@Translations.ContactFormTitle</h2>
-	    @Html.Action("_ContactFormPartial", "Contact")
+    <div class="panel-group" role="tablist" aria-multiselectable="true">
+        @foreach (var affiliate in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        @if (affiliate.IsPrimary)
+                        {
+                            <span class="pull-right">
+                                <i class="fa fa-check-circle"></i>@Translations.ContactsForm_Primary
+                            </span>
+                        }
+                        <i class="fa fa-map-marker"></i>@affiliate.Address.Name
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <address>
+                                <i class="fa fa-clock-o"></i>
+                                @Translations.Contacts_Hours_Prompt
+                                <br />
+                                @Translations.Contacts_Hours_From @affiliate.Hours.Start.ToString(@"hh\:mm")
+                                &nbsp;@Translations.Contacts_Hours_To@affiliate.Hours.End.ToString(@"hh\:mm")
+                            </address>
+                            @Html.Raw(affiliate.HtmlDataContacts)
+                            <p>@affiliate.Description</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="map-@affiliate.Id" lat="@affiliate.Address.Latitude.ToString(enFormatProvier)" lng="@affiliate.Address.Longitude.ToString(enFormatProvier)" class="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
-</div>
+
+        <div class="contact-form-wrapper">
+            <h2 class="text-center">@Translations.ContactFormTitle</h2>
+            @Html.Action("_ContactFormPartial", "Contact")
+        </div>
+    </div>
 <script>
 	var maps = [];
 	var markers = [];
@@ -95,3 +90,46 @@
     <meta name="description" content="Контакти Центру інтелектуального і творчого розвитку особистості Райдуга, телефон, адреса, години роботи, електронна пошта.">
     <meta name="keywords" content="контакти, центр райдуга, філії, телефон, адреса, електронна пошта, години роботи">
 }
+
+
+<!-- old accordeon -->
+@*<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    @foreach (var affiliate in Model)
+    {
+        <div class="panel panel-default">
+            <a class="panel-heading" role="tab" id="heading-@affiliate.Id"
+               data-toggle="collapse"
+               data-parent="#accordion"
+               href="#collapse-@affiliate.Id"
+               aria-expanded="@affiliate.IsPrimary"
+               aria-controls="collapse-@affiliate.Id">
+
+                <h4 class="panel-title pull-left">
+                    <i class="fa fa-map-marker"></i>@affiliate.Address.Name
+                </h4>
+
+                <div class="clearfix"></div>
+            </a>
+            <div id="collapse-@affiliate.Id" class="panel-collapse collapse @(affiliate.IsPrimary ? "in" : "")" role="tabpanel" aria-labelledby="heading-@affiliate.Id">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <address>
+                                <i class="fa fa-clock-o"></i>
+                                @Translations.Contacts_Hours_Prompt
+                                <br />
+                                @Translations.Contacts_Hours_From @affiliate.Hours.Start.ToString(@"hh\:mm")
+                                &nbsp;@Translations.Contacts_Hours_To@affiliate.Hours.End.ToString(@"hh\:mm")
+                            </address>
+                            @Html.Raw(affiliate.HtmlDataContacts)
+                            <p>@affiliate.Description</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="map-@affiliate.Id" lat="@affiliate.Address.Latitude.ToString(enFormatProvier)" lng="@affiliate.Address.Longitude.ToString(enFormatProvier)" class="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>*@

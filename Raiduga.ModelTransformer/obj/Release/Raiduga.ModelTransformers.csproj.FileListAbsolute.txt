@@ -1,7 +1,0 @@
-C:\Users\toha\Work\Projects\Raiduga\Raiduga.ModelTransformer\bin\Release\Raiduga.ModelTransformers.dll
-C:\Users\toha\Work\Projects\Raiduga\Raiduga.ModelTransformer\bin\Release\Raiduga.ModelTransformers.pdb
-C:\Users\toha\Work\Projects\Raiduga\Raiduga.ModelTransformer\bin\Release\Raiduga.Interface.dll
-C:\Users\toha\Work\Projects\Raiduga\Raiduga.ModelTransformer\bin\Release\Raiduga.Interface.pdb
-C:\Users\toha\Work\Projects\Raiduga\Raiduga.ModelTransformer\obj\Release\Raiduga.ModelTransformers.csprojResolveAssemblyReference.cache
-C:\Users\toha\Work\Projects\Raiduga\Raiduga.ModelTransformer\obj\Release\Raiduga.ModelTransformers.dll
-C:\Users\toha\Work\Projects\Raiduga\Raiduga.ModelTransformer\obj\Release\Raiduga.ModelTransformers.pdb
